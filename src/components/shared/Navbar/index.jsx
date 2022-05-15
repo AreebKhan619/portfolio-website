@@ -14,6 +14,7 @@ const Navbar = () => {
       <NavigationItems>
         <Item>{Strings.overview}</Item>
         <Item>{Strings.experience}</Item>
+        <Item>{Strings.testimonials}</Item>
         <Item>{Strings.education}</Item>
         <PrimaryActionItem>{Strings.connect}</PrimaryActionItem>
       </NavigationItems>

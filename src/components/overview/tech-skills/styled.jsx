@@ -16,19 +16,19 @@ export const SkillCapsule = styled.div`
   position: relative;
   font-weight: bold;
 
-  &:nth-child(1) {
+  &:nth-child(4n+1) {
     background-color: #efb969;
-    color: #656565;
+    color: #f6f5f5;
   }
-  &:nth-child(2) {
+  &:nth-child(4n+2) {
     background-color: #255567;
     color: #e6e6e6;
   }
-  &:nth-child(3) {
+  &:nth-child(4n+3) {
     background-color: #3f51b5;
     color: #e6e6e6;
   }
-  &:nth-child(4) {
+  &:nth-child(4n) {
     background-color: grey;
     color: #e6e6e6;
   }

@@ -45,4 +45,15 @@ export const ExperienceMain = styled.div`
 
 export const WorkplaceName = styled.div`
   color: #795548;
-`
+`;
+
+export const AdditionalInfo = styled.div`
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0 0 2px 0px #c9c0c0;
+  &:hover {
+    background-color: #e3ecf4;
+  }
+`;

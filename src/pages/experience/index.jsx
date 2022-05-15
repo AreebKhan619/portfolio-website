@@ -4,8 +4,11 @@ import {
   Timeline,
   TimeRange,
   ExperienceMain,
-  WorkplaceName
+  WorkplaceName,
+  AdditionalInfo,
 } from "./styled";
+
+import { CAWStudios } from "../../assets/images";
 
 const Experience = () => {
   return (
@@ -29,21 +32,40 @@ const ExperiencePoint = () => {
     >
       <TimeRange>Jan 2022 - Present</TimeRange>
       <ExperienceMain>
-        <div
-          style={{
-            fontWeight: "bold",
-            fontSize: "1.2em",
-          }}
-        >
-          SDE-2
+        <div style={{ display: "flex" }}>
+          <img
+            src={CAWStudios}
+            alt="Company Logo"
+            style={{ width: 50, height: 50, marginRight: 10, borderRadius: 10 }}
+          />
+          <div>
+            <div
+              style={{
+                fontWeight: "bold",
+                fontSize: "1.2em",
+              }}
+            >
+              SDE-2
+            </div>
+            <WorkplaceName>
+              ChimpsAtWork Studios / CAW Studios (External Link Indicator)
+            </WorkplaceName>
+          </div>
         </div>
-        <WorkplaceName>ChimpsAtWork Studios / CAW Studios (External Link Indicator)</WorkplaceName>
-        {/* Responsibilities */}
-        <ol style={{marginBottom: 50}}>
-          {[1, 2, 3, 4, 5].map((el) => (
-            <li style={{ marginBottom: 15 }}>Managed &amp; set-up monorepo architecture and co-lead the shared code development</li>
-          ))}
-        </ol>
+
+        <section style={{ marginBottom: 50 }}>
+          {/* Responsibilities */}
+          <ol>
+            {[1, 2, 3, 4, 5].map((el) => (
+              <li style={{ marginBottom: 15 }}>
+                Managed &amp; set-up monorepo architecture and co-lead the
+                shared code development
+              </li>
+            ))}
+          </ol>
+
+          <AdditionalInfo>Open Gallery</AdditionalInfo>
+        </section>
       </ExperienceMain>
     </div>
   );

@@ -3,9 +3,10 @@ import { SkillCapsule, TechSkillsContainer } from "./styled";
 const TechSkillsList = () => {
   const skills = [
     "UI/UX Designing",
-    "Prototyping",
     "Web Development",
     "Back-end Development",
+    "Mobile App Development",
+    "Prototyping",
   ];
 
   return (

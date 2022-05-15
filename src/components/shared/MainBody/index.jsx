@@ -9,6 +9,7 @@ const MainBody = () => {
       {/* Routing here */}
       <Overview />
       <Experience />
+      <Experience />
     </MainBodyContainer>
   );
 };

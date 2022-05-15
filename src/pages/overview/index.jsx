@@ -27,11 +27,11 @@ const Overview = () => {
           <IntroText>
             I'm{" "}
             <Name>
-              Mohammad <MainName>Areeb</MainName> Khan.
+              Mohammad <MainName>Areeb</MainName> Khan
             </Name>
           </IntroText>
         </div>
-        <div>and I'm a full stack developer, experienced in MERN.</div>
+        <div>and I'm a full stack developer, experienced in MERN.<br/> Nice to see you here :{")"}</div>
         <StatContainerOuter>
           <Stat>
             <StatHeader>03+</StatHeader>
