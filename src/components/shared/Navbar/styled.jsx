@@ -13,6 +13,7 @@ export const NavbarOuterContainer = styled.div`
   width: 100%;
   backdrop-filter: blur(20px);
   background-color: #f0f8ff94;
+  z-index: 2;
 `;
 
 export const Title = styled.div`
@@ -30,8 +31,9 @@ export const NavigationItems = styled.div`
 export const Item = styled.div``;
 
 export const PrimaryActionItem = styled(Item)`
-  background-color: ${Colors.black};
-  color: ${Colors.white};
+  /* background-color: ${Colors.black}; */
+  /* color: ${Colors.white}; */
+  border: 2px solid #a4cddd;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 25px;
 `;

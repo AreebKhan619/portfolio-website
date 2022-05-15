@@ -5,8 +5,6 @@ export const Title = styled.h3`
   font-weight: bold;
   position: relative;
 
-  $height: 30px;
-
   &::before,
   &::after {
     content: "";
@@ -19,11 +17,11 @@ export const Title = styled.h3`
 
   &::before {
     left: 0;
-    width: 50%;
+    width: 40%;
   }
 
   &::after{
-    left: calc(50% + 10px);
-    width: 8px;
+    left: calc(40% + 10px);
+    width: 30px;
   }
 `;

@@ -10,7 +10,6 @@ export const OverviewContainer = styled.div`
 
 export const LeftPortion = styled.div`
   flex: 50%;
-  font-size: 20px;
   color: grey;
 `;
 
@@ -60,4 +59,10 @@ export const StatSubtitle = styled.div`
 export const WaveImgContainer = styled.img`
   max-height: 600px;
   border-radius: 10px;
+  box-shadow: -20px 20px #e4dfe061;
+  margin-top: 30px;
+`;
+
+export const ImageAndSkills = styled.div`
+  position: relative;
 `;

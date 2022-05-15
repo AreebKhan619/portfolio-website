@@ -11,9 +11,12 @@ import {
   Stat,
   WaveImgContainer,
   OverviewContainer,
+  ImageAndSkills,
 } from "./styled";
 
 import { Hi, WavyLine } from "../../assets/images";
+import SkillsPossessed from "../../components/overview/skills-posssessed";
+import TechSkillsList from "../../components/overview/tech-skills";
 
 const Overview = () => {
   return (
@@ -28,9 +31,7 @@ const Overview = () => {
             </Name>
           </IntroText>
         </div>
-        <div>
-          and I'm a full stack developer, experienced in MERN for 3+ years.
-        </div>
+        <div>and I'm a full stack developer, experienced in MERN.</div>
         <StatContainerOuter>
           <Stat>
             <StatHeader>03+</StatHeader>
@@ -52,15 +53,17 @@ const Overview = () => {
           <div style={{ margin: "20px 0" }}>
             <div>Resume, GitHub, LinkedIn, Stackoverflow, Email</div>
           </div>
-          <div>
-            Skill Capsules Here - UI/UX Designing, Prototyping, Development
-          </div>
+          {/* UI/UX Designing, Prototyping, Web Development */}
+          <TechSkillsList />
         </div>
       </LeftPortion>
 
       <RightPortion>
-        {/* Replace .gif with .avif with gif as fallback */}
-        <WaveImgContainer src={Hi} alt="It's me waving :)" />
+        <ImageAndSkills>
+          <SkillsPossessed />
+          {/* Replace .gif with .avif with gif as fallback */}
+          <WaveImgContainer src={Hi} alt="It's me waving :)" />
+        </ImageAndSkills>
       </RightPortion>
     </OverviewContainer>
   );

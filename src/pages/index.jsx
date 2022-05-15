@@ -1,5 +1,6 @@
 import Navbar from "../components/shared/Navbar";
 import MainBody from "../components/shared/MainBody";
+import Footer from "../components/shared/Footer";
 import { OuterContainer } from "./styled";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <OuterContainer>
       <Navbar />
       <MainBody />
-      <div>Made with محنت</div>
+      <Footer />
     </OuterContainer>
   );
 }
