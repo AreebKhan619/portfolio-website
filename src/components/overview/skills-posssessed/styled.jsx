@@ -11,4 +11,7 @@ export const SkillContainer = styled.div`
   top: ${(props) => props.top || "unset"};
   right: ${(props) => props.right || "unset"};
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 `;

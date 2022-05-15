@@ -14,44 +14,97 @@ import {
   ImageAndSkills,
 } from "./styled";
 
-import { Hi, WavyLine } from "../../assets/images";
+import {
+  Hi,
+  WavyLine,
+  GitHub,
+  LinkedIn,
+  GMail,
+  StackOverflow,
+} from "../../assets/images";
 import SkillsPossessed from "../../components/overview/skills-posssessed";
 import TechSkillsList from "../../components/overview/tech-skills";
+import { Strings } from "../../assets/constants/strings";
+
+const links = [
+  {
+    name: "GitHub",
+    imgUri: GitHub,
+    url: "https://www.github.com",
+  },
+  {
+    name: "LinkedIn",
+    imgUri: LinkedIn,
+    url: "https://www.github.com",
+  },
+  {
+    name: "GMail",
+    imgUri: GMail,
+    url: "https://www.github.com",
+  },
+  {
+    name: "StackOverflow",
+    imgUri: StackOverflow,
+    url: "https://www.github.com",
+  },
+];
 
 const Overview = () => {
   return (
     <OverviewContainer>
       <LeftPortion>
         <div>
-          <HiText>Hi,</HiText>
+          <HiText>{Strings.hi}</HiText>
           <IntroText>
-            I'm{" "}
+            {Strings.iAm}{" "}
             <Name>
               Mohammad <MainName>Areeb</MainName> Khan
             </Name>
           </IntroText>
         </div>
-        <div>and I'm a full stack developer, experienced in MERN.<br/> Nice to see you here :{")"}</div>
+        <div>
+          {Strings.welcomeTextSuffix1}
+          <br /> {Strings.welcomeTextSuffix2}
+        </div>
         <StatContainerOuter>
           <Stat>
             <StatHeader>03+</StatHeader>
-            <StatSubtitle>Years of experience</StatSubtitle>
+            <StatSubtitle>{Strings.yearsOfExperience}</StatSubtitle>
           </Stat>
           <Stat>
             <StatHeader>5+</StatHeader>
-            <StatSubtitle>Courses &amp; Certifications</StatSubtitle>
+            <StatSubtitle>{Strings.coursesAndCerts}</StatSubtitle>
           </Stat>
           <Stat>
             <StatHeader>13+</StatHeader>
-            <StatSubtitle>Projects</StatSubtitle>
+            <StatSubtitle>{Strings.projects}</StatSubtitle>
           </Stat>
         </StatContainerOuter>
-        <div style={{ margin: "20px 0 40px", textAlign: "center" }}>
-          <img style={{ height: 45 }} src={WavyLine} alt="It's me waving :)" />
+        <div style={{ margin: "20px 0", textAlign: "center" }}>
+          <img style={{ height: 45 }} src={WavyLine} alt={"divider"} />
         </div>
         <div id="second_half">
-          <div style={{ margin: "20px 0" }}>
-            <div>Resume, GitHub, LinkedIn, Stackoverflow, Email</div>
+          <div style={{ margin: "20px 0", display: "flex", columnGap: 10 }}>
+            <div
+              style={{
+                backgroundColor: "black",
+                display: "inline-block",
+                color: "white",
+                alignSelf: "center",
+                padding: "10px 15px",
+                borderRadius: "10px",
+                fontSize: 15,
+              }}
+            >
+              Download Resume
+            </div>
+            {links.map((el) => {
+              return (
+                <a href={el.url}>
+                  <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
+                </a>
+              );
+            })}
           </div>
           {/* UI/UX Designing, Prototyping, Web Development */}
           <TechSkillsList />
@@ -62,7 +115,7 @@ const Overview = () => {
         <ImageAndSkills>
           <SkillsPossessed />
           {/* Replace .gif with .avif with gif as fallback */}
-          <WaveImgContainer src={Hi} alt="It's me waving :)" />
+          <WaveImgContainer src={Hi} alt={Strings.itsMeWaving} />
         </ImageAndSkills>
       </RightPortion>
     </OverviewContainer>
