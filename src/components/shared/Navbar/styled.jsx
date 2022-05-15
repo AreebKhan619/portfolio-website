@@ -3,11 +3,16 @@ import { Colors } from "../../../assets/styles/colors";
 
 export const NavbarOuterContainer = styled.div`
   font-size: 25px;
-  padding: 20px 100px;
+  padding: 20px 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 2px 1px ${Colors.white100};
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  background-color: #f0f8ff94;
 `;
 
 export const Title = styled.div`
