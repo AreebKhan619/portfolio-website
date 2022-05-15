@@ -7,6 +7,7 @@ function App() {
     <OuterContainer>
       <Navbar />
       <MainBody />
+      <div>Made with محنت</div>
     </OuterContainer>
   );
 }

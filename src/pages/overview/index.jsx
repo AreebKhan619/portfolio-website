@@ -37,6 +37,10 @@ const Overview = () => {
             <StatSubtitle>Years of experience</StatSubtitle>
           </Stat>
           <Stat>
+            <StatHeader>5+</StatHeader>
+            <StatSubtitle>Courses &amp; Certifications</StatSubtitle>
+          </Stat>
+          <Stat>
             <StatHeader>13+</StatHeader>
             <StatSubtitle>Projects</StatSubtitle>
           </Stat>
@@ -55,6 +59,7 @@ const Overview = () => {
       </LeftPortion>
 
       <RightPortion>
+        {/* Replace .gif with .avif with gif as fallback */}
         <WaveImgContainer src={Hi} alt="It's me waving :)" />
       </RightPortion>
     </OverviewContainer>

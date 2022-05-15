@@ -1,5 +1,5 @@
 export const Strings = {
-  siteTitle: "Areeb.",
+  siteTitle: "AREEB.",
   overview: "Overview",
   experience: "Experience",
   education: "Education",
