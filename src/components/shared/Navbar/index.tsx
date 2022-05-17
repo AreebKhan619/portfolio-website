@@ -12,7 +12,7 @@ const Navbar = () => {
     <NavbarOuterContainer>
       <Title>{Strings.siteTitle}</Title>
       <NavigationItems>
-        <Item>{Strings.overview}</Item>
+        <Item style={{ fontWeight: "bold" }}>{Strings.overview}</Item>
         <Item>{Strings.experience}</Item>
         <Item>{Strings.testimonials}</Item>
         <Item>{Strings.education}</Item>

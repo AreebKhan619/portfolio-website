@@ -21,7 +21,7 @@ export const Title = styled.div`
 `;
 
 export const NavigationItems = styled.div`
-  font-size: 0.8em;
+  font-size: 0.6em;
   display: inherit;
   align-items: inherit;
   column-gap: 50px;

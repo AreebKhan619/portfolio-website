@@ -15,22 +15,20 @@ export const SkillCapsule = styled.div`
   cursor: pointer;
   position: relative;
   font-weight: bold;
+  background-color: white;
+  border: 1px dashed;
 
   &:nth-child(4n+1) {
-    background-color: #efb969;
-    color: #f6f5f5;
+    color: #a2660d;
   }
   &:nth-child(4n+2) {
-    background-color: #255567;
-    color: #e6e6e6;
+    color: #255567;
   }
   &:nth-child(4n+3) {
-    background-color: #3f51b5;
-    color: #e6e6e6;
+    color: #3f51b5;
   }
   &:nth-child(4n) {
-    background-color: grey;
-    color: #e6e6e6;
+    color: grey;
   }
 
   &:hover {

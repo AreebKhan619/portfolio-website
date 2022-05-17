@@ -1,11 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const ExperienceOuterContainer = styled.div`
-  margin-top: 100px;
-  padding: 0 150px;
-`;
-
-export const Timeline = styled.div``;
+export const TimelineContainer = styled.div``;
 
 export const TimeRange = styled.div`
   font-size: 15px;
@@ -14,7 +9,7 @@ export const TimeRange = styled.div`
   text-align: right;
 `;
 
-export const ExperienceMain = styled.div`
+export const EventMain = styled.div`
   position: relative;
   padding-left: 30px;
   margin-left: 20px;
@@ -43,7 +38,7 @@ export const ExperienceMain = styled.div`
   }
 `;
 
-export const WorkplaceName = styled.div`
+export const Subtitle = styled.div`
   color: #795548;
 `;
 
