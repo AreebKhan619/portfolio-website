@@ -27,6 +27,7 @@ const EventPoint: FC<TimelineEventObject> = ({
   subtitle,
   eventImg,
   points,
+  gallery,
 }) => {
   return (
     <div
@@ -62,7 +63,7 @@ const EventPoint: FC<TimelineEventObject> = ({
             ))}
           </ol>
 
-          <AdditionalInfo>Open Gallery</AdditionalInfo>
+          {gallery && <AdditionalInfo>Open Gallery</AdditionalInfo>}
         </section>
       </EventMain>
     </div>

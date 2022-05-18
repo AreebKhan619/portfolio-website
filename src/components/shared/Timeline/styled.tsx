@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const TimelineContainer = styled.div``;
 
@@ -7,12 +7,15 @@ export const TimeRange = styled.div`
   position: relative;
   top: 5px;
   text-align: right;
+  width: 150px;
+  min-width: 150px;
 `;
 
 export const EventMain = styled.div`
   position: relative;
   padding-left: 30px;
-  margin-left: 20px;
+  margin-left: 10px;
+  flex: 1;
 
   &::before,
   &::after {

@@ -6,4 +6,5 @@ export interface TimelineEventObject {
   subtitle: StringOrElement;
   eventImg: any;
   points: string[];
+  gallery?: any[]
 }

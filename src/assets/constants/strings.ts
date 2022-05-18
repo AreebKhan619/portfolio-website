@@ -4,6 +4,7 @@ export const Strings: { [k: string]: string } = {
   experience: "Experience",
   testimonials: "Testimonials",
   education: "Education",
+  skills: "Skills",
   connect: "Connect",
   hi: "Hi,",
   iAm: "I'm",

@@ -2,6 +2,7 @@ import { MainBodyContainer } from "./styled";
 
 import Overview from "../../../pages/overview";
 import Experience from "../../../pages/experience";
+import Education from "../../../pages/education";
 
 const MainBody = () => {
   return (
@@ -9,7 +10,7 @@ const MainBody = () => {
       {/* Routing here */}
       <Overview />
       <Experience />
-      <Experience />
+      <Education />
     </MainBodyContainer>
   );
 };
