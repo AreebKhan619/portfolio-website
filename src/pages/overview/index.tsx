@@ -22,7 +22,7 @@ import {
   GMail,
   StackOverflow,
 } from "../../assets/images";
-import SkillsPossessed from "../../components/overview/skills-posssessed";
+import SkillsPossessed from "../../components/overview/skills-possessed";
 import TechSkillsList from "../../components/overview/tech-skills";
 import { Strings } from "../../assets/constants/strings";
 

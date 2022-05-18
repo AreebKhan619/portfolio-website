@@ -4,6 +4,7 @@ import PageTitle from "../../components/shared/PageTitle";
 import Timeline from "../../components/shared/Timeline";
 
 import { CAWStudios } from "../../assets/images";
+import { GenericObject } from "../../ts";
 
 const Experience = () => {
   const experience = [
@@ -27,7 +28,7 @@ const Experience = () => {
   );
 };
 
-const TimelineWrapper = ({ experience }) => {
+const TimelineWrapper = ({ experience }: { experience: GenericObject[] }) => {
   const events = experience.map((exp) => ({
     range: exp.duration,
     title: exp.role,

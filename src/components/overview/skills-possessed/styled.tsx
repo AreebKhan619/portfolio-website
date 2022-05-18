@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-export const SkillContainer = styled.div`
+interface SkillContainerProps {
+  bottom?: string;
+  left?: string;
+  top?: string;
+  right?: string;
+}
+
+export const SkillContainer = styled.div<SkillContainerProps>`
   background-color: white;
   position: absolute;
   padding: 20px 40px;

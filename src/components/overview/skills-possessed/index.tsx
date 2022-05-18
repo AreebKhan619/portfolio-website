@@ -1,5 +1,10 @@
 import { SkillContainer } from "./styled";
 import { ReactJS, Redux, NodeJS } from "../../../assets/images";
+import { FC } from "react";
+
+interface SkillProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactElement;
+}
 
 const SkillsPossessed = () => {
   const skills = [
@@ -24,19 +29,21 @@ const SkillsPossessed = () => {
     <>
       {skills.map((skill) => (
         <Skill style={skill.style}>
-          <img
-            src={skill.imgUri}
-            style={{ width: "2em", marginRight: 5 }}
-            alt={skill.name}
-          />
-          {skill.name}
+          <>
+            <img
+              src={skill.imgUri}
+              style={{ width: "2em", marginRight: 5 }}
+              alt={skill.name}
+            />
+            {skill.name}
+          </>
         </Skill>
       ))}
     </>
   );
 };
 
-const Skill = ({ children, ...rest }) => {
+const Skill: FC<SkillProps> = ({ children, ...rest }) => {
   return <SkillContainer {...rest}>{children}</SkillContainer>;
 };
 

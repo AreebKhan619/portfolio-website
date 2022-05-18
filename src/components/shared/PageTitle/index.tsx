@@ -1,6 +1,6 @@
 import { Title } from "./styled";
 
-const PageTitle = ({ title }) => {
+const PageTitle = ({ title }: { title: string }) => {
   return <Title>{title}</Title>;
 };
 
