@@ -12,6 +12,6 @@ export const Strings: { [k: string]: string } = {
   welcomeTextSuffix2: "Nice to see you here :)",
   yearsOfExperience: "Years of experience",
   coursesAndCerts: "Courses & Certifications",
-  projects: "Projects",
+  projects: "Professional Projects",
   itsMeWaving: "It's me waving :)"
 };

@@ -40,6 +40,7 @@ const Experience = () => {
     <ExperienceOuterContainer>
       <PageTitle title={"Education"} />
       <TimelineWrapper education={education} />
+      <div>Additional thingies: Got 1103<sup>rd</sup> position throughout the valley in JKCET.</div>
     </ExperienceOuterContainer>
   );
 };
