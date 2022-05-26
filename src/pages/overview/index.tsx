@@ -80,27 +80,17 @@ const Overview = () => {
             <StatSubtitle>{Strings.projects}</StatSubtitle>
           </Stat>
         </StatContainerOuter>
-        <div style={{ margin: "20px 0", textAlign: "center" }}>
-          <img style={{ height: 45 }} src={WavyLine} alt={"divider"} />
+        <div className="wavy-line-container">
+          <img src={WavyLine} alt={"divider"} />
         </div>
-        <div id="second_half">
-          <div style={{ margin: "20px 0", display: "flex", columnGap: 10 }}>
-            <div
-              style={{
-                backgroundColor: "black",
-                display: "inline-block",
-                color: "white",
-                alignSelf: "center",
-                padding: "10px 15px",
-                borderRadius: "10px",
-                fontSize: 15,
-              }}
-            >
+        <div id="second-half">
+          <div className="links-container">
+            <div id="resume-link" className="link">
               Download Resume
             </div>
             {links.map((el) => {
               return (
-                <a href={el.url}>
+                <a className="link" href={el.url}>
                   <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
                 </a>
               );

@@ -3,7 +3,13 @@ import { ExperienceOuterContainer } from "./styled";
 import PageTitle from "../../components/shared/PageTitle";
 import Timeline from "../../components/shared/Timeline";
 
-import { CAWStudios, DISQ, Emertech, Freelance } from "../../assets/images";
+import {
+  CAWStudios,
+  DISQ,
+  Emertech,
+  Freelance,
+  ReactJS,
+} from "../../assets/images";
 import { GenericObject } from "../../ts";
 
 const Experience = () => {
@@ -24,7 +30,65 @@ const Experience = () => {
       company: "Emertech Innovations Pvt. Ltd.",
       companyURL: "(External Link Indicator)",
       companyLogo: Emertech,
-      rolesAndResponsibilities: ["Did some things here as well"],
+      rolesAndResponsibilities: [
+        {
+          text: "ERP Management Software",
+          subPoints: [
+            "Led the front-end development for ERP Management Software that helps enterprises in inventory management, invoice generation and throughput estimation.",
+          ],
+          link: "https://invento.agrotrust.io",
+          list: [
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "AntDesign Something",
+            },
+          ],
+        },
+        {
+          text: "Farm to Fork Traceability & Transparency Solution",
+          subPoints: [
+            "Co-led the development for Farm to Fork Traceability & Transparency Solution",
+          ],
+          link: "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738",
+          list: [
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "AntDesign",
+            },
+          ],
+        },
+        {
+          text: "Tripitaka",
+          subPoints: [
+            "Co-led the development for Farm to Fork Traceability & Transparency Solution",
+          ],
+          link: "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738",
+          list: [
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "AntDesign",
+            },
+          ],
+        },
+      ],
       gallery: [],
     },
     {

@@ -11,6 +11,40 @@ export const OverviewContainer = styled.div`
 export const LeftPortion = styled.div`
   flex: 50%;
   color: grey;
+
+  .wavy-line-container {
+    margin: 20px 0;
+    text-align: center;
+
+    img {
+      height: 45px;
+    }
+  }
+
+  #second-half .links-container {
+    margin: 20px 0;
+    display: flex;
+    column-gap: 10px;
+
+    #resume-link {
+      background-color: black;
+      display: inline-block;
+      color: white;
+      align-self: center;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+
+    .link {
+      transition: 0.3s all ease-in-out;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+  }
 `;
 
 export const RightPortion = styled.div`
