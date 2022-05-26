@@ -15,17 +15,35 @@ import { GenericObject } from "../../ts";
 const Experience = () => {
   const experience = [
     {
-      duration: "Jan 2022 - Present",
+      duration: "Jan '22 - Present",
       role: "SDE-2",
       company: "ChimpsAtWork Studios / CAW Studios",
       companyURL: "(External Link Indicator)",
       companyLogo: CAWStudios,
       rolesAndResponsibilities: [
-        "Managed & set-up monorepo architecture and co-lead the shared code development",
+        {
+          text: "BeTagged",
+          subPoints: [
+            "Managed & set-up monorepo architecture and co-lead the shared code development",
+          ],
+          link: "https://incom.betagged.co",
+          list: [
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "AntDesign",
+            },
+          ],
+        },
       ],
     },
     {
-      duration: "June 2019 - Present",
+      duration: "April '20 - Present",
       role: "Full Stack / Lead Front End Developer",
       company: "Emertech Innovations Pvt. Ltd.",
       companyURL: "(External Link Indicator)",
@@ -69,6 +87,16 @@ const Experience = () => {
             },
           ],
         },
+      ],
+      gallery: [],
+    },
+    {
+      duration: "June '19 - Apr 2020",
+      role: "Intern - Front End Developer",
+      company: "Emertech Innovations Pvt. Ltd.",
+      companyURL: "(External Link Indicator)",
+      companyLogo: Emertech,
+      rolesAndResponsibilities: [
         {
           text: "Tripitaka",
           subPoints: [
@@ -86,21 +114,42 @@ const Experience = () => {
               link: null,
               title: "AntDesign",
             },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "AntDesign",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "AntDesign",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "AntDesign",
+            },
           ],
         },
       ],
-      gallery: [],
     },
     {
-      duration: "June 2019 - Present",
-      role: "Intern - Front End Developer",
-      company: "Emertech Innovations Pvt. Ltd.",
-      companyURL: "(External Link Indicator)",
-      companyLogo: Emertech,
-      rolesAndResponsibilities: ["Did some things here as well"],
-    },
-    {
-      duration: "June 2019 - Apr 2020",
+      duration: "June '19 - Apr 2020",
       role: "Innovator",
       company: "Digital Impact Square",
       companyURL: "(External Link Indicator)",
@@ -109,7 +158,7 @@ const Experience = () => {
       gallery: [],
     },
     {
-      duration: "June 2018 - October 2018",
+      duration: "June '18 - Oct 2018",
       role: "Android App Developer",
       company: "(Freelance)",
       companyURL: null,

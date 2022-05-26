@@ -68,14 +68,17 @@ const EventPoint: FC<TimelineEventObject> = ({
               See it live in action: {point.link}
             </a>
             <div className="list">
-              <div style={{ color: "#417e41" }}>Tech Stack:</div>
-              <div className="list-items">
-                {point.list.map(({ icon, link, title }, idx) => (
-                  <div className="item" key={idx}>
-                    <img className="icon" src={icon} alt={title} />
-                    <div className="title">{title}</div>
-                  </div>
-                ))}
+              <div className="bg-img"></div>
+              <div className="content">
+                <div>Libraries/Tools I used:</div>
+                <div className="list-items">
+                  {point.list.map(({ icon, link, title }, idx) => (
+                    <div className="item" key={idx}>
+                      <img className="icon" src={icon} alt={title} />
+                      <div className="title">{title}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -95,9 +98,9 @@ const EventPoint: FC<TimelineEventObject> = ({
       <EventMain>
         <div style={{ display: "flex" }}>
           <img
+            className="event-logo"
             src={eventImg}
             alt={typeof subtitle === "string" ? subtitle : "Event"}
-            style={{ width: 50, height: 50, marginRight: 10, borderRadius: 10 }}
           />
           <div>
             <div
