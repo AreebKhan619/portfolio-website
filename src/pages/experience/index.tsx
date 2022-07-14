@@ -25,6 +25,27 @@ const Experience = () => {
           text: "BeTagged",
           subPoints: [
             "Managed & set-up monorepo architecture and co-lead the shared code development",
+            "Set up the shared logging infrastructure with Segment and error handling with Sentry",
+          ],
+          link: "https://incom.betagged.co",
+          list: [
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: ReactJS,
+              link: null,
+              title: "AntDesign",
+            },
+          ],
+        },
+        {
+          text: "Reeco",
+          subPoints: [
+            "Worked on 3 apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing]",
+            "Implemented optimistic updates and response caching with react-query",
           ],
           link: "https://incom.betagged.co",
           list: [
@@ -43,7 +64,7 @@ const Experience = () => {
       ],
     },
     {
-      duration: "April '20 - Present",
+      duration: "April '20 - March '22",
       role: "Full Stack / Lead Front End Developer",
       company: "Emertech Innovations Pvt. Ltd.",
       companyURL: "(External Link Indicator)",
@@ -91,7 +112,7 @@ const Experience = () => {
       gallery: [],
     },
     {
-      duration: "June '19 - Apr 2020",
+      duration: "June '19 - Apr '20",
       role: "Intern - Front End Developer",
       company: "Emertech Innovations Pvt. Ltd.",
       companyURL: "(External Link Indicator)",
@@ -149,7 +170,7 @@ const Experience = () => {
       ],
     },
     {
-      duration: "June '19 - Apr 2020",
+      duration: "June '19 - Apr '20",
       role: "Innovator",
       company: "Digital Impact Square",
       companyURL: "(External Link Indicator)",
@@ -158,7 +179,7 @@ const Experience = () => {
       gallery: [],
     },
     {
-      duration: "June '18 - Oct 2018",
+      duration: "June '18 - Oct '18",
       role: "Android App Developer",
       company: "(Freelance)",
       companyURL: null,

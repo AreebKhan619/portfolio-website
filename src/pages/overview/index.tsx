@@ -56,7 +56,6 @@ const Overview = () => {
         <div>
           <HiText>{Strings.hi}</HiText>
           <IntroText>
-            {Strings.iAm}{" "}
             <Name>
               Mohammad <MainName>Areeb</MainName> Khan
             </Name>

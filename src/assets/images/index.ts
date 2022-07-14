@@ -13,6 +13,8 @@ import DISQ from "./disq.jpg"
 import Freelance from "./freelance.png"
 import Biscoe from "./biscoe.jpg"
 import GECA from "./geca.png"
+import MongoDB from "./mongodb.webp"
+import ExpressJS from "./expressjs.png"
 
 export {
   Hi,
@@ -29,5 +31,7 @@ export {
   DISQ,
   Freelance,
   Biscoe,
-  GECA
+  GECA,
+  MongoDB,
+  ExpressJS
 };

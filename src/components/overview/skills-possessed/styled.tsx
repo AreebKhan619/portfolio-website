@@ -10,7 +10,7 @@ interface SkillContainerProps {
 export const SkillContainer = styled.div<SkillContainerProps>`
   background-color: white;
   position: absolute;
-  padding: 20px 40px;
+  padding: 10px 25px;
   border-radius: 20px;
   box-shadow: 0 0 5px #9e9e9e66;
   bottom: ${(props) => props.bottom || "unset"};

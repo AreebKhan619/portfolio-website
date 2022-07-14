@@ -32,7 +32,10 @@ const Experience = () => {
       institutionName: "Tyndale Biscoe School",
       institutionURL: "(External Link Indicator)",
       companyLogo: Biscoe,
-      rolesAndResponsibilities: ["Did some things here as well"],
+      rolesAndResponsibilities: [
+        "Scored 20th position state-wide",
+        "Swimming",
+      ],
     },
   ];
 
@@ -40,7 +43,10 @@ const Experience = () => {
     <ExperienceOuterContainer>
       <PageTitle title={"Education"} />
       <TimelineWrapper education={education} />
-      <div>Additional thingies: Got 1103<sup>rd</sup> position throughout the valley in JKCET.</div>
+      <div>
+        Additional thingies: Got 1103<sup>rd</sup> position throughout the
+        valley in JKCET.
+      </div>
     </ExperienceOuterContainer>
   );
 };

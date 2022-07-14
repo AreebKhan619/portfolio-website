@@ -31,9 +31,12 @@ export const NavigationItems = styled.div`
 export const Item = styled.div``;
 
 export const PrimaryActionItem = styled(Item)`
-  /* background-color: ${Colors.black}; */
-  /* color: ${Colors.white}; */
   border: 2px solid #a4cddd;
   padding: 10px 20px;
   border-radius: 25px;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    background-color: ${Colors.black};
+    color: ${Colors.white};
+  }
 `;

@@ -1,5 +1,11 @@
 import { SkillContainer } from "./styled";
-import { ReactJS, Redux, NodeJS } from "../../../assets/images";
+import {
+  ReactJS,
+  Redux,
+  NodeJS,
+  ExpressJS,
+  MongoDB,
+} from "../../../assets/images";
 import { FC } from "react";
 
 interface SkillProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -9,19 +15,30 @@ interface SkillProps extends React.HTMLAttributes<HTMLDivElement> {
 const SkillsPossessed = () => {
   const skills = [
     {
-      name: "React JS",
-      imgUri: ReactJS,
-      style: { bottom: "10%", left: "-20%", backgroundColor: "#e1f6f9" },
-    },
-    {
       name: "Redux",
       imgUri: Redux,
       style: { top: "10%", right: "-10%", backgroundColor: "#e2d5f7" },
     },
     {
+      name: "MongoDB",
+      imgUri: MongoDB,
+      style: { top: "30%", left: "-20%", backgroundColor: "#f2e3d5" },
+    },
+    {
+      name: "Express",
+      imgUri: ExpressJS,
+      style: { top: "50%", right: "-10%", backgroundColor: "#e3ecf4" },
+    },
+    {
+      name: "React JS",
+      imgUri: ReactJS,
+      style: { top: "70%", left: "-20%", backgroundColor: "#e1f6f9" },
+    },
+
+    {
       name: "NodeJS",
       imgUri: NodeJS,
-      style: { bottom: "25%", right: "-10%", backgroundColor: "#b2ecb4" },
+      style: { top: "87%", right: "-10%", backgroundColor: "#b2ecb4" },
     },
   ];
 

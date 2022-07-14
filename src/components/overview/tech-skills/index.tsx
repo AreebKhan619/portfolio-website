@@ -7,6 +7,7 @@ const TechSkillsList = () => {
     "Back-end Development",
     "Mobile App Development",
     "Prototyping",
+    "Testing & TDD",
   ];
 
   return (
