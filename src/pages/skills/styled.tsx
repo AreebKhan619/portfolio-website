@@ -16,6 +16,9 @@ export const SkillsOuterContainer = styled.section`
       .name {
         color: #009688;
         margin-bottom: 10px;
+        &.alternate{
+          color: darkblue;
+        }
       }
       .libraries-used {
         font-size: 15px;

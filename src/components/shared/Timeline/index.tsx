@@ -4,9 +4,9 @@ import LibrariesUsed from "../LibrariesUsed";
 import {
   TimelineContainer,
   TimeRange,
-  EventMain,
   Subtitle,
   AdditionalInfo,
+  EventContainer,
 } from "./styled";
 
 interface TimelineProps {
@@ -77,28 +77,17 @@ const EventPoint: FC<TimelineEventObject> = ({
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-      }}
-    >
+    <EventContainer>
       <TimeRange>{range}</TimeRange>
-      <EventMain>
-        <div style={{ display: "flex" }}>
+      <div className="event-main">
+        <div className="event-point-container">
           <img
             className="event-logo"
             src={eventImg}
             alt={typeof subtitle === "string" ? subtitle : "Event"}
           />
           <div>
-            <div
-              style={{
-                fontWeight: "bold",
-                fontSize: "1.2em",
-              }}
-            >
-              {title}
-            </div>
+            <div className="title">{title}</div>
             <Subtitle>{subtitle}</Subtitle>
           </div>
         </div>
@@ -114,8 +103,8 @@ const EventPoint: FC<TimelineEventObject> = ({
 
           {gallery && <AdditionalInfo>Open Gallery</AdditionalInfo>}
         </section>
-      </EventMain>
-    </div>
+      </div>
+    </EventContainer>
   );
 };
 
