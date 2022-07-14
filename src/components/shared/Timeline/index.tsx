@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { TimelineEventObject } from "../../../ts/interfaces";
+import LibrariesUsed from "../LibrariesUsed";
 import {
   TimelineContainer,
   TimeRange,
@@ -67,20 +68,7 @@ const EventPoint: FC<TimelineEventObject> = ({
             >
               See it live in action: {point.link}
             </a>
-            <div className="list">
-              <div className="bg-img"></div>
-              <div className="content">
-                <div>Libraries/Tools I used:</div>
-                <div className="list-items">
-                  {point.list.map(({ icon, link, title }, idx) => (
-                    <div className="item" key={idx}>
-                      <img className="icon" src={icon} alt={title} />
-                      <div className="title">{title}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <LibrariesUsed list={point.list} />
           </div>
         </div>
       );
