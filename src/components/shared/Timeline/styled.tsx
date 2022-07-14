@@ -55,7 +55,7 @@ export const EventMain = styled.div`
     top: 26px;
   }
 
-  ol{
+  ol {
     list-style: upper-roman;
   }
   .point-details {
@@ -91,7 +91,6 @@ export const EventMain = styled.div`
             filter: brightness(0.9);
           }
         }
-  
       }
     }
   }
@@ -102,11 +101,14 @@ export const Subtitle = styled.div`
 `;
 
 export const AdditionalInfo = styled.div`
-  padding: 20px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
   box-shadow: 0 0 2px 0px #c9c0c0;
+
+  font-size: 15px;
+  padding: 15px;
+
   &:hover {
     background-color: #e3ecf4;
   }

@@ -87,9 +87,9 @@ const Overview = () => {
             <div id="resume-link" className="link">
               Download Resume
             </div>
-            {links.map((el) => {
+            {links.map((el, idx) => {
               return (
-                <a className="link" href={el.url}>
+                <a className="link" key={idx} href={el.url}>
                   <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
                 </a>
               );

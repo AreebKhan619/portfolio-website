@@ -12,8 +12,8 @@ const TechSkillsList = () => {
 
   return (
     <TechSkillsContainer>
-      {skills.map((el) => (
-        <SkillCapsule>{el}</SkillCapsule>
+      {skills.map((el, idx) => (
+        <SkillCapsule key={idx}>{el}</SkillCapsule>
       ))}
     </TechSkillsContainer>
   );

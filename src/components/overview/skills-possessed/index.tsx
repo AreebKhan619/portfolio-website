@@ -44,8 +44,8 @@ const SkillsPossessed = () => {
 
   return (
     <>
-      {skills.map((skill) => (
-        <Skill style={skill.style}>
+      {skills.map((skill, idx) => (
+        <Skill key={idx} style={skill.style}>
           <>
             <img
               src={skill.imgUri}

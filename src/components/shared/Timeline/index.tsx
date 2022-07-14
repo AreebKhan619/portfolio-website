@@ -29,8 +29,8 @@ interface IList {
 const Timeline: FC<TimelineProps> = ({ events }): JSX.Element => {
   return (
     <TimelineContainer>
-      {events.map((e) => (
-        <EventPoint {...e} />
+      {events.map((e, idx) => (
+        <EventPoint {...e} key={idx} />
       ))}
     </TimelineContainer>
   );
@@ -51,7 +51,7 @@ const EventPoint: FC<TimelineEventObject> = ({
     else if (typeof point == "object") {
       return (
         <div className="extended">
-          <div>{point.text}</div>
+          <div className="dashed-underline">{point.text}</div>
           {point.subPoints && (
             <ul className="subpoints">
               {point.subPoints.map((_subPt, _idx) => (
@@ -105,8 +105,10 @@ const EventPoint: FC<TimelineEventObject> = ({
 
         <section style={{ marginBottom: 50 }}>
           <ol>
-            {points?.map((point) => (
-              <li className="point-details">{renderPoint(point)}</li>
+            {points?.map((point, idx) => (
+              <li className="point-details" key={idx}>
+                {renderPoint(point)}
+              </li>
             ))}
           </ol>
 
