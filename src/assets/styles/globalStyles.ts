@@ -8,7 +8,7 @@ export default createGlobalStyle`
 }
 
 html{
-  font-size: 1rem;
+  font-size: 10px;
 }
   body{
     margin: 0;
