@@ -5,6 +5,28 @@ import { SkillsOuterContainer } from "./styled";
 
 const projectsList = [
   {
+    name: "Portfolio",
+    description:
+      "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",
+    skillsList: [
+      {
+        icon: ReactJS,
+        link: null,
+        title: "ReactJS",
+      },
+      {
+        icon: ReactJS,
+        link: null,
+        title: "AntDesign",
+      },
+      {
+        icon: ReactJS,
+        link: null,
+        title: "ReactJS",
+      },
+    ],
+  },
+  {
     name: "2048",
     description:
       "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",

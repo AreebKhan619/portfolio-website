@@ -10,14 +10,14 @@ interface SkillContainerProps {
 export const SkillContainer = styled.div<SkillContainerProps>`
   background-color: white;
   position: absolute;
-  padding: 10px 25px;
-  border-radius: 20px;
-  box-shadow: 0 0 5px #9e9e9e66;
+  padding: 1rem 2.5rem;
+  border-radius: 20rem;
+  box-shadow: 0 0 0.5rem #9e9e9e66;
   bottom: ${(props) => props.bottom || "unset"};
   left: ${(props) => props.left || "unset"};
   top: ${(props) => props.top || "unset"};
   right: ${(props) => props.right || "unset"};
-  font-size: 15px;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   font-weight: bold;

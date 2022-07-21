@@ -26,6 +26,13 @@ import SkillsPossessed from "../../components/overview/skills-possessed";
 import TechSkillsList from "../../components/overview/tech-skills";
 import { Strings } from "../../assets/constants/strings";
 
+import { motion } from "framer-motion";
+import {
+  getOnClickAnimationProps,
+  getScaleAnimationProps,
+  getWaveAnimationProps,
+} from "../../assets/constants/motionProps";
+
 const links = [
   {
     name: "GitHub",
@@ -56,7 +63,7 @@ const Overview = () => {
         <div>
           <HiText>{Strings.hi}</HiText>
           <IntroText>
-            <Name>
+            <Name as={motion.div} {...getScaleAnimationProps()}>
               Mohammad <MainName>Areeb</MainName> Khan
             </Name>
           </IntroText>
@@ -84,14 +91,21 @@ const Overview = () => {
         </div>
         <div id="second-half">
           <div className="links-container">
-            <div id="resume-link" className="link">
+            <motion.div id="resume-link" {...getOnClickAnimationProps()}>
               Download Resume
-            </div>
+            </motion.div>
             {links.map((el, idx) => {
               return (
-                <a className="link" key={idx} href={el.url}>
-                  <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
-                </a>
+                <motion.div key={idx} {...getOnClickAnimationProps()}>
+                  <a
+                    className="link"
+                    href={el.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
+                  </a>
+                </motion.div>
               );
             })}
           </div>
@@ -104,7 +118,12 @@ const Overview = () => {
         <ImageAndSkills>
           <SkillsPossessed />
           {/* Replace .gif with .avif with gif as fallback */}
-          <WaveImgContainer src={Hi} alt={Strings.itsMeWaving} />
+          <WaveImgContainer
+            as={motion.img}
+            src={Hi}
+            alt={Strings.itsMeWaving}
+            {...getWaveAnimationProps()}
+          />
         </ImageAndSkills>
       </RightPortion>
     </OverviewContainer>

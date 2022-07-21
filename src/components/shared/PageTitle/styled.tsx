@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.h3`
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bold;
   position: relative;
 
@@ -10,8 +10,8 @@ export const Title = styled.h3`
     content: "";
     position: absolute;
     bottom: 0;
-    height: 3px;
-    border-radius: 3px;
+    height: .3rem;
+    border-radius: .3rem;
     background-color: #abd2e2;
   }
 
@@ -21,7 +21,7 @@ export const Title = styled.h3`
   }
 
   &::after{
-    left: calc(40% + 10px);
-    width: 30px;
+    left: calc(40% + 1rem);
+    width: 3rem;
   }
 `;

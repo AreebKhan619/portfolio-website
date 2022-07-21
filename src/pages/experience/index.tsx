@@ -22,7 +22,7 @@ const Experience = () => {
       companyLogo: CAWStudios,
       rolesAndResponsibilities: [
         {
-          text: "BeTagged",
+          text: "BeTagged - A Social Media Marketing Platform",
           subPoints: [
             "Managed & set-up monorepo architecture and co-lead the shared code development",
             "Set up the shared logging infrastructure with Segment and error handling with Sentry",
@@ -42,7 +42,7 @@ const Experience = () => {
           ],
         },
         {
-          text: "Reeco",
+          text: "Reeco - A Restaurant Procurement Platform",
           subPoints: [
             "Worked on 3 apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing]",
             "Implemented optimistic updates and response caching with react-query",

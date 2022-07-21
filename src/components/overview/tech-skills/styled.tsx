@@ -2,21 +2,21 @@ import styled from "styled-components";
 
 export const TechSkillsContainer = styled.div`
   display: flex;
-  max-width: 500px;
+  max-width: 50rem;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
 `;
 
 export const SkillCapsule = styled.div`
-  border-radius: 20px;
-  padding: 10px 15px;
-  font-size: 15px;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
   cursor: pointer;
   position: relative;
   font-weight: bold;
   background-color: white;
-  border: 1px dashed;
+  border: .1rem dashed;
 
   &:nth-child(4n+1) {
     color: #a2660d;

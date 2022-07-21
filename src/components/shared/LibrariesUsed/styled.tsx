@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LibrariesUsedContainer = styled.div`
   .list {
-    border-radius: 5px;
+    border-radius:.5rem;
     background: white;
     position: relative;
     overflow: hidden;
@@ -26,20 +26,20 @@ export const LibrariesUsedContainer = styled.div`
     .content {
       z-index: 1;
       position: relative;
-      padding: 5px 10px;
+      padding:.5rem 1rem;
     }
   }
   .list-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 10px;
+    gap: 2rem;
+    margin-top: 1rem;
     .item {
       text-align: center;
-      width: 80px;
+      width: 8rem;
       img.icon {
-        width: 45px;
-        height: 45px;
+        width: 4.5rem;
+        height: 4.5rem;
         object-fit: cover;
       }
       .title {

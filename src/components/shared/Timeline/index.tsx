@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { FC } from "react";
+import { getFadeInProps } from "../../../assets/constants/motionProps";
 import { TimelineEventObject } from "../../../ts/interfaces";
 import LibrariesUsed from "../LibrariesUsed";
 import {
@@ -77,7 +79,7 @@ const EventPoint: FC<TimelineEventObject> = ({
   };
 
   return (
-    <EventContainer>
+    <EventContainer as={motion.div} {...getFadeInProps()}>
       <TimeRange>{range}</TimeRange>
       <div className="event-main">
         <div className="event-point-container">

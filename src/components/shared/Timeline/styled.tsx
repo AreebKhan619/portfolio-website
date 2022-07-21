@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const TimelineContainer = styled.div``;
 
 export const TimeRange = styled.div`
-  font-size: 15px;
+  font-size: 1.5rem;
   position: relative;
-  top: 5px;
+  top: 0.5rem;
   text-align: right;
-  width: 150px;
-  min-width: 150px;
+  width: 15rem;
+  min-width: 15rem;
 `;
 
 export const EventContainer = styled.div`
@@ -16,8 +16,8 @@ export const EventContainer = styled.div`
 
   .event-main {
     position: relative;
-    padding-left: 30px;
-    margin-left: 10px;
+    padding-left: 3rem;
+    margin-left: 1rem;
     flex: 1;
 
     .event-point-container {
@@ -32,14 +32,14 @@ export const EventContainer = styled.div`
     &::after {
       content: "";
       position: absolute;
-      left: 10px;
+      left: 1rem;
     }
 
     .event-logo {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
-      border-radius: 10px;
+      width: 5rem;
+      height: 5rem;
+      margin-right: 1rem;
+      border-radius: 1rem;
       position: relative;
 
       &::before {
@@ -51,41 +51,45 @@ export const EventContainer = styled.div`
     }
 
     &::before {
-      height: 10px;
-      width: 10px;
+      height: 1rem;
+      width: 1rem;
       background-color: black;
       border-radius: 50%;
-      top: calc(0.5em - 2.5px);
+      top: calc(0.5em - 2.5rem);
     }
 
     &::after {
-      height: calc(100% - 30px);
-      width: 1px;
-      left: 14px;
+      height: calc(100% - 3rem);
+      width: 0.1rem;
+      left: 1.4rem;
       background: #efb969;
-      top: 26px;
+      top: 2.6rem;
     }
 
     ol {
       list-style: upper-roman;
     }
     .point-details {
-      margin-bottom: 25px;
+      margin-bottom: 2.5rem;
+      &:marker {
+        color: grey;
+      }
 
       .extended {
+        margin-block: 2rem;
         .subpoints {
-          margin: 10px 0;
+          margin: 2rem 0;
           list-style-type: disc;
           color: #646464;
           li {
-            margin-block-end: 5px;
+            margin-block-end: 0.5rem;
           }
         }
         .supporting-items {
-          font-size: 14px;
+          font-size: 1.4rem;
           a.link {
-            margin: 10px 0;
-            border-radius: 5px;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
             text-decoration: none;
 
             display: -webkit-box;
@@ -113,13 +117,13 @@ export const Subtitle = styled.div`
 `;
 
 export const AdditionalInfo = styled.div`
-  border-radius: 10px;
+  border-radius: 1rem;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
-  box-shadow: 0 0 2px 0px #c9c0c0;
+  box-shadow: 0 0 .2rem 0 #c9c0c0;
 
-  font-size: 15px;
-  padding: 15px;
+  font-size: 1.5rem;
+  padding: 1.5rem;
 
   &:hover {
     background-color: #e3ecf4;
