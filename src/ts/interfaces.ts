@@ -8,3 +8,7 @@ export interface TimelineEventObject {
   points: string[];
   gallery?: any[]
 }
+
+export interface CircleColorProps {
+  circleColor?: string;
+}

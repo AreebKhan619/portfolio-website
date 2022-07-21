@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CrayonUnderline, BgImgPattern } from "../../assets/images";
 
 export const OverviewContainer = styled.div`
   height: calc(
@@ -72,12 +73,21 @@ export const Name = styled.div`
 `;
 
 export const MainName = styled.span`
-  text-decoration: underline;
   color: #417e41;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: calc(100% - 8px);
+    left: 0px;
+    background: url(${CrayonUnderline}) top center / contain no-repeat;
+  }
 `;
 
 export const StatContainerOuter = styled.div.attrs((props) => ({
-  className: `${props.className} circle-blob-left`,
+  className: props.className + ` circle-blob-left`,
 }))`
   display: flex;
   margin: 2rem 0;
@@ -103,10 +113,28 @@ export const WaveImgContainer = styled.img`
   width: 100%;
   max-height: 60rem;
   border-radius: 1rem;
-  box-shadow: -2rem 2rem #e4dfe061;
-  margin-top: 3rem;
+  position: relative;
 `;
 
 export const ImageAndSkills = styled.div`
   position: absolute;
+  .img-container {
+    margin-top: 3rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 95%;
+      width: 100%;
+      left: -2rem;
+      top: 2rem;
+      background: url(${BgImgPattern});
+      background-size: 5px;
+      border-radius: 10%;
+      transform: rotate(20deg);
+      background-color: #ffffff80;
+      background-blend-mode: hue;
+    }
+  }
 `;

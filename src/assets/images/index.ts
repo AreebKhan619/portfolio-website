@@ -15,6 +15,8 @@ import Biscoe from "./biscoe.jpg"
 import GECA from "./geca.png"
 import MongoDB from "./mongodb.webp"
 import ExpressJS from "./expressjs.png"
+import CrayonUnderline from "./underline.png"
+import BgImgPattern from "./pattern.png"
 
 export {
   Hi,
@@ -33,5 +35,7 @@ export {
   Biscoe,
   GECA,
   MongoDB,
-  ExpressJS
+  ExpressJS,
+  CrayonUnderline,
+  BgImgPattern
 };

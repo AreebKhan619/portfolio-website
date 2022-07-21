@@ -21,4 +21,5 @@ export const SkillContainer = styled.div<SkillContainerProps>`
   display: flex;
   align-items: center;
   font-weight: bold;
+  z-index: 1;
 `;

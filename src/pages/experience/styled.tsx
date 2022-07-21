@@ -1,8 +1,5 @@
 import styled from "styled-components";
-
-interface CircleColorProps {
-  circleColor?: string;
-}
+import { CircleColorProps } from "../../ts";
 
 export const ExperienceOuterContainer = styled.div.attrs((props) => ({
   className: props.className + " circle-blob-left",
