@@ -52,6 +52,9 @@ export const RightPortion = styled.div`
   flex: 50%;
   display: flex;
   justify-content: flex-end;
+
+  height: 100%;
+  position: relative;
 `;
 
 export const HiText = styled.span``;
@@ -97,6 +100,7 @@ export const StatSubtitle = styled.div`
 `;
 
 export const WaveImgContainer = styled.img`
+  width: 100%;
   max-height: 60rem;
   border-radius: 1rem;
   box-shadow: -2rem 2rem #e4dfe061;
@@ -104,5 +108,5 @@ export const WaveImgContainer = styled.img`
 `;
 
 export const ImageAndSkills = styled.div`
-  position: relative;
+  position: absolute;
 `;

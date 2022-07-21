@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Colors } from "../../../assets/styles/colors";
 
 export const MainBodyContainer = styled.div`
-  padding: 0 15rem 8rem;
+  padding: 0 10vw 8rem;
   margin-top: 8.5rem;
   background-color: ${Colors.blue};
 
