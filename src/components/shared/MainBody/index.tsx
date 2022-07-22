@@ -4,6 +4,7 @@ import Overview from "../../../pages/overview";
 import Experience from "../../../pages/experience";
 import Education from "../../../pages/education";
 import Skills from "../../../pages/skills";
+import Hobbies from "../../../pages/hobbies";
 
 const MainBody = () => {
   return (
@@ -13,6 +14,7 @@ const MainBody = () => {
       <Experience />
       <Skills />
       <Education />
+      <Hobbies />
     </MainBodyContainer>
   );
 };

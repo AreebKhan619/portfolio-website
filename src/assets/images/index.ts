@@ -17,6 +17,7 @@ import MongoDB from "./mongodb.webp"
 import ExpressJS from "./expressjs.png"
 import CrayonUnderline from "./underline.png"
 import BgImgPattern from "./pattern.png"
+import WebDev from "./web_dev.jpg"
 
 export {
   Hi,
@@ -37,5 +38,6 @@ export {
   MongoDB,
   ExpressJS,
   CrayonUnderline,
-  BgImgPattern
+  BgImgPattern,
+  WebDev
 };
