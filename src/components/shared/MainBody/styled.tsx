@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { breakpoints } from "../../../assets/styles/breakpoints";
 import { Colors } from "../../../assets/styles/colors";
 
-export const MainBodyContainer = styled.div`
-  padding: 0 var(--padding-x) 8rem;
-  margin-top: 8.5rem;
+export const MainBodyContainer = styled.main`
+  padding: 2rem var(--padding-x) 8rem;
+  margin-top: 6.5rem;
   background-color: ${Colors.blue};
 
   .dashed-underline {

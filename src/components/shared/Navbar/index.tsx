@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { getOnClickAnimationProps } from "../../../assets/constants/motionProps";
 import { Strings } from "../../../assets/constants/strings";
 import { breakpoints } from "../../../assets/styles/breakpoints";
@@ -49,13 +50,34 @@ const Navbar = () => {
         ) : (
           <LargerDisplayNavItems links={links} />
         )}
+
+        <PrimaryActionItem as={motion.div} {...getOnClickAnimationProps()}>
+          {Strings.connect}
+        </PrimaryActionItem>
       </NavigationItems>
     </NavbarOuterContainer>
   );
 };
 
-const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = () => {
-  return <div>Hamburger</div>;
+const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <>
+      <button style={{ order: 1 }} onClick={() => setIsExpanded(!isExpanded)}>
+        Hamburger
+      </button>
+      {isExpanded && (
+        <motion.div className="small-nav-container">
+          {links.map((link, idx) => (
+            <div className="item" key={idx}>
+              {link.name}
+            </div>
+          ))}
+        </motion.div>
+      )}
+    </>
+  );
 };
 
 const LargerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
@@ -64,9 +86,6 @@ const LargerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
       {links.map((link, idx) => {
         return <Item key={idx}>{link.name}</Item>;
       })}
-      <PrimaryActionItem as={motion.div} {...getOnClickAnimationProps()}>
-        {Strings.connect}
-      </PrimaryActionItem>
     </>
   );
 };
