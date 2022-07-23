@@ -61,15 +61,15 @@ export const EventContainer = styled.div`
       width: 1rem;
       background-color: black;
       border-radius: 50%;
-      top: calc(0.5em - 2.5rem);
+      top: 0;
     }
 
     &::after {
-      height: calc(100% - 3rem);
+      height: 100%;
       width: 0.1rem;
       left: 1.4rem;
       background: #efb969;
-      top: 2.6rem;
+      top: 1rem;
     }
 
     ol {

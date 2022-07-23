@@ -9,7 +9,7 @@ import { GenericObject } from "../../ts";
 const Experience = () => {
   const education = [
     {
-      duration: "July '17 - Oct 2020",
+      duration: "July '17 - Oct '20",
       role: "Bachelors in Computer Science (B.E - C.S.E)",
       institutionName: "Government College of Engineering, Aurangabad",
       institutionURL: "(External Link Indicator)",
@@ -19,7 +19,7 @@ const Experience = () => {
       ],
     },
     {
-      duration: "June '02 - June 2015",
+      duration: "June '02 - June '15",
       role: "HSC (12th)",
       institutionName: "Tyndale Biscoe School",
       institutionURL: "(External Link Indicator)",
@@ -27,7 +27,7 @@ const Experience = () => {
       // rolesAndResponsibilities: ["Did some things here as well"],
     },
     {
-      duration: "June '02 - June 2015",
+      duration: "June '02 - June '15",
       role: "SSC (10th)",
       institutionName: "Tyndale Biscoe School",
       institutionURL: "(External Link Indicator)",
