@@ -11,11 +11,9 @@ import {
   Stat,
   WaveImgContainer,
   OverviewContainer,
-  ImageAndSkills,
 } from "./styled";
 
 import {
-  Hi,
   WavyLine,
   GitHub,
   LinkedIn,
@@ -116,18 +114,19 @@ const Overview = () => {
       </LeftPortion>
 
       <RightPortion>
-        <ImageAndSkills>
+        <div className="img-and-skills">
           <SkillsPossessed />
           {/* Replace .gif with .avif with gif as fallback */}
           <div className="img-container">
             <WaveImgContainer
+              className="hero-img"
               as={motion.img}
               src={WebDev}
               alt={Strings.itsMeWaving}
               {...getWaveAnimationProps()}
             />
           </div>
-        </ImageAndSkills>
+        </div>
       </RightPortion>
     </OverviewContainer>
   );

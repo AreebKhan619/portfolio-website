@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../../assets/styles/breakpoints";
 
 export const TimelineContainer = styled.div``;
 
@@ -9,6 +10,11 @@ export const TimeRange = styled.div`
   text-align: right;
   width: 15rem;
   min-width: 15rem;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    width: 7rem;
+    min-width: 7rem;
+  }
 `;
 
 export const EventContainer = styled.div`
@@ -110,6 +116,23 @@ export const EventContainer = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    .event-main {
+      ul.subpoints,
+      ol {
+        padding-inline-start: 2rem;
+      }
+      .point-details .extended {
+        .supporting-items a.link {
+          width: 100%;
+        }
+        .dashed-underline {
+          display: block;
+        }
+      }
+    }
+  }
 `;
 
 export const Subtitle = styled.div`
@@ -120,7 +143,7 @@ export const AdditionalInfo = styled.div`
   border-radius: 1rem;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
-  box-shadow: 0 0 .2rem 0 #c9c0c0;
+  box-shadow: 0 0 0.2rem 0 #c9c0c0;
 
   font-size: 1.5rem;
   padding: 1.5rem;

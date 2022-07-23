@@ -6,7 +6,7 @@ import {
   ExpressJS,
   MongoDB,
 } from "../../../assets/images";
-import { FC } from "react";
+import React, { FC } from "react";
 
 interface SkillProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactElement;
@@ -45,13 +45,9 @@ const SkillsPossessed = () => {
   return (
     <>
       {skills.map((skill, idx) => (
-        <Skill key={idx} style={skill.style}>
+        <Skill className="skill" key={idx} style={skill.style}>
           <>
-            <img
-              src={skill.imgUri}
-              style={{ width: "2em", marginRight: 5 }}
-              alt={skill.name}
-            />
+            <img className="icon" src={skill.imgUri} alt={skill.name} />
             {skill.name}
           </>
         </Skill>

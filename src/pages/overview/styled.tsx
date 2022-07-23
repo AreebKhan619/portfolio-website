@@ -1,12 +1,57 @@
 import styled from "styled-components";
 import { CrayonUnderline, BgImgPattern } from "../../assets/images";
+import { breakpoints } from "../../assets/styles/breakpoints";
 
 export const OverviewContainer = styled.div`
-  height: calc(
+  /* height: calc(
     100vh - 10rem - 2.5rem
-  ); // full - navbar padding - font size of navbar
+  ); // full - navbar padding - font size of navbar */
   display: flex;
   align-items: center;
+
+  .img-and-skills {
+    position: relative;
+    .img-container {
+      margin-top: 3rem;
+      position: relative;
+
+      .hero-img {
+        width: 100%;
+        max-height: 60rem;
+        border-radius: 1rem;
+        position: relative;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 95%;
+        width: 100%;
+        left: -2rem;
+        top: 2rem;
+        background: url(${BgImgPattern});
+        background-size: 5px;
+        border-radius: 10%;
+        transform: rotate(20deg);
+        background-color: #ffffff80;
+        background-blend-mode: hue;
+      }
+    }
+  }
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+
+    .img-and-skills {
+      .img-container > .hero-img {
+        max-width: 200px;
+      }
+
+      .skill {
+        transform: scale(0.7);
+      }
+    }
+  }
 `;
 
 export const LeftPortion = styled.div`
@@ -66,6 +111,10 @@ export const IntroText = styled.h2`
   line-height: 1.1;
   font-size: 5rem;
   color: darkgrey;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    font-size: 4rem;
+  }
 `;
 
 export const Name = styled.div`
@@ -87,12 +136,17 @@ export const MainName = styled.span`
 `;
 
 export const StatContainerOuter = styled.div.attrs((props) => ({
-  className: props.className + ` circle-blob-left`,
+  className: (props.className || "") + ` circle-blob-left`,
 }))`
   display: flex;
   margin: 2rem 0;
   column-gap: 3rem;
   position: relative;
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 `;
 
 export const Stat = styled.div`
@@ -114,27 +168,4 @@ export const WaveImgContainer = styled.img`
   max-height: 60rem;
   border-radius: 1rem;
   position: relative;
-`;
-
-export const ImageAndSkills = styled.div`
-  position: absolute;
-  .img-container {
-    margin-top: 3rem;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      height: 95%;
-      width: 100%;
-      left: -2rem;
-      top: 2rem;
-      background: url(${BgImgPattern});
-      background-size: 5px;
-      border-radius: 10%;
-      transform: rotate(20deg);
-      background-color: #ffffff80;
-      background-blend-mode: hue;
-    }
-  }
 `;

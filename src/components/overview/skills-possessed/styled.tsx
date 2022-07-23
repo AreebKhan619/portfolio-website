@@ -22,4 +22,9 @@ export const SkillContainer = styled.div<SkillContainerProps>`
   align-items: center;
   font-weight: bold;
   z-index: 1;
+
+  .icon {
+    width: 3rem;
+    margin-right: 0.5rem;
+  }
 `;
