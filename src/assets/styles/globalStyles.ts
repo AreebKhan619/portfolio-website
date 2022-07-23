@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { RubikVariable } from "../fonts/Rubik";
+import { breakpoints } from "./breakpoints";
 
 export default createGlobalStyle`
 @font-face {
@@ -7,13 +8,41 @@ export default createGlobalStyle`
   src: url(${RubikVariable}) format('truetype');
 }
 
-html{
-  font-size: 10px;
-}
+  html{
+    font-size: 10px;
+    --padding-x: 6rem;  
+
+    @media screen and (max-width: ${breakpoints.large}) {
+        --padding-x: 2rem;
+    }
+
+    @media screen and (min-width: ${breakpoints.extraExtraLarge}) {
+        --padding-x: 8rem;
+    }
+     
+    @media screen and (min-width: 1360px) {
+       --padding-x: 12rem;
+    }
+
+    @media screen and (min-width: 1480px) {
+        --padding-x: 18rem;
+    }
+
+    @media screen and (min-width: ${breakpoints.extraExtraLarge}) {
+        --padding-x: 22rem;
+    }
+  
+    @media screen and (min-width: 1800px) {
+        --padding-x: 30rem;
+    }
+  }
+
   body{
     margin: 0;
     padding: 0;
+
   }
+
   *{
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
@@ -23,6 +52,8 @@ html{
   width: .5rem;
   height: .5rem;
 }
+
+
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -51,4 +82,5 @@ html{
     background-color: #f9e1af61;
   }
 }
+
 `;

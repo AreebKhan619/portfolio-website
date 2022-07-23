@@ -3,7 +3,7 @@ import { Colors } from "../../../assets/styles/colors";
 
 export const NavbarOuterContainer = styled.div`
   font-size: 2.5rem;
-  padding: 2rem min(10vw, 15rem);
+  padding: 2rem var(--padding-x);
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -71,7 +71,7 @@ const Experience = () => {
       companyLogo: Emertech,
       rolesAndResponsibilities: [
         {
-          text: "ERP Management Software",
+          text: "Invento - ERP Management Software",
           subPoints: [
             "Led the front-end development for ERP Management Software that helps enterprises in inventory management, invoice generation and throughput estimation.",
           ],
@@ -90,7 +90,7 @@ const Experience = () => {
           ],
         },
         {
-          text: "Farm to Fork Traceability & Transparency Solution",
+          text: "QRiosity - Farm to Fork Traceability & Transparency Solution",
           subPoints: [
             "Co-led the development for Farm to Fork Traceability & Transparency Solution",
           ],
@@ -119,11 +119,11 @@ const Experience = () => {
       companyLogo: Emertech,
       rolesAndResponsibilities: [
         {
-          text: "Tripitaka",
+          text: "DhammaEdicts - Verse",
           subPoints: [
             "Co-led the development for Farm to Fork Traceability & Transparency Solution",
           ],
-          link: "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738",
+          link: "https://dhammaedicts-block.com",
           list: [
             {
               icon: ReactJS,
