@@ -40,7 +40,7 @@ const Experience = () => {
   ];
 
   return (
-    <ExperienceOuterContainer>
+    <ExperienceOuterContainer className="inner-padding">
       <PageTitle title={"Education"} />
       <TimelineWrapper education={education} />
       <div>

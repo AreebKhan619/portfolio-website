@@ -139,7 +139,7 @@ const certificationsList = [
 
 const Skills = () => {
   return (
-    <SkillsOuterContainer circleColor={"#c8d8ff61"}>
+    <SkillsOuterContainer className="inner-padding" circleColor={"#c8d8ff61"}>
       <PageTitle title={"Skills & Personal Projects"} />
       <div className="personal-projects-container">
         <div className="bold">Personal Projects</div>

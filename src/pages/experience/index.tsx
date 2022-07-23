@@ -189,7 +189,7 @@ const Experience = () => {
   ];
 
   return (
-    <ExperienceOuterContainer>
+    <ExperienceOuterContainer className="inner-padding">
       <PageTitle title={"Experience"} />
       <TimelineWrapper experience={experience} />
     </ExperienceOuterContainer>

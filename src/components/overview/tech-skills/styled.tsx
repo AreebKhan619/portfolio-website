@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../../assets/styles/breakpoints";
 
 export const TechSkillsContainer = styled.div`
   display: flex;
@@ -16,21 +17,22 @@ export const SkillCapsule = styled.div`
   position: relative;
   font-weight: bold;
   background-color: white;
-  border: .1rem dashed;
+  border: 0.1rem dashed;
 
-  &:nth-child(4n+1) {
+  &:nth-child(4n + 1) {
     color: #a2660d;
   }
-  &:nth-child(4n+2) {
+  &:nth-child(4n + 2) {
     color: #255567;
   }
-  &:nth-child(4n+3) {
+  &:nth-child(4n + 3) {
     color: #3f51b5;
   }
   &:nth-child(4n) {
     color: grey;
   }
 
-  &:hover {
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    font-size: 1.2rem;
   }
 `;

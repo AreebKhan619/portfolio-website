@@ -92,6 +92,12 @@ export const LeftPortion = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    #second-half .links-container{
+      justify-content: center;
+    }
+  }
 `;
 
 export const RightPortion = styled.div`

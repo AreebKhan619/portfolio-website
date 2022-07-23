@@ -4,7 +4,6 @@ import { CircleColorProps } from "../../ts";
 export const SkillsOuterContainer = styled.section.attrs((props) => ({
   className: props.className + " circle-blob-left",
 }))<CircleColorProps>`
-  padding: 0 15rem;
   margin-block: 10rem;
 
   &:before {

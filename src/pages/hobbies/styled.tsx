@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const HobbiesOuterContainer = styled.div`
   margin-top: 10rem;
-  padding: 0 15rem;
 
   position: relative;
 
