@@ -1,6 +1,9 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { getOnClickAnimationProps } from "../../../assets/constants/motionProps";
+import {
+  getOnClickAnimationProps,
+  getSlideInProps,
+} from "../../../assets/constants/motionProps";
 import { Strings } from "../../../assets/constants/strings";
 import { breakpoints } from "../../../assets/styles/breakpoints";
 import { useMaxWidthQuery } from "../../../hooks/useMediaQuery";
@@ -64,18 +67,27 @@ const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
 
   return (
     <>
-      <button style={{ order: 1 }} onClick={() => setIsExpanded(!isExpanded)}>
+      <button
+        style={{ order: 1 }}
+        onClick={() => setIsExpanded((state) => !state)}
+      >
         Hamburger
       </button>
-      {isExpanded && (
-        <motion.div className="small-nav-container">
-          {links.map((link, idx) => (
-            <div className="item" key={idx}>
-              {link.name}
-            </div>
-          ))}
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            key="mobile-links"
+            {...getSlideInProps()}
+            className="small-nav-container"
+          >
+            {links.map((link, idx) => (
+              <div className="item" key={idx}>
+                {link.name}
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

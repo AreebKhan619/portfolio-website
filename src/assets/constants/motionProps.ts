@@ -20,6 +20,27 @@ export const getFadeInProps = (): HTMLMotionProps<"div"> => {
   })
 }
 
+export const getSlideInProps = (): HTMLMotionProps<"div"> => {
+  return ({
+    initial: {
+      height: 0,
+      opacity: 0,
+    },
+    animate: {
+      height: 'auto',
+      opacity: 1,
+    },
+    transition: {
+      type: 'tween',
+      duration: 0.1
+    },
+    exit: {
+      y: '-10%',
+      opacity: 0,
+    }
+  })
+}
+
 export const getOnClickAnimationProps = (): HTMLMotionProps<"div"> => {
   return ({
     whileTap: { scale: 0.9 }

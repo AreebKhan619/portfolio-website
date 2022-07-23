@@ -37,7 +37,7 @@ export const NavigationItems = styled.nav`
     top: 6rem;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: aliceblue;
     cursor: initial;
     box-shadow: 0px 1px 2px #b7b7b796;
     padding: 2rem var(--padding-x);
