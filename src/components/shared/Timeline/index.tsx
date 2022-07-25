@@ -1,6 +1,9 @@
-import { motion } from "framer-motion";
-import { FC } from "react";
-import { getFadeInProps } from "../../../assets/constants/motionProps";
+import { AnimatePresence, motion } from "framer-motion";
+import { FC, useEffect, useState } from "react";
+import {
+  getFadeInProps,
+  getSlideInProps,
+} from "../../../assets/constants/motionProps";
 import { TimelineEventObject } from "../../../ts/interfaces";
 import LibrariesUsed from "../LibrariesUsed";
 import {
@@ -13,6 +16,7 @@ import {
 
 interface TimelineProps {
   events: TimelineEventObject[];
+  isCollapsible?: boolean;
 }
 
 interface ExtendedDetails<T> {
@@ -28,11 +32,14 @@ interface IList {
   title: string;
 }
 
-const Timeline: FC<TimelineProps> = ({ events }): JSX.Element => {
+const Timeline: FC<TimelineProps> = ({
+  events,
+  isCollapsible = false,
+}): JSX.Element => {
   return (
     <TimelineContainer className="timeline">
       {events.map((e, idx) => (
-        <EventPoint {...e} key={idx} />
+        <EventPoint isCollapsible={isCollapsible} {...e} key={idx} />
       ))}
     </TimelineContainer>
   );
@@ -45,7 +52,15 @@ const EventPoint: FC<TimelineEventObject> = ({
   eventImg,
   points,
   gallery,
+  isCollapsible = false,
+  bgColor,
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    if (!isCollapsible) setIsExpanded(false);
+  }, [isCollapsible]);
+
   const renderPoint = (
     point: string | ExtendedDetails<IList>
   ): string | JSX.Element => {
@@ -79,7 +94,14 @@ const EventPoint: FC<TimelineEventObject> = ({
   };
 
   return (
-    <EventContainer className="timeline-point" as={motion.div} {...getFadeInProps()}>
+    <EventContainer
+      className="timeline-point"
+      as={motion.div}
+      {...getFadeInProps()}
+      isExpanded={isExpanded}
+      onClick={() => setIsExpanded(!isExpanded)}
+      bgColor={bgColor}
+    >
       <TimeRange className="time-range">{range}</TimeRange>
       <div className="event-main">
         <div className="event-point-container">
@@ -94,17 +116,21 @@ const EventPoint: FC<TimelineEventObject> = ({
           </div>
         </div>
 
-        <section className="subpoints">
-          <ol>
-            {points?.map((point, idx) => (
-              <li className="point-details" key={idx}>
-                {renderPoint(point)}
-              </li>
-            ))}
-          </ol>
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.section {...getSlideInProps()} className="subpoints">
+              <ol>
+                {points?.map((point, idx) => (
+                  <li className="point-details" key={idx}>
+                    {renderPoint(point)}
+                  </li>
+                ))}
+              </ol>
 
-          {gallery && <AdditionalInfo>Open Gallery</AdditionalInfo>}
-        </section>
+              {gallery && <AdditionalInfo>Open Gallery</AdditionalInfo>}
+            </motion.section>
+          )}
+        </AnimatePresence>
       </div>
     </EventContainer>
   );

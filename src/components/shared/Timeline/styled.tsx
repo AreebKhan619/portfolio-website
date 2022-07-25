@@ -1,5 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { breakpoints } from "../../../assets/styles/breakpoints";
+
+interface EventContainerProps {
+  isExpanded: boolean;
+  bgColor?: string;
+}
 
 export const TimelineContainer = styled.div``;
 
@@ -17,7 +22,40 @@ export const TimeRange = styled.div`
   }
 `;
 
-export const EventContainer = styled.div`
+const collapsedEventCSS = css`
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: #f8f3e9;
+  align-items: center;
+  margin-block-end: 2rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    /* content: ""; */
+    position: absolute;
+    width: 5rem;
+    right: 0;
+    height: 100%;
+    background-color: #bebbbb36;
+  }
+
+  &:hover {
+    box-shadow: 0 0 4px 1px #a19c154f;
+  }
+
+  .event-logo {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+`;
+
+export const EventContainer = styled.div<EventContainerProps>`
   display: flex;
 
   .event-main {
@@ -34,7 +72,7 @@ export const EventContainer = styled.div`
       }
     }
 
-    .subpoints{
+    .subpoints {
       margin-block-end: 5rem;
     }
 
@@ -163,6 +201,13 @@ export const EventContainer = styled.div`
         }
       }
     }
+  }
+
+  .event-point-container {
+    transition: 0.4s all ease-in-out;
+    ${(props) => (props.isExpanded ? "" : collapsedEventCSS)};
+    background-color: ${(props) =>
+      props.isExpanded ? "transparent" : props.bgColor || "initial"};
   }
 `;
 

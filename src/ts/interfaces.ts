@@ -6,7 +6,9 @@ export interface TimelineEventObject {
   subtitle: StringOrElement;
   eventImg: any;
   points: string[];
-  gallery?: any[]
+  gallery?: any[];
+  isCollapsible?: boolean;
+  bgColor?: string;
 }
 
 export interface CircleColorProps {

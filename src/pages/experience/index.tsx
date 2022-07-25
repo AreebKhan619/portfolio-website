@@ -62,6 +62,7 @@ const Experience = () => {
           ],
         },
       ],
+      bgColor: "#f8f3e9",
     },
     {
       duration: "April '20 - March '22",
@@ -108,9 +109,10 @@ const Experience = () => {
             },
           ],
         },
-        "Sahyadri Farms Website"
+        "Sahyadri Farms Website",
       ],
       gallery: [],
+      bgColor: "#e2f6ff",
     },
     {
       duration: "June '19 - Apr '20",
@@ -169,6 +171,7 @@ const Experience = () => {
           ],
         },
       ],
+      bgColor: "#e7e7e8",
     },
     {
       duration: "June '19 - Apr '20",
@@ -178,6 +181,7 @@ const Experience = () => {
       companyLogo: DISQ,
       rolesAndResponsibilities: ["Did some things here as well"],
       gallery: [],
+      bgColor: "#ffffff",
     },
     {
       duration: "June '18 - Oct '18",
@@ -186,6 +190,7 @@ const Experience = () => {
       companyURL: null,
       companyLogo: Freelance,
       rolesAndResponsibilities: ["Did some things here as well"],
+      bgColor: "#d5f3e9",
     },
   ];
 
@@ -205,6 +210,7 @@ const TimelineWrapper = ({ experience }: { experience: GenericObject[] }) => {
     eventImg: exp.companyLogo,
     points: exp.rolesAndResponsibilities,
     gallery: exp.gallery,
+    bgColor: exp.bgColor,
   }));
 
   return <Timeline events={events} />;
