@@ -1,4 +1,3 @@
-import Hi from "./hi.gif";
 import WavyLine from "./wavy.png";
 import CAWStudios from "./caw.jpg";
 import Emertech from "./emertech.png";
@@ -20,7 +19,6 @@ import BgImgPattern from "./pattern.png"
 import WebDev from "./web_dev.png"
 
 export {
-  Hi,
   WavyLine,
   Emertech,
   CAWStudios,
