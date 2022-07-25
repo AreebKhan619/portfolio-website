@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const ExperienceOuterContainer = styled.div`
-  margin-top: 10rem;
-`;
+  margin-block-start: 10rem;
 
-export const Timeline = styled.div``;
+  .additional-content {
+    margin-block: 3rem;
+  }
+`;

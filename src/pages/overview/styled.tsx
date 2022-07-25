@@ -81,6 +81,7 @@ export const LeftPortion = styled.div`
       padding: 1rem 1.5rem;
       border-radius: 1rem;
       font-size: 1.5rem;
+      text-align: center;
     }
 
     .link {

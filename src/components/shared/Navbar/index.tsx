@@ -40,8 +40,8 @@ const Navbar = () => {
       name: Strings.education,
     },
     {
-      name: Strings.testimonials,
-    },
+      name: Strings.hobbies
+    }
   ];
 
   return (

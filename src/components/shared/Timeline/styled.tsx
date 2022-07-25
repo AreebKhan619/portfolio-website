@@ -34,6 +34,10 @@ export const EventContainer = styled.div`
       }
     }
 
+    .subpoints{
+      margin-block-end: 5rem;
+    }
+
     &::before,
     &::after {
       content: "";
@@ -129,6 +133,33 @@ export const EventContainer = styled.div`
         }
         .dashed-underline {
           display: block;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: ${breakpoints.customMobile1}) {
+    flex-direction: column;
+
+    &.timeline-point {
+      .time-range {
+        width: fit-content;
+        padding: 1rem 1.5rem;
+        background-color: white;
+        border-radius: 1rem;
+        border: 0.1rem solid lightgrey;
+        position: relative;
+        top: -1rem;
+        right: -4rem;
+      }
+      .event-main {
+        &:before {
+          top: -3.5rem;
+          z-index: 1;
+        }
+        &:after {
+          top: -3rem;
+          height: calc(100% + 3.5rem);
         }
       }
     }

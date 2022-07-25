@@ -3,6 +3,7 @@ export const Strings: { [k: string]: string } = {
   overview: "Overview",
   experience: "Experience",
   testimonials: "Testimonials",
+  hobbies: "Hobbies & Others",
   education: "Education",
   skills: "Skills",
   connect: "Connect",

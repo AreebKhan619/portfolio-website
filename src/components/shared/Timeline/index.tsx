@@ -30,7 +30,7 @@ interface IList {
 
 const Timeline: FC<TimelineProps> = ({ events }): JSX.Element => {
   return (
-    <TimelineContainer>
+    <TimelineContainer className="timeline">
       {events.map((e, idx) => (
         <EventPoint {...e} key={idx} />
       ))}
@@ -79,8 +79,8 @@ const EventPoint: FC<TimelineEventObject> = ({
   };
 
   return (
-    <EventContainer as={motion.div} {...getFadeInProps()}>
-      <TimeRange>{range}</TimeRange>
+    <EventContainer className="timeline-point" as={motion.div} {...getFadeInProps()}>
+      <TimeRange className="time-range">{range}</TimeRange>
       <div className="event-main">
         <div className="event-point-container">
           <img
@@ -94,7 +94,7 @@ const EventPoint: FC<TimelineEventObject> = ({
           </div>
         </div>
 
-        <section style={{ marginBottom: 50 }}>
+        <section className="subpoints">
           <ol>
             {points?.map((point, idx) => (
               <li className="point-details" key={idx}>

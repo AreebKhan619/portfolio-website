@@ -43,7 +43,7 @@ const Experience = () => {
     <ExperienceOuterContainer className="inner-padding">
       <PageTitle title={"Education"} />
       <TimelineWrapper education={education} />
-      <div>
+      <div className="additional-content">
         Additional thingies: Got 1103<sup>rd</sup> position throughout the
         valley in JKCET.
       </div>

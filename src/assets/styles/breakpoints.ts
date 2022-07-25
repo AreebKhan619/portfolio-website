@@ -7,10 +7,5 @@ export const breakpoints = {
   extraLarge: '1200px',
   extraExtraLarge: '1536px',
 
-  intendedFigmaMobile: '360px',
-  intendedFigmaDesktop: '1440px',
-  customBreakPoint: '920px',
-  smallBreakpoint: '920px',
-  customBreakPointDesktop: '1366px',
-  largeDesktop: '1400px',
+  customMobile1: '420px'
 }
