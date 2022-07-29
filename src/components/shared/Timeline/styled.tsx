@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { breakpoints } from "../../../assets/styles/breakpoints";
-import { BgImgPattern } from "../../../assets/images";
 
 interface EventContainerProps {
   isExpanded: boolean;
@@ -33,18 +32,6 @@ const collapsedEventCSS = css`
   position: relative;
   overflow: hidden;
 
-  &:before {
-    content: "";
-    position: absolute;
-    width: 10rem;
-    right: 0;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    opacity: 0.04;
-  }
-
   &:hover {
     box-shadow: 0 0 4px 1px #a19c154f;
   }
@@ -75,10 +62,6 @@ export const EventContainer = styled.div<EventContainerProps>`
       background-color: ${(props) =>
         props.isExpanded ? "transparent" : props.bgColor || "initial"};
       padding: ${(props) => (props.isExpanded ? "1rem" : "initial")};
-      &:before {
-        background-image: ${(props) =>
-          props.isExpanded ? "initial" : `url(${BgImgPattern})`};
-      }
 
       .title {
         font-weight: bold;
@@ -90,11 +73,12 @@ export const EventContainer = styled.div<EventContainerProps>`
       }
 
       .collapse-btn {
+        display: none;
         position: absolute;
         right: 0;
         font-size: 1.5rem;
         background: darkgrey;
-        padding: 1rem 1.5rem;
+        padding: 0.6rem 1.2rem;
         border-radius: 2rem;
         color: white;
         cursor: pointer;
@@ -102,6 +86,10 @@ export const EventContainer = styled.div<EventContainerProps>`
           background-color: grey;
         }
       }
+    }
+
+    &:hover .collapse-btn {
+      display: block;
     }
 
     .subpoints {

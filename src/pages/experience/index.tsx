@@ -16,7 +16,7 @@ const Experience = () => {
   const experience = [
     {
       duration: "Jan '22 - Present",
-      role: "SDE-2",
+      role: "Software Dev Engineer II",
       company: "ChimpsAtWork [CAW] Studios",
       companyURL: "(External Link Indicator)",
       companyLogo: CAWStudios,

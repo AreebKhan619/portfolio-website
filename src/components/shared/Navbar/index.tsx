@@ -5,6 +5,7 @@ import {
   getSlideInProps,
 } from "../../../assets/constants/motionProps";
 import { Strings } from "../../../assets/constants/strings";
+import { Hamburger } from "../../../assets/images";
 import { breakpoints } from "../../../assets/styles/breakpoints";
 import { useMaxWidthQuery } from "../../../hooks/useMediaQuery";
 import {
@@ -40,8 +41,8 @@ const Navbar = () => {
       name: Strings.education,
     },
     {
-      name: Strings.hobbies
-    }
+      name: Strings.hobbies,
+    },
   ];
 
   return (
@@ -68,10 +69,10 @@ const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
   return (
     <>
       <button
-        style={{ order: 1 }}
+        className="toggle"
         onClick={() => setIsExpanded((state) => !state)}
       >
-        Hamburger
+        <img src={Hamburger} alt="Hamburger Icon" />
       </button>
       <AnimatePresence>
         {isExpanded && (

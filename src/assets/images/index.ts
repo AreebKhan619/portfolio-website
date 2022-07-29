@@ -17,6 +17,8 @@ import ExpressJS from "./expressjs.png"
 import CrayonUnderline from "./underline.png"
 import BgImgPattern from "./pattern.png"
 import WebDev from "./web_dev.png"
+import CornerBlob from "./cornerblob.svg"
+import Hamburger from "./hamburger.svg"
 
 export {
   WavyLine,
@@ -37,5 +39,7 @@ export {
   ExpressJS,
   CrayonUnderline,
   BgImgPattern,
-  WebDev
+  WebDev,
+  CornerBlob,
+  Hamburger
 };

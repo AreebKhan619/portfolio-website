@@ -32,6 +32,14 @@ export const NavigationItems = styled.nav`
   column-gap: min(5rem, 2vw);
   cursor: pointer;
 
+  button.toggle {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    order: 1;
+  }
+
   .small-nav-container {
     position: absolute;
     top: 6rem;
