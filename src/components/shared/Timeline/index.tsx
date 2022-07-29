@@ -9,7 +9,6 @@ import LibrariesUsed from "../LibrariesUsed";
 import {
   TimelineContainer,
   TimeRange,
-  Subtitle,
   AdditionalInfo,
   EventContainer,
 } from "./styled";
@@ -93,13 +92,17 @@ const EventPoint: FC<TimelineEventObject> = ({
     return "";
   };
 
+  const toggleCollapse = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <EventContainer
       className="timeline-point"
       as={motion.div}
       {...getFadeInProps()}
       isExpanded={isExpanded}
-      onClick={() => setIsExpanded(!isExpanded)}
+      onClick={() => !isExpanded && toggleCollapse()}
       bgColor={bgColor}
     >
       <TimeRange className="time-range">{range}</TimeRange>
@@ -112,8 +115,17 @@ const EventPoint: FC<TimelineEventObject> = ({
           />
           <div>
             <div className="title">{title}</div>
-            <Subtitle>{subtitle}</Subtitle>
+            <div className="subtitle">{subtitle}</div>
           </div>
+          {isExpanded && (
+            <div
+              className="collapse-btn"
+              role={"button"}
+              onClick={toggleCollapse}
+            >
+              Collapse
+            </div>
+          )}
         </div>
 
         <AnimatePresence>

@@ -17,7 +17,7 @@ const Experience = () => {
     {
       duration: "Jan '22 - Present",
       role: "SDE-2",
-      company: "ChimpsAtWork Studios / CAW Studios",
+      company: "ChimpsAtWork [CAW] Studios",
       companyURL: "(External Link Indicator)",
       companyLogo: CAWStudios,
       rolesAndResponsibilities: [
@@ -171,7 +171,7 @@ const Experience = () => {
           ],
         },
       ],
-      bgColor: "#e7e7e8",
+      bgColor: "#ececee",
     },
     {
       duration: "June '19 - Apr '20",
@@ -190,7 +190,7 @@ const Experience = () => {
       companyURL: null,
       companyLogo: Freelance,
       rolesAndResponsibilities: ["Did some things here as well"],
-      bgColor: "#d5f3e9",
+      bgColor: "#fdf6f6",
     },
   ];
 

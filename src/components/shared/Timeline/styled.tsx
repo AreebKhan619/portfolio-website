@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { breakpoints } from "../../../assets/styles/breakpoints";
+import { BgImgPattern } from "../../../assets/images";
 
 interface EventContainerProps {
   isExpanded: boolean;
@@ -33,12 +34,15 @@ const collapsedEventCSS = css`
   overflow: hidden;
 
   &:before {
-    /* content: ""; */
+    content: "";
     position: absolute;
-    width: 5rem;
+    width: 10rem;
     right: 0;
     height: 100%;
-    background-color: #bebbbb36;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    opacity: 0.04;
   }
 
   &:hover {
@@ -66,9 +70,37 @@ export const EventContainer = styled.div<EventContainerProps>`
 
     .event-point-container {
       display: flex;
+      transition: 0.2s all linear;
+      ${(props) => (props.isExpanded ? "" : collapsedEventCSS)};
+      background-color: ${(props) =>
+        props.isExpanded ? "transparent" : props.bgColor || "initial"};
+      padding: ${(props) => (props.isExpanded ? "1rem" : "initial")};
+      &:before {
+        background-image: ${(props) =>
+          props.isExpanded ? "initial" : `url(${BgImgPattern})`};
+      }
+
       .title {
         font-weight: bold;
         font-size: 1.2em;
+      }
+
+      .subtitle {
+        color: #795548;
+      }
+
+      .collapse-btn {
+        position: absolute;
+        right: 0;
+        font-size: 1.5rem;
+        background: darkgrey;
+        padding: 1rem 1.5rem;
+        border-radius: 2rem;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: grey;
+        }
       }
     }
 
@@ -202,17 +234,6 @@ export const EventContainer = styled.div<EventContainerProps>`
       }
     }
   }
-
-  .event-point-container {
-    transition: 0.4s all ease-in-out;
-    ${(props) => (props.isExpanded ? "" : collapsedEventCSS)};
-    background-color: ${(props) =>
-      props.isExpanded ? "transparent" : props.bgColor || "initial"};
-  }
-`;
-
-export const Subtitle = styled.div`
-  color: #795548;
 `;
 
 export const AdditionalInfo = styled.div`
