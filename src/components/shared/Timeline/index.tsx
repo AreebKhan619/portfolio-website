@@ -117,15 +117,18 @@ const EventPoint: FC<TimelineEventObject> = ({
             <div className="title">{title}</div>
             <div className="subtitle">{subtitle}</div>
           </div>
-          {isExpanded && (
-            <div
-              className="collapse-btn"
-              role={"button"}
-              onClick={toggleCollapse}
-            >
-              Collapse
-            </div>
-          )}
+          <AnimatePresence>
+            {isExpanded && (
+              <motion.div
+                className="collapse-btn"
+                role={"button"}
+                {...getFadeInProps()}
+                onClick={toggleCollapse}
+              >
+                Collapse
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         <AnimatePresence>

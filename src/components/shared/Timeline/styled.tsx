@@ -76,7 +76,7 @@ export const EventContainer = styled.div<EventContainerProps>`
         display: none;
         position: absolute;
         right: 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         background: darkgrey;
         padding: 0.6rem 1.2rem;
         border-radius: 2rem;
