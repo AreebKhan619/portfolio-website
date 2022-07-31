@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { WorkingFillerImg } from "../../assets/images";
 import { breakpoints } from "../../assets/styles/breakpoints";
 import { CircleColorProps } from "../../ts";
 
@@ -7,6 +8,10 @@ export const ExperienceOuterContainer = styled.div.attrs((props) => ({
 }))<CircleColorProps>`
   margin-top: 10rem;
   position: relative;
+
+  .left-filler-img {
+    background-image: url(${WorkingFillerImg});
+  }
 
   @media screen and (max-width: ${breakpoints.tablet}) {
     padding: 0;

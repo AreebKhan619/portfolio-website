@@ -76,15 +76,18 @@ const EventPoint: FC<TimelineEventObject> = ({
             </ul>
           )}
           <div className="supporting-items">
-            <a
-              target={"_blank"}
-              rel={"noreferrer"}
-              href={point.link}
-              className="link"
-            >
-              See it live in action: {point.link}
-            </a>
-            <LibrariesUsed list={point.list} />
+            {point.link && (
+              <a
+                target={"_blank"}
+                rel={"noreferrer"}
+                href={point.link}
+                className="link"
+              >
+                See it live in action: {point.link}
+              </a>
+            )}
+
+            {point?.list?.length && <LibrariesUsed list={point.list} />}
           </div>
         </div>
       );

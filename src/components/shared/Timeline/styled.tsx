@@ -123,7 +123,7 @@ export const EventContainer = styled.div<EventContainerProps>`
       width: 1rem;
       background-color: black;
       border-radius: 50%;
-      top: 0;
+      top: 1rem;
     }
 
     &::after {
@@ -131,7 +131,7 @@ export const EventContainer = styled.div<EventContainerProps>`
       width: 0.1rem;
       left: 1.4rem;
       background: #efb969;
-      top: 1rem;
+      top: 2rem;
     }
 
     ol {
@@ -165,9 +165,10 @@ export const EventContainer = styled.div<EventContainerProps>`
             -webkit-box-orient: vertical;
             overflow: hidden;
             line-height: 2;
-            width: 50%;
+            width: 60%;
             word-break: break-all;
             transition: 0.2s all ease-in;
+            color: #a2660d;
 
             &:hover {
               text-decoration: underline;

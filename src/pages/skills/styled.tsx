@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import { PersonalProjects } from "../../assets/images";
 import { CircleColorProps } from "../../ts";
 
 export const SkillsOuterContainer = styled.section.attrs((props) => ({
   className: props.className + " circle-blob-left",
 }))<CircleColorProps>`
   margin-block: 10rem;
+  position: relative;
+
+  .left-filler-img{
+    background-image: url(${PersonalProjects})
+  }
 
   &:before {
     left: 10rem;

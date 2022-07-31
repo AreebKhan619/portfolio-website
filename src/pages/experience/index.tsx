@@ -7,7 +7,10 @@ import {
   CAWStudios,
   DISQ,
   Emertech,
+  ExpressJS,
   Freelance,
+  MongoDB,
+  NodeJS,
   ReactJS,
 } from "../../assets/images";
 import { GenericObject } from "../../ts";
@@ -24,8 +27,9 @@ const Experience = () => {
         {
           text: "BeTagged - A Social Media Marketing Platform",
           subPoints: [
-            "Managed & set-up monorepo architecture and co-lead the shared code development",
-            "Set up the shared logging infrastructure with Segment and error handling with Sentry",
+            "Led the development of Web App for the platform.",
+            "Managed & set-up monorepo architecture and co-lead the shared code development.",
+            "Set up the shared logging infrastructure with Segment and error handling with Sentry.",
           ],
           link: "https://incom.betagged.co",
           list: [
@@ -46,8 +50,9 @@ const Experience = () => {
           subPoints: [
             "Worked on 3 apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing]",
             "Implemented optimistic updates and response caching with react-query",
+            "Contributed to creating highly reusable components between the three apps.",
           ],
-          link: "https://incom.betagged.co",
+          link: "https://buyer-df.reeco.io",
           list: [
             {
               icon: ReactJS,
@@ -94,6 +99,7 @@ const Experience = () => {
           text: "QRiosity - Farm to Fork Traceability & Transparency Solution",
           subPoints: [
             "Co-led the development for Farm to Fork Traceability & Transparency Solution",
+            "Created driver that interacts with the local machine to dynamically print labels",
           ],
           link: "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738",
           list: [
@@ -103,15 +109,32 @@ const Experience = () => {
               title: "ReactJS",
             },
             {
-              icon: ReactJS,
+              icon: NodeJS,
               link: null,
-              title: "AntDesign",
+              title: "NodeJS",
+            },
+            {
+              icon: MongoDB,
+              link: null,
+              title: "MongoDB",
+            },
+            {
+              icon: ExpressJS,
+              link: null,
+              title: "ExpressJS",
             },
           ],
         },
-        "Sahyadri Farms Website",
+        {
+          text: "Sahyadri Farms Website",
+          subPoints: [
+            "Developed and co-designed the corporate website for Sahyadri Farms",
+          ],
+          link: "https://sahyadrifarms.com",
+        },
+        "Trained over 30+ interns in hands-on, interactive bootcamps for ReactJS, going over from the basics to the advanced concepts",
       ],
-      gallery: [],
+      // gallery: [],
       bgColor: "#e2f6ff",
     },
     {
@@ -122,9 +145,10 @@ const Experience = () => {
       companyLogo: Emertech,
       rolesAndResponsibilities: [
         {
-          text: "DhammaEdicts - Verse",
+          text: "DhammaEdicts - Verse storage on the blockchain",
           subPoints: [
-            "Co-led the development for Farm to Fork Traceability & Transparency Solution",
+            `Developed the Web App for storing sacred Buddist "Tripitaka" texts on the blockchain`,
+            "Co-implemented the authentication and authorization mechanism",
           ],
           link: "https://dhammaedicts-block.com",
           list: [
@@ -134,44 +158,24 @@ const Experience = () => {
               title: "ReactJS",
             },
             {
-              icon: ReactJS,
+              icon: NodeJS,
               link: null,
-              title: "AntDesign",
+              title: "NodeJS",
             },
             {
-              icon: ReactJS,
+              icon: MongoDB,
               link: null,
-              title: "ReactJS",
+              title: "MongoDB",
             },
             {
-              icon: ReactJS,
+              icon: ExpressJS,
               link: null,
-              title: "AntDesign",
-            },
-            {
-              icon: ReactJS,
-              link: null,
-              title: "ReactJS",
-            },
-            {
-              icon: ReactJS,
-              link: null,
-              title: "AntDesign",
-            },
-            {
-              icon: ReactJS,
-              link: null,
-              title: "ReactJS",
-            },
-            {
-              icon: ReactJS,
-              link: null,
-              title: "AntDesign",
+              title: "ExpressJS",
             },
           ],
         },
       ],
-      bgColor: "#ececee",
+      bgColor: "#e5e5e9d1",
     },
     {
       duration: "June '19 - Apr '20",
@@ -179,23 +183,43 @@ const Experience = () => {
       company: "Digital Impact Square",
       companyURL: "(External Link Indicator)",
       companyLogo: DISQ,
-      rolesAndResponsibilities: ["Did some things here as well"],
-      gallery: [],
-      bgColor: "#ffffff",
+      rolesAndResponsibilities: [
+        "Entrepreneurship training",
+        "Participated in team building exercises, presentations, and also their seminars, which illuminated me on how an entrepreneur with an idea can cause an impact on the society.",
+        {
+          text: "HortiSquare - Farmer Outreach Programme",
+          subPoints: [
+            "Developed and designed corporate website for the programme",
+          ],
+          link: "https://www.hortisquare.org/",
+        },
+      ],
+      // gallery: [],
+      bgColor: "#e2f6ff",
     },
     {
       duration: "June '18 - Oct '18",
-      role: "Android App Developer",
-      company: "(Freelance)",
+      role: "Freelance Developer",
+      company: "",
       companyURL: null,
       companyLogo: Freelance,
-      rolesAndResponsibilities: ["Did some things here as well"],
-      bgColor: "#fdf6f6",
+      rolesAndResponsibilities: [
+        {
+          text: "Client Requirement: Software solution for Acupressure Treatment",
+          subPoints: [
+            "Designed and co-developed Android Application used by patients and practitioners",
+            "Patients could schedule appointments, and practitioners could manage reports",
+            "Developed and designed corporate website for the client",
+          ],
+        },
+      ],
+      bgColor: "#f8f3e9",
     },
   ];
 
   return (
     <ExperienceOuterContainer className="inner-padding">
+      <div className="left-filler-img" />
       <PageTitle title={"Experience"} />
       <TimelineWrapper experience={experience} />
     </ExperienceOuterContainer>

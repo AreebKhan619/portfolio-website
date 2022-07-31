@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { CornerBlob } from "../../../assets/images";
 import { breakpoints } from "../../../assets/styles/breakpoints";
 import { Colors } from "../../../assets/styles/colors";
 
@@ -34,19 +33,18 @@ export const MainBodyContainer = styled.main`
     padding: 0 15rem;
   }
 
-  &::before{
-    content: "";
+  .left-filler-img {
     position: absolute;
-  
-    height: 5rem;
-    width: 5rem;
-    background: url(${CornerBlob}) center center;
-    background-size: cover;
-    transform: scale(2.5);
-    opacity: 0.3
+    height: 30rem;
+    width: 30rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 15rem;
+    left: -15rem;
+    opacity: 0.15;
   }
 
-  &::before{
+  &::before {
     left: 0;
   }
 
