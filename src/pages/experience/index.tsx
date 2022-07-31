@@ -29,7 +29,7 @@ const Experience = () => {
           subPoints: [
             "Led the development of Web App for the platform.",
             "Managed & set-up monorepo architecture and co-lead the shared code development.",
-            "Set up the shared logging infrastructure with Segment and error handling with Sentry.",
+            "Set up the shared logging infrastructure with Segment and error handling with Sentry, which serves as blueprint for logging for other projects in the organisation as well.",
           ],
           link: "https://incom.betagged.co",
           list: [
@@ -49,8 +49,8 @@ const Experience = () => {
           text: "Reeco - A Restaurant Procurement Platform",
           subPoints: [
             "Worked on 3 apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing]",
-            "Implemented optimistic updates and response caching with react-query",
-            "Contributed to creating highly reusable components between the three apps.",
+            "Implemented optimistic updates and response caching, resulting in lesser wait times and better UX.",
+            "Contributed to component library for creating highly reusable and flexible components between the three apps.",
           ],
           link: "https://buyer-df.reeco.io",
           list: [
@@ -100,6 +100,7 @@ const Experience = () => {
           subPoints: [
             "Co-led the development for Farm to Fork Traceability & Transparency Solution",
             "Created driver that interacts with the local machine to dynamically print labels",
+            "Solution won national and international awards"
           ],
           link: "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738",
           list: [
@@ -184,8 +185,8 @@ const Experience = () => {
       companyURL: "(External Link Indicator)",
       companyLogo: DISQ,
       rolesAndResponsibilities: [
-        "Entrepreneurship training",
-        "Participated in team building exercises, presentations, and also their seminars, which illuminated me on how an entrepreneur with an idea can cause an impact on the society.",
+        "Interacted with tech entrepreneurs in understanding the approaches for problem-solving, translating theoretical solutions for real-world problems into softwares and devicing them",
+        "Participated in team building exercises, presentations, and seminars, which illuminated me on how an entrepreneur with an idea can cause an impact on the society.",
         {
           text: "HortiSquare - Farmer Outreach Programme",
           subPoints: [
