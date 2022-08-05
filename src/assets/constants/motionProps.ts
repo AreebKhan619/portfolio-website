@@ -15,12 +15,12 @@ export const getScaleAnimationProps = (): HTMLMotionProps<"div"> => {
 
 export const getListPopInProps = (i: number): HTMLMotionProps<"div"> => {
   return ({
-    initial: { scale: 0.1 },
+    initial: { scale: 0 },
     whileInView: { scale: 1 },
     transition: {
       duration: 0.1,
       delay: 0.05 * i
-    }
+    },
   })
 }
 
