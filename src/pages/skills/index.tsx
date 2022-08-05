@@ -1,4 +1,11 @@
-import { ReactJS } from "../../assets/images";
+import {
+  ChakraUI,
+  ExpressJS,
+  FramerMotion,
+  NodeJS,
+  ReactJS,
+  StyledComponents,
+} from "../../assets/images";
 import LibrariesUsed from "../../components/shared/LibrariesUsed";
 import PageTitle from "../../components/shared/PageTitle";
 import { SkillsOuterContainer } from "./styled";
@@ -6,8 +13,7 @@ import { SkillsOuterContainer } from "./styled";
 const projectsList = [
   {
     name: "Portfolio",
-    description:
-      "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",
+    description: "The current website being viewed. Written in TypeScript.",
     skillsList: [
       {
         icon: ReactJS,
@@ -15,14 +21,14 @@ const projectsList = [
         title: "ReactJS",
       },
       {
-        icon: ReactJS,
+        icon: StyledComponents,
         link: null,
-        title: "AntDesign",
+        title: "styled-components",
       },
       {
-        icon: ReactJS,
+        icon: FramerMotion,
         link: null,
-        title: "ReactJS",
+        title: "Framer Motion",
       },
     ],
   },
@@ -37,14 +43,9 @@ const projectsList = [
         title: "ReactJS",
       },
       {
-        icon: ReactJS,
+        icon: StyledComponents,
         link: null,
-        title: "AntDesign",
-      },
-      {
-        icon: ReactJS,
-        link: null,
-        title: "ReactJS",
+        title: "styled-components",
       },
     ],
   },
@@ -59,14 +60,19 @@ const projectsList = [
         title: "ReactJS",
       },
       {
-        icon: ReactJS,
+        icon: ChakraUI,
         link: null,
-        title: "AntDesign",
+        title: "Chakra UI",
       },
       {
-        icon: ReactJS,
+        icon: NodeJS,
         link: null,
-        title: "ReactJS",
+        title: "NodeJS",
+      },
+      {
+        icon: ExpressJS,
+        link: null,
+        title: "ExpressJS",
       },
     ],
   },
@@ -74,62 +80,38 @@ const projectsList = [
     name: "Snake game",
     description:
       "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",
-    skillsList: [
-      {
-        icon: ReactJS,
-        link: null,
-        title: "ReactJS",
-      },
-      {
-        icon: ReactJS,
-        link: null,
-        title: "AntDesign",
-      },
-      {
-        icon: ReactJS,
-        link: null,
-        title: "ReactJS",
-      },
-    ],
   },
   {
     name: "Sticky Notes",
     description:
       "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",
-    skillsList: [
-      {
-        icon: ReactJS,
-        link: null,
-        title: "ReactJS",
-      },
-      {
-        icon: ReactJS,
-        link: null,
-        title: "AntDesign",
-      },
-      {
-        icon: ReactJS,
-        link: null,
-        title: "ReactJS",
-      },
-    ],
   },
 ];
 
 const certificationsList = [
   {
-    name: "Redux SASS",
+    name: "Front End Certification [React, Redux, SASS]",
     description: "Certification provided by freeCodeCamp",
     link: "",
   },
   {
-    name: "Redux SASS",
-    description: "Certification provided by freeCodeCamp",
+    name: "React",
+    description: "Certification provided by HackerRank",
     link: "",
   },
   {
-    name: "Redux SASS",
-    description: "Certification provided by freeCodeCamp",
+    name: "React",
+    description: "Certification provided by TestDome",
+    link: "",
+  },
+  {
+    name: "NodeJS, ReactJS, MongoDB",
+    description: "Certification provided by LinkedIn",
+    link: "",
+  },
+  {
+    name: "Computer Networks",
+    description: "Certification provided by NPTEL",
     link: "",
   },
 ];
@@ -151,7 +133,7 @@ const Skills = () => {
                 <div className="name dashed-underline">{name}</div>
                 <div>{description}</div>
                 <div className="libraries-used">
-                  <LibrariesUsed list={skillsList} />
+                  {skillsList && <LibrariesUsed list={skillsList} />}
                 </div>
               </li>
             );
@@ -170,6 +152,15 @@ const Skills = () => {
               </li>
             );
           })}
+        </ol>
+      </div>
+
+      <div className="certifications-container">
+        <div className="bold">Skills</div>
+        <ol className="certifications-list">
+          <li className="project">
+            <div className="name alternate">TS</div>
+          </li>
         </ol>
       </div>
     </SkillsOuterContainer>

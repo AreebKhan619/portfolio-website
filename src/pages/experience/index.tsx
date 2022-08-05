@@ -4,14 +4,26 @@ import PageTitle from "../../components/shared/PageTitle";
 import Timeline from "../../components/shared/Timeline";
 
 import {
+  AntDesign,
   CAWStudios,
+  ChakraUI,
   DISQ,
   Emertech,
   ExpressJS,
   Freelance,
+  Lerna,
   MongoDB,
+  Nivo,
   NodeJS,
+  Puppeteer,
   ReactJS,
+  Redux,
+  Sass,
+  Segment,
+  Sentry,
+  Storybook,
+  StyledComponents,
+  TanstackQuery,
 } from "../../assets/images";
 import { GenericObject } from "../../ts";
 
@@ -27,9 +39,9 @@ const Experience = () => {
         {
           text: "BeTagged - A Social Media Marketing Platform",
           subPoints: [
-            "Led the development of Web App for the platform.",
-            "Managed & set-up monorepo architecture and co-lead the shared code development.",
-            "Set up the shared logging infrastructure with Segment and error handling with Sentry, which serves as blueprint for logging for other projects in the organisation as well.",
+            "Led the development of Web App for the platform from scratch.",
+            "Managed & set-up monorepo architecture with Lerna; Co-led the shared code development.",
+            "Set up the singular cross-platform logging infrastructure with Segment and error handling with Sentry, which serves as blueprint for logging for other projects in the organisation as well.",
           ],
           link: "https://incom.betagged.co",
           list: [
@@ -39,18 +51,48 @@ const Experience = () => {
               title: "ReactJS",
             },
             {
-              icon: ReactJS,
+              icon: Redux,
               link: null,
-              title: "AntDesign",
+              title: "Redux",
+            },
+            {
+              icon: ChakraUI,
+              link: null,
+              title: "Chakra UI",
+            },
+            {
+              icon: Lerna,
+              link: null,
+              title: "Lerna",
+            },
+            {
+              icon: Segment,
+              link: null,
+              title: "Segment",
+            },
+            {
+              icon: Sentry,
+              link: null,
+              title: "Sentry",
+            },
+            {
+              icon: StyledComponents,
+              link: null,
+              title: "styled-components",
+            },
+            {
+              icon: Sass,
+              link: null,
+              title: "SASS",
             },
           ],
         },
         {
           text: "Reeco - A Restaurant Procurement Platform",
           subPoints: [
-            "Worked on 3 apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing]",
-            "Implemented optimistic updates and response caching, resulting in lesser wait times and better UX.",
-            "Contributed to component library for creating highly reusable and flexible components between the three apps.",
+            "Worked on 3 apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing].",
+            "Implemented optimistic updates and response caching with TanStack Query, resulting in lesser wait times and better UX.",
+            "Contributed to component library for creating highly reusable and flexible components between the three apps with Storybook.",
           ],
           link: "https://buyer-df.reeco.io",
           list: [
@@ -60,9 +102,24 @@ const Experience = () => {
               title: "ReactJS",
             },
             {
-              icon: ReactJS,
+              icon: TanstackQuery,
               link: null,
-              title: "AntDesign",
+              title: "Tanstack Query",
+            },
+            {
+              icon: StyledComponents,
+              link: null,
+              title: "styled-components",
+            },
+            {
+              icon: Nivo,
+              link: null,
+              title: "nivo",
+            },
+            {
+              icon: Storybook,
+              link: null,
+              title: "Storybook",
             },
           ],
         },
@@ -89,18 +146,28 @@ const Experience = () => {
               title: "ReactJS",
             },
             {
-              icon: ReactJS,
+              icon: AntDesign,
               link: null,
-              title: "AntDesign Something",
+              title: "AntDesign",
+            },
+            {
+              icon: Redux,
+              link: null,
+              title: "Redux",
+            },
+            {
+              icon: Sass,
+              link: null,
+              title: "SASS",
             },
           ],
         },
         {
-          text: "QRiosity - Farm to Fork Traceability & Transparency Solution",
+          text: "QRiosity - Traceability & Transparency Solution",
           subPoints: [
-            "Co-led the development for Farm to Fork Traceability & Transparency Solution",
-            "Created driver that interacts with the local machine to dynamically print labels",
-            "Solution won national and international awards"
+            "Co-led the development for Blockchain-enabled Farm to Fork Traceability & Transparency Solution.",
+            "Developed the backbone print driver with NodeJS and interactive dashboard to automate the label printing, providing identity to items and speeding up the process by more than 60%.",
+            "Designed & developed 5+ trace screens to provide customised traceability to organisations.",
           ],
           link: "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738",
           list: [
@@ -113,6 +180,11 @@ const Experience = () => {
               icon: NodeJS,
               link: null,
               title: "NodeJS",
+            },
+            {
+              icon: Puppeteer,
+              link: null,
+              title: "Puppeteer",
             },
             {
               icon: MongoDB,
@@ -129,11 +201,12 @@ const Experience = () => {
         {
           text: "Sahyadri Farms Website",
           subPoints: [
-            "Developed and co-designed the corporate website for Sahyadri Farms",
+            "Developed and co-designed the corporate website for Sahyadri Farms, India's leading Farmer-Producer-Organisation",
           ],
           link: "https://sahyadrifarms.com",
         },
-        "Trained over 30+ interns in hands-on, interactive bootcamps for ReactJS, going over from the basics to the advanced concepts",
+        "Developed a PWA and an Android App using React Native to be used by lesser tech-savvy farmers of Maharashtra, India.",
+        "Trained over 30+ interns in hands-on, interactive bootcamps for ReactJS, going over the basics to the advanced concepts",
       ],
       // gallery: [],
       bgColor: "#e2f6ff",
@@ -148,7 +221,7 @@ const Experience = () => {
         {
           text: "DhammaEdicts - Verse storage on the blockchain",
           subPoints: [
-            `Developed the Web App for storing sacred Buddist "Tripitaka" texts on the blockchain`,
+            `Designed and developed the Web App for storing sacred Buddist "Tripitaka" texts on the blockchain`,
             "Co-implemented the authentication and authorization mechanism",
           ],
           link: "https://dhammaedicts-block.com",
@@ -192,7 +265,7 @@ const Experience = () => {
           subPoints: [
             "Developed and designed corporate website for the programme",
           ],
-          link: "https://www.hortisquare.org/",
+          link: "https://www.hortisquare.org",
         },
       ],
       // gallery: [],
@@ -206,7 +279,7 @@ const Experience = () => {
       companyLogo: Freelance,
       rolesAndResponsibilities: [
         {
-          text: "Client Requirement: Software solution for Acupressure Treatment",
+          text: "Software solution for Acupressure Treatment",
           subPoints: [
             "Designed and co-developed Android Application used by patients and practitioners",
             "Patients could schedule appointments, and practitioners could manage reports",

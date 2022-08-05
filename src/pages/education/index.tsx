@@ -15,7 +15,7 @@ const Experience = () => {
       institutionURL: "(External Link Indicator)",
       companyLogo: GECA,
       rolesAndResponsibilities: [
-        "Managed & set-up monorepo architecture and co-lead the shared code development",
+        "Managed & set-up monorepo architecture and co-led the shared code development",
       ],
     },
     {

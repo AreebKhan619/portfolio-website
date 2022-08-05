@@ -10,7 +10,7 @@ const LibrariesUsed: FC<ILibrariesUsed> = ({ list }): JSX.Element => {
       <div className="list">
         <div className="bg-img"></div>
         <div className="content">
-          <div>Libraries/Tools I used:</div>
+          <div>Major libraries/tools used:</div>
           <div className="list-items">
             {list.map(({ icon, link, title }, idx) => (
               <div className="item" key={idx}>

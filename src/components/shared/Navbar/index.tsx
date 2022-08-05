@@ -39,10 +39,7 @@ const Navbar = () => {
     },
     {
       name: Strings.education,
-    },
-    {
-      name: Strings.hobbies,
-    },
+    }
   ];
 
   return (

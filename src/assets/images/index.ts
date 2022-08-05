@@ -16,11 +16,23 @@ import MongoDB from "./mongodb.webp"
 import ExpressJS from "./expressjs.png"
 import CrayonUnderline from "./underline.png"
 import BgImgPattern from "./pattern.png"
-import WebDev from "./web_dev.png"
+import WebDev from "./hero-img.png"
 import CornerBlob from "./cornerblob.svg"
 import Hamburger from "./hamburger.svg"
 import WorkingFillerImg from "./working.png"
-import PersonalProjects from "./personalprojects.png"
+import PersonalProjects from "./personal-projects.png"
+import ChakraUI from "./chakra-ui.png"
+import Lerna from "./lerna.svg"
+import Segment from "./segment.png"
+import StyledComponents from "./styled-components.png"
+import Sass from "./sass.png"
+import Sentry from "./sentry.png"
+import TanstackQuery from "./tanstack-query.png"
+import Nivo from "./nivo.png"
+import Storybook from "./storybook.png"
+import AntDesign from "./ant-design.png"
+import Puppeteer from "./puppeteer.png"
+import FramerMotion from "./framer-motion.png"
 
 export {
   WavyLine,
@@ -45,5 +57,17 @@ export {
   CornerBlob,
   Hamburger,
   WorkingFillerImg,
-  PersonalProjects
+  PersonalProjects,
+  ChakraUI,
+  Lerna,
+  Segment,
+  StyledComponents,
+  Sass,
+  Sentry,
+  TanstackQuery,
+  Nivo,
+  Storybook,
+  AntDesign,
+  Puppeteer,
+  FramerMotion
 };

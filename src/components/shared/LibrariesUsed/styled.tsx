@@ -40,7 +40,7 @@ export const LibrariesUsedContainer = styled.div`
       img.icon {
         width: 4.5rem;
         height: 4.5rem;
-        object-fit: cover;
+        object-fit: contain;
       }
       .title {
         font-size: 0.8em;
