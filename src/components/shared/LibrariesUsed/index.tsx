@@ -1,9 +1,12 @@
+import { motion } from "framer-motion";
 import { FC } from "react";
+import { getListPopInProps } from "../../../assets/constants/motionProps";
 import { LibrariesUsedContainer } from "./styled";
 
 interface ILibrariesUsed {
   list: any[];
 }
+
 const LibrariesUsed: FC<ILibrariesUsed> = ({ list }): JSX.Element => {
   return (
     <LibrariesUsedContainer>
@@ -13,10 +16,14 @@ const LibrariesUsed: FC<ILibrariesUsed> = ({ list }): JSX.Element => {
           <div>Major libraries/tools used:</div>
           <div className="list-items">
             {list.map(({ icon, link, title }, idx) => (
-              <div className="item" key={idx}>
+              <motion.div
+                {...getListPopInProps(idx)}
+                className="item"
+                key={idx}
+              >
                 <img className="icon" src={icon} alt={title} />
                 <div className="title">{title}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

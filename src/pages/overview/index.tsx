@@ -55,6 +55,21 @@ const links = [
   },
 ];
 
+const statsList = [
+  {
+    mainStat: "03+",
+    subtitle: Strings.yearsOfExperience,
+  },
+  {
+    mainStat: "5+",
+    subtitle: Strings.coursesAndCerts,
+  },
+  {
+    mainStat: "13+",
+    subtitle: Strings.projects,
+  },
+];
+
 const Overview = () => {
   return (
     <OverviewContainer>
@@ -72,18 +87,14 @@ const Overview = () => {
           <br /> {Strings.welcomeTextSuffix2}
         </div>
         <StatContainerOuter>
-          <Stat>
-            <StatHeader>03+</StatHeader>
-            <StatSubtitle>{Strings.yearsOfExperience}</StatSubtitle>
-          </Stat>
-          <Stat>
-            <StatHeader>5+</StatHeader>
-            <StatSubtitle>{Strings.coursesAndCerts}</StatSubtitle>
-          </Stat>
-          <Stat>
-            <StatHeader>13+</StatHeader>
-            <StatSubtitle>{Strings.projects}</StatSubtitle>
-          </Stat>
+          {statsList.map(({ mainStat, subtitle }, idx) => {
+            return (
+              <Stat key={idx}>
+                <StatHeader>{mainStat}</StatHeader>
+                <StatSubtitle>{subtitle}</StatSubtitle>
+              </Stat>
+            );
+          })}
         </StatContainerOuter>
         <div className="wavy-line-container">
           <img src={WavyLine} alt={"divider"} />
