@@ -64,6 +64,7 @@ interface LinkItemProps {
   isSelected?: boolean;
 }
 export const Item = styled.div<LinkItemProps>`
+  padding-block: 1rem;
   font-weight: ${(props) => (props.isSelected ? 800 : "normal")};
   text-shadow: ${(props) => (props.isSelected ? "0 0 black" : "none")};
 `;

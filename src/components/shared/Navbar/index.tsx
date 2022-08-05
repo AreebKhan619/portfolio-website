@@ -91,11 +91,17 @@ const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
 };
 
 const LargerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
+  const [selectedIdx, setSelectedIdx] = useState(1);
+
   return (
     <>
       {links.map((link, idx) => {
         return (
-          <Item isSelected={idx === 1} key={idx}>
+          <Item
+            isSelected={idx === selectedIdx}
+            onClick={() => setSelectedIdx(idx)}
+            key={idx}
+          >
             {link.name}
           </Item>
         );

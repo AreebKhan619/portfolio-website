@@ -147,7 +147,14 @@ const Skills = () => {
           {certificationsList.map(({ name, description, link }, idx) => {
             return (
               <li className="list-item" key={idx}>
-                <div className="name alternate dashed-underline">{name}</div>
+                <a
+                  href={link}
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  className="name alternate dashed-underline"
+                >
+                  {name}
+                </a>
                 <div>{description}</div>
               </li>
             );

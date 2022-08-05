@@ -29,6 +29,7 @@ export const SkillsOuterContainer = styled.section.attrs((props) => ({
       .name {
         color: #009688;
         margin-bottom: 1rem;
+        text-decoration: none;
         &.alternate {
           color: darkblue;
         }
