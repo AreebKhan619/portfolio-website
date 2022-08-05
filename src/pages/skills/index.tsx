@@ -124,12 +124,12 @@ const Skills = () => {
     <SkillsOuterContainer className="inner-padding" circleColor={"#c8d8ff61"}>
       <div className="left-filler-img" />
       <PageTitle title={"Skills & Personal Projects"} />
-      <div className="personal-projects-container">
+      <div className="content-container">
         <div className="bold">Personal Projects</div>
-        <ol className="projects-list">
+        <ol className="content-list">
           {projectsList.map(({ name, description, skillsList }, idx) => {
             return (
-              <li className="project" key={idx}>
+              <li className="list-item" key={idx}>
                 <div className="name dashed-underline">{name}</div>
                 <div>{description}</div>
                 <div className="libraries-used">
@@ -141,12 +141,12 @@ const Skills = () => {
         </ol>
       </div>
 
-      <div className="certifications-container">
+      <div className="content-container">
         <div className="bold">Certifications</div>
-        <ol className="certifications-list">
+        <ol className="content-list">
           {certificationsList.map(({ name, description, link }, idx) => {
             return (
-              <li className="project" key={idx}>
+              <li className="list-item" key={idx}>
                 <div className="name alternate dashed-underline">{name}</div>
                 <div>{description}</div>
               </li>
@@ -155,10 +155,10 @@ const Skills = () => {
         </ol>
       </div>
 
-      <div className="certifications-container">
+      <div className="content-container">
         <div className="bold">Skills</div>
-        <ol className="certifications-list">
-          <li className="project">
+        <ol className="content-list">
+          <li className="list-item">
             <div className="name alternate">TS</div>
           </li>
         </ol>

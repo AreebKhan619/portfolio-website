@@ -15,26 +15,30 @@ const Experience = () => {
       institutionURL: "(External Link Indicator)",
       companyLogo: GECA,
       rolesAndResponsibilities: [
-        "Managed & set-up monorepo architecture and co-led the shared code development",
+        "CGPA: 7.6",
+        "Runner up, Web Quest (Techfest event) 2017, 2018",
+        "Winner, Spell Your Brain (College event) 2018, 2019",
       ],
     },
     {
-      duration: "June '02 - June '15",
+      duration: "Nov '13 - Nov '15",
       role: "HSC (12th)",
       institutionName: "Tyndale Biscoe School",
       institutionURL: "(External Link Indicator)",
       companyLogo: Biscoe,
-      // rolesAndResponsibilities: ["Did some things here as well"],
+      rolesAndResponsibilities: [
+        "Got 120th position state-wide; Resulting in getting a national scholarship for the aforementioned college.",
+      ],
     },
     {
-      duration: "June '02 - June '15",
+      duration: "Nov '02 - Nov '13",
       role: "SSC (10th)",
       institutionName: "Tyndale Biscoe School",
       institutionURL: "(External Link Indicator)",
       companyLogo: Biscoe,
       rolesAndResponsibilities: [
         "Scored 20th position state-wide",
-        "Swimming",
+        "Actively participated in extra-curricular activities, represented school in Art Competitions",
       ],
     },
   ];
@@ -44,8 +48,7 @@ const Experience = () => {
       <PageTitle title={"Education"} />
       <TimelineWrapper education={education} />
       <div className="additional-content">
-        Additional thingies: Got 1103<sup>rd</sup> position throughout the
-        valley in JKCET.
+        Got 1103<sup>rd</sup> position in state-level entrance exams.
       </div>
     </ExperienceOuterContainer>
   );

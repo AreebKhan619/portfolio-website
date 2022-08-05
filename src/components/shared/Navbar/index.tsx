@@ -39,7 +39,7 @@ const Navbar = () => {
     },
     {
       name: Strings.education,
-    }
+    },
   ];
 
   return (
@@ -94,7 +94,11 @@ const LargerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
   return (
     <>
       {links.map((link, idx) => {
-        return <Item key={idx}>{link.name}</Item>;
+        return (
+          <Item isSelected={idx === 1} key={idx}>
+            {link.name}
+          </Item>
+        );
       })}
     </>
   );

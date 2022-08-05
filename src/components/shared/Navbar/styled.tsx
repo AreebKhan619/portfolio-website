@@ -60,7 +60,13 @@ export const NavigationItems = styled.nav`
   }
 `;
 
-export const Item = styled.div``;
+interface LinkItemProps {
+  isSelected?: boolean;
+}
+export const Item = styled.div<LinkItemProps>`
+  font-weight: ${(props) => (props.isSelected ? 800 : "normal")};
+  text-shadow: ${(props) => (props.isSelected ? "0 0 black" : "none")};
+`;
 
 export const PrimaryActionItem = styled(Item)`
   border: 0.2rem solid #a4cddd;

@@ -41,7 +41,7 @@ const Experience = () => {
           subPoints: [
             "Led the development of Web App for the platform from scratch.",
             "Managed & set-up monorepo architecture with Lerna; Co-led the shared code development.",
-            "Set up the singular cross-platform logging infrastructure with Segment and error handling with Sentry, which serves as blueprint for logging for other projects in the organisation as well.",
+            "Set up the singular cross-platform logging infrastructure with Segment & Sentry; This infra serves as blueprint for logging for other projects in the organisation as well.",
           ],
           link: "https://incom.betagged.co",
           list: [
@@ -177,6 +177,11 @@ const Experience = () => {
               title: "ReactJS",
             },
             {
+              icon: Redux,
+              link: null,
+              title: "Redux",
+            },
+            {
               icon: NodeJS,
               link: null,
               title: "NodeJS",
@@ -196,17 +201,23 @@ const Experience = () => {
               link: null,
               title: "ExpressJS",
             },
+            {
+              icon: Sass,
+              link: null,
+              title: "SASS",
+            },
           ],
         },
         {
           text: "Sahyadri Farms Website",
           subPoints: [
-            "Developed and co-designed the corporate website for Sahyadri Farms, India's leading Farmer-Producer-Organisation",
+            "Developed and co-designed the corporate website for Sahyadri Farms, India's leading Farmer-Producer-Organisation.",
+            "This updated website increased traffic and engagement, resulting in ~10K impressions per month.",
           ],
           link: "https://sahyadrifarms.com",
         },
-        "Developed a PWA and an Android App using React Native to be used by lesser tech-savvy farmers of Maharashtra, India.",
-        "Trained over 30+ interns in hands-on, interactive bootcamps for ReactJS, going over the basics to the advanced concepts",
+        "Developed a PWA and an Android App using React Native with i18n support to be used by lesser tech-savvy farmers of Maharashtra, India.",
+        "Trained over 30+ interns in hands-on, interactive bootcamps for ReactJS, going over concepts from basics to advanced.",
       ],
       // gallery: [],
       bgColor: "#e2f6ff",
@@ -221,8 +232,9 @@ const Experience = () => {
         {
           text: "DhammaEdicts - Verse storage on the blockchain",
           subPoints: [
-            `Designed and developed the Web App for storing sacred Buddist "Tripitaka" texts on the blockchain`,
-            "Co-implemented the authentication and authorization mechanism",
+            `Designed and developed the Web App for storing sacred Buddist "Tripitaka" texts on the blockchain.`,
+            "Co-implemented the authentication and authorization mechanism with JWT.",
+            "Project was inaugrated at Global Buddist Congregation 2019 by Dalai Lama.",
           ],
           link: "https://dhammaedicts-block.com",
           list: [
@@ -230,6 +242,11 @@ const Experience = () => {
               icon: ReactJS,
               link: null,
               title: "ReactJS",
+            },
+            {
+              icon: Redux,
+              link: null,
+              title: "Redux",
             },
             {
               icon: NodeJS,

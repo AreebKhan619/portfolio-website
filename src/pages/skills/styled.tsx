@@ -8,8 +8,8 @@ export const SkillsOuterContainer = styled.section.attrs((props) => ({
   margin-block: 10rem;
   position: relative;
 
-  .left-filler-img{
-    background-image: url(${PersonalProjects})
+  .left-filler-img {
+    background-image: url(${PersonalProjects});
   }
 
   &:before {
@@ -18,15 +18,13 @@ export const SkillsOuterContainer = styled.section.attrs((props) => ({
     background-color: ${(props) => props.circleColor}!important;
   }
 
-  .personal-projects-container,
-  .certifications-container {
+  .content-container {
     margin-block: 4rem;
   }
 
-  ol.projects-list,
-  ol.certifications-list {
+  ol.content-list {
     list-style: unset;
-    li.project {
+    li.list-item {
       margin-block-end: 2rem;
       .name {
         color: #009688;
