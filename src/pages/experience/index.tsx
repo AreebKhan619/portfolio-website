@@ -166,7 +166,7 @@ const Experience = () => {
           text: "QRiosity - Traceability & Transparency Solution",
           subPoints: [
             "Co-led the development for Blockchain-enabled Farm to Fork Traceability & Transparency Solution.",
-            "Developed the backbone print driver with NodeJS and interactive dashboard to automate the label printing, providing identity to items and speeding up the process by more than 60%.",
+            "Developed the backbone print driver with NodeJS and interactive dashboard to automate the label printing, providing identity to items and speeding up the process by more than 60%. 5M+ unique traceable QR Codes generated since 2019.",
             "Designed & developed 5+ trace screens to provide customised traceability to organisations.",
           ],
           link: "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738",

@@ -65,7 +65,7 @@ export const EventContainer = styled.div<EventContainerProps>`
 
       .title {
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 2.4rem;
       }
 
       .subtitle {
@@ -182,6 +182,7 @@ export const EventContainer = styled.div<EventContainerProps>`
 
   @media screen and (max-width: ${breakpoints.tablet}) {
     .event-main {
+      margin-left: 0;
       ul.subpoints,
       ol {
         padding-inline-start: 2rem;
@@ -201,6 +202,7 @@ export const EventContainer = styled.div<EventContainerProps>`
     flex-direction: column;
 
     &.timeline-point {
+      margin-block-end: 1rem;
       .time-range {
         width: fit-content;
         padding: 1rem 1.5rem;
@@ -209,7 +211,7 @@ export const EventContainer = styled.div<EventContainerProps>`
         border: 0.1rem solid lightgrey;
         position: relative;
         top: -1rem;
-        right: -4rem;
+        right: -3rem;
       }
       .event-main {
         &:before {
@@ -219,6 +221,16 @@ export const EventContainer = styled.div<EventContainerProps>`
         &:after {
           top: -3rem;
           height: calc(100% + 3.5rem);
+        }
+
+        .event-point-container {
+          .title {
+            line-height: 1;
+            font-size: 2rem;
+          }
+          .subtitle {
+            font-size: 1.8rem;
+          }
         }
       }
     }

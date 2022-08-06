@@ -35,7 +35,7 @@ const projectsList = [
   {
     name: "2048",
     description:
-      "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",
+      "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch.",
     skillsList: [
       {
         icon: ReactJS,
@@ -52,7 +52,7 @@ const projectsList = [
   {
     name: "Movies Explorer",
     description:
-      "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",
+      "App created using MERN stack which acts like a movie explorer for browsing, managing and playing stored movies, with offline metadata caching (kind of like Plex).",
     skillsList: [
       {
         icon: ReactJS,
@@ -78,41 +78,39 @@ const projectsList = [
   },
   {
     name: "Snake game",
-    description:
-      "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",
+    description: "Classic game of Snake in ReactJS",
   },
   {
     name: "Sticky Notes",
-    description:
-      "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch. Used styled components",
+    description: "Draggable sticky notes made in ReactJS",
   },
 ];
 
 const certificationsList = [
   {
-    name: "Front End Certification [React, Redux, SASS]",
-    description: "Certification provided by freeCodeCamp",
-    link: "",
+    name: "Front End Certification [React, Redux, SASS] - freeCodeCamp",
+    description: "",
+    link: "https://www.freecodecamp.org/certification/fccbd0ae55d-491b-441c-8296-1727843d700b/front-end-development-libraries",
   },
   {
-    name: "React",
-    description: "Certification provided by HackerRank",
-    link: "",
+    name: "React - TestDome (Top 10%)",
+    description: "",
+    link: "https://www.testdome.com/certificates/e9a80f7e75c44a3c967e1d0320c1c34e",
   },
   {
-    name: "React",
-    description: "Certification provided by TestDome",
-    link: "",
+    name: "React - HackerRank",
+    description: "",
+    link: "https://www.hackerrank.com/certificates/be403f4d3fd3",
   },
   {
-    name: "NodeJS, ReactJS, MongoDB",
-    description: "Certification provided by LinkedIn",
-    link: "",
+    name: "NodeJS, ReactJS, MongoDB - LinkedIn",
+    description: "",
+    link: "https://in.linkedin.com/in/mareebkhan",
   },
   {
-    name: "Computer Networks",
-    description: "Certification provided by NPTEL",
-    link: "",
+    name: "Computer Networks - NPTEL (Top 5%)",
+    description: "",
+    link: "https://drive.google.com/file/d/1T5vYLOBtS6OysTNXzKQmYGwDUZ2D1d3_/view?usp=shari",
   },
 ];
 
