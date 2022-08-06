@@ -155,26 +155,6 @@ export const EventContainer = styled.div<EventContainerProps>`
         }
         .supporting-items {
           font-size: 1.4rem;
-          a.link {
-            margin: 1rem 0;
-            border-radius: 0.5rem;
-            text-decoration: none;
-
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            line-height: 2;
-            width: 60%;
-            word-break: break-all;
-            transition: 0.2s all ease-in;
-            color: #a2660d;
-
-            &:hover {
-              text-decoration: underline;
-              filter: brightness(0.9);
-            }
-          }
         }
       }
     }

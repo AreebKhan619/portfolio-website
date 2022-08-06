@@ -1,10 +1,10 @@
+import { PageTitle } from "../../components/shared/SharedStyledComponents/styled";
 import { HobbiesOuterContainer } from "./styled";
-import PageTitle from "../../components/shared/PageTitle";
 
 const Hobbies = () => {
   return (
     <HobbiesOuterContainer className="inner-padding">
-      <PageTitle title={"Hobbies"} />
+      <PageTitle>Hobbies</PageTitle>
       <div>Sketching</div>
     </HobbiesOuterContainer>
   );

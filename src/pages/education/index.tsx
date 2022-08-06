@@ -1,10 +1,10 @@
 import { ExperienceOuterContainer } from "./styled";
 
-import PageTitle from "../../components/shared/PageTitle";
 import Timeline from "../../components/shared/Timeline";
-
+import { PageTitle } from "../../components/shared/SharedStyledComponents/styled";
 import { Biscoe, GECA } from "../../assets/images";
 import { GenericObject } from "../../ts";
+
 
 const Experience = () => {
   const education = [
@@ -17,7 +17,7 @@ const Experience = () => {
       rolesAndResponsibilities: [
         "CGPA: 7.6",
         "Runner up, Web Quest (Techfest event) 2017, 2018",
-        "Winner, Spell Your Brain (College event) 2018, 2019",
+        "Winner, Spell Your Brain 2018, 2019",
       ],
     },
     {
@@ -45,7 +45,7 @@ const Experience = () => {
 
   return (
     <ExperienceOuterContainer className="inner-padding">
-      <PageTitle title={"Education"} />
+      <PageTitle>Education</PageTitle>
       <TimelineWrapper education={education} />
       <div className="additional-content">
         Got 1103<sup>rd</sup> position in state-level entrance exams.

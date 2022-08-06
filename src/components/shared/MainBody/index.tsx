@@ -3,7 +3,7 @@ import { MainBodyContainer } from "./styled";
 import Overview from "../../../pages/overview";
 import Experience from "../../../pages/experience";
 import Education from "../../../pages/education";
-import Skills from "../../../pages/skills";
+import SkillsAndPersonalProjects from "../../../pages/skills";
 
 const MainBody = () => {
   return (
@@ -11,7 +11,7 @@ const MainBody = () => {
       {/* Routing here */}
       <Overview />
       <Experience />
-      <Skills />
+      <SkillsAndPersonalProjects />
       <Education />
     </MainBodyContainer>
   );

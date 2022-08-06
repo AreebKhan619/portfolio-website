@@ -1,6 +1,6 @@
 import { ExperienceOuterContainer } from "./styled";
 
-import PageTitle from "../../components/shared/PageTitle";
+import { PageTitle } from "../../components/shared/SharedStyledComponents/styled";
 import Timeline from "../../components/shared/Timeline";
 
 import {
@@ -311,7 +311,7 @@ const Experience = () => {
   return (
     <ExperienceOuterContainer className="inner-padding">
       <div className="left-filler-img" />
-      <PageTitle title={"Experience"} />
+      <PageTitle>Experience</PageTitle>
       <TimelineWrapper experience={experience} />
     </ExperienceOuterContainer>
   );

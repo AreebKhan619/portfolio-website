@@ -2,12 +2,16 @@ import {
   ChakraUI,
   ExpressJS,
   FramerMotion,
+  GitHub,
   NodeJS,
   ReactJS,
   StyledComponents,
 } from "../../assets/images";
 import LibrariesUsed from "../../components/shared/LibrariesUsed";
-import PageTitle from "../../components/shared/PageTitle";
+import {
+  HrefLink,
+  PageTitle,
+} from "../../components/shared/SharedStyledComponents/styled";
 import { SkillsOuterContainer } from "./styled";
 
 const projectsList = [
@@ -31,6 +35,8 @@ const projectsList = [
         title: "Framer Motion",
       },
     ],
+    link: "https://areeb.co.in",
+    repoLink: "https://github.com/AreebKhan619/portfolio-website",
   },
   {
     name: "2048",
@@ -48,6 +54,8 @@ const projectsList = [
         title: "styled-components",
       },
     ],
+    link: "https://2048-three.vercel.app",
+    repoLink: "https://github.com/AreebKhan619/2048",
   },
   {
     name: "Movies Explorer",
@@ -75,14 +83,21 @@ const projectsList = [
         title: "ExpressJS",
       },
     ],
+    link: "",
+    repoLink: "https://github.com/AreebKhan619/MoviesExplorer",
   },
+
   {
     name: "Snake game",
     description: "Classic game of Snake in ReactJS",
+    link: "",
+    repoLink: "https://github.com/AreebKhan619/snake-game",
   },
   {
     name: "Sticky Notes",
     description: "Draggable sticky notes made in ReactJS",
+    link: "",
+    repoLink: "https://github.com/AreebKhan619/react-sticky-notes",
   },
 ];
 
@@ -117,25 +132,44 @@ const certificationsList = [
 // write something about Projects, Skills and Certifications
 // Libraries and UI kits familiar with
 
-const Skills = () => {
+const SkillsAndPersonalProjects = () => {
   return (
     <SkillsOuterContainer className="inner-padding" circleColor={"#c8d8ff61"}>
       <div className="left-filler-img" />
-      <PageTitle title={"Skills & Personal Projects"} />
+      <PageTitle>Skills &amp; Personal Projects</PageTitle>
       <div className="content-container">
+        {/* Personal Projects */}
         <div className="bold">Personal Projects</div>
         <ol className="content-list">
-          {projectsList.map(({ name, description, skillsList }, idx) => {
-            return (
-              <li className="list-item" key={idx}>
-                <div className="name dashed-underline">{name}</div>
-                <div>{description}</div>
-                <div className="libraries-used">
-                  {skillsList && <LibrariesUsed list={skillsList} />}
-                </div>
-              </li>
-            );
-          })}
+          {projectsList.map(
+            ({ name, description, skillsList, link, repoLink }, idx) => {
+              return (
+                <li className="list-item" key={idx}>
+                  <div className="name dashed-underline">{name}</div>
+                  <div>{description}</div>
+                  {link && (
+                    <HrefLink href={link}>
+                      See it live in action: {link}
+                    </HrefLink>
+                  )}
+                  {repoLink && (
+                    <HrefLink href={repoLink}>
+                      <img
+                        className="repo-icon"
+                        src={GitHub}
+                        alt={"repository"}
+                      />
+                    </HrefLink>
+                  )}
+                  {skillsList && (
+                    <div className="libraries-used">
+                      <LibrariesUsed list={skillsList} />
+                    </div>
+                  )}
+                </li>
+              );
+            }
+          )}
         </ol>
       </div>
 
@@ -172,4 +206,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsAndPersonalProjects;
