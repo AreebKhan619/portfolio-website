@@ -58,6 +58,12 @@ const projectsList = [
     repoLink: "https://github.com/AreebKhan619/2048",
   },
   {
+    name: "Sticky Notes",
+    description: "Draggable sticky notes made in ReactJS",
+    link: "https://stickynotesinreact.netlify.app/",
+    repoLink: "https://github.com/AreebKhan619/react-sticky-notes",
+  },
+  {
     name: "Movies Explorer",
     description:
       "App created using MERN stack which acts like a movie explorer for browsing, managing and playing stored movies, with offline metadata caching (kind of like Plex).",
@@ -92,12 +98,6 @@ const projectsList = [
     description: "Classic game of Snake in ReactJS",
     link: "",
     repoLink: "https://github.com/AreebKhan619/snake-game",
-  },
-  {
-    name: "Sticky Notes",
-    description: "Draggable sticky notes made in ReactJS",
-    link: "",
-    repoLink: "https://github.com/AreebKhan619/react-sticky-notes",
   },
 ];
 
