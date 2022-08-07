@@ -28,6 +28,7 @@ const Experience = () => {
           subPoints: [
             "Plant-based disease detection and prevention system using Machine Learning",
           ],
+          link: "https://github.com/AreebKhan619/PlantDiseaseDetection",
           list: [
             {
               icon: ReactJS,

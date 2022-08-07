@@ -117,7 +117,7 @@ const certificationsList = [
     link: "https://www.hackerrank.com/certificates/be403f4d3fd3",
   },
   {
-    name: "NodeJS, ReactJS, MongoDB - LinkedIn",
+    name: "NodeJS, ReactJS, MongoDB - LinkedIn (Top 15%, 30%, 5% resp.)",
     description: "",
     link: "https://in.linkedin.com/in/mareebkhan",
   },
