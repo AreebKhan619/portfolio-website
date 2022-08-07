@@ -489,7 +489,7 @@ export const educationData = [
     institutionURL: "(External Link Indicator)",
     companyLogo: GECA,
     rolesAndResponsibilities: [
-      "CGPA: 7.6",
+      "GPA: 7.6",
       {
         text: "Final Year Project",
         subPoints: [
@@ -535,6 +535,7 @@ export const educationData = [
     institutionURL: "(External Link Indicator)",
     companyLogo: Biscoe,
     rolesAndResponsibilities: [
+      "GPA: 8.6",
       "Got 120th position state-wide; Was awarded a national scholarship in the aforementioned college for my performance.",
     ],
   },
@@ -545,6 +546,7 @@ export const educationData = [
     institutionURL: "(External Link Indicator)",
     companyLogo: Biscoe,
     rolesAndResponsibilities: [
+      "GPA: 9.4",
       "Scored 20th position state-wide",
       "Actively participated in extra-curricular activities, represented school in Art Competitions",
     ],
