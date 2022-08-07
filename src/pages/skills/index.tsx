@@ -1,11 +1,20 @@
 import {
   ChakraUI,
+  ComputerNetworking,
   ExpressJS,
+  Flask,
   FramerMotion,
+  Git,
   GitHub,
+  HTMLandCSS,
+  JavaScript,
+  MongoDB,
   NodeJS,
   ReactJS,
+  Redux,
   StyledComponents,
+  TDD,
+  TypeScript,
 } from "../../assets/images";
 import LibrariesUsed from "../../components/shared/LibrariesUsed";
 import {
@@ -130,40 +139,52 @@ const certificationsList = [
 
 const skillsList = [
   {
-    name: "TypeScript",
+    icon: TypeScript,
+    title: "TypeScript",
   },
   {
-    name: "JavaScript",
+    icon: JavaScript,
+    title: "JavaScript",
   },
   {
-    name: "ReactJS",
+    icon: ReactJS,
+    title: "ReactJS",
   },
   {
-    name: "Redux",
+    icon: Redux,
+    title: "Redux",
   },
   {
-    name: "Git",
+    icon: Git,
+    title: "Git",
   },
   {
-    name: "Express",
+    icon: ExpressJS,
+    title: "Express",
   },
   {
-    name: "MongoDB",
+    icon: MongoDB,
+    title: "MongoDB",
   },
   {
-    name: "NodeJS",
+    icon: NodeJS,
+    title: "NodeJS",
   },
   {
-    name: "Computer Networking",
+    icon: ComputerNetworking,
+    title: "Computer Networking",
   },
   {
-    name: "HTML / CSS",
+    icon: HTMLandCSS,
+    title: "HTML / CSS",
   },
   {
-    name: "Flask",
+    icon: Flask,
+    title: "Flask",
   },
   {
-    name: "TDD",
+    icon: TDD,
+    title: "TDD",
   },
 ];
 
@@ -234,15 +255,7 @@ const SkillsAndPersonalProjects = () => {
 
       <div className="content-container">
         <div className="bold">Skills &amp; Languages</div>
-        <ol className="content-list inline">
-          {skillsList.map(({ name }, idx) => {
-            return (
-              <li key={idx} className="list-item">
-                <div className="name alternate">{name}</div>
-              </li>
-            );
-          })}
-        </ol>
+        <LibrariesUsed hideTitle={true} list={skillsList} />
       </div>
     </SkillsOuterContainer>
   );

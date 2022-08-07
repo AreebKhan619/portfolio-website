@@ -5,15 +5,19 @@ import { LibrariesUsedContainer } from "./styled";
 
 interface ILibrariesUsed {
   list: any[];
+  hideTitle?: boolean;
 }
 
-const LibrariesUsed: FC<ILibrariesUsed> = ({ list }): JSX.Element => {
+const LibrariesUsed: FC<ILibrariesUsed> = ({
+  list,
+  hideTitle = false,
+}): JSX.Element => {
   return (
     <LibrariesUsedContainer>
       <div className="list">
         <div className="bg-img"></div>
         <div className="content">
-          <div>Major libraries/tools used:</div>
+          {!hideTitle && <div>Major libraries/tools used:</div>}
           <div className="list-items">
             {list.map(({ icon, link, title }, idx) => (
               <motion.div
