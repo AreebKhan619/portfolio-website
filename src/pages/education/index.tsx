@@ -1,9 +1,16 @@
 import { ExperienceOuterContainer } from "./styled";
 
-import PageTitle from "../../components/shared/PageTitle";
 import Timeline from "../../components/shared/Timeline";
-
-import { Biscoe, GECA } from "../../assets/images";
+import { PageTitle } from "../../components/shared/SharedStyledComponents/styled";
+import {
+  Biscoe,
+  Flask,
+  GECA,
+  Keras,
+  ReactJS,
+  SemanticUI,
+  TensorFlow,
+} from "../../assets/images";
 import { GenericObject } from "../../ts";
 
 const Experience = () => {
@@ -16,8 +23,42 @@ const Experience = () => {
       companyLogo: GECA,
       rolesAndResponsibilities: [
         "CGPA: 7.6",
+        {
+          text: "Final Year Project",
+          subPoints: [
+            "Plant-based disease detection and prevention system using Machine Learning",
+          ],
+          link: "https://github.com/AreebKhan619/PlantDiseaseDetection",
+          list: [
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: SemanticUI,
+              link: null,
+              title: "Semantic UI",
+            },
+            {
+              icon: Flask,
+              link: null,
+              title: "Flask",
+            },
+            {
+              icon: TensorFlow,
+              link: null,
+              title: "TensorFlow",
+            },
+            {
+              icon: Keras,
+              link: null,
+              title: "Keras",
+            },
+          ],
+        },
         "Runner up, Web Quest (Techfest event) 2017, 2018",
-        "Winner, Spell Your Brain (College event) 2018, 2019",
+        "Winner, Spell Your Brain 2018, 2019",
       ],
     },
     {
@@ -27,7 +68,7 @@ const Experience = () => {
       institutionURL: "(External Link Indicator)",
       companyLogo: Biscoe,
       rolesAndResponsibilities: [
-        "Got 120th position state-wide; Resulting in getting a national scholarship for the aforementioned college.",
+        "Got 120th position state-wide; Was awarded a national scholarship in the aforementioned college for my performance.",
       ],
     },
     {
@@ -45,7 +86,7 @@ const Experience = () => {
 
   return (
     <ExperienceOuterContainer className="inner-padding">
-      <PageTitle title={"Education"} />
+      <PageTitle>Education</PageTitle>
       <TimelineWrapper education={education} />
       <div className="additional-content">
         Got 1103<sup>rd</sup> position in state-level entrance exams.

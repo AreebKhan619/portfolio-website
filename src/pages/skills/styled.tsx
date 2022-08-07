@@ -24,6 +24,13 @@ export const SkillsOuterContainer = styled.section.attrs((props) => ({
 
   ol.content-list {
     list-style: unset;
+
+    &.inline {
+      display: flex;
+      column-gap: 5rem;
+      flex-wrap: wrap;
+    }
+
     li.list-item {
       margin-block-end: 2rem;
       .name {
@@ -33,6 +40,9 @@ export const SkillsOuterContainer = styled.section.attrs((props) => ({
         &.alternate {
           color: darkblue;
         }
+      }
+      .repo-icon {
+        width: 4rem;
       }
       .libraries-used {
         font-size: 1.5rem;

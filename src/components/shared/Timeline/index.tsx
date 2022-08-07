@@ -6,6 +6,7 @@ import {
 } from "../../../assets/constants/motionProps";
 import { TimelineEventObject } from "../../../ts/interfaces";
 import LibrariesUsed from "../LibrariesUsed";
+import { HrefLink } from "../SharedStyledComponents/styled";
 import {
   TimelineContainer,
   TimeRange,
@@ -77,14 +78,9 @@ const EventPoint: FC<TimelineEventObject> = ({
           )}
           <div className="supporting-items">
             {point.link && (
-              <a
-                target={"_blank"}
-                rel={"noreferrer"}
-                href={point.link}
-                className="link"
-              >
+              <HrefLink href={point.link}>
                 See it live in action: {point.link}
-              </a>
+              </HrefLink>
             )}
 
             {point?.list?.length && <LibrariesUsed list={point.list} />}

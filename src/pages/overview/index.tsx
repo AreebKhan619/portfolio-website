@@ -31,27 +31,28 @@ import {
   getScaleAnimationProps,
   getWaveAnimationProps,
 } from "../../assets/constants/motionProps";
+import { HrefLink } from "../../components/shared/SharedStyledComponents/styled";
 
 const links = [
   {
     name: "GitHub",
     imgUri: GitHub,
-    url: "https://www.github.com",
+    url: "https://github.com/AreebKhan619",
   },
   {
     name: "LinkedIn",
     imgUri: LinkedIn,
-    url: "https://www.github.com",
+    url: "https://linkedin.com/in/mareebkhan",
   },
   {
     name: "GMail",
     imgUri: GMail,
-    url: "https://www.github.com",
+    url: "mailto:areebkhan619@gmail.com",
   },
   {
     name: "StackOverflow",
     imgUri: StackOverflow,
-    url: "https://www.github.com",
+    url: "https://stackoverflow.com/users/7343008/areeb-khan",
   },
 ];
 
@@ -102,7 +103,9 @@ const Overview = () => {
         <div id="second-half">
           <div className="links-container">
             <motion.div id="resume-link" {...getOnClickAnimationProps()}>
-              Download Resume
+              <a className="link" target={"_blank"} rel={"noreferrer"} href={"/Areeb Khan - Resume.pdf"}>
+                Download Resume
+              </a>
             </motion.div>
             {links.map((el, idx) => {
               return (

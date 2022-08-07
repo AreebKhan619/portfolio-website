@@ -1,6 +1,6 @@
 import { ExperienceOuterContainer } from "./styled";
 
-import PageTitle from "../../components/shared/PageTitle";
+import { PageTitle } from "../../components/shared/SharedStyledComponents/styled";
 import Timeline from "../../components/shared/Timeline";
 
 import {
@@ -39,8 +39,9 @@ const Experience = () => {
         {
           text: "BeTagged - A Social Media Marketing Platform",
           subPoints: [
-            "Led the development of Web App for the platform from scratch.",
+            "Led the development of Web App for the platform from scratch; written in TS.",
             "Managed & set-up monorepo architecture with Lerna; Co-led the shared code development.",
+            "Reviewed code and mentored other devs in the team.",
             "Set up the singular cross-platform logging infrastructure with Segment & Sentry; This infra serves as blueprint for logging for other projects in the organisation as well.",
           ],
           link: "https://incom.betagged.co",
@@ -134,39 +135,11 @@ const Experience = () => {
       companyLogo: Emertech,
       rolesAndResponsibilities: [
         {
-          text: "Invento - ERP Management Software",
-          subPoints: [
-            "Led the front-end development for ERP Management Software that helps enterprises in inventory management, invoice generation and throughput estimation.",
-          ],
-          link: "https://invento.agrotrust.io",
-          list: [
-            {
-              icon: ReactJS,
-              link: null,
-              title: "ReactJS",
-            },
-            {
-              icon: AntDesign,
-              link: null,
-              title: "AntDesign",
-            },
-            {
-              icon: Redux,
-              link: null,
-              title: "Redux",
-            },
-            {
-              icon: Sass,
-              link: null,
-              title: "SASS",
-            },
-          ],
-        },
-        {
           text: "QRiosity - Traceability & Transparency Solution",
           subPoints: [
             "Co-led the development for Blockchain-enabled Farm to Fork Traceability & Transparency Solution.",
-            "Developed the backbone print driver with NodeJS and interactive dashboard to automate the label printing, providing identity to items and speeding up the process by more than 60%.",
+            "Was geared towards consumable units in Supply Chain",
+            "Developed the backbone print driver with NodeJS and interactive dashboard to automate the label printing, providing identity to items and speeding up the process by more than 60%. 5M+ unique traceable QR Codes generated since 2019.",
             "Designed & developed 5+ trace screens to provide customised traceability to organisations.",
           ],
           link: "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738",
@@ -200,6 +173,35 @@ const Experience = () => {
               icon: ExpressJS,
               link: null,
               title: "ExpressJS",
+            },
+            {
+              icon: Sass,
+              link: null,
+              title: "SASS",
+            },
+          ],
+        },
+        {
+          text: "Invento - ERP Management Software",
+          subPoints: [
+            "Led the front-end development for ERP Management Software that helps enterprises in inventory management, invoice generation and throughput estimation.",
+          ],
+          link: "https://invento.agrotrust.io",
+          list: [
+            {
+              icon: ReactJS,
+              link: null,
+              title: "ReactJS",
+            },
+            {
+              icon: AntDesign,
+              link: null,
+              title: "AntDesign",
+            },
+            {
+              icon: Redux,
+              link: null,
+              title: "Redux",
             },
             {
               icon: Sass,
@@ -311,7 +313,7 @@ const Experience = () => {
   return (
     <ExperienceOuterContainer className="inner-padding">
       <div className="left-filler-img" />
-      <PageTitle title={"Experience"} />
+      <PageTitle>Experience</PageTitle>
       <TimelineWrapper experience={experience} />
     </ExperienceOuterContainer>
   );
