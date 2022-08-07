@@ -31,7 +31,6 @@ import {
   getScaleAnimationProps,
   getWaveAnimationProps,
 } from "../../assets/constants/motionProps";
-import { HrefLink } from "../../components/shared/SharedStyledComponents/styled";
 
 const links = [
   {
