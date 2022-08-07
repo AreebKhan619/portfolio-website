@@ -69,6 +69,15 @@ export const NavigationItems = styled.nav`
       text-shadow: 0 0 black;
     }
   }
+
+  .item-lg {
+    padding-block: 1rem;
+
+    &.active {
+      font-weight: 800;
+      text-shadow: 0 0 black;
+    }
+  }
 `;
 
 export const PrimaryActionItem = styled.div`
