@@ -33,6 +33,11 @@ import Storybook from "./storybook.png"
 import AntDesign from "./ant-design.png"
 import Puppeteer from "./puppeteer.png"
 import FramerMotion from "./framer-motion.png"
+import SemanticUI from "./semantic-ui.png"
+import Flask from "./flask.png"
+import TensorFlow from "./tensorflow.png"
+import Keras from "./keras.png"
+
 
 export {
   WavyLine,
@@ -69,5 +74,9 @@ export {
   Storybook,
   AntDesign,
   Puppeteer,
-  FramerMotion
+  FramerMotion,
+  SemanticUI,
+  Flask,
+  TensorFlow,
+  Keras
 };

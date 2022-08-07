@@ -40,8 +40,7 @@ const projectsList = [
   },
   {
     name: "2048",
-    description:
-      `Classic game of 2048 in ReactJS. Was addicted to the game, thought to make a version of it myself.`,
+    description: `Classic game of 2048 in ReactJS. Was addicted to the game, thought to make a version of it myself.`,
     skillsList: [
       {
         icon: ReactJS,
@@ -129,6 +128,45 @@ const certificationsList = [
   },
 ];
 
+const skillsList = [
+  {
+    name: "TypeScript",
+  },
+  {
+    name: "JavaScript",
+  },
+  {
+    name: "ReactJS",
+  },
+  {
+    name: "Redux",
+  },
+  {
+    name: "Git",
+  },
+  {
+    name: "Express",
+  },
+  {
+    name: "MongoDB",
+  },
+  {
+    name: "NodeJS",
+  },
+  {
+    name: "Computer Networking",
+  },
+  {
+    name: "HTML / CSS",
+  },
+  {
+    name: "Flask",
+  },
+  {
+    name: "TDD",
+  },
+];
+
 // write something about Projects, Skills and Certifications
 // Libraries and UI kits familiar with
 
@@ -195,11 +233,15 @@ const SkillsAndPersonalProjects = () => {
       </div>
 
       <div className="content-container">
-        <div className="bold">Skills</div>
-        <ol className="content-list">
-          <li className="list-item">
-            <div className="name alternate">TS</div>
-          </li>
+        <div className="bold">Skills &amp; Languages</div>
+        <ol className="content-list inline">
+          {skillsList.map(({ name }, idx) => {
+            return (
+              <li key={idx} className="list-item">
+                <div className="name alternate">{name}</div>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </SkillsOuterContainer>
