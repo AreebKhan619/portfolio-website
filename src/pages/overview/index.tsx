@@ -31,6 +31,7 @@ import {
   getScaleAnimationProps,
   getWaveAnimationProps,
 } from "../../assets/constants/motionProps";
+import { HrefLink } from "../../components/shared/SharedStyledComponents/styled";
 
 const links = [
   {
@@ -102,7 +103,9 @@ const Overview = () => {
         <div id="second-half">
           <div className="links-container">
             <motion.div id="resume-link" {...getOnClickAnimationProps()}>
-              Download Resume
+              <a className="link" target={"_blank"} rel={"noreferrer"} href={"/Areeb Khan - Resume.pdf"}>
+                Download Resume
+              </a>
             </motion.div>
             {links.map((el, idx) => {
               return (
