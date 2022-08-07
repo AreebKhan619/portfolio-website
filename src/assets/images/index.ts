@@ -37,7 +37,12 @@ import SemanticUI from "./semantic-ui.png"
 import Flask from "./flask.png"
 import TensorFlow from "./tensorflow.png"
 import Keras from "./keras.png"
-
+import TypeScript from "./typescript.png"
+import JavaScript from "./javascript.png"
+import Git from "./git.png"
+import ComputerNetworking from "./computer-networking.png"
+import HTMLandCSS from "./html-css.png"
+import TDD from "./tdd.png"
 
 export {
   WavyLine,
@@ -78,5 +83,11 @@ export {
   SemanticUI,
   Flask,
   TensorFlow,
-  Keras
+  Keras,
+  TypeScript,
+  JavaScript,
+  Git,
+  ComputerNetworking,
+  HTMLandCSS,
+  TDD
 };
