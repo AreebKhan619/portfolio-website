@@ -1,4 +1,4 @@
-import { ExperienceOuterContainer } from "./styled";
+import { EducationOuterContainer } from "./styled";
 
 import Timeline from "../../components/shared/Timeline";
 import { PageTitle } from "../../components/shared/SharedStyledComponents/styled";
@@ -7,13 +7,13 @@ import { educationData } from "../../data";
 
 const Education = () => {
   return (
-    <ExperienceOuterContainer id="education" className="inner-padding">
+    <EducationOuterContainer id="education" className="inner-padding">
       <PageTitle>Education</PageTitle>
       <TimelineWrapper education={educationData} />
       <div className="additional-content">
         Got 1103<sup>rd</sup> position in state-level entrance exams.
       </div>
-    </ExperienceOuterContainer>
+    </EducationOuterContainer>
   );
 };
 
