@@ -51,11 +51,22 @@ export const NavigationItems = styled.nav`
     padding: 2rem var(--padding-x);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+  }
 
-    .item {
+  .item {
+    &.sm {
+      display: block;
       cursor: pointer;
       padding-block: 1rem;
       margin-block: 0.5rem;
+    }
+    &.lg {
+      padding-block: 1rem;
+    }
+
+    &.active {
+      font-weight: 800;
+      text-shadow: 0 0 black;
     }
   }
 

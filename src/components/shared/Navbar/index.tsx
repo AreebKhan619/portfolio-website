@@ -91,9 +91,10 @@ const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
                 smooth
                 spy
                 activeClass="active"
-                className="item"
+                className="item sm"
                 to={link.id}
                 key={idx}
+                offset={-75}
               >
                 {link.name}
               </Link>
@@ -111,7 +112,7 @@ const LargerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
       {links.map((link, idx) => {
         return (
           <Link
-            className="item-lg"
+            className="item lg"
             smooth
             spy
             activeClass="active"
