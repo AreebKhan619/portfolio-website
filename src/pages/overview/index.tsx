@@ -101,10 +101,12 @@ const Overview = () => {
         </div>
         <div id="second-half">
           <div className="links-container">
-            <motion.div id="resume-link" {...getOnClickAnimationProps()}>
-              <a className="link" target={"_blank"} rel={"noreferrer"} href={"/Areeb Khan - Resume.pdf"}>
-                Download Resume
-              </a>
+            <motion.div
+              id="resume-link"
+              onClick={() => window.open("/Areeb Khan - Resume.pdf", "_new")}
+              {...getOnClickAnimationProps()}
+            >
+              Download Resume
             </motion.div>
             {links.map((el, idx) => {
               return (

@@ -91,7 +91,7 @@ const Experience = () => {
         {
           text: "Reeco - A Restaurant Procurement Platform",
           subPoints: [
-            "Worked on 3 apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing].",
+            "Worked on 3 TS-written apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing].",
             "Implemented optimistic updates and response caching with TanStack Query, resulting in lesser wait times and better UX.",
             "Contributed to component library for creating highly reusable and flexible components between the three apps with Storybook.",
           ],

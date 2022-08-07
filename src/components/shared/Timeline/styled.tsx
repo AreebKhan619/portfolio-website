@@ -168,9 +168,6 @@ export const EventContainer = styled.div<EventContainerProps>`
         padding-inline-start: 2rem;
       }
       .point-details .extended {
-        .supporting-items a.link {
-          width: 100%;
-        }
         .dashed-underline {
           display: block;
         }

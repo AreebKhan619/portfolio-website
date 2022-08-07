@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../../assets/styles/breakpoints";
 
 export const PageTitle = styled.h3`
   font-size: 3rem;
@@ -48,6 +49,10 @@ export const HrefLink = styled.a.attrs((props) => ({
   &:hover {
     text-decoration: underline;
     filter: brightness(0.9);
+  }
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    width: 100%;
   }
 `;
 
