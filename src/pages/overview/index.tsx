@@ -36,22 +36,22 @@ const links = [
   {
     name: "GitHub",
     imgUri: GitHub,
-    url: "https://www.github.com",
+    url: "https://github.com/AreebKhan619",
   },
   {
     name: "LinkedIn",
     imgUri: LinkedIn,
-    url: "https://www.github.com",
+    url: "https://linkedin.com/in/mareebkhan",
   },
   {
     name: "GMail",
     imgUri: GMail,
-    url: "https://www.github.com",
+    url: "mailto:areebkhan619@gmail.com",
   },
   {
     name: "StackOverflow",
     imgUri: StackOverflow,
-    url: "https://www.github.com",
+    url: "https://stackoverflow.com/users/7343008/areeb-khan",
   },
 ];
 
