@@ -41,7 +41,7 @@ const projectsList = [
   {
     name: "2048",
     description:
-      "Classic game of 2048 in ReactJS. Mobile and desktop-friendly web app created from scratch.",
+      `Classic game of 2048 in ReactJS. Was addicted to the game, thought to make a version of it myself.`,
     skillsList: [
       {
         icon: ReactJS,
@@ -59,7 +59,7 @@ const projectsList = [
   },
   {
     name: "Sticky Notes",
-    description: "Draggable sticky notes made in ReactJS",
+    description: "Draggable sticky notes. My first ReactJS Project.",
     link: "https://stickynotesinreact.netlify.app/",
     repoLink: "https://github.com/AreebKhan619/react-sticky-notes",
   },

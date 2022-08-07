@@ -35,7 +35,7 @@ export const SkillsOuterContainer = styled.section.attrs((props) => ({
         }
       }
       .repo-icon {
-        width: 4.5rem;
+        width: 4rem;
       }
       .libraries-used {
         font-size: 1.5rem;
