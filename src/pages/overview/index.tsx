@@ -72,7 +72,7 @@ const statsList = [
 
 const Overview = () => {
   return (
-    <OverviewContainer>
+    <OverviewContainer id="overview">
       <LeftPortion>
         <div>
           <HiText>{Strings.hi}</HiText>

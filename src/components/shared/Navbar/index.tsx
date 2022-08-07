@@ -9,15 +9,18 @@ import { Hamburger } from "../../../assets/images";
 import { breakpoints } from "../../../assets/styles/breakpoints";
 import { useMaxWidthQuery } from "../../../hooks/useMediaQuery";
 import {
-  Item,
   NavbarOuterContainer,
   NavigationItems,
   PrimaryActionItem,
   Title,
 } from "./styled";
 
+import { Link } from "react-scroll";
+
 interface ILink {
   name: string;
+  id: string;
+  offset?: number;
 }
 
 interface DisplayNavItemsProps {
@@ -30,15 +33,20 @@ const Navbar = () => {
   const links: ILink[] = [
     {
       name: Strings.overview,
+      id: "overview",
+      offset: 0,
     },
     {
       name: Strings.experience,
+      id: "experience",
     },
     {
       name: Strings.skills,
+      id: "skills",
     },
     {
       name: Strings.education,
+      id: "education",
     },
   ];
 
@@ -79,9 +87,16 @@ const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
             className="small-nav-container"
           >
             {links.map((link, idx) => (
-              <div className="item" key={idx}>
+              <Link
+                smooth
+                spy
+                activeClass="active"
+                className="item"
+                to={link.id}
+                key={idx}
+              >
                 {link.name}
-              </div>
+              </Link>
             ))}
           </motion.div>
         )}
@@ -91,19 +106,22 @@ const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
 };
 
 const LargerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
-  const [selectedIdx, setSelectedIdx] = useState(1);
-
   return (
     <>
       {links.map((link, idx) => {
         return (
-          <Item
-            isSelected={idx === selectedIdx}
-            onClick={() => setSelectedIdx(idx)}
+          <Link
+            className="item-lg"
+            smooth
+            spy
+            activeClass="active"
+            to={link.id}
             key={idx}
+            isDynamic={true}
+            offset={-95}
           >
             {link.name}
-          </Item>
+          </Link>
         );
       })}
     </>

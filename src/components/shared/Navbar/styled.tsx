@@ -58,18 +58,18 @@ export const NavigationItems = styled.nav`
       margin-block: 0.5rem;
     }
   }
+
+  .item-lg {
+    padding-block: 1rem;
+
+    &.active {
+      font-weight: 800;
+      text-shadow: 0 0 black;
+    }
+  }
 `;
 
-interface LinkItemProps {
-  isSelected?: boolean;
-}
-export const Item = styled.div<LinkItemProps>`
-  padding-block: 1rem;
-  font-weight: ${(props) => (props.isSelected ? 800 : "normal")};
-  text-shadow: ${(props) => (props.isSelected ? "0 0 black" : "none")};
-`;
-
-export const PrimaryActionItem = styled(Item)`
+export const PrimaryActionItem = styled.div`
   border: 0.2rem solid #a4cddd;
   padding: 1rem 2rem;
   border-radius: 2.5rem;

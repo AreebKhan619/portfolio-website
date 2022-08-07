@@ -9,7 +9,7 @@ import { SkillsOuterContainer } from "./styled";
 
 const SkillsAndPersonalProjects = () => {
   return (
-    <SkillsOuterContainer className="inner-padding" circleColor={"#c8d8ff61"}>
+    <SkillsOuterContainer id="skills" className="inner-padding" circleColor={"#c8d8ff61"}>
       <div className="left-filler-img" />
       <PageTitle>Skills &amp; Personal Projects</PageTitle>
       <div className="content-container">

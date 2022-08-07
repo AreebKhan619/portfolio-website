@@ -8,7 +8,7 @@ import { experienceData } from "../../data";
 
 const Experience = () => {
   return (
-    <ExperienceOuterContainer className="inner-padding">
+    <ExperienceOuterContainer  id="experience" className="inner-padding">
       <div className="left-filler-img" />
       <PageTitle>Experience</PageTitle>
       <TimelineWrapper experience={experienceData} />
