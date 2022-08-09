@@ -60,7 +60,7 @@ const Navbar = () => {
           <LargerDisplayNavItems links={links} />
         )}
 
-        <PrimaryActionItem as={motion.div} {...getOnClickAnimationProps()}>
+        <PrimaryActionItem as={motion.div} {...getOnClickAnimationProps()} onClick={()=>window.scrollTo(0,0)}>
           {Strings.connect}
         </PrimaryActionItem>
       </NavigationItems>
@@ -90,6 +90,7 @@ const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
               <Link
                 smooth
                 spy
+                onClick={() => setIsExpanded(false)}
                 activeClass="active"
                 className="item sm"
                 to={link.id}
