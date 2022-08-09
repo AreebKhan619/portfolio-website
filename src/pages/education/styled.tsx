@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const ExperienceOuterContainer = styled.div`
-  margin-block-start: 10rem;
+export const EducationOuterContainer = styled.div`
+  margin-block: 10rem;
 
   .additional-content {
     margin-block: 3rem;
