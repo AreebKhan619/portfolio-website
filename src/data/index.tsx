@@ -342,7 +342,7 @@ export const projectsList = [
   },
   {
     name: "2048",
-    description: `Classic game of 2048 in ReactJS. Was addicted to the game, thought to make a version of it myself.`,
+    description: `Classic game of 2048 in ReactJS. Was addicted to the game; thought of making a version of it myself.`,
     skillsList: [
       {
         icon: ReactJS,
@@ -403,6 +403,11 @@ export const projectsList = [
 ];
 
 export const certificationsList = [
+  {
+    name: "Front-end Web Development in React [in association with The Hong Kong University of Science and Technology]",
+    description: "",
+    link: "https://coursera.org/share/2bdb2f760d5c95d238e673093fc51cc0",
+  },
   {
     name: "Front End Certification [React, Redux, SASS] - freeCodeCamp",
     description: "",
