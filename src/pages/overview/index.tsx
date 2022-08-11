@@ -121,6 +121,7 @@ const Overview = () => {
                     href={el.url}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={()=>window.analytics.track(`Visited social media profile: ` + el.name)}
                   >
                     <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
                   </a>

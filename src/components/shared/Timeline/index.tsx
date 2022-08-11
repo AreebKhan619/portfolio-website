@@ -61,6 +61,13 @@ const EventPoint: FC<TimelineEventObject> = ({
     if (!isCollapsible) setIsExpanded(false);
   }, [isCollapsible]);
 
+  useEffect(() => {
+    if (isExpanded) {
+      window.analytics.track(`${title} (${subtitle}) was expanded`);
+    }
+    // eslint-disable-next-line
+  }, [isExpanded]);
+
   const renderPoint = (
     point: string | ExtendedDetails<IList>
   ): string | JSX.Element => {
@@ -78,7 +85,7 @@ const EventPoint: FC<TimelineEventObject> = ({
           )}
           <div className="supporting-items">
             {point.link && (
-              <HrefLink href={point.link}>
+              <HrefLink onClick={()=>window.analytics.track(`${point.link} - external link visited`)} href={point.link}>
                 See it live in action: {point.link}
               </HrefLink>
             )}
