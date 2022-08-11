@@ -488,7 +488,7 @@ export const skillsList = [
 
 export const educationData = [
   {
-    duration: "July '17 - Oct '20",
+    duration: "July '16 - Oct '20",
     role: "Bachelors in Computer Science (B.E - C.S.E)",
     institutionName: "Government College of Engineering, Aurangabad",
     institutionURL: "(External Link Indicator)",

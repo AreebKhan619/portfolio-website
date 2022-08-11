@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@types/react-scroll": "^1.8.4",
+    "@types/segment-analytics": "^0.0.34",
     "@types/styled-components": "^5.1.25"
   }
 }
