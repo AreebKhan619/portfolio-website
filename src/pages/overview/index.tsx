@@ -70,6 +70,11 @@ const statsList = [
   },
 ];
 
+const onResumeDownloadClick = () => {
+  window.open("/Areeb Khan - Resume.pdf", "_new");
+  window.analytics.track("Resume was downloaded.")
+}
+
 const Overview = () => {
   return (
     <OverviewContainer id="overview">
@@ -103,7 +108,7 @@ const Overview = () => {
           <div className="links-container">
             <motion.div
               id="resume-link"
-              onClick={() => window.open("/Areeb Khan - Resume.pdf", "_new")}
+              onClick={onResumeDownloadClick}
               {...getOnClickAnimationProps()}
             >
               Download Resume
@@ -116,6 +121,7 @@ const Overview = () => {
                     href={el.url}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={()=>window.analytics.track(`Visited social media profile: ` + el.name)}
                   >
                     <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
                   </a>

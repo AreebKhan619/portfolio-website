@@ -9,7 +9,11 @@ import { SkillsOuterContainer } from "./styled";
 
 const SkillsAndPersonalProjects = () => {
   return (
-    <SkillsOuterContainer id="skills" className="inner-padding" circleColor={"#c8d8ff61"}>
+    <SkillsOuterContainer
+      id="skills"
+      className="inner-padding"
+      circleColor={"#c8d8ff61"}
+    >
       <div className="left-filler-img" />
       <PageTitle>Skills &amp; Personal Projects</PageTitle>
       <div className="content-container">
@@ -23,12 +27,26 @@ const SkillsAndPersonalProjects = () => {
                   <div className="name dashed-underline">{name}</div>
                   <div>{description}</div>
                   {link && (
-                    <HrefLink href={link}>
+                    <HrefLink
+                      onClick={() =>
+                        window.analytics.track(
+                          `${link} - external link visited`
+                        )
+                      }
+                      href={link}
+                    >
                       See it live in action: {link}
                     </HrefLink>
                   )}
                   {repoLink && (
-                    <HrefLink href={repoLink}>
+                    <HrefLink
+                      onClick={() =>
+                        window.analytics.track(
+                          `${repoLink} - external link visited`
+                        )
+                      }
+                      href={repoLink}
+                    >
                       <img
                         className="repo-icon"
                         src={GitHub}
@@ -59,6 +77,9 @@ const SkillsAndPersonalProjects = () => {
                   target={"_blank"}
                   rel={"noreferrer"}
                   className="name alternate dashed-underline"
+                  onClick={() =>
+                    window.analytics.track(`${name} - Certification viewed visited (${link})`)
+                  }
                 >
                   {name}
                 </a>
