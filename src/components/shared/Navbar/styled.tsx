@@ -12,9 +12,17 @@ export const NavbarOuterContainer = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  backdrop-filter: blur(2rem);
-  background-color: #f0f8ff94;
+
   z-index: 2;
+
+  /* slightly transparent fallback */
+  background-color: rgba(255, 255, 255);
+
+  /* if backdrop support: very transparent and blurred */
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    backdrop-filter: blur(2rem);
+    background-color: #f0f8ff94;
+  }
 
   @media screen and (max-width: ${breakpoints.tablet}) {
     padding-block: 1rem;

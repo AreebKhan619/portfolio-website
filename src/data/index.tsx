@@ -32,6 +32,7 @@ import {
   TensorFlow,
   Keras,
   Biscoe,
+  TailwindCSS,
 } from "../assets/images";
 
 export const experienceData = [
@@ -467,6 +468,14 @@ export const skillsList = [
   {
     icon: NodeJS,
     title: "NodeJS",
+  },
+  {
+    icon: TailwindCSS,
+    title: "Tailwind CSS",
+  },
+  {
+    icon: FramerMotion,
+    title: "Framer Motion",
   },
   {
     icon: ComputerNetworking,
