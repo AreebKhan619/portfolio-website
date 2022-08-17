@@ -43,6 +43,7 @@ import Git from "./git.png"
 import ComputerNetworking from "./computer-networking.png"
 import HTMLandCSS from "./html-css.png"
 import TDD from "./tdd.png"
+import TailwindCSS from "./tailwind.png"
 
 export {
   WavyLine,
@@ -89,5 +90,6 @@ export {
   Git,
   ComputerNetworking,
   HTMLandCSS,
-  TDD
+  TDD,
+  TailwindCSS
 };
