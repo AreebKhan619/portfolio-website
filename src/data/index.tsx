@@ -405,7 +405,12 @@ export const projectsList = [
 
 export const certificationsList = [
   {
-    name: "Front-end Web Development in React [in association with The Hong Kong University of Science and Technology]",
+    name: "React (Expert) & Front End (Advanced) Certification - TripleByte",
+    description: "",
+    link: "https://triplebyte.com/tb/areeb-khan-otqw3jw/certificate",
+  },
+  {
+    name: "Front-end Web Development in React - Coursera / The Hong Kong UST",
     description: "",
     link: "https://coursera.org/share/2bdb2f760d5c95d238e673093fc51cc0",
   },
