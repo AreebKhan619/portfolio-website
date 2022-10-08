@@ -243,7 +243,7 @@ export const experienceData = [
         subPoints: [
           `Designed and developed the Web App for storing sacred Buddist "Tripitaka" texts on the blockchain.`,
           "Co-implemented the authentication and authorization mechanism with JWT.",
-          "Project was inaugrated at Global Buddist Congregation 2019 by Dalai Lama.",
+          "Project was inaugurated at Global Buddhist Congregation 2019 by Dalai Lama.",
         ],
         link: "https://dhammaedicts-block.com",
         list: [
