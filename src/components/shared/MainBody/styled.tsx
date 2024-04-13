@@ -30,7 +30,7 @@ export const MainBodyContainer = styled.main`
   }
 
   .inner-padding {
-    padding: 0 15rem;
+    padding: 0 clamp(5rem, 15rem, 10vw);
   }
 
   .left-filler-img {

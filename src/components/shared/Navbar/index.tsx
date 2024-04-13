@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   getOnClickAnimationProps,
   getSlideInProps,
@@ -16,6 +16,8 @@ import {
 } from "./styled";
 
 import { Link } from "react-scroll";
+import { useOnClickOutside } from "../../../hooks/useOnClickOutside";
+import ConnectLinks from "../ConnectLinks";
 
 interface ILink {
   name: string;
@@ -29,6 +31,12 @@ interface DisplayNavItemsProps {
 
 const Navbar = () => {
   const isSmallerDisplay = useMaxWidthQuery(breakpoints.tablet);
+  const [isConnectOptionShown, setIsConnectOptionShown] = useState(false);
+  const connectOptionsRef = useRef<HTMLDivElement>(null);
+
+  useOnClickOutside(connectOptionsRef, () => {
+    setIsConnectOptionShown(false);
+  });
 
   const links: ILink[] = [
     {
@@ -60,16 +68,29 @@ const Navbar = () => {
           <LargerDisplayNavItems links={links} />
         )}
 
-        <PrimaryActionItem as={motion.div} {...getOnClickAnimationProps()} onClick={()=>window.scrollTo(0,0)}>
+        <PrimaryActionItem
+          as={motion.div}
+          {...getOnClickAnimationProps()}
+          onClick={() => setIsConnectOptionShown(true)}
+        >
           {Strings.connect}
         </PrimaryActionItem>
       </NavigationItems>
+
+      {isConnectOptionShown && (
+        <div ref={connectOptionsRef} className="connect-options">
+          <ConnectLinks />
+        </div>
+      )}
     </NavbarOuterContainer>
   );
 };
 
 const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const smallNavRef = useRef<HTMLDivElement>(null);
+
+  useOnClickOutside(smallNavRef, () => setIsExpanded(false));
 
   return (
     <>
@@ -84,6 +105,7 @@ const SmallerDisplayNavItems: React.FC<DisplayNavItemsProps> = ({ links }) => {
           <motion.div
             key="mobile-links"
             {...getSlideInProps()}
+            ref={smallNavRef}
             className="small-nav-container"
           >
             {links.map((link, idx) => (

@@ -85,7 +85,14 @@ const EventPoint: FC<TimelineEventObject> = ({
           )}
           <div className="supporting-items">
             {point.link && (
-              <HrefLink onClick={()=>window.analytics.track(`${point.link} - external link visited`)} href={point.link}>
+              <HrefLink
+                onClick={() =>
+                  window.analytics.track(
+                    `${point.link} - external link visited`
+                  )
+                }
+                href={point.link}
+              >
                 See it live in action: {point.link}
               </HrefLink>
             )}
@@ -136,6 +143,8 @@ const EventPoint: FC<TimelineEventObject> = ({
             )}
           </AnimatePresence>
         </div>
+
+        <div className="time-range-sm">{range}</div>
 
         <AnimatePresence>
           {isExpanded && (

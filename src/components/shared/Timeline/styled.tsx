@@ -17,8 +17,7 @@ export const TimeRange = styled.div`
   min-width: 15rem;
 
   @media screen and (max-width: ${breakpoints.tablet}) {
-    width: 7rem;
-    min-width: 7rem;
+    display: none;
   }
 `;
 
@@ -43,6 +42,10 @@ const collapsedEventCSS = css`
 
   .title {
     font-size: 1.4rem;
+  }
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    margin-block-end: 0;
   }
 `;
 
@@ -86,6 +89,12 @@ export const EventContainer = styled.div<EventContainerProps>`
           background-color: grey;
         }
       }
+    }
+
+    .time-range-sm {
+      display: none;
+      margin-block: 1rem 2rem;
+      font-size: 1.5rem;
     }
 
     &:hover .collapse-btn {
@@ -172,6 +181,10 @@ export const EventContainer = styled.div<EventContainerProps>`
           display: block;
         }
       }
+    }
+
+    .time-range-sm {
+      display: block !important;
     }
   }
 
