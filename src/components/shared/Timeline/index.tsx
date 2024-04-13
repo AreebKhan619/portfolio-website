@@ -143,7 +143,7 @@ const EventPoint: FC<TimelineEventObject> = ({
             )}
           </AnimatePresence>
 
-          {bgColor && (
+          {bgColor && !isExpanded && (
             <img alt="watermark" className="logo-watermark" src={eventImg} />
           )}
         </div>
