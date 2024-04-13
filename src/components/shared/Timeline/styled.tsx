@@ -89,6 +89,16 @@ export const EventContainer = styled.div<EventContainerProps>`
           background-color: grey;
         }
       }
+
+      .logo-watermark {
+        position: absolute;
+        height: 100%;
+        right: 0;
+        width: 8rem;
+        filter: opacity(0.05) hue-rotate(90deg);
+        transform: rotate(-45deg) scale(1.5);
+        border-radius: 50%;
+      }
     }
 
     .time-range-sm {

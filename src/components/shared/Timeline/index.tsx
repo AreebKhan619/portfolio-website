@@ -142,6 +142,10 @@ const EventPoint: FC<TimelineEventObject> = ({
               </motion.div>
             )}
           </AnimatePresence>
+
+          {bgColor && (
+            <img alt="watermark" className="logo-watermark" src={eventImg} />
+          )}
         </div>
 
         <div className="time-range-sm">{range}</div>
