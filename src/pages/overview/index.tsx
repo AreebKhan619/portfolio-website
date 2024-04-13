@@ -13,7 +13,7 @@ import {
   OverviewContainer,
 } from "./styled";
 
-import { WavyLine, WebDev, WebDevAlt } from "../../assets/images";
+import { WavyLine, WebDevAlt } from "../../assets/images";
 import SkillsPossessed from "../../components/overview/skills-possessed";
 import TechSkillsList from "../../components/overview/tech-skills";
 import { Strings } from "../../assets/constants/strings";
