@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 import { breakpoints } from "../../../assets/styles/breakpoints";
 
 interface EventContainerProps {
-  isExpanded: boolean;
-  bgColor?: string;
+  $isExpanded: boolean;
+  $bgColor?: string;
 }
 
 export const TimelineContainer = styled.div``;
@@ -61,10 +61,10 @@ export const EventContainer = styled.div<EventContainerProps>`
     .event-point-container {
       display: flex;
       transition: 0.2s all linear;
-      ${(props) => (props.isExpanded ? "" : collapsedEventCSS)};
+      ${(props) => (props.$isExpanded ? "" : collapsedEventCSS)};
       background-color: ${(props) =>
-        props.isExpanded ? "transparent" : props.bgColor || "initial"};
-      padding: ${(props) => (props.isExpanded ? "1rem" : "initial")};
+        props.$isExpanded ? "transparent" : props.$bgColor || "initial"};
+      padding: ${(props) => (props.$isExpanded ? "1rem" : "initial")};
 
       .title {
         font-weight: bold;

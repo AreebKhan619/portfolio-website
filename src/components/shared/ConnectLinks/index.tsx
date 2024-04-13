@@ -1,4 +1,7 @@
-import { getOnClickAnimationProps } from "../../../assets/constants/motionProps";
+import {
+  getOnClickAnimationProps,
+  getSlideInProps,
+} from "../../../assets/constants/motionProps";
 import { GitHub, LinkedIn, GMail, StackOverflow } from "../../../assets/images";
 import { motion } from "framer-motion";
 import { LinksContainerStyled } from "./styled";
@@ -32,7 +35,11 @@ interface IConnectLinksProps {
 
 const ConnectLinks: React.FC<IConnectLinksProps> = ({ PrefixComponent }) => {
   return (
-    <LinksContainerStyled className="links-container">
+    <LinksContainerStyled
+      as={motion.div}
+      {...getSlideInProps()}
+      className="links-container"
+    >
       {PrefixComponent}
       {links.map((el, idx) => {
         return (

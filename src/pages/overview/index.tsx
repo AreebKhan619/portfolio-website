@@ -93,18 +93,15 @@ const Overview = () => {
       </LeftPortion>
 
       <RightPortion>
-        <div className="img-and-skills">
+        <div className="img-container">
           <SkillsPossessed />
-          {/* Replace .gif with .avif with gif as fallback */}
-          <div className="img-container">
-            <WaveImgContainer
-              className="hero-img"
-              as={motion.img}
-              src={WebDev}
-              alt={Strings.itsMeWaving}
-              {...getWaveAnimationProps()}
-            />
-          </div>
+          <WaveImgContainer
+            className="hero-img"
+            as={motion.img}
+            src={WebDev}
+            alt={Strings.itsMeWaving}
+            {...getWaveAnimationProps()}
+          />
         </div>
       </RightPortion>
     </OverviewContainer>

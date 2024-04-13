@@ -38,8 +38,11 @@ export const NavbarOuterContainer = styled.header`
     .links-container {
       justify-content: flex-end;
       background-color: white;
-      margin-block: 0;
-      padding-block: 1rem;
+      margin-block: 0.2rem;
+      border-radius: 1.5rem;
+      border-width: 1px;
+      padding: 1rem;
+      box-shadow: 0px 1px 4px #b1b1b1;
     }
   }
 `;

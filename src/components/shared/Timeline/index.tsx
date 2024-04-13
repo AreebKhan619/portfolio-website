@@ -114,9 +114,9 @@ const EventPoint: FC<TimelineEventObject> = ({
       className="timeline-point"
       as={motion.div}
       {...getFadeInProps()}
-      isExpanded={isExpanded}
+      $isExpanded={isExpanded}
+      $bgColor={bgColor}
       onClick={() => !isExpanded && toggleCollapse()}
-      bgColor={bgColor}
     >
       <TimeRange className="time-range">{range}</TimeRange>
       <div className="event-main">
