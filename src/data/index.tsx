@@ -33,14 +33,65 @@ import {
   Keras,
   Biscoe,
   TailwindCSS,
+  SuperTokens,
+  Reeco,
 } from "../assets/images";
 
 export const experienceData = [
   {
-    duration: "Jan '22 - Present",
+    duration: "Jan '23 - Present",
+    role: "Software Development Consultant",
+    company: "Reeco",
+    companyURL: "https://reeco.io",
+    companyLogo: Reeco,
+    rolesAndResponsibilities: [
+      {
+        text: "Reeco - Mobile App",
+        subPoints: [
+          "Handled the development of the mobile app from scratch; releasing stable versions for Android and iOS variants.",
+          "Overlooked & provided assistance in the development of later versions, adding modules here and there.",
+        ],
+        link: "https://play.google.com/store/apps/details?id=io.reeco.ocr&hl=en&gl=US",
+        list: [
+          {
+            icon: ReactJS,
+            link: null,
+            title: "React Native",
+          },
+        ],
+      },
+      "Recreated the company's website, suggested & added CMS interation; overlooked further development for easier modification.",
+      "Participated in regular PR reviews, ensuring consistent code quality throughout the governing repositories.",
+    ],
+    bgColor: "#e1f7ee",
+  },
+  {
+    duration: "Jan '23 - Apr '23",
+    role: "SDE Consultant",
+    company: "SuperTokens",
+    companyURL: "https://supertokens.io",
+    companyLogo: SuperTokens,
+    rolesAndResponsibilities: [
+      {
+        text: "JWT Encoder / Decoder",
+        subPoints: [
+          "Developed the JWT Encoder / Decoder module with the ability to check the validity of signature keys.",
+          "Supported Algorithms: HS256, HS384, HS512, ES256, RS256, PS256",
+        ],
+        link: "https://supertokens.com/jwt-encoder-decoder",
+      },
+      "Maintained and updated the user management dashboard, front-end SDKs the company website; identified & resolved UI bugs to improve site performance.",
+      "Demonstrated strong technical skills by modifying legacy code to be compatible with the latest SDK version [of that time], and added theming support to the sign-up page.",
+      "Worked closely with the UI/UX team to ensure seamless integration of design elements into the final product.",
+      "Updated the NodeJS back-end SDK to include session-based authentication in the Sign Up flow, resulting in improved security and user experience.",
+    ],
+    bgColor: "#fae7fb",
+  },
+  {
+    duration: "Jan '22 - Jan '23",
     role: "Software Dev Engineer II",
     company: "ChimpsAtWork [CAW] Studios",
-    companyURL: "(External Link Indicator)",
+    companyURL: "https://cawstudios.com",
     companyLogo: CAWStudios,
     rolesAndResponsibilities: [
       {
@@ -138,7 +189,7 @@ export const experienceData = [
     duration: "April '20 - March '22",
     role: "Full Stack / Lead Front End Developer",
     company: "Emertech Innovations Pvt. Ltd.",
-    companyURL: "(External Link Indicator)",
+    companyURL: "https://emertech.io",
     companyLogo: Emertech,
     rolesAndResponsibilities: [
       {

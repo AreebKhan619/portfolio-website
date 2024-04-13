@@ -42,7 +42,6 @@ const SkillsPossessed = () => {
       imgUri: ReactJS,
       style: { top: "70%", left, backgroundColor: "#e1f6f9" },
     },
-
     {
       name: "NodeJS",
       imgUri: NodeJS,
