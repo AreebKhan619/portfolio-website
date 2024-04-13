@@ -27,6 +27,24 @@ export const NavbarOuterContainer = styled.header`
   @media screen and (max-width: ${breakpoints.tablet}) {
     padding-block: 1rem;
   }
+
+  .connect-options {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    padding-inline: inherit;
+
+    .links-container {
+      justify-content: flex-end;
+      background-color: white;
+      margin-block: 0.2rem;
+      border-radius: 1.5rem;
+      border-width: 1px;
+      padding: 1rem;
+      box-shadow: 0px 1px 4px #b1b1b1;
+    }
+  }
 `;
 
 export const Title = styled.div`

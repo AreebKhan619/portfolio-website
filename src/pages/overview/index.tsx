@@ -13,14 +13,7 @@ import {
   OverviewContainer,
 } from "./styled";
 
-import {
-  WavyLine,
-  GitHub,
-  LinkedIn,
-  GMail,
-  StackOverflow,
-  WebDev,
-} from "../../assets/images";
+import { WavyLine, WebDevAlt } from "../../assets/images";
 import SkillsPossessed from "../../components/overview/skills-possessed";
 import TechSkillsList from "../../components/overview/tech-skills";
 import { Strings } from "../../assets/constants/strings";
@@ -31,33 +24,11 @@ import {
   getScaleAnimationProps,
   getWaveAnimationProps,
 } from "../../assets/constants/motionProps";
-
-const links = [
-  {
-    name: "GitHub",
-    imgUri: GitHub,
-    url: "https://github.com/AreebKhan619",
-  },
-  {
-    name: "LinkedIn",
-    imgUri: LinkedIn,
-    url: "https://linkedin.com/in/mareebkhan",
-  },
-  {
-    name: "GMail",
-    imgUri: GMail,
-    url: "mailto:areebkhan619@gmail.com",
-  },
-  {
-    name: "StackOverflow",
-    imgUri: StackOverflow,
-    url: "https://stackoverflow.com/users/7343008/areeb-khan",
-  },
-];
+import ConnectLinks from "../../components/shared/ConnectLinks";
 
 const statsList = [
   {
-    mainStat: "03+",
+    mainStat: "04+",
     subtitle: Strings.yearsOfExperience,
   },
   {
@@ -72,8 +43,8 @@ const statsList = [
 
 const onResumeDownloadClick = () => {
   window.open("/Areeb Khan - Resume.pdf", "_new");
-  window.analytics.track("Resume was downloaded.")
-}
+  window.analytics.track("Resume was downloaded.");
+};
 
 const Overview = () => {
   return (
@@ -105,48 +76,32 @@ const Overview = () => {
           <img src={WavyLine} alt={"divider"} />
         </div>
         <div id="second-half">
-          <div className="links-container">
-            <motion.div
-              id="resume-link"
-              onClick={onResumeDownloadClick}
-              {...getOnClickAnimationProps()}
-            >
-              Download Resume
-            </motion.div>
-            {links.map((el, idx) => {
-              return (
-                <motion.div key={idx} {...getOnClickAnimationProps()}>
-                  <a
-                    className="link"
-                    href={el.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={()=>window.analytics.track(`Visited social media profile: ` + el.name)}
-                  >
-                    <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
-                  </a>
-                </motion.div>
-              );
-            })}
-          </div>
+          <ConnectLinks
+            PrefixComponent={
+              <motion.div
+                id="resume-link"
+                onClick={onResumeDownloadClick}
+                {...getOnClickAnimationProps()}
+              >
+                Download Resume
+              </motion.div>
+            }
+          />
           {/* UI/UX Designing, Prototyping, Web Development */}
           <TechSkillsList />
         </div>
       </LeftPortion>
 
       <RightPortion>
-        <div className="img-and-skills">
+        <div className="img-container">
           <SkillsPossessed />
-          {/* Replace .gif with .avif with gif as fallback */}
-          <div className="img-container">
-            <WaveImgContainer
-              className="hero-img"
-              as={motion.img}
-              src={WebDev}
-              alt={Strings.itsMeWaving}
-              {...getWaveAnimationProps()}
-            />
-          </div>
+          <WaveImgContainer
+            className="hero-img"
+            as={motion.img}
+            src={WebDevAlt}
+            alt={Strings.itsMeWaving}
+            {...getWaveAnimationProps()}
+          />
         </div>
       </RightPortion>
     </OverviewContainer>

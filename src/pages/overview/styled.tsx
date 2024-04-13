@@ -9,33 +9,32 @@ export const OverviewContainer = styled.div`
   display: flex;
   align-items: center;
 
-  .img-and-skills {
+  .img-container {
+    margin-top: 3rem;
     position: relative;
-    .img-container {
-      margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+
+    .hero-img {
+      width: 100%;
+      max-height: 60rem;
+      border-radius: 1rem;
       position: relative;
+    }
 
-      .hero-img {
-        width: 100%;
-        max-height: 60rem;
-        border-radius: 1rem;
-        position: relative;
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        height: 95%;
-        width: 100%;
-        left: -2rem;
-        top: 2rem;
-        background: url(${BgImgPattern});
-        background-size: 5px;
-        border-radius: 10%;
-        transform: rotate(20deg);
-        background-color: #ffffff80;
-        background-blend-mode: hue;
-      }
+    &:before {
+      content: "";
+      position: absolute;
+      height: 95%;
+      width: 100%;
+      left: -2rem;
+      top: 2rem;
+      background: url(${BgImgPattern});
+      background-size: 5px;
+      border-radius: 10%;
+      transform: rotate(20deg);
+      background-color: #ffffff80;
+      background-blend-mode: hue;
     }
   }
 
@@ -44,7 +43,7 @@ export const OverviewContainer = styled.div`
 
     .img-and-skills {
       .img-container > .hero-img {
-        max-width: 200px;
+        width: clamp(50vw, 80%, 90vw);
       }
 
       .skill {
@@ -57,6 +56,8 @@ export const OverviewContainer = styled.div`
 export const LeftPortion = styled.div`
   flex: 50%;
   color: grey;
+  position: relative;
+  z-index: 1;
 
   .wavy-line-container {
     margin: 2rem 0;
@@ -67,41 +68,14 @@ export const LeftPortion = styled.div`
     }
   }
 
-  #second-half .links-container {
-    margin: 2rem 0;
-    display: flex;
-    column-gap: 1rem;
-
-    #resume-link {
-      cursor: pointer;
-      background-color: black;
-      display: inline-block;
-      color: white;
-      align-self: center;
-      padding: 1rem 1.5rem;
-      border-radius: 1rem;
-      font-size: 1.5rem;
-      text-align: center;
-      a{
-        color: inherit;
-        text-decoration: none;
-      }
-    }
-
-    .link {
-      transition: 0.3s all ease-in-out;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.8;
-        transform: scale(1.05);
-      }
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    #second-half .links-container {
+      justify-content: center;
     }
   }
 
-  @media screen and (max-width: ${breakpoints.tablet}) {
-    #second-half .links-container{
-      justify-content: center;
-    }
+  @media screen and (max-width: ${breakpoints.desktop}) {
+    padding-inline-end: 2rem;
   }
 `;
 

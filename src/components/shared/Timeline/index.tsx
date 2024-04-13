@@ -85,7 +85,14 @@ const EventPoint: FC<TimelineEventObject> = ({
           )}
           <div className="supporting-items">
             {point.link && (
-              <HrefLink onClick={()=>window.analytics.track(`${point.link} - external link visited`)} href={point.link}>
+              <HrefLink
+                onClick={() =>
+                  window.analytics.track(
+                    `${point.link} - external link visited`
+                  )
+                }
+                href={point.link}
+              >
                 See it live in action: {point.link}
               </HrefLink>
             )}
@@ -107,9 +114,9 @@ const EventPoint: FC<TimelineEventObject> = ({
       className="timeline-point"
       as={motion.div}
       {...getFadeInProps()}
-      isExpanded={isExpanded}
+      $isExpanded={isExpanded}
+      $bgColor={bgColor}
       onClick={() => !isExpanded && toggleCollapse()}
-      bgColor={bgColor}
     >
       <TimeRange className="time-range">{range}</TimeRange>
       <div className="event-main">
@@ -135,7 +142,13 @@ const EventPoint: FC<TimelineEventObject> = ({
               </motion.div>
             )}
           </AnimatePresence>
+
+          {bgColor && !isExpanded && (
+            <img alt="watermark" className="logo-watermark" src={eventImg} />
+          )}
         </div>
+
+        <div className="time-range-sm">{range}</div>
 
         <AnimatePresence>
           {isExpanded && (

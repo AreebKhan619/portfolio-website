@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 import { breakpoints } from "../../../assets/styles/breakpoints";
 
 interface EventContainerProps {
-  isExpanded: boolean;
-  bgColor?: string;
+  $isExpanded: boolean;
+  $bgColor?: string;
 }
 
 export const TimelineContainer = styled.div``;
@@ -17,8 +17,7 @@ export const TimeRange = styled.div`
   min-width: 15rem;
 
   @media screen and (max-width: ${breakpoints.tablet}) {
-    width: 7rem;
-    min-width: 7rem;
+    display: none;
   }
 `;
 
@@ -44,6 +43,10 @@ const collapsedEventCSS = css`
   .title {
     font-size: 1.4rem;
   }
+
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    margin-block-end: 0;
+  }
 `;
 
 export const EventContainer = styled.div<EventContainerProps>`
@@ -58,10 +61,10 @@ export const EventContainer = styled.div<EventContainerProps>`
     .event-point-container {
       display: flex;
       transition: 0.2s all linear;
-      ${(props) => (props.isExpanded ? "" : collapsedEventCSS)};
+      ${(props) => (props.$isExpanded ? "" : collapsedEventCSS)};
       background-color: ${(props) =>
-        props.isExpanded ? "transparent" : props.bgColor || "initial"};
-      padding: ${(props) => (props.isExpanded ? "1rem" : "initial")};
+        props.$isExpanded ? "transparent" : props.$bgColor || "initial"};
+      padding: ${(props) => (props.$isExpanded ? "1rem" : "initial")};
 
       .title {
         font-weight: bold;
@@ -86,6 +89,22 @@ export const EventContainer = styled.div<EventContainerProps>`
           background-color: grey;
         }
       }
+
+      .logo-watermark {
+        position: absolute;
+        height: 100%;
+        right: 0;
+        width: 8rem;
+        filter: opacity(0.05) hue-rotate(90deg);
+        transform: rotate(-45deg) scale(1.5);
+        border-radius: 50%;
+      }
+    }
+
+    .time-range-sm {
+      display: none;
+      margin-block: 1rem 2rem;
+      font-size: 1.5rem;
     }
 
     &:hover .collapse-btn {
@@ -172,6 +191,10 @@ export const EventContainer = styled.div<EventContainerProps>`
           display: block;
         }
       }
+    }
+
+    .time-range-sm {
+      display: block !important;
     }
   }
 
