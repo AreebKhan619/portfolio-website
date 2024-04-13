@@ -27,9 +27,14 @@ const SkillsPossessed = () => {
 
   const skills = [
     {
-      name: "Redux",
+      name: "React Native",
       imgUri: Redux,
-      style: { top: "10%", ...rightStyle, backgroundColor: "#e2d5f7" },
+      style: {
+        top: "10%",
+        ...rightStyle,
+        right: "18%",
+        backgroundColor: "#e2d5f7",
+      },
     },
     {
       name: "MongoDB",
@@ -49,7 +54,7 @@ const SkillsPossessed = () => {
     {
       name: "NodeJS",
       imgUri: NodeJS,
-      style: { top: "87%", ...rightStyle, backgroundColor: "#b2ecb4" },
+      style: { top: "90%%", left: "50%", backgroundColor: "#b2ecb4" },
     },
   ];
 

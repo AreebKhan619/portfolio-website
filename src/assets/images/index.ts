@@ -17,6 +17,7 @@ import ExpressJS from "./expressjs.png";
 import CrayonUnderline from "./underline.png";
 import BgImgPattern from "./pattern.png";
 import WebDev from "./hero-img.png";
+import WebDevAlt from "./hero-img-alt.png";
 import CornerBlob from "./cornerblob.svg";
 import Hamburger from "./hamburger.svg";
 import WorkingFillerImg from "./working.png";
@@ -67,6 +68,7 @@ export {
   CrayonUnderline,
   BgImgPattern,
   WebDev,
+  WebDevAlt,
   CornerBlob,
   Hamburger,
   WorkingFillerImg,

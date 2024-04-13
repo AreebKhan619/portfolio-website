@@ -13,7 +13,7 @@ import {
   OverviewContainer,
 } from "./styled";
 
-import { WavyLine, WebDev } from "../../assets/images";
+import { WavyLine, WebDev, WebDevAlt } from "../../assets/images";
 import SkillsPossessed from "../../components/overview/skills-possessed";
 import TechSkillsList from "../../components/overview/tech-skills";
 import { Strings } from "../../assets/constants/strings";
@@ -98,7 +98,7 @@ const Overview = () => {
           <WaveImgContainer
             className="hero-img"
             as={motion.img}
-            src={WebDev}
+            src={WebDevAlt}
             alt={Strings.itsMeWaving}
             {...getWaveAnimationProps()}
           />
