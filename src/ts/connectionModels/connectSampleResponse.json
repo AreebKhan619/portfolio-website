@@ -1,0 +1,81 @@
+{
+  "connectCollection": {
+    "items": [
+      {
+        "socialsCollection": {
+          "total": 4,
+          "items": [
+            {
+              "sys": {
+                "id": "1rjttJPbsW2XURf4oEaqak"
+              },
+              "label": "GitHub",
+              "url": "https://github.com/AreebKhan619",
+              "icon": {
+                "title": "github-logo",
+                "description": "GitHub logo",
+                "contentType": "image/svg+xml",
+                "fileName": "github.94d582f2915a5274b68035e4c6a54196.svg",
+                "size": 975,
+                "url": "https://images.ctfassets.net/8gqscx367zzu/29fdqer8FBTLzEUZ2Amsrg/d479f0938d716d44f71f6c7e476bcf23/github.94d582f2915a5274b68035e4c6a54196.svg",
+                "width": 60,
+                "height": 60
+              }
+            },
+            {
+              "sys": {
+                "id": "2QDlRsK12LlMKG6Ffmj3qy"
+              },
+              "label": "LinkedIn",
+              "url": "https://linkedin.com/in/mareebkhan",
+              "icon": {
+                "title": "LinkedInLogo",
+                "description": "",
+                "contentType": "image/svg+xml",
+                "fileName": "linkedin.be91fbb860055627117e0dcd1c1e091d.svg",
+                "size": 473,
+                "url": "https://images.ctfassets.net/8gqscx367zzu/1z2ROVv6xJVhN0gCGIdgGF/7590fb5a89cdb3fbf97c746c67a3d5d3/linkedin.be91fbb860055627117e0dcd1c1e091d.svg",
+                "width": 64,
+                "height": 64
+              }
+            },
+            {
+              "sys": {
+                "id": "6vsIjigjeS6ucT8qe49Yjo"
+              },
+              "label": "Gmail",
+              "url": "mailto:areebkhan619@gmail.com",
+              "icon": {
+                "title": "Gmail Logo",
+                "description": "",
+                "contentType": "image/svg+xml",
+                "fileName": "gmail.b6b3a7f0ecf6818cd612f45bee37dbbc.svg",
+                "size": 602,
+                "url": "https://images.ctfassets.net/8gqscx367zzu/1mnpEqheAf8OcrRLJva28q/0f4713a5fa86542ee8f2f8377f63785c/gmail.b6b3a7f0ecf6818cd612f45bee37dbbc.svg",
+                "width": 50,
+                "height": 50
+              }
+            },
+            {
+              "sys": {
+                "id": "5Q6ewGA7R3JzCrfYOcnXzn"
+              },
+              "label": "StackOverflow",
+              "url": "https://stackoverflow.com/users/7343008/areeb-khan",
+              "icon": {
+                "title": "StackOverflow Logo",
+                "description": "",
+                "contentType": "image/svg+xml",
+                "fileName": "stackoverflow.52e6ac5dceb606f7ff99d5b3b3118efc.svg",
+                "size": 604,
+                "url": "https://images.ctfassets.net/8gqscx367zzu/2yhvwpceYRDZO4HdWBEuu9/d9507284b28ddea539844a3891b0e419/stackoverflow.52e6ac5dceb606f7ff99d5b3b3118efc.svg",
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

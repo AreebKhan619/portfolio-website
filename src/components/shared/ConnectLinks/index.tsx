@@ -2,38 +2,26 @@ import {
   getOnClickAnimationProps,
   getSlideInProps,
 } from "../../../assets/constants/motionProps";
-import { GitHub, LinkedIn, GMail, StackOverflow } from "../../../assets/images";
 import { motion } from "framer-motion";
 import { LinksContainerStyled } from "./styled";
-
-const links = [
-  {
-    name: "GitHub",
-    imgUri: GitHub,
-    url: "https://github.com/AreebKhan619",
-  },
-  {
-    name: "LinkedIn",
-    imgUri: LinkedIn,
-    url: "https://linkedin.com/in/mareebkhan",
-  },
-  {
-    name: "GMail",
-    imgUri: GMail,
-    url: "mailto:areebkhan619@gmail.com",
-  },
-  {
-    name: "StackOverflow",
-    imgUri: StackOverflow,
-    url: "https://stackoverflow.com/users/7343008/areeb-khan",
-  },
-];
+import { gql, useQuery } from "@apollo/client";
+import { CONNECT_WITH_ME } from "@/connections/contentfulGraphQlLiterals";
+import { TConnectCollectionResponse } from "@/ts/connectionModels/response";
 
 interface IConnectLinksProps {
   PrefixComponent?: JSX.Element;
 }
 
 const ConnectLinks: React.FC<IConnectLinksProps> = ({ PrefixComponent }) => {
+  const { loading, data } = useQuery<TConnectCollectionResponse>(
+    gql(CONNECT_WITH_ME)
+  );
+
+  if (loading || !data?.connectCollection?.items?.[0])
+    return <div>Loading...</div>;
+
+  const socialsItems = data.connectCollection.items[0].socialsCollection.items;
+
   return (
     <LinksContainerStyled
       as={motion.div}
@@ -41,21 +29,25 @@ const ConnectLinks: React.FC<IConnectLinksProps> = ({ PrefixComponent }) => {
       className="links-container"
     >
       {PrefixComponent}
-      {links.map((el, idx) => {
+      {socialsItems.map((socials) => {
         return (
-          <motion.div key={idx} {...getOnClickAnimationProps()}>
+          <motion.div key={socials?.sys?.id} {...getOnClickAnimationProps()}>
             <a
               className="link"
-              href={el.url}
+              href={socials.url}
               target="_blank"
               rel="noreferrer"
               onClick={() =>
                 window.analytics.track?.(
-                  `Visited social media profile: ` + el.name
+                  `Visited social media profile: ` + socials.label
                 )
               }
             >
-              <img style={{ width: 45 }} src={el.imgUri} alt={el.name} />
+              <img
+                style={{ width: 45 }}
+                src={socials.icon.url}
+                alt={socials.label}
+              />
             </a>
           </motion.div>
         );

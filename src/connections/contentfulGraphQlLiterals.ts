@@ -53,3 +53,33 @@ query GetHeroSectionData {
 }
 
 `;
+
+export const CONNECT_WITH_ME = `
+query ConnectCollection {
+    connectCollection(limit: 1) {
+        items {
+            socialsCollection {
+                total
+                items {
+                    label
+                    url
+                    icon {
+                        title
+                        description
+                        contentType
+                        fileName
+                        size
+                        url
+                        width
+                        height
+                    }
+                    sys {
+                        id
+                    }
+                }
+            }
+        }
+    }
+}
+
+`;
