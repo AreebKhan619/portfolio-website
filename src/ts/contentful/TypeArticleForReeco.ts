@@ -1,10 +1,11 @@
-import type { Asset, Entry, EntryFields } from "contentful";
+import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
 export interface TypeArticleForReecoFields {
-    author?: EntryFields.Symbol;
-    content?: EntryFields.Text;
-    articleImage?: Asset;
-    sampleContent?: EntryFields.RichText;
+    author?: EntryFieldTypes.Symbol;
+    content?: EntryFieldTypes.Text;
+    articleImage?: EntryFieldTypes.AssetLink;
+    sampleContent?: EntryFieldTypes.RichText;
 }
 
-export type TypeArticleForReeco = Entry<TypeArticleForReecoFields>;
+export type TypeArticleForReecoSkeleton = EntrySkeletonType<TypeArticleForReecoFields, "articleForReeco">;
+export type TypeArticleForReeco<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeArticleForReecoSkeleton, Modifiers, Locales>;

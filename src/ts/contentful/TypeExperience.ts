@@ -1,13 +1,14 @@
-import type { Asset, Entry, EntryFields } from "contentful";
+import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
 export interface TypeExperienceFields {
-    duration?: EntryFields.Symbol;
-    role?: EntryFields.Symbol;
-    company?: EntryFields.Symbol;
-    companyURL?: EntryFields.Symbol;
-    companyLogo?: Asset;
-    bgColor?: EntryFields.Symbol;
-    rolesAndResponsibilities?: EntryFields.RichText;
+    duration?: EntryFieldTypes.Symbol;
+    role?: EntryFieldTypes.Symbol;
+    company?: EntryFieldTypes.Symbol;
+    companyURL?: EntryFieldTypes.Symbol;
+    companyLogo?: EntryFieldTypes.AssetLink;
+    bgColor?: EntryFieldTypes.Symbol;
+    rolesAndResponsibilities?: EntryFieldTypes.RichText;
 }
 
-export type TypeExperience = Entry<TypeExperienceFields>;
+export type TypeExperienceSkeleton = EntrySkeletonType<TypeExperienceFields, "experience">;
+export type TypeExperience<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeExperienceSkeleton, Modifiers, Locales>;

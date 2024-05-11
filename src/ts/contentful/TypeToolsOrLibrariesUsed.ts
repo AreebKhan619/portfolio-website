@@ -1,10 +1,11 @@
-import type { Entry, EntryFields } from "contentful";
-import type { TypeLibraryOrToolFields } from "./TypeLibraryOrTool";
+import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
+import type { TypeLibraryOrToolSkeleton } from "./TypeLibraryOrTool";
 
 export interface TypeToolsOrLibrariesUsedFields {
-    createdFor?: EntryFields.Symbol;
-    title?: EntryFields.Symbol;
-    librariesList?: Entry<TypeLibraryOrToolFields>[];
+    createdFor?: EntryFieldTypes.Symbol;
+    title?: EntryFieldTypes.Symbol;
+    librariesList?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeLibraryOrToolSkeleton>>;
 }
 
-export type TypeToolsOrLibrariesUsed = Entry<TypeToolsOrLibrariesUsedFields>;
+export type TypeToolsOrLibrariesUsedSkeleton = EntrySkeletonType<TypeToolsOrLibrariesUsedFields, "toolsOrLibrariesUsed">;
+export type TypeToolsOrLibrariesUsed<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeToolsOrLibrariesUsedSkeleton, Modifiers, Locales>;

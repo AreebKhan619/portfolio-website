@@ -1,7 +1,8 @@
-import type { Entry, EntryFields } from "contentful";
+import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
 export interface TypePostFields {
-    something: EntryFields.Symbol;
+    something: EntryFieldTypes.Symbol;
 }
 
-export type TypePost = Entry<TypePostFields>;
+export type TypePostSkeleton = EntrySkeletonType<TypePostFields, "post">;
+export type TypePost<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypePostSkeleton, Modifiers, Locales>;

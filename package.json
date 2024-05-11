@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cf-get-content": "contentful space export --config contentful/export-config.json --management-token tokenHere --space-id spaceIDHere",
-    "cf-gen-types": "cf-content-types-generator contentful/export.json --out src/ts/contentful",
+    "cf-gen-types": "cf-content-types-generator contentful/export.json --out src/ts/contentful --v10",
     "sample": "cross-env CF_MANAGEMENT_TOKEN=%CF_MANAGEMENT_TOKEN% && echo $CF_MANAGEMENT_TOKEN"
   },
   "eslintConfig": {

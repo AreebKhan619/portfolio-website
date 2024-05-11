@@ -1,7 +1,8 @@
-import type { Entry, EntryFields } from "contentful";
+import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
 export interface TypeProductReviewFields {
-    heading: EntryFields.Symbol;
+    heading: EntryFieldTypes.Symbol;
 }
 
-export type TypeProductReview = Entry<TypeProductReviewFields>;
+export type TypeProductReviewSkeleton = EntrySkeletonType<TypeProductReviewFields, "productReview">;
+export type TypeProductReview<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeProductReviewSkeleton, Modifiers, Locales>;

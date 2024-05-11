@@ -1,8 +1,8 @@
-export type { TypeArticleForReeco, TypeArticleForReecoFields } from "./TypeArticleForReeco";
-export type { TypeExperience, TypeExperienceFields } from "./TypeExperience";
-export type { TypeHeroSection, TypeHeroSectionFields } from "./TypeHeroSection";
-export type { TypeLibraryOrTool, TypeLibraryOrToolFields } from "./TypeLibraryOrTool";
-export type { TypeMainStatDetails, TypeMainStatDetailsFields } from "./TypeMainStatDetails";
-export type { TypePost, TypePostFields } from "./TypePost";
-export type { TypeProductReview, TypeProductReviewFields } from "./TypeProductReview";
-export type { TypeToolsOrLibrariesUsed, TypeToolsOrLibrariesUsedFields } from "./TypeToolsOrLibrariesUsed";
+export type { TypeArticleForReeco, TypeArticleForReecoFields, TypeArticleForReecoSkeleton } from "./TypeArticleForReeco";
+export type { TypeExperience, TypeExperienceFields, TypeExperienceSkeleton } from "./TypeExperience";
+export type { TypeHeroSection, TypeHeroSectionFields, TypeHeroSectionSkeleton } from "./TypeHeroSection";
+export type { TypeLibraryOrTool, TypeLibraryOrToolFields, TypeLibraryOrToolSkeleton } from "./TypeLibraryOrTool";
+export type { TypeMainStatDetails, TypeMainStatDetailsFields, TypeMainStatDetailsSkeleton } from "./TypeMainStatDetails";
+export type { TypePost, TypePostFields, TypePostSkeleton } from "./TypePost";
+export type { TypeProductReview, TypeProductReviewFields, TypeProductReviewSkeleton } from "./TypeProductReview";
+export type { TypeToolsOrLibrariesUsed, TypeToolsOrLibrariesUsedFields, TypeToolsOrLibrariesUsedSkeleton } from "./TypeToolsOrLibrariesUsed";

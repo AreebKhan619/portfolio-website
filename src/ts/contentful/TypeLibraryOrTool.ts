@@ -1,9 +1,10 @@
-import type { Asset, Entry, EntryFields } from "contentful";
+import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
 export interface TypeLibraryOrToolFields {
-    name?: EntryFields.Symbol;
-    url?: EntryFields.Symbol;
-    icon?: Asset;
+    name?: EntryFieldTypes.Symbol;
+    url?: EntryFieldTypes.Symbol;
+    icon?: EntryFieldTypes.AssetLink;
 }
 
-export type TypeLibraryOrTool = Entry<TypeLibraryOrToolFields>;
+export type TypeLibraryOrToolSkeleton = EntrySkeletonType<TypeLibraryOrToolFields, "libraryOrTool">;
+export type TypeLibraryOrTool<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeLibraryOrToolSkeleton, Modifiers, Locales>;
