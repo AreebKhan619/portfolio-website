@@ -1,0 +1,3974 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "experience",
+        "type": "ContentType",
+        "createdAt": "2022-12-01T18:26:03.588Z",
+        "updatedAt": "2022-12-03T15:34:14.632Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2022-12-03T15:34:14.632Z",
+        "firstPublishedAt": "2022-12-01T18:26:04.172Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/content_types/experience"
+      },
+      "displayField": "duration",
+      "name": "Experience",
+      "description": "Experience for portfolio",
+      "fields": [
+        {
+          "id": "duration",
+          "name": "Duration",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "role",
+          "name": "Role",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "company",
+          "name": "Company",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "companyURL",
+          "name": "Company URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "companyLogo",
+          "name": "Company Logo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "bgColor",
+          "name": "Background Color",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "rolesAndResponsibilities",
+          "name": "Roles And Responsibilities",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code"
+              ],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "productReview",
+        "type": "ContentType",
+        "createdAt": "2022-12-02T15:17:22.412Z",
+        "updatedAt": "2022-12-02T15:17:22.870Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-12-02T15:17:22.870Z",
+        "firstPublishedAt": "2022-12-02T15:17:22.870Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/content_types/productReview"
+      },
+      "displayField": "heading",
+      "name": "Product Review",
+      "description": "A brief description for products",
+      "fields": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "libraryOrTool",
+        "type": "ContentType",
+        "createdAt": "2022-12-03T15:50:58.045Z",
+        "updatedAt": "2022-12-03T15:50:58.539Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-12-03T15:50:58.539Z",
+        "firstPublishedAt": "2022-12-03T15:50:58.539Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/content_types/libraryOrTool"
+      },
+      "displayField": "name",
+      "name": "libraryOrTool",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "url",
+          "name": "url",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "icon",
+          "name": "icon",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "toolsOrLibrariesUsed",
+        "type": "ContentType",
+        "createdAt": "2022-12-03T15:52:44.475Z",
+        "updatedAt": "2022-12-03T16:15:22.039Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2022-12-03T16:15:22.039Z",
+        "firstPublishedAt": "2022-12-03T15:52:44.964Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/content_types/toolsOrLibrariesUsed"
+      },
+      "displayField": "title",
+      "name": "Tools Or Libraries Used",
+      "description": "List of tools or libraries used",
+      "fields": [
+        {
+          "id": "createdFor",
+          "name": "Created For",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Major libraries/tools used:"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "librariesList",
+          "name": "LibrariesList",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "libraryOrTool"
+                ],
+                "message": "Only LibraryOrTool Entry Type is supported"
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "articleForReeco",
+        "type": "ContentType",
+        "createdAt": "2022-12-21T11:45:34.300Z",
+        "updatedAt": "2022-12-21T11:55:03.051Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-12-21T11:55:03.051Z",
+        "firstPublishedAt": "2022-12-21T11:45:34.908Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/content_types/articleForReeco"
+      },
+      "displayField": "author",
+      "name": "Article For Reeco",
+      "description": "Definition of how an article should look like / the properties it should have",
+      "fields": [
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "articleImage",
+          "name": "Article Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "sampleContent",
+          "name": "sampleContent",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ]
+            },
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "post",
+        "type": "ContentType",
+        "createdAt": "2023-11-05T10:36:08.283Z",
+        "updatedAt": "2023-11-05T10:36:08.885Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-11-05T10:36:08.885Z",
+        "firstPublishedAt": "2023-11-05T10:36:08.885Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/content_types/post"
+      },
+      "displayField": "something",
+      "name": "Post",
+      "description": "Sample post. I just wanna integrate lol",
+      "fields": [
+        {
+          "id": "something",
+          "name": "something",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "heroSection",
+        "type": "ContentType",
+        "createdAt": "2024-05-10T11:36:37.990Z",
+        "updatedAt": "2024-05-10T11:41:42.092Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-05-10T11:41:42.092Z",
+        "firstPublishedAt": "2024-05-10T11:36:38.658Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/content_types/heroSection"
+      },
+      "displayField": "prefix",
+      "name": "HeroSection",
+      "description": "The main hero-section content text - e.g., \nSup? I'm\nXYZ\nand I'm a full stack developer, experienced in MERN.\nIt's cool that you're here :)",
+      "fields": [
+        {
+          "id": "prefix",
+          "name": "prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "name",
+          "name": "name",
+          "type": "Object",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1,
+                "max": 3
+              },
+              "message": "Need to have first name, middle name, last name"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "suffix",
+          "name": "suffix",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "and I'm a full stack developer, experienced in MERN.\nIt's cool that you're here :)"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "statMainAndSubtitle",
+          "name": "statMainAndSubtitle",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "max": 2
+              },
+              "message": "Needs only mainText and subtitle"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "mainStatsList",
+          "name": "mainStatsList",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "mainStatDetails"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "heroImg",
+          "name": "heroImg",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "highlightedSkills",
+          "name": "highlightedSkills",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "mainStatDetails",
+        "type": "ContentType",
+        "createdAt": "2024-05-10T11:38:31.509Z",
+        "updatedAt": "2024-05-10T11:39:13.482Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-05-10T11:39:13.482Z",
+        "firstPublishedAt": "2024-05-10T11:38:32.209Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/content_types/mainStatDetails"
+      },
+      "displayField": "statMainText",
+      "name": "mainStatDetails",
+      "description": "e.g., 04+\nYears of experience\n5+\nCourses & Certifications\n13+\nProfessional Projects",
+      "fields": [
+        {
+          "id": "statMainText",
+          "name": "statMainText",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subtitleText",
+          "name": "subtitleText",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8gqscx367zzu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2022-12-01T18:26:04.289Z",
+        "createdBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-12-03T15:34:15.778Z",
+        "updatedBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "experience",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "duration",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "role",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "company",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "companyURL",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "companyLogo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "bgColor",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "rolesAndResponsibilities",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8gqscx367zzu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-12-02T15:17:22.949Z",
+        "createdBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-12-02T15:17:24.039Z",
+        "updatedBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "productReview",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "heading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8gqscx367zzu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-12-03T15:50:58.589Z",
+        "createdBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-12-03T15:50:59.815Z",
+        "updatedBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "libraryOrTool",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "url",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icon",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8gqscx367zzu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2022-12-03T15:52:45.018Z",
+        "createdBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-12-03T16:15:23.186Z",
+        "updatedBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "toolsOrLibrariesUsed",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "createdFor",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "librariesList",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8gqscx367zzu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2022-12-21T11:45:35.012Z",
+        "createdBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-12-21T11:55:04.864Z",
+        "updatedBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "articleForReeco",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "editors": [
+        {
+          "widgetId": "default-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "tags-editor",
+          "widgetNamespace": "editor-builtin"
+        },
+        {
+          "widgetId": "69mKkEFmMO9ue4lwWfto2C",
+          "widgetNamespace": "app"
+        }
+      ],
+      "sidebar": [
+        {
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "widgetId": "703nAvCC2nuDjQCiI5P8e2",
+          "widgetNamespace": "app"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "author",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "articleImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sampleContent",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8gqscx367zzu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-11-05T10:36:09.030Z",
+        "createdBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-11-05T10:36:09.906Z",
+        "updatedBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "something",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8gqscx367zzu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2024-05-10T11:36:38.825Z",
+        "createdBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-05-10T11:41:43.068Z",
+        "updatedBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "heroSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "prefix",
+          "settings": {
+            "helpText": "e.g., \"Sup? I'm\""
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "name",
+          "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "suffix",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "statMainAndSubtitle",
+          "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "mainStatsList",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heroImg",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "highlightedSkills",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8gqscx367zzu",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-05-10T11:38:32.361Z",
+        "createdBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-05-10T11:39:14.451Z",
+        "updatedBy": {
+          "sys": {
+            "id": "41Y61fIwAd3xhHOighIdSs",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "mainStatDetails",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "statMainText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subtitleText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "4t1VzuzuwF1bx1k2PPv2Iy",
+        "type": "Entry",
+        "createdAt": "2022-12-01T18:31:51.829Z",
+        "updatedAt": "2022-12-03T18:04:08.433Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 40,
+        "publishedAt": "2022-12-03T18:04:08.433Z",
+        "firstPublishedAt": "2022-12-01T18:34:17.896Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 41,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experience"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/4t1VzuzuwF1bx1k2PPv2Iy"
+      },
+      "fields": {
+        "duration": {
+          "en-US": "Jan '22 - Present"
+        },
+        "role": {
+          "en-US": "Software Dev Engineer II"
+        },
+        "company": {
+          "en-US": "ChimpsAtWork [CAW] Studios"
+        },
+        "companyURL": {
+          "en-US": "https://cawstudios.com"
+        },
+        "companyLogo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4f3VM5kGD7WFNUzHE6d6ZS"
+            }
+          }
+        },
+        "bgColor": {
+          "en-US": "#f8f3e9"
+        },
+        "rolesAndResponsibilities": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "ordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "hyperlink",
+                            "data": {
+                              "uri": "https://incom.betagged.co/"
+                            },
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "BeTagged - A Social Media Marketing Platform",
+                                "marks": [
+                                ],
+                                "data": {
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "nodeType": "unordered-list",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "list-item",
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "nodeType": "paragraph",
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "Led the development of Web App for the platform from scratch; written in TS.",
+                                    "marks": [
+                                    ],
+                                    "data": {
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "list-item",
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "nodeType": "paragraph",
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "Managed & set-up monorepo architecture with Lerna; Co-led the shared code development.",
+                                    "marks": [
+                                    ],
+                                    "data": {
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "list-item",
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "nodeType": "paragraph",
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "Reviewed code and mentored other devs in the team.",
+                                    "marks": [
+                                    ],
+                                    "data": {
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "list-item",
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "nodeType": "paragraph",
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "Set up the singular cross-platform logging infrastructure with Segment & Sentry; This infra serves as blueprint for logging for other projects in the organisation as well.",
+                                    "marks": [
+                                    ],
+                                    "data": {
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-entry-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "3hDoQlrjfqA25gsLjQbEUW",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "ordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "hyperlink",
+                            "data": {
+                              "uri": "https://buyer-df.reeco.io/"
+                            },
+                            "content": [
+                              {
+                                "nodeType": "text",
+                                "value": "Reeco - A Restaurant Procurement Platform",
+                                "marks": [
+                                ],
+                                "data": {
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": "",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "nodeType": "unordered-list",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "list-item",
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "nodeType": "paragraph",
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "Worked on 3 TS-written apps for restaurant management & goods procurement [Back Office, Seller-facing, Buyer-facing].",
+                                    "marks": [
+                                    ],
+                                    "data": {
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "list-item",
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "nodeType": "paragraph",
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "\rImplemented optimistic updates and response caching with TanStack Query, resulting in lesser wait times and better UX.",
+                                    "marks": [
+                                    ],
+                                    "data": {
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "list-item",
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "nodeType": "paragraph",
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "nodeType": "text",
+                                    "value": "\rContributed to component library for creating highly reusable and flexible components between the three apps with Storybook.",
+                                    "marks": [
+                                    ],
+                                    "data": {
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-entry-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "3xjSL3kTWGGoA6gcZShpw5",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "1dzmeR2Bgu0nzubjPneB6C",
+        "type": "Entry",
+        "createdAt": "2022-12-03T14:44:28.085Z",
+        "updatedAt": "2022-12-03T14:55:26.904Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2022-12-03T14:55:26.904Z",
+        "firstPublishedAt": "2022-12-03T14:53:47.363Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experience"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/1dzmeR2Bgu0nzubjPneB6C"
+      },
+      "fields": {
+        "duration": {
+          "en-US": "April '20 - March '22"
+        },
+        "role": {
+          "en-US": "Full Stack / Lead Front End Developer"
+        },
+        "company": {
+          "en-US": "Emertech Innovations Pvt. Ltd."
+        },
+        "companyURL": {
+          "en-US": "https://emertech.io"
+        },
+        "companyLogo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6lxyiV8Xy1nSu0LFWZLVQs"
+            }
+          }
+        },
+        "bgColor": {
+          "en-US": "#e2f6ff"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "dKdgjkzYHYM0ANQgJ9JIO",
+        "type": "Entry",
+        "createdAt": "2022-12-03T14:58:07.213Z",
+        "updatedAt": "2022-12-03T14:59:00.672Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2022-12-03T14:59:00.672Z",
+        "firstPublishedAt": "2022-12-03T14:59:00.672Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experience"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/dKdgjkzYHYM0ANQgJ9JIO"
+      },
+      "fields": {
+        "duration": {
+          "en-US": "June '19 - Apr '20"
+        },
+        "role": {
+          "en-US": "Intern - Front End Developer"
+        },
+        "company": {
+          "en-US": "Emertech Innovations Pvt. Ltd."
+        },
+        "companyURL": {
+          "en-US": "https://emertech.io"
+        },
+        "companyLogo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6lxyiV8Xy1nSu0LFWZLVQs"
+            }
+          }
+        },
+        "bgColor": {
+          "en-US": "#e5e5e9d1"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "5cm4xTRSK3EIBcdDdNL9hY",
+        "type": "Entry",
+        "createdAt": "2022-12-03T14:59:15.718Z",
+        "updatedAt": "2022-12-03T15:00:46.560Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2022-12-03T15:00:46.560Z",
+        "firstPublishedAt": "2022-12-03T15:00:46.560Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experience"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/5cm4xTRSK3EIBcdDdNL9hY"
+      },
+      "fields": {
+        "duration": {
+          "en-US": "June '19 - Apr '20"
+        },
+        "role": {
+          "en-US": "Innovator"
+        },
+        "company": {
+          "en-US": "Digital Impact Square"
+        },
+        "companyURL": {
+          "en-US": "https://www.digitalimpactsquare.com/"
+        },
+        "companyLogo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "28Dhcx6iFzwB7GdQkJfCEX"
+            }
+          }
+        },
+        "bgColor": {
+          "en-US": "#e2f6ff"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "7fctnnZTsTkLyoC8Lf2Itw",
+        "type": "Entry",
+        "createdAt": "2022-12-03T15:01:28.302Z",
+        "updatedAt": "2022-12-03T15:02:49.047Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-12-03T15:02:49.047Z",
+        "firstPublishedAt": "2022-12-03T15:02:49.047Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experience"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/7fctnnZTsTkLyoC8Lf2Itw"
+      },
+      "fields": {
+        "duration": {
+          "en-US": "June '18 - Oct '18"
+        },
+        "role": {
+          "en-US": "Freelance Developer"
+        },
+        "companyLogo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "t5ljWIOVG8ttCHtLk5gSV"
+            }
+          }
+        },
+        "bgColor": {
+          "en-US": "#f8f3e9"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "79s43lY4TLtkZtCcSohkzv",
+        "type": "Entry",
+        "createdAt": "2022-12-03T15:53:02.775Z",
+        "updatedAt": "2022-12-03T15:54:00.530Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-12-03T15:54:00.530Z",
+        "firstPublishedAt": "2022-12-03T15:54:00.530Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "libraryOrTool"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/79s43lY4TLtkZtCcSohkzv"
+      },
+      "fields": {
+        "name": {
+          "en-US": "ReactJS"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1SrTGJO8pxRQw2gjc4YBLj"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "5j0W8pUR7A81DkrejOQ1O5",
+        "type": "Entry",
+        "createdAt": "2022-12-03T15:54:20.071Z",
+        "updatedAt": "2022-12-03T15:56:32.574Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-12-03T15:56:32.574Z",
+        "firstPublishedAt": "2022-12-03T15:56:32.574Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "libraryOrTool"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/5j0W8pUR7A81DkrejOQ1O5"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Tanstack Query"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "30gvyOtzeGjgebdrkCbmON"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "4uOjBFN1cHzkjLXFjZfFd9",
+        "type": "Entry",
+        "createdAt": "2022-12-03T16:03:21.269Z",
+        "updatedAt": "2022-12-03T16:04:12.358Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-12-03T16:04:12.358Z",
+        "firstPublishedAt": "2022-12-03T16:04:12.358Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "libraryOrTool"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/4uOjBFN1cHzkjLXFjZfFd9"
+      },
+      "fields": {
+        "name": {
+          "en-US": "styled-components"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6fUXe1hUtINl1v6FJvjtc4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "6WFKDVAXN3r5cYtJmuHHox",
+        "type": "Entry",
+        "createdAt": "2022-12-03T16:09:18.293Z",
+        "updatedAt": "2022-12-03T16:09:52.077Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-12-03T16:09:52.077Z",
+        "firstPublishedAt": "2022-12-03T16:09:52.077Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "libraryOrTool"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/6WFKDVAXN3r5cYtJmuHHox"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Redux"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5iqsdhPBxYfAaLjz1gq3fg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "5i4c23gs67fQJB95PO9vRD",
+        "type": "Entry",
+        "createdAt": "2022-12-03T16:13:14.909Z",
+        "updatedAt": "2022-12-03T16:13:48.885Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-12-03T16:13:48.885Z",
+        "firstPublishedAt": "2022-12-03T16:13:48.885Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "libraryOrTool"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/5i4c23gs67fQJB95PO9vRD"
+      },
+      "fields": {
+        "name": {
+          "en-US": "Chakra UI"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4Up8hL3HKQr0SowSnNF469"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "3hDoQlrjfqA25gsLjQbEUW",
+        "type": "Entry",
+        "createdAt": "2022-12-03T16:16:07.208Z",
+        "updatedAt": "2022-12-03T16:16:34.268Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-12-03T16:16:34.268Z",
+        "firstPublishedAt": "2022-12-03T16:16:34.268Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "toolsOrLibrariesUsed"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/3hDoQlrjfqA25gsLjQbEUW"
+      },
+      "fields": {
+        "createdFor": {
+          "en-US": "BeTagged"
+        },
+        "title": {
+          "en-US": "Major libraries/tools used:"
+        },
+        "librariesList": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5i4c23gs67fQJB95PO9vRD"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6WFKDVAXN3r5cYtJmuHHox"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4uOjBFN1cHzkjLXFjZfFd9"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5j0W8pUR7A81DkrejOQ1O5"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "79s43lY4TLtkZtCcSohkzv"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "3xjSL3kTWGGoA6gcZShpw5",
+        "type": "Entry",
+        "createdAt": "2022-12-03T16:17:15.741Z",
+        "updatedAt": "2022-12-03T16:17:44.042Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-12-03T16:17:44.042Z",
+        "firstPublishedAt": "2022-12-03T16:17:44.042Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "toolsOrLibrariesUsed"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/3xjSL3kTWGGoA6gcZShpw5"
+      },
+      "fields": {
+        "createdFor": {
+          "en-US": "Reeco"
+        },
+        "title": {
+          "en-US": "Major libraries/tools used:"
+        },
+        "librariesList": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4uOjBFN1cHzkjLXFjZfFd9"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5j0W8pUR7A81DkrejOQ1O5"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "79s43lY4TLtkZtCcSohkzv"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "1oozj41vk6uxY3oUW3JFrN",
+        "type": "Entry",
+        "createdAt": "2024-05-10T11:42:06.580Z",
+        "updatedAt": "2024-05-10T11:46:19.705Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-05-10T11:46:19.705Z",
+        "firstPublishedAt": "2024-05-10T11:46:19.705Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "heroSection"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/1oozj41vk6uxY3oUW3JFrN"
+      },
+      "fields": {
+        "prefix": {
+          "en-US": "Sup? I'm"
+        },
+        "name": {
+          "en-US": {
+            "lastName": "Khan",
+            "firstName": "Mohammad",
+            "middleName": "Areeb"
+          }
+        },
+        "suffix": {
+          "en-US": "and I'm a full stack developer, experienced in MERN.\nIt's cool that you're here :)"
+        },
+        "mainStatsList": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3rqTBo32ERJYifeMsbYKbU"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "iiVrrKgNBSKZtGwHfa0T6"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4C8AIL2SeabraAyYHNN2GA"
+              }
+            }
+          ]
+        },
+        "heroImg": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "HPfh7PagEf0kDPiBEyeFb"
+            }
+          }
+        },
+        "highlightedSkills": {
+          "en-US": [
+            "Web Development",
+            "Mobile App Development",
+            "Back-end Development",
+            "Prototyping",
+            "UI/UX Designing",
+            "Testing & TDD"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "iiVrrKgNBSKZtGwHfa0T6",
+        "type": "Entry",
+        "createdAt": "2024-05-10T11:43:12.855Z",
+        "updatedAt": "2024-05-10T11:43:35.379Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-05-10T11:43:35.379Z",
+        "firstPublishedAt": "2024-05-10T11:43:35.379Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "mainStatDetails"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/iiVrrKgNBSKZtGwHfa0T6"
+      },
+      "fields": {
+        "statMainText": {
+          "en-US": "5+"
+        },
+        "subtitleText": {
+          "en-US": "Courses & Certifications"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "4C8AIL2SeabraAyYHNN2GA",
+        "type": "Entry",
+        "createdAt": "2024-05-10T11:43:46.049Z",
+        "updatedAt": "2024-05-10T11:43:57.025Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-05-10T11:43:57.025Z",
+        "firstPublishedAt": "2024-05-10T11:43:57.025Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "mainStatDetails"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/4C8AIL2SeabraAyYHNN2GA"
+      },
+      "fields": {
+        "statMainText": {
+          "en-US": "13+"
+        },
+        "subtitleText": {
+          "en-US": "Professional Projects"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "3rqTBo32ERJYifeMsbYKbU",
+        "type": "Entry",
+        "createdAt": "2024-05-10T11:44:08.124Z",
+        "updatedAt": "2024-05-10T11:44:16.544Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-05-10T11:44:16.544Z",
+        "firstPublishedAt": "2024-05-10T11:44:16.544Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "mainStatDetails"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/entries/3rqTBo32ERJYifeMsbYKbU"
+      },
+      "fields": {
+        "statMainText": {
+          "en-US": "04+"
+        },
+        "subtitleText": {
+          "en-US": "Years of experience"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "4f3VM5kGD7WFNUzHE6d6ZS",
+        "type": "Asset",
+        "createdAt": "2022-12-01T18:33:06.865Z",
+        "updatedAt": "2022-12-01T18:33:53.711Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-12-01T18:33:53.711Z",
+        "firstPublishedAt": "2022-12-01T18:33:53.711Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/4f3VM5kGD7WFNUzHE6d6ZS"
+      },
+      "fields": {
+        "title": {
+          "en-US": "CAW Studios Logo"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/4f3VM5kGD7WFNUzHE6d6ZS/991079b8015e7cad2d16393bbcbd7a78/caw.jpg",
+            "details": {
+              "size": 6048,
+              "image": {
+                "width": 200,
+                "height": 200
+              }
+            },
+            "fileName": "caw.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "6lxyiV8Xy1nSu0LFWZLVQs",
+        "type": "Asset",
+        "createdAt": "2022-12-03T14:45:42.118Z",
+        "updatedAt": "2022-12-03T14:46:14.922Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-12-03T14:46:14.922Z",
+        "firstPublishedAt": "2022-12-03T14:46:14.922Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/6lxyiV8Xy1nSu0LFWZLVQs"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Emertech Logo"
+        },
+        "description": {
+          "en-US": "Emertech Innovation Pvt. Ltd."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/6lxyiV8Xy1nSu0LFWZLVQs/64575fe37beaf4c4f765c2e7634297b3/emertech.a4ff914f56e370b78f6e.png",
+            "details": {
+              "size": 57866,
+              "image": {
+                "width": 265,
+                "height": 266
+              }
+            },
+            "fileName": "emertech.a4ff914f56e370b78f6e.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "28Dhcx6iFzwB7GdQkJfCEX",
+        "type": "Asset",
+        "createdAt": "2022-12-03T14:59:53.490Z",
+        "updatedAt": "2022-12-03T15:00:22.179Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-12-03T15:00:22.179Z",
+        "firstPublishedAt": "2022-12-03T15:00:22.179Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/28Dhcx6iFzwB7GdQkJfCEX"
+      },
+      "fields": {
+        "title": {
+          "en-US": "disq"
+        },
+        "description": {
+          "en-US": "Digital Impact Square"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/28Dhcx6iFzwB7GdQkJfCEX/9f8b81a998a4125526cc213e72238824/disq.b0009db92b49825d25b0.png",
+            "details": {
+              "size": 25704,
+              "image": {
+                "width": 225,
+                "height": 225
+              }
+            },
+            "fileName": "disq.b0009db92b49825d25b0.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "t5ljWIOVG8ttCHtLk5gSV",
+        "type": "Asset",
+        "createdAt": "2022-12-03T15:02:08.963Z",
+        "updatedAt": "2022-12-03T15:02:28.400Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2022-12-03T15:02:28.400Z",
+        "firstPublishedAt": "2022-12-03T15:02:28.400Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/t5ljWIOVG8ttCHtLk5gSV"
+      },
+      "fields": {
+        "title": {
+          "en-US": "freelance"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/t5ljWIOVG8ttCHtLk5gSV/d6e2c74c16f028231cfb8a0622b49020/freelance.337c8f7f1218659b201e.png",
+            "details": {
+              "size": 55347,
+              "image": {
+                "width": 511,
+                "height": 511
+              }
+            },
+            "fileName": "freelance.337c8f7f1218659b201e.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "1SrTGJO8pxRQw2gjc4YBLj",
+        "type": "Asset",
+        "createdAt": "2022-12-03T15:53:30.417Z",
+        "updatedAt": "2022-12-03T15:53:49.228Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-12-03T15:53:49.228Z",
+        "firstPublishedAt": "2022-12-03T15:53:49.228Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/1SrTGJO8pxRQw2gjc4YBLj"
+      },
+      "fields": {
+        "title": {
+          "en-US": "ReactJS Icon"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/1SrTGJO8pxRQw2gjc4YBLj/a0e52c57adb996356032968c729ed4da/react.fecca4b45c6846836b8b973195ba7f31.svg",
+            "details": {
+              "size": 1380,
+              "image": {
+                "width": 48,
+                "height": 48
+              }
+            },
+            "fileName": "react.fecca4b45c6846836b8b973195ba7f31.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "30gvyOtzeGjgebdrkCbmON",
+        "type": "Asset",
+        "createdAt": "2022-12-03T15:54:46.625Z",
+        "updatedAt": "2022-12-03T15:56:24.068Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-12-03T15:56:24.068Z",
+        "firstPublishedAt": "2022-12-03T15:56:24.068Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/30gvyOtzeGjgebdrkCbmON"
+      },
+      "fields": {
+        "title": {
+          "en-US": "tanstack-query"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/30gvyOtzeGjgebdrkCbmON/f1f85859d4da90172f3413abca87b593/tanstack-query.png",
+            "details": {
+              "size": 6570,
+              "image": {
+                "width": 225,
+                "height": 225
+              }
+            },
+            "fileName": "tanstack-query.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "6fUXe1hUtINl1v6FJvjtc4",
+        "type": "Asset",
+        "createdAt": "2022-12-03T16:03:35.409Z",
+        "updatedAt": "2022-12-03T16:03:59.823Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-12-03T16:03:59.823Z",
+        "firstPublishedAt": "2022-12-03T16:03:59.823Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/6fUXe1hUtINl1v6FJvjtc4"
+      },
+      "fields": {
+        "title": {
+          "en-US": "styled-components"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/6fUXe1hUtINl1v6FJvjtc4/ca32b417361197cf92f5a4a3df849576/styled-components.png",
+            "details": {
+              "size": 13132,
+              "image": {
+                "width": 318,
+                "height": 318
+              }
+            },
+            "fileName": "styled-components.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "5iqsdhPBxYfAaLjz1gq3fg",
+        "type": "Asset",
+        "createdAt": "2022-12-03T16:09:27.166Z",
+        "updatedAt": "2022-12-03T16:09:47.816Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-12-03T16:09:47.816Z",
+        "firstPublishedAt": "2022-12-03T16:09:47.816Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/5iqsdhPBxYfAaLjz1gq3fg"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Redux"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/5iqsdhPBxYfAaLjz1gq3fg/9f3e11b5465bccabb5d2ae977e7594e3/redux.svg",
+            "details": {
+              "size": 1461,
+              "image": {
+                "width": 48,
+                "height": 48
+              }
+            },
+            "fileName": "redux.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "4Up8hL3HKQr0SowSnNF469",
+        "type": "Asset",
+        "createdAt": "2022-12-03T16:13:21.753Z",
+        "updatedAt": "2022-12-03T16:13:39.788Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2022-12-03T16:13:39.788Z",
+        "firstPublishedAt": "2022-12-03T16:13:39.788Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/4Up8hL3HKQr0SowSnNF469"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Chakra UI"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/4Up8hL3HKQr0SowSnNF469/0a67bf8a41980107c105c3b4958fb078/chakra-ui.png",
+            "details": {
+              "size": 6214,
+              "image": {
+                "width": 206,
+                "height": 205
+              }
+            },
+            "fileName": "chakra-ui.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "id": "HPfh7PagEf0kDPiBEyeFb",
+        "type": "Asset",
+        "createdAt": "2024-05-10T11:44:37.479Z",
+        "updatedAt": "2024-05-10T11:45:28.920Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-05-10T11:45:28.920Z",
+        "firstPublishedAt": "2024-05-10T11:45:28.920Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8gqscx367zzu/environments/master/assets/HPfh7PagEf0kDPiBEyeFb"
+      },
+      "fields": {
+        "title": {
+          "en-US": "with-glasses"
+        },
+        "description": {
+          "en-US": "Dude's out here trying to look like an intellectual"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8gqscx367zzu/HPfh7PagEf0kDPiBEyeFb/9bc8af5a82fc0de255515c3953ac3acd/hero-img-alt.850650b5ffecbf17f11a.png",
+            "details": {
+              "size": 486666,
+              "image": {
+                "width": 699,
+                "height": 736
+              }
+            },
+            "fileName": "hero-img-alt.850650b5ffecbf17f11a.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "4931u55s89NXdv2OtkHYHY",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "5e817a08-0fee-4945-a0f8-2a1d26a311b6"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "createdAt": "2022-12-01T18:18:51Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedAt": "2022-12-01T18:18:51Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "49bFYfX1wKU9MWT5nupk0m",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8gqscx367zzu"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "createdAt": "2022-12-01T18:18:52Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "41Y61fIwAd3xhHOighIdSs"
+          }
+        },
+        "updatedAt": "2022-12-01T18:18:52Z"
+      }
+    }
+  ]
+}
