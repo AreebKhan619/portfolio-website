@@ -8,7 +8,6 @@ query GetHeroSectionData {
             prefix
             name
             suffix
-            statMainAndSubtitle
             highlightedSkills
             heroImg {
                 title
