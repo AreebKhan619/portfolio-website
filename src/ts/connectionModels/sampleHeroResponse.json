@@ -1,0 +1,142 @@
+{
+  "prefix": "Sup? I'm",
+  "name": {
+    "lastName": "Khan",
+    "firstName": "Mohammad",
+    "middleName": "Areeb"
+  },
+  "suffix": "and I'm a full stack developer, experienced in MERN.\nIt's cool that you're here :)",
+  "statMainAndSubtitle": null,
+  "highlightedSkills": [
+    "Web Development",
+    "Mobile App Development",
+    "Back-end Development",
+    "Prototyping",
+    "UI/UX Designing",
+    "Testing & TDD"
+  ],
+  "heroImg": {
+    "title": "with-glasses",
+    "description": "Dude's out here trying to look like an intellectual",
+    "contentType": "image/png",
+    "fileName": "hero-img-alt.850650b5ffecbf17f11a.png",
+    "size": 486666,
+    "url": "https://images.ctfassets.net/8gqscx367zzu/HPfh7PagEf0kDPiBEyeFb/9bc8af5a82fc0de255515c3953ac3acd/hero-img-alt.850650b5ffecbf17f11a.png",
+    "width": 699,
+    "height": 736
+  },
+  "mainStatsListCollection": {
+    "items": [
+      {
+        "sys": {
+          "id": "3rqTBo32ERJYifeMsbYKbU"
+        },
+        "statMainText": "05+",
+        "subtitleText": "Years of experience"
+      },
+      {
+        "sys": {
+          "id": "iiVrrKgNBSKZtGwHfa0T6"
+        },
+        "statMainText": "5+",
+        "subtitleText": "Courses & Certifications"
+      },
+      {
+        "sys": {
+          "id": "4C8AIL2SeabraAyYHNN2GA"
+        },
+        "statMainText": "13+",
+        "subtitleText": "Professional Projects"
+      }
+    ]
+  },
+  "heroImgSurroundingSkillsCollection": {
+    "items": [
+      {
+        "sys": {
+          "id": "3gh80X6LhDTQ4vJXUzLeJa"
+        },
+        "name": "React Native",
+        "url": "https://reactnative.dev",
+        "icon": {
+          "title": "ReactNative",
+          "description": "",
+          "contentType": "image/png",
+          "fileName": "react-native-1.png",
+          "size": 25821,
+          "url": "https://images.ctfassets.net/8gqscx367zzu/65CUoPGNZu4i3PxWtIsVj1/8700f450d166c44960d30c683d591677/react-native-1.png",
+          "width": 343,
+          "height": 343
+        }
+      },
+      {
+        "sys": {
+          "id": "27B45B1kt8zYfmgOy6bAJp"
+        },
+        "name": "MongoDB",
+        "url": "https://www.mongodb.com/",
+        "icon": {
+          "title": "mongodb-logo",
+          "description": "",
+          "contentType": "image/webp",
+          "fileName": "mongodb.2f14bb2065d8bc1ec5a3.webp",
+          "size": 8516,
+          "url": "https://images.ctfassets.net/8gqscx367zzu/5J1AMwGUOH2i5boflLpCS5/015bb47ef1d2b3cef639ec275bf93e89/mongodb.2f14bb2065d8bc1ec5a3.webp",
+          "width": 406,
+          "height": 406
+        }
+      },
+      {
+        "sys": {
+          "id": "79s43lY4TLtkZtCcSohkzv"
+        },
+        "name": "ReactJS",
+        "url": null,
+        "icon": {
+          "title": "ReactJS Icon",
+          "description": "",
+          "contentType": "image/svg+xml",
+          "fileName": "react.fecca4b45c6846836b8b973195ba7f31.svg",
+          "size": 1380,
+          "url": "https://images.ctfassets.net/8gqscx367zzu/1SrTGJO8pxRQw2gjc4YBLj/a0e52c57adb996356032968c729ed4da/react.fecca4b45c6846836b8b973195ba7f31.svg",
+          "width": 48,
+          "height": 48
+        }
+      },
+      {
+        "sys": {
+          "id": "10ULcXLuxUelUvfujv2AnP"
+        },
+        "name": "Express",
+        "url": null,
+        "icon": {
+          "title": "express-logo",
+          "description": "",
+          "contentType": "image/png",
+          "fileName": "download (1).png",
+          "size": 6859,
+          "url": "https://images.ctfassets.net/8gqscx367zzu/1FrNi2B90PhkvM6BWHoWSD/76b2dd447e4e4c6ced60b08c7c0768ae/download__1_.png",
+          "width": 200,
+          "height": 200
+        }
+      },
+      {
+        "sys": {
+          "id": "4Og7cXwvxcLi0DLlHyxrVW"
+        },
+        "name": "NodeJS",
+        "url": null,
+        "icon": {
+          "title": "nodejs-logo",
+          "description": "",
+          "contentType": "image/svg+xml",
+          "fileName": "nodejs.cccdafa931eebdaea49f5c5ac3ba232f.svg",
+          "size": 3018,
+          "url": "https://images.ctfassets.net/8gqscx367zzu/3QsWovSypP4QDHV9EguIlo/630f8382a928642bc3fe96777b682987/nodejs.cccdafa931eebdaea49f5c5ac3ba232f.svg",
+          "width": 48,
+          "height": 48
+        }
+      }
+    ]
+  }
+}

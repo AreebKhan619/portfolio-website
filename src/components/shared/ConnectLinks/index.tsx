@@ -50,7 +50,7 @@ const ConnectLinks: React.FC<IConnectLinksProps> = ({ PrefixComponent }) => {
               target="_blank"
               rel="noreferrer"
               onClick={() =>
-                window.analytics.track(
+                window.analytics.track?.(
                   `Visited social media profile: ` + el.name
                 )
               }

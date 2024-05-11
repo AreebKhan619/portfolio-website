@@ -13,20 +13,21 @@ import {
   OverviewContainer,
 } from "./styled";
 
-import { WavyLine, WebDevAlt } from "../../assets/images";
-import SkillsPossessed from "../../components/overview/skills-possessed";
-import TechSkillsList from "../../components/overview/tech-skills";
-import { Strings } from "../../assets/constants/strings";
+import { WavyLine } from "@/assets/images";
+import SkillsPossessed from "@/components/overview/skills-possessed";
+import TechSkillsList from "@/components/overview/tech-skills";
+import { Strings } from "@/assets/constants/strings";
 
 import { motion } from "framer-motion";
 import {
   getOnClickAnimationProps,
   getScaleAnimationProps,
   getWaveAnimationProps,
-} from "../../assets/constants/motionProps";
-import ConnectLinks from "../../components/shared/ConnectLinks";
+} from "@/assets/constants/motionProps";
+import ConnectLinks from "@/components/shared/ConnectLinks";
 import { gql, useQuery } from "@apollo/client";
 import { HERO_SECTION_DETAILS } from "@/connections/contentfulGraphQlLiterals";
+import { IHeroSectionDetails } from "@/ts/connectionModels/response";
 
 const statsList = [
   {
@@ -45,13 +46,16 @@ const statsList = [
 
 const onResumeDownloadClick = () => {
   window.open("/Areeb Khan - Resume.pdf", "_new");
-  window.analytics.track("Resume was downloaded.");
+  window.analytics.track?.("Resume was downloaded.");
 };
 
 const Overview = () => {
-  const { loading, data } = useQuery(gql(HERO_SECTION_DETAILS));
+  const { loading, data } = useQuery<IHeroSectionDetails>(
+    gql(HERO_SECTION_DETAILS)
+  );
 
-  if (loading) return <div>Loading...</div>;
+  if (loading || !data?.heroSectionCollection?.items?.[0])
+    return <div>Loading...</div>;
 
   const {
     prefix,
@@ -60,6 +64,7 @@ const Overview = () => {
     mainStatsListCollection,
     highlightedSkills,
     heroImg,
+    heroImgSurroundingSkillsCollection,
   } = data?.heroSectionCollection?.items?.[0] ?? {};
 
   return (
@@ -113,7 +118,9 @@ const Overview = () => {
 
       <RightPortion>
         <div className="img-container">
-          <SkillsPossessed />
+          <SkillsPossessed
+            skills={heroImgSurroundingSkillsCollection?.items ?? []}
+          />
           <HeroImgContainer
             className="hero-img"
             as={motion.img}

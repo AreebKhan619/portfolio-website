@@ -10,8 +10,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// TODO: Uncomment this, get the API key again because I don't hae it anymore lol
-// segmentLogScriptSetup();
+segmentLogScriptSetup();
 
 const root = ReactDOM.createRoot(document.getElementById("root") as Element);
 root.render(

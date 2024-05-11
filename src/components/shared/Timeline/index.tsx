@@ -63,7 +63,7 @@ const EventPoint: FC<TimelineEventObject> = ({
 
   useEffect(() => {
     if (isExpanded) {
-      window.analytics.track(`${title} (${subtitle}) was expanded`);
+      window.analytics.track?.(`${title} (${subtitle}) was expanded`);
     }
     // eslint-disable-next-line
   }, [isExpanded]);
@@ -87,7 +87,7 @@ const EventPoint: FC<TimelineEventObject> = ({
             {point.link && (
               <HrefLink
                 onClick={() =>
-                  window.analytics.track(
+                  window.analytics.track?.(
                     `${point.link} - external link visited`
                   )
                 }

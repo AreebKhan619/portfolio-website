@@ -29,7 +29,7 @@ const SkillsAndPersonalProjects = () => {
                   {link && (
                     <HrefLink
                       onClick={() =>
-                        window.analytics.track(
+                        window.analytics.track?.(
                           `${link} - external link visited`
                         )
                       }
@@ -41,7 +41,7 @@ const SkillsAndPersonalProjects = () => {
                   {repoLink && (
                     <HrefLink
                       onClick={() =>
-                        window.analytics.track(
+                        window.analytics.track?.(
                           `${repoLink} - external link visited`
                         )
                       }
@@ -78,7 +78,9 @@ const SkillsAndPersonalProjects = () => {
                   rel={"noreferrer"}
                   className="name alternate dashed-underline"
                   onClick={() =>
-                    window.analytics.track(`${name} - Certification viewed visited (${link})`)
+                    window.analytics.track?.(
+                      `${name} - Certification viewed visited (${link})`
+                    )
                   }
                 >
                   {name}
