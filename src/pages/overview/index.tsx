@@ -9,7 +9,7 @@ import {
   StatSubtitle,
   StatContainerOuter,
   Stat,
-  WaveImgContainer,
+  HeroImgContainer,
   OverviewContainer,
 } from "./styled";
 
@@ -25,6 +25,8 @@ import {
   getWaveAnimationProps,
 } from "../../assets/constants/motionProps";
 import ConnectLinks from "../../components/shared/ConnectLinks";
+import { gql, useQuery } from "@apollo/client";
+import { HERO_SECTION_DETAILS } from "@/connections/contentfulGraphQlLiterals";
 
 const statsList = [
   {
@@ -47,30 +49,47 @@ const onResumeDownloadClick = () => {
 };
 
 const Overview = () => {
+  const { loading, data } = useQuery(gql(HERO_SECTION_DETAILS));
+
+  if (loading) return <div>Loading...</div>;
+
+  const {
+    prefix,
+    name,
+    suffix,
+    mainStatsListCollection,
+    highlightedSkills,
+    heroImg,
+  } = data?.heroSectionCollection?.items?.[0] ?? {};
+
   return (
     <OverviewContainer id="overview">
       <LeftPortion>
         <div>
-          <HiText>{Strings.hi}</HiText>
+          <HiText>
+            <pre>{prefix}</pre>
+          </HiText>
           <IntroText>
             <Name as={motion.div} {...getScaleAnimationProps()}>
-              Mohammad <MainName>Areeb</MainName> Khan
+              {name.firstName} <MainName>{name.middleName}</MainName>{" "}
+              {name.lastName}
             </Name>
           </IntroText>
         </div>
         <div>
-          {Strings.welcomeTextSuffix1}
-          <br /> {Strings.welcomeTextSuffix2}
+          <pre>{suffix}</pre>
         </div>
         <StatContainerOuter>
-          {statsList.map(({ mainStat, subtitle }, idx) => {
-            return (
-              <Stat key={idx}>
-                <StatHeader>{mainStat}</StatHeader>
-                <StatSubtitle>{subtitle}</StatSubtitle>
-              </Stat>
-            );
-          })}
+          {mainStatsListCollection.items.map(
+            ({ statMainText, subtitleText, sys }) => {
+              return (
+                <Stat key={sys.id}>
+                  <StatHeader>{statMainText}</StatHeader>
+                  <StatSubtitle>{subtitleText}</StatSubtitle>
+                </Stat>
+              );
+            }
+          )}
         </StatContainerOuter>
         <div className="wavy-line-container">
           <img src={WavyLine} alt={"divider"} />
@@ -88,17 +107,17 @@ const Overview = () => {
             }
           />
           {/* UI/UX Designing, Prototyping, Web Development */}
-          <TechSkillsList />
+          <TechSkillsList skills={highlightedSkills} />
         </div>
       </LeftPortion>
 
       <RightPortion>
         <div className="img-container">
           <SkillsPossessed />
-          <WaveImgContainer
+          <HeroImgContainer
             className="hero-img"
             as={motion.img}
-            src={WebDevAlt}
+            src={heroImg.url}
             alt={Strings.itsMeWaving}
             {...getWaveAnimationProps()}
           />

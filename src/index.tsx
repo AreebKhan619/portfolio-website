@@ -3,12 +3,22 @@ import ReactDOM from "react-dom/client";
 import { segmentLogScriptSetup } from "./analytics/segment";
 import GlobalStyles from "./assets/styles/globalStyles";
 import App from "./pages";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
-segmentLogScriptSetup();
+const client = new ApolloClient({
+  uri: `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/environments/master?access_token=${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`,
+  cache: new InMemoryCache(),
+});
+
+// TODO: Uncomment this, get the API key again because I don't hae it anymore lol
+// segmentLogScriptSetup();
+
 const root = ReactDOM.createRoot(document.getElementById("root") as Element);
 root.render(
   <React.StrictMode>
     <GlobalStyles />
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>
 );

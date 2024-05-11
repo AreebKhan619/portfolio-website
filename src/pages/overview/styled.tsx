@@ -148,7 +148,7 @@ export const StatSubtitle = styled.div`
   font-size: 1.5rem;
 `;
 
-export const WaveImgContainer = styled.img`
+export const HeroImgContainer = styled.img`
   width: 100%;
   max-height: 60rem;
   border-radius: 1rem;

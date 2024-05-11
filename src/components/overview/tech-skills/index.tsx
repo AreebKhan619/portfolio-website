@@ -1,15 +1,6 @@
 import { SkillCapsule, TechSkillsContainer } from "./styled";
 
-const TechSkillsList = () => {
-  const skills = [
-    "Web Development",
-    "Mobile App Development",
-    "Back-end Development",
-    "Prototyping",
-    "UI/UX Designing",
-    "Testing & TDD",
-  ];
-
+const TechSkillsList = ({ skills }: { skills: string[] }) => {
   return (
     <TechSkillsContainer>
       {skills.map((el, idx) => (
