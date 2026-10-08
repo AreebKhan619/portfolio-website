@@ -23,7 +23,7 @@ export default async function HomePage() {
       <HeroBackdrop />
       <SiteHeader name={profile.personalInfo.name} />
       <main id="main" className="mx-auto max-w-5xl px-5 sm:px-8">
-        <Hero info={profile.personalInfo} />
+        <Hero info={profile.personalInfo} locale={profile.site.locale.replace("_", "-")} />
         <Experience jobs={profile.workExperience} />
         <Projects projects={profile.projects} />
         <Skills groups={profile.skills} />

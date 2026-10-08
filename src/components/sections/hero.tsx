@@ -1,6 +1,7 @@
+import { RotatingTagline } from "@/components/rotating-tagline";
 import type { PersonalInfo } from "@/types/profile";
 
-export function Hero({ info }: { info: PersonalInfo }) {
+export function Hero({ info, locale }: { info: PersonalInfo; locale: string }) {
   return (
     <section aria-labelledby="hero-title" className="pt-16 pb-20 sm:pt-24 sm:pb-28">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent sm:text-sm">
@@ -15,7 +16,12 @@ export function Hero({ info }: { info: PersonalInfo }) {
           {info.jobTitle}
         </span>
       </h1>
-      <p className="mt-8 max-w-2xl text-xl leading-relaxed text-fg sm:text-2xl sm:leading-snug">
+      <RotatingTagline
+        tagline={info.tagline}
+        locale={locale}
+        className="tagline mt-10 font-display text-4xl leading-tight text-fg sm:text-5xl"
+      />
+      <p className="mt-6 max-w-2xl text-xl leading-relaxed text-fg sm:text-2xl sm:leading-snug">
         {info.valueProposition}
       </p>
       <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">{info.summary}</p>

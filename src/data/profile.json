@@ -25,6 +25,17 @@
     "familyName": "Khan",
     "jobTitle": "Full-Stack Software Engineer",
     "headline": "React · React Native · TypeScript · Node.js",
+    "tagline": {
+      "lead": "I build",
+      "words": [
+        "procurement platforms",
+        "React Native apps",
+        "traceability systems",
+        "component libraries",
+        "ERP dashboards"
+      ],
+      "end": "."
+    },
     "valueProposition": "I take web and mobile products from a blank repo to production, then build the shared code, logging and review habits that keep teams shipping fast.",
     "summary": "Software engineer since 2019 with a speciality in React. I have led greenfield builds for a restaurant procurement platform, a social-media marketing platform and a blockchain farm-to-fork traceability solution that has given 5M+ products a unique identity.",
     "email": "areebkhan619@gmail.com",

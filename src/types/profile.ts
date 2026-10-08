@@ -49,6 +49,17 @@ export interface PersonalInfo {
   jobTitle: string;
   /** Short specialisation line shown above the name. */
   headline: string;
+  /**
+   * Hero line with a rotating phrase: "{lead} {word}{end}". Each word must be
+   * something real from the work history. The full sentence ("I build a, b
+   * and c.") is rendered as plain text for crawlers and screen readers.
+   */
+  tagline: {
+    lead: string;
+    words: string[];
+    /** Trailing punctuation, e.g. ".". */
+    end: string;
+  };
   /** One-sentence value proposition shown in the hero. */
   valueProposition: string;
   /** Short supporting paragraph under the value proposition. */
