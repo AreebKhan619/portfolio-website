@@ -3,6 +3,8 @@
 import { useTheme } from "next-themes";
 import { useSyncExternalStore } from "react";
 
+import { centerOf, switchTheme } from "@/lib/theme-transition";
+
 const subscribe = () => () => {};
 
 /** true only after hydration, so the icon never mismatches the server HTML. */
@@ -22,7 +24,9 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={(event) =>
+        switchTheme(isDark ? "light" : "dark", setTheme, centerOf(event.currentTarget))
+      }
       aria-label={mounted ? `Switch to ${isDark ? "light" : "dark"} theme` : "Toggle theme"}
       className="inline-flex size-9 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-fg/30 hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >

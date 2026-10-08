@@ -326,3 +326,11 @@
     opacity: 1;
   }
 }
+
+/* ---------- Theme switch: circular reveal (see lib/theme-transition.ts) ---------- */
+/* The JS drives a clip-path on the new snapshot; disable the default crossfade. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
