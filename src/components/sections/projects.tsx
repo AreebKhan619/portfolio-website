@@ -1,4 +1,5 @@
 import { BadgeList } from "@/components/badge-list";
+import { CardSpotlight } from "@/components/card-spotlight";
 import { ExternalLink } from "@/components/external-link";
 import { FadeIn } from "@/components/fade-in";
 import { RichText } from "@/components/rich-text";
@@ -29,7 +30,10 @@ function ProjectLinks({ project }: { project: Project }) {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-line bg-surface p-6 transition-colors hover:border-fg/20">
+    <article
+      data-spotlight=""
+      className="spotlight-card flex h-full flex-col rounded-2xl border border-line bg-surface p-6 transition-colors hover:border-fg/20"
+    >
       <header>
         {project.organization ? (
           <p className="font-mono text-xs text-muted">{project.organization}</p>
@@ -70,6 +74,7 @@ export function Projects({ projects }: { projects: Project[] }) {
   return (
     <section id="projects" aria-labelledby="projects-title" className="py-20">
       <SectionHeading id="projects-title" eyebrow="Selected work" title="Projects" />
+      <CardSpotlight />
       <ul className="grid gap-5 sm:grid-cols-2">
         {professional.map((project, i) => (
           <li key={project.id}>
@@ -87,7 +92,10 @@ export function Projects({ projects }: { projects: Project[] }) {
             {personal.map((project) => (
               <li key={project.id}>
                 <FadeIn className="h-full">
-                  <article className="flex h-full flex-col rounded-2xl border border-line p-5">
+                  <article
+                    data-spotlight=""
+                    className="spotlight-card flex h-full flex-col rounded-2xl border border-line p-5"
+                  >
                     <h4 className="font-semibold text-fg">{project.name}</h4>
                     <p className="mt-2 text-sm leading-relaxed text-muted">
                       <RichText text={project.summary} />
