@@ -145,9 +145,33 @@ export interface Publication {
   url?: string;
 }
 
+/**
+ * "At a glance" bento under the hero. Numbers (years, companies) are computed
+ * from `workExperience`; only labels and hand-picked values live here.
+ */
+export interface Glance {
+  title: string;
+  labels: {
+    current: string;
+    experience: string;
+    companies: string;
+    stack: string;
+    availability: string;
+  };
+  /** Headline technologies; each should also appear in `skills`. */
+  coreStack: string[];
+  availability: {
+    /** true renders a pulsing green dot; false a muted one. */
+    available: boolean;
+    /** Short status, e.g. "Open to roles". */
+    status: string;
+  };
+}
+
 export interface Profile {
   site: SiteConfig;
   personalInfo: PersonalInfo;
+  glance: Glance;
   workExperience: WorkExperience[];
   projects: Project[];
   skills: SkillGroup[];

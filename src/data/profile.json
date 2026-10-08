@@ -62,6 +62,21 @@
       }
     ]
   },
+  "glance": {
+    "title": "At a glance",
+    "labels": {
+      "current": "Currently",
+      "experience": "Years of experience",
+      "companies": "Companies",
+      "stack": "Core stack",
+      "availability": "Availability"
+    },
+    "coreStack": ["React", "React Native", "TypeScript", "Node.js"],
+    "availability": {
+      "available": true,
+      "status": "Open to roles"
+    }
+  },
   "workExperience": [
     {
       "id": "reeco",

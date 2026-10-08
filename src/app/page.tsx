@@ -2,15 +2,16 @@ import { HeroBackdrop } from "@/components/hero-backdrop";
 import { PersonJsonLd } from "@/components/person-json-ld";
 import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
+import { Glance } from "@/components/sections/glance";
 import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { getProfile } from "@/lib/content";
+import { getCareerStats, getProfile } from "@/lib/content";
 
 export default async function HomePage() {
-  const profile = await getProfile();
+  const [profile, stats] = await Promise.all([getProfile(), getCareerStats()]);
 
   return (
     <>
@@ -24,6 +25,7 @@ export default async function HomePage() {
       <SiteHeader name={profile.personalInfo.name} />
       <main id="main" className="mx-auto max-w-5xl px-5 sm:px-8">
         <Hero info={profile.personalInfo} locale={profile.site.locale.replace("_", "-")} />
+        <Glance content={profile.glance} stats={stats} />
         <Experience jobs={profile.workExperience} />
         <Projects projects={profile.projects} />
         <Skills groups={profile.skills} />

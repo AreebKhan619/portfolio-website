@@ -1,6 +1,7 @@
 import { cacheLife } from "next/cache";
 
 import profileData from "@/data/profile.json";
+import { computeCareerStats, type CareerStats } from "@/lib/stats";
 import type { Profile } from "@/types/profile";
 
 // Assigning (not casting) makes `tsc` verify the JSON against the schema.
@@ -17,4 +18,15 @@ export async function getProfile(): Promise<Profile> {
   "use cache";
   cacheLife("max");
   return profile;
+}
+
+/**
+ * Career numbers for the "At a glance" tiles. Cached per day so the computed
+ * years tick over without a redeploy.
+ */
+export async function getCareerStats(): Promise<CareerStats> {
+  "use cache";
+  cacheLife("days");
+  const { workExperience } = await getProfile();
+  return computeCareerStats(workExperience, new Date());
 }

@@ -3,7 +3,7 @@ import type { PersonalInfo } from "@/types/profile";
 
 export function Hero({ info, locale }: { info: PersonalInfo; locale: string }) {
   return (
-    <section aria-labelledby="hero-title" className="pt-16 pb-20 sm:pt-24 sm:pb-28">
+    <section aria-labelledby="hero-title" className="pt-16 pb-14 sm:pt-24 sm:pb-20">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent sm:text-sm">
         {info.headline}
       </p>
