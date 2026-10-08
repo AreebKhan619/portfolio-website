@@ -1,13 +1,14 @@
 import { CommandMenu } from "@/components/command-menu";
 import { ThemeToggle } from "@/components/theme-toggle";
-import type { PaletteData } from "@/lib/commands";
+import type { PaletteData, TerminalData } from "@/lib/commands";
 
 interface SiteHeaderProps {
   name: string;
   palette: PaletteData;
+  terminal: TerminalData;
 }
 
-export function SiteHeader({ name, palette }: SiteHeaderProps) {
+export function SiteHeader({ name, palette, terminal }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-line/70 bg-bg/80 backdrop-blur supports-[backdrop-filter]:bg-bg/70">
       <div className="mx-auto flex h-16 max-w-5xl items-center gap-2 px-5 sm:gap-3 sm:px-8">
@@ -28,7 +29,7 @@ export function SiteHeader({ name, palette }: SiteHeaderProps) {
             ))}
           </ul>
         </nav>
-        <CommandMenu palette={palette} />
+        <CommandMenu palette={palette} terminal={terminal} />
         <ThemeToggle />
       </div>
     </header>

@@ -3,11 +3,25 @@
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 
-import type { PaletteData } from "@/lib/commands";
+import type { PaletteData, TerminalData } from "@/lib/commands";
 
-// Loaded on first open only; nothing from the palette ships in the initial JS.
+// Loaded on first open only; neither overlay ships in the initial JS.
 const loadPalette = () => import("@/components/command-palette");
 const CommandPalette = dynamic(loadPalette, { ssr: false, loading: () => null });
+const Terminal = dynamic(() => import("@/components/terminal"), { ssr: false, loading: () => null });
+
+type Overlay = "palette" | "terminal" | null;
+
+/** True when a keypress is meant for a text field, not a global shortcut. */
+function isTyping(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false;
+  return (
+    target.isContentEditable ||
+    target instanceof HTMLInputElement ||
+    target instanceof HTMLTextAreaElement ||
+    target instanceof HTMLSelectElement
+  );
+}
 
 const subscribe = () => () => {};
 
@@ -20,24 +34,36 @@ function usePlatform() {
   );
 }
 
+interface CommandMenuProps {
+  palette: PaletteData;
+  terminal: TerminalData;
+}
+
 /**
- * Header trigger + global ⌘K / Ctrl+K shortcut for the command palette.
- * Remembers what had focus before opening and restores it on close.
+ * Header trigger plus the global shortcuts: ⌘K / Ctrl+K toggles the command
+ * palette, ` (backtick, outside text fields) opens the terminal. Remembers
+ * what had focus before an overlay opened and restores it on close.
  */
-export function CommandMenu({ palette }: { palette: PaletteData }) {
-  const [open, setOpen] = useState(false);
+export function CommandMenu({ palette, terminal }: CommandMenuProps) {
+  const [overlay, setOverlay] = useState<Overlay>(null);
   const platform = usePlatform();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const returnFocusRef = useRef<HTMLElement | null>(null);
+  const overlayRef = useRef<Overlay>(null);
 
-  const openPalette = useCallback(() => {
-    returnFocusRef.current =
-      document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    setOpen(true);
+  const open = useCallback((next: Exclude<Overlay, null>) => {
+    // Switching palette -> terminal keeps the original focus target.
+    if (overlayRef.current === null) {
+      returnFocusRef.current =
+        document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    }
+    overlayRef.current = next;
+    setOverlay(next);
   }, []);
 
-  const closePalette = useCallback((restoreFocus = true) => {
-    setOpen(false);
+  const close = useCallback((restoreFocus = true) => {
+    overlayRef.current = null;
+    setOverlay(null);
     if (!restoreFocus) return;
     const target = returnFocusRef.current;
     requestAnimationFrame(() => {
@@ -45,17 +71,32 @@ export function CommandMenu({ palette }: { palette: PaletteData }) {
     });
   }, []);
 
+  const openPalette = useCallback(() => open("palette"), [open]);
+  const openTerminal = useCallback(() => open("terminal"), [open]);
+
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
-        if (open) closePalette();
+        if (overlay === "palette") close();
         else openPalette();
+        return;
+      }
+      if (
+        event.key === "`" &&
+        overlay === null &&
+        !event.metaKey &&
+        !event.ctrlKey &&
+        !event.altKey &&
+        !isTyping(event.target)
+      ) {
+        event.preventDefault();
+        openTerminal();
       }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open, openPalette, closePalette]);
+  }, [overlay, openPalette, openTerminal, close]);
 
   return (
     <>
@@ -81,7 +122,10 @@ export function CommandMenu({ palette }: { palette: PaletteData }) {
           {platform === null ? " " : platform === "mac" ? "⌘K" : "Ctrl K"}
         </kbd>
       </button>
-      {open ? <CommandPalette data={palette} onClose={closePalette} /> : null}
+      {overlay === "palette" ? (
+        <CommandPalette data={palette} onClose={close} onOpenTerminal={openTerminal} />
+      ) : null}
+      {overlay === "terminal" ? <Terminal data={terminal} onClose={close} /> : null}
     </>
   );
 }

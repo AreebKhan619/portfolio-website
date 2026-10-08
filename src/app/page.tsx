@@ -8,7 +8,7 @@ import { Projects } from "@/components/sections/projects";
 import { Skills } from "@/components/sections/skills";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { buildPaletteData } from "@/lib/commands";
+import { buildPaletteData, buildTerminalData } from "@/lib/commands";
 import { getCareerStats, getProfile } from "@/lib/content";
 
 export default async function HomePage() {
@@ -23,7 +23,11 @@ export default async function HomePage() {
         Skip to content
       </a>
       <HeroBackdrop />
-      <SiteHeader name={profile.personalInfo.name} palette={buildPaletteData(profile)} />
+      <SiteHeader
+        name={profile.personalInfo.name}
+        palette={buildPaletteData(profile)}
+        terminal={buildTerminalData(profile)}
+      />
       <main id="main" className="mx-auto max-w-5xl px-5 sm:px-8">
         <Hero info={profile.personalInfo} locale={profile.site.locale.replace("_", "-")} />
         <Glance content={profile.glance} stats={stats} />

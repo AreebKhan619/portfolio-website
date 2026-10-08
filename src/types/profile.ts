@@ -68,6 +68,7 @@ export interface CommandPaletteCopy {
     copiedAnnouncement: string;
     downloadResume: string;
     toggleTheme: string;
+    openTerminal: string;
     /** Template; `{label}` is replaced by the social link label. */
     openSocial: string;
   };
@@ -186,6 +187,43 @@ export interface Publication {
   url?: string;
 }
 
+/** Terminal command names, in the order `help` lists them. */
+export type TerminalCommand =
+  | "help"
+  | "whoami"
+  | "experience"
+  | "skills"
+  | "projects"
+  | "contact"
+  | "resume"
+  | "theme"
+  | "clear"
+  | "exit";
+
+/**
+ * Copy for the terminal easter egg. Command output itself (whoami,
+ * experience, …) is generated from the rest of the profile.
+ */
+export interface TerminalCopy {
+  title: string;
+  prompt: string;
+  /** Accessible label for the command input. */
+  inputLabel: string;
+  closeLabel: string;
+  /** Lines printed when the terminal opens. */
+  welcome: string[];
+  /** Template; `{command}` is replaced by what was typed. */
+  notFound: string;
+  /** Description of each command, shown by `help`. */
+  commands: Record<TerminalCommand, string>;
+  responses: {
+    /** Template; `{fileName}` is the resume file name. */
+    resume: string;
+    /** Template; `{theme}` is "light" or "dark". */
+    theme: string;
+  };
+}
+
 /**
  * "At a glance" bento under the hero. Numbers (years, companies) are computed
  * from `workExperience`; only labels and hand-picked values live here.
@@ -213,6 +251,7 @@ export interface Profile {
   site: SiteConfig;
   personalInfo: PersonalInfo;
   commandPalette: CommandPaletteCopy;
+  terminal: TerminalCopy;
   glance: Glance;
   workExperience: WorkExperience[];
   projects: Project[];

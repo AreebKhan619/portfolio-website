@@ -16,7 +16,7 @@ import type { PaletteData } from "@/lib/commands";
 import { centerOf, switchTheme } from "@/lib/theme-transition";
 
 type GroupKey = keyof PaletteData["copy"]["groups"];
-type IconName = "section" | "copy" | "check" | "download" | "theme" | "external";
+type IconName = "section" | "copy" | "check" | "download" | "theme" | "terminal" | "external";
 
 interface Command {
   id: string;
@@ -24,6 +24,8 @@ interface Command {
   label: string;
   keywords: string;
   icon: IconName;
+  /** Global keyboard shortcut, shown at the end of the row. */
+  shortcut?: string;
   run: () => void;
 }
 
@@ -31,6 +33,8 @@ export interface CommandPaletteProps {
   data: PaletteData;
   /** `restoreFocus: false` when the command moved focus elsewhere (e.g. a section). */
   onClose: (restoreFocus?: boolean) => void;
+  /** Swaps the palette for the terminal overlay. */
+  onOpenTerminal: () => void;
 }
 
 const GROUP_ORDER: GroupKey[] = ["navigate", "actions", "links"];
@@ -51,6 +55,7 @@ const ICONS: Record<IconName, ReactNode> = {
       <path d="M8 2.5v11a5.5 5.5 0 0 0 0-11Z" fill="currentColor" />
     </>
   ),
+  terminal: <path d="m3 4.5 3.5 3.5L3 11.5M8.5 12H13" />,
   external: <path d="M6 3.5H3.5v9h9V10M9 3h4v4M13 3 7.5 8.5" />,
 };
 
@@ -89,7 +94,7 @@ function prefersReducedMotion() {
  * listbox of commands. Focus stays on the input (Tab is trapped), arrows move
  * the active option, Enter runs it, Esc or a backdrop click closes.
  */
-export default function CommandPalette({ data, onClose }: CommandPaletteProps) {
+export default function CommandPalette({ data, onClose, onOpenTerminal }: CommandPaletteProps) {
   const { copy } = data;
   const { resolvedTheme, setTheme } = useTheme();
   const [query, setQuery] = useState("");
@@ -183,6 +188,16 @@ export default function CommandPalette({ data, onClose }: CommandPaletteProps) {
       },
     );
 
+    list.push({
+      id: "open-terminal",
+      group: "actions",
+      label: copy.actions.openTerminal,
+      keywords: "terminal shell console cli",
+      icon: "terminal",
+      shortcut: "`",
+      run: onOpenTerminal,
+    });
+
     for (const social of data.socials) {
       list.push({
         id: `social-${social.label}`,
@@ -198,7 +213,7 @@ export default function CommandPalette({ data, onClose }: CommandPaletteProps) {
     }
 
     return list;
-  }, [data, copy, onClose, resolvedTheme, setTheme]);
+  }, [data, copy, onClose, onOpenTerminal, resolvedTheme, setTheme]);
 
   const filtered = useMemo(
     () =>
@@ -337,6 +352,14 @@ export default function CommandPalette({ data, onClose }: CommandPaletteProps) {
                     <span className={`truncate ${isCopied ? "font-medium text-accent" : ""}`}>
                       {isCopied ? copy.actions.copied : command.label}
                     </span>
+                    {command.shortcut ? (
+                      <kbd
+                        aria-hidden="true"
+                        className="ml-auto rounded-md border border-line px-1.5 font-mono text-[0.7rem] text-muted"
+                      >
+                        {command.shortcut}
+                      </kbd>
+                    ) : null}
                   </div>
                 );
               })}

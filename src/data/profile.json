@@ -41,6 +41,7 @@
       "copiedAnnouncement": "Email address copied to the clipboard.",
       "downloadResume": "Download resume (PDF)",
       "toggleTheme": "Toggle light / dark theme",
+      "openTerminal": "Open terminal",
       "openSocial": "Open {label}"
     },
     "hints": {
@@ -92,6 +93,33 @@
         "handle": "areeb-khan"
       }
     ]
+  },
+  "terminal": {
+    "title": "areeb — terminal",
+    "prompt": "guest@areeb.co.in:~$",
+    "inputLabel": "Terminal command",
+    "closeLabel": "Close terminal",
+    "welcome": [
+      "Hi, you found the terminal.",
+      "Type `help` to see what I can tell you."
+    ],
+    "notFound": "command not found: {command}. Type `help` for the list.",
+    "commands": {
+      "help": "list available commands",
+      "whoami": "who am I talking to?",
+      "experience": "work history",
+      "skills": "skills by category",
+      "projects": "selected projects",
+      "contact": "email and profiles",
+      "resume": "download the PDF resume",
+      "theme": "toggle light / dark theme",
+      "clear": "clear the screen",
+      "exit": "close the terminal"
+    },
+    "responses": {
+      "resume": "Downloading {fileName}…",
+      "theme": "Switched to the {theme} theme."
+    }
   },
   "glance": {
     "title": "At a glance",
