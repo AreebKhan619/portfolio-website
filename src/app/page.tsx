@@ -1,3 +1,4 @@
+import { HeroBackdrop } from "@/components/hero-backdrop";
 import { PersonJsonLd } from "@/components/person-json-ld";
 import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
@@ -19,6 +20,7 @@ export default async function HomePage() {
       >
         Skip to content
       </a>
+      <HeroBackdrop />
       <SiteHeader name={profile.personalInfo.name} />
       <main id="main" className="mx-auto max-w-5xl px-5 sm:px-8">
         <Hero info={profile.personalInfo} />
