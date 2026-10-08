@@ -363,3 +363,23 @@
 section[tabindex="-1"]:focus {
   outline: none;
 }
+
+/* ---------- GitHub contribution calendar ---------- */
+.gh-calendar path {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.gh-month {
+  fill: var(--muted);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 9px;
+}
+
+.gh-l0 { color: color-mix(in oklab, var(--line) 85%, var(--surface)); }
+.gh-l1 { color: color-mix(in oklab, var(--accent) 32%, var(--surface)); }
+.gh-l2 { color: color-mix(in oklab, var(--accent) 55%, var(--surface)); }
+.gh-l3 { color: color-mix(in oklab, var(--accent) 78%, var(--surface)); }
+.gh-l4 { color: var(--accent); }

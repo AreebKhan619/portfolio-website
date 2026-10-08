@@ -2,6 +2,7 @@ import { HeroBackdrop } from "@/components/hero-backdrop";
 import { PersonJsonLd } from "@/components/person-json-ld";
 import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
+import { GitHubActivity } from "@/components/sections/github-activity";
 import { Glance } from "@/components/sections/glance";
 import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
@@ -13,6 +14,7 @@ import { getCareerStats, getProfile } from "@/lib/content";
 
 export default async function HomePage() {
   const [profile, stats] = await Promise.all([getProfile(), getCareerStats()]);
+  const locale = profile.site.locale.replace("_", "-");
 
   return (
     <>
@@ -29,10 +31,11 @@ export default async function HomePage() {
         terminal={buildTerminalData(profile)}
       />
       <main id="main" className="mx-auto max-w-5xl px-5 sm:px-8">
-        <Hero info={profile.personalInfo} locale={profile.site.locale.replace("_", "-")} />
+        <Hero info={profile.personalInfo} locale={locale} />
         <Glance content={profile.glance} stats={stats} />
         <Experience jobs={profile.workExperience} />
         <Projects projects={profile.projects} />
+        <GitHubActivity content={profile.githubActivity} locale={locale} />
         <Skills groups={profile.skills} />
         <Education
           education={profile.education}

@@ -225,6 +225,25 @@ export interface TerminalCopy {
 }
 
 /**
+ * GitHub contribution calendar. Fetched on the server from GitHub's public
+ * contributions page; the section is omitted when that fails.
+ */
+export interface GitHubActivity {
+  /** Must match the GitHub entry in `personalInfo.socials`. */
+  username: string;
+  eyebrow: string;
+  title: string;
+  /** Template; `{count}` is the formatted total. */
+  total: string;
+  /** Template; `{username}` is the GitHub username. */
+  profileLink: string;
+  /** Accessible label for the scrollable calendar region. */
+  graphLabel: string;
+  legendLess: string;
+  legendMore: string;
+}
+
+/**
  * "At a glance" bento under the hero. Numbers (years, companies) are computed
  * from `workExperience`; only labels and hand-picked values live here.
  */
@@ -252,6 +271,7 @@ export interface Profile {
   personalInfo: PersonalInfo;
   commandPalette: CommandPaletteCopy;
   terminal: TerminalCopy;
+  githubActivity: GitHubActivity;
   glance: Glance;
   workExperience: WorkExperience[];
   projects: Project[];

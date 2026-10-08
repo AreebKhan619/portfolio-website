@@ -121,6 +121,16 @@
       "theme": "Switched to the {theme} theme."
     }
   },
+  "githubActivity": {
+    "username": "AreebKhan619",
+    "eyebrow": "Open source",
+    "title": "GitHub activity",
+    "total": "{count} contributions in the last year",
+    "profileLink": "@{username} on GitHub",
+    "graphLabel": "Contribution calendar for the last year",
+    "legendLess": "Less",
+    "legendMore": "More"
+  },
   "glance": {
     "title": "At a glance",
     "labels": {
