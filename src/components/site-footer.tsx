@@ -12,7 +12,7 @@ export function SiteFooter({ info }: { info: PersonalInfo }) {
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Contact</p>
         <h2
           id="contact-title"
-          className="mt-2 text-2xl font-semibold tracking-tight text-fg sm:text-3xl"
+          className="mt-2 font-display text-4xl leading-none tracking-tight text-fg sm:text-5xl"
         >
           Let&apos;s talk
         </h2>

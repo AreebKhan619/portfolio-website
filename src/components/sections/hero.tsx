@@ -8,10 +8,10 @@ export function Hero({ info }: { info: PersonalInfo }) {
       </p>
       <h1
         id="hero-title"
-        className="mt-4 text-4xl font-semibold tracking-tight text-fg sm:text-6xl"
+        className="mt-4 font-display text-6xl leading-[0.95] tracking-tight text-fg sm:text-8xl"
       >
         {info.name}
-        <span className="mt-2 block text-xl font-normal text-muted sm:text-2xl">
+        <span className="mt-4 block font-sans text-xl font-normal tracking-normal text-muted sm:text-2xl">
           {info.jobTitle}
         </span>
       </h1>
