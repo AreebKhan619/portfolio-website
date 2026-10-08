@@ -36,6 +36,47 @@ export interface SiteConfig {
   locale: string;
   /** ISO date of the last content update; used by the sitemap. */
   lastUpdated: string;
+  /** In-page sections shown in the header nav and the command palette. */
+  navigation: NavItem[];
+}
+
+export interface NavItem {
+  /** Section element id (without "#"). */
+  id: string;
+  label: string;
+}
+
+/** Copy for the ⌘K / Ctrl+K command palette. */
+export interface CommandPaletteCopy {
+  /** Accessible dialog title. */
+  title: string;
+  /** Accessible name of the header trigger button. */
+  triggerLabel: string;
+  placeholder: string;
+  /** Shown when the filter matches nothing. */
+  empty: string;
+  groups: {
+    navigate: string;
+    actions: string;
+    links: string;
+  };
+  actions: {
+    copyEmail: string;
+    /** Inline feedback after copying. */
+    copied: string;
+    /** Screen-reader announcement after copying. */
+    copiedAnnouncement: string;
+    downloadResume: string;
+    toggleTheme: string;
+    /** Template; `{label}` is replaced by the social link label. */
+    openSocial: string;
+  };
+  /** Footer key hints. */
+  hints: {
+    navigate: string;
+    select: string;
+    close: string;
+  };
 }
 
 export interface PersonalInfo {
@@ -171,6 +212,7 @@ export interface Glance {
 export interface Profile {
   site: SiteConfig;
   personalInfo: PersonalInfo;
+  commandPalette: CommandPaletteCopy;
   glance: Glance;
   workExperience: WorkExperience[];
   projects: Project[];

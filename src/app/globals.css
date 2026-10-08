@@ -334,3 +334,32 @@
   animation: none;
   mix-blend-mode: normal;
 }
+
+/* ---------- Command palette ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .cmdk-backdrop {
+    animation: cmdk-fade 0.18s ease-out;
+  }
+
+  .cmdk-panel {
+    animation: cmdk-pop 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@keyframes cmdk-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes cmdk-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+}
+
+/* Sections focused programmatically (palette "Go to") don't need a ring. */
+section[tabindex="-1"]:focus {
+  outline: none;
+}

@@ -24,6 +24,7 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
+      data-theme-toggle=""
       onClick={(event) =>
         switchTheme(isDark ? "light" : "dark", setTheme, centerOf(event.currentTarget))
       }

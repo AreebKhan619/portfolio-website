@@ -16,7 +16,38 @@
       "Portfolio"
     ],
     "locale": "en_US",
-    "lastUpdated": "2026-10-08"
+    "lastUpdated": "2026-10-08",
+    "navigation": [
+      { "id": "experience", "label": "Experience" },
+      { "id": "projects", "label": "Projects" },
+      { "id": "skills", "label": "Skills" },
+      { "id": "education", "label": "Education" },
+      { "id": "contact", "label": "Contact" }
+    ]
+  },
+  "commandPalette": {
+    "title": "Command palette",
+    "triggerLabel": "Open command palette",
+    "placeholder": "Type a command or search…",
+    "empty": "No matching commands.",
+    "groups": {
+      "navigate": "Go to",
+      "actions": "Actions",
+      "links": "Profiles"
+    },
+    "actions": {
+      "copyEmail": "Copy email address",
+      "copied": "Copied!",
+      "copiedAnnouncement": "Email address copied to the clipboard.",
+      "downloadResume": "Download resume (PDF)",
+      "toggleTheme": "Toggle light / dark theme",
+      "openSocial": "Open {label}"
+    },
+    "hints": {
+      "navigate": "navigate",
+      "select": "select",
+      "close": "close"
+    }
   },
   "personalInfo": {
     "name": "Areeb Khan",
