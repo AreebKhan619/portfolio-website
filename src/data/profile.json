@@ -185,7 +185,9 @@
         "Delivered the customer-facing Buyer app, a **B2B marketplace** connecting hotels with suppliers, by building its Store, multi-stage Orders and Accounts Payable (invoices, statements) modules in **React** and **TypeScript** with **role-based access control (RBAC)**.",
         "Launched Reeco's mobile app, built from scratch in **React Native** with **offline support** and **optimistic updates**, shipping stable **Android** and **iOS** releases that keep ordering reliable on unstable hotel networks; oversaw subsequent versions.",
         "Expanded the product suite by building the Corporate Platform app for multi-property oversight and rebuilding the company website on a **headless CMS**.",
-        "Lead and mentor developers through **pull-request reviews** across Reeco's repositories, having joined directly after building its Back Office, Seller and Buyer apps through CAW Studios."
+        "As lead front-end developer, screen and review front-end **pull requests** across Reeco's repositories, holding the bar on code quality, architecture and consistency while mentoring developers on the team.",
+        "Partner with the product designer in iterative back-and-forth reviews, turning designs into production UI and feeding implementation constraints and edge cases back into the design.",
+        "Joined Reeco directly after building its Back Office, Seller and Buyer apps through CAW Studios."
       ],
       "stack": [
         "React",
