@@ -123,6 +123,8 @@ export interface WorkExperience {
   role: string;
   company: string;
   companyUrl?: string;
+  /** Square logo under /public. `inset` pads logos drawn on a transparent background. */
+  logo?: { src: string; inset?: boolean };
   location?: string;
   employmentType?: string;
   startDate: YearMonth;
