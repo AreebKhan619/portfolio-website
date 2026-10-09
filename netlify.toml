@@ -1,0 +1,8 @@
+[build]
+  command = "yarn build"
+  # Next.js output; Netlify's Next.js runtime serves it (the old CRA site published "build").
+  publish = ".next"
+
+[build.environment]
+  # Next.js 16 needs Node 20.9+. Pinned to what the site is developed and tested on.
+  NODE_VERSION = "24"
