@@ -1,4 +1,6 @@
+import { CompanyLogo } from "@/components/company-logo";
 import { ExternalLink } from "@/components/external-link";
+import { brandProps } from "@/lib/brand";
 import type { CareerStats } from "@/lib/stats";
 import type { Glance as GlanceContent } from "@/types/profile";
 
@@ -21,8 +23,17 @@ export function Glance({ content, stats }: GlanceProps) {
       </h2>
       <dl className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {stats.current ? (
-          <div className={`${tile} col-span-2 flex flex-col justify-between gap-8 md:row-span-2`}>
+          <div
+            {...brandProps(stats.current)}
+            className={`${tile} brand-tile relative col-span-2 flex flex-col justify-between gap-8 md:row-span-2`}
+          >
             <dt className={label}>{labels.current}</dt>
+            {stats.current.logo ? (
+              <CompanyLogo
+                logo={stats.current.logo}
+                className="absolute top-5 right-5 size-12 sm:top-6 sm:right-6 sm:size-14"
+              />
+            ) : null}
             <dd>
               <p className="font-display text-3xl leading-tight text-fg sm:text-4xl">
                 {stats.current.role}

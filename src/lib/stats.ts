@@ -6,7 +6,10 @@ export interface CareerStats {
   /** Distinct employers, excluding freelance / self-employed entries. */
   companies: number;
   /** The first role without an end date, if any. */
-  current: { role: string; company: string; companyUrl?: string } | null;
+  current: Pick<
+    WorkExperience,
+    "role" | "company" | "companyUrl" | "logo" | "brandColor" | "lineColor"
+  > | null;
 }
 
 /** Months since year 0 for a "YYYY-MM" value. */
@@ -29,7 +32,14 @@ export function computeCareerStats(jobs: WorkExperience[], now: Date): CareerSta
 
   const currentJob = jobs.find((job) => job.endDate === null);
   const current = currentJob
-    ? { role: currentJob.role, company: currentJob.company, companyUrl: currentJob.companyUrl }
+    ? {
+        role: currentJob.role,
+        company: currentJob.company,
+        companyUrl: currentJob.companyUrl,
+        logo: currentJob.logo,
+        brandColor: currentJob.brandColor,
+        lineColor: currentJob.lineColor,
+      }
     : null;
 
   return { years, companies, current };

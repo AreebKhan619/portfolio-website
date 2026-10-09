@@ -1,12 +1,11 @@
-import Image from "next/image";
-import type { CSSProperties } from "react";
-
-import { ExternalLink } from "@/components/external-link";
 import { BadgeList } from "@/components/badge-list";
+import { CompanyLogo } from "@/components/company-logo";
+import { ExternalLink } from "@/components/external-link";
 import { DateRange } from "@/components/date-range";
 import { FadeIn } from "@/components/fade-in";
 import { RichText } from "@/components/rich-text";
 import { SectionHeading } from "@/components/section-heading";
+import { brandProps } from "@/lib/brand";
 import type { WorkExperience } from "@/types/profile";
 
 export function Experience({ jobs }: { jobs: WorkExperience[] }) {
@@ -26,18 +25,7 @@ export function Experience({ jobs }: { jobs: WorkExperience[] }) {
         </span>
         <ol className="space-y-12 pl-6 sm:pl-8">
           {jobs.map((job) => (
-            <li
-              key={job.id}
-              data-brand={job.brandColor ? "" : undefined}
-              style={
-                {
-                  ...(job.brandColor ? { "--brand": job.brandColor } : {}),
-                  // An inline custom property outranks the derived one in globals.css.
-                  ...(job.lineColor ? { "--brand-line": job.lineColor } : {}),
-                } as CSSProperties
-              }
-              className="timeline-item group relative"
-            >
+            <li key={job.id} {...brandProps(job)} className="timeline-item group relative">
               {/* This company's stretch of the line, down to the next dot. */}
               <span
                 aria-hidden="true"
@@ -51,18 +39,7 @@ export function Experience({ jobs }: { jobs: WorkExperience[] }) {
               <FadeIn>
                 <article>
                   <header className="flex items-start gap-4">
-                    {job.logo ? (
-                      <span className="grid size-11 shrink-0 place-items-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-line sm:size-12">
-                        <Image
-                          src={job.logo.src}
-                          alt=""
-                          width={96}
-                          height={96}
-                          sizes="48px"
-                          className={`size-full ${job.logo.inset ? "object-contain p-1.5" : "object-cover"}`}
-                        />
-                      </span>
-                    ) : null}
+                    {job.logo ? <CompanyLogo logo={job.logo} /> : null}
                     <div className="flex min-w-0 flex-1 flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                       <div>
                         <h3 className="text-lg font-semibold text-fg">{job.role}</h3>

@@ -171,25 +171,34 @@
 }
 
 /*
- * Each role tints its stretch of the line and its dot with the company colour.
+ * Company colours (`brandProps()` sets data-brand). Each role tints its stretch
+ * of the line and its dot, and the current role tints the "Currently" tile.
  * The stored colours are pastels, so keep the hue and deepen them per theme.
  */
 .timeline-item {
   --brand-line: var(--accent);
 }
 
-.timeline-item[data-brand] {
+[data-brand] {
   --brand-line: var(--brand);
 }
 
 @supports (color: oklch(from red l c h)) {
-  .timeline-item[data-brand] {
+  [data-brand] {
     --brand-line: oklch(from var(--brand) calc(l - 0.32) min(calc(c * 6), 0.19) h);
   }
 
-  .dark .timeline-item[data-brand] {
+  .dark [data-brand] {
     --brand-line: oklch(from var(--brand) calc(l - 0.12) min(calc(c * 5), 0.17) h);
   }
+}
+
+/* The "Currently" tile: company-coloured border with a soft glow. */
+.brand-tile[data-brand] {
+  border-color: var(--brand-line);
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--brand-line) 30%, transparent),
+    0 12px 40px -16px color-mix(in oklab, var(--brand-line) 55%, transparent);
 }
 
 .timeline-segment {
