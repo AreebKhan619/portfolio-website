@@ -19,6 +19,8 @@
       "REST APIs",
       "AI-Assisted Development",
       "AI Coding Agents",
+      "Claude Code",
+      "Design-to-Code",
       "Portfolio"
     ],
     "locale": "en_US",
@@ -187,6 +189,8 @@
         "Delivered the customer-facing Buyer app, a **B2B marketplace** connecting hotels with suppliers, by building its Store, multi-stage Orders and Accounts Payable (invoices, statements) modules in **React** and **TypeScript** with **role-based access control (RBAC)**; the platform serves 3,700+ users across 1,000+ properties for 100+ corporate clients and has processed 24,000+ invoices worth $42M+.",
         "Launched Reeco's mobile app, built from scratch in **React Native** with **offline support** and **optimistic updates**, shipping stable **Android** and **iOS** releases that keep ordering reliable on unstable hotel networks; oversaw subsequent versions.",
         "Shipped the Corporate Platform app for multi-property oversight with zero hand-written code, directing **AI coding agents** end to end through custom **agent skills** and review gates on every change; the app is stable in production and buyers are adopting it.",
+        "Built the AI-driven designer-to-developer pipeline behind it as a **Claude Code** plugin: one command turns a **Claude Design** file into production code by matching every design component to existing primitives, pausing at a plan gate for approval, then generating the code, tests and a gallery demo.",
+        "Kept design and code in lockstep with a reverse sync that treats code as the source of truth: per-component fingerprints of the real browser render, explicit sync verdicts that catch conflicts and outside edits before any push, token-level verification of every style value, and **CI** gates against raw colours; full design-system audits run from an export, cutting ~200K tokens of fetches per audit to zero.",
         "Rebuilt the company website on a **headless CMS** that I proposed and integrated, so the business publishes content without engineering involvement.",
         "As lead front-end developer, screen and review **pull requests** from an 11-developer front-end team across Reeco's repositories, holding the bar on code quality, architecture and consistency while mentoring the team.",
         "Partner with the product designer in iterative back-and-forth reviews, turning designs into production UI and feeding implementation constraints and edge cases back into the design.",
@@ -410,6 +414,17 @@
       "impact": "Stable in production with buyers adopting it; zero lines written by hand.",
       "role": "Directed the build end to end: authored the agent skills, steered implementation and reviewed every change before it shipped.",
       "stack": ["AI coding agents", "Agent skills", "AI-assisted code review"],
+      "links": {}
+    },
+    {
+      "id": "design-to-code-pipeline",
+      "name": "AI Design-to-Code Pipeline",
+      "category": "professional",
+      "organization": "Reeco",
+      "summary": "**Claude Code** plugin that converts designer files into production code and keeps the design system mirroring what actually ships.",
+      "impact": "Design file to code, tests and demo in one command; drift between code and the design system caught per component before any push; full audits cut from ~200K tokens to zero.",
+      "role": "Designed and built the pipeline: four agent commands, parallel subagents for token mapping and staging, sync verdicts and CI quality gates.",
+      "stack": ["Claude Code", "Claude Design", "Agent skills", "Subagents", "Design tokens", "CI"],
       "links": {}
     },
     {
@@ -652,7 +667,10 @@
         "AI coding agents",
         "Agent skills & workflows",
         "AI-assisted code review",
-        "Agent orchestration"
+        "Agent orchestration",
+        "Claude Code",
+        "Claude Design",
+        "Design-to-code automation"
       ]
     },
     {
