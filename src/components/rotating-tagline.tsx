@@ -41,7 +41,7 @@ export function RotatingTagline({ tagline, locale, className }: RotatingTaglineP
   const { lead, words, end } = tagline;
   if (words.length === 0) return null;
 
-  const sentence = `${lead} ${new Intl.ListFormat(locale, { type: "conjunction" }).format(words)}${end}`;
+  const sentence = `${lead} ${new Intl.ListFormat(locale, { type: "conjunction" }).format(words.map((word) => word.text))}${end}`;
   const name = `tagline-cycle-${words.length}`;
   const animated = words.length > 1;
 
@@ -53,19 +53,23 @@ export function RotatingTagline({ tagline, locale, className }: RotatingTaglineP
         <span className="tagline-words">
           {words.map((word, i) => (
             <span
-              key={word}
+              key={word.text}
               className="tagline-word"
+              data-color={word.color ? "" : undefined}
               style={
-                animated
-                  ? ({
-                      "--tagline-name": name,
-                      "--tagline-duration": `${words.length * STEP}s`,
-                      "--tagline-delay": `${i * STEP}s`,
-                    } as CSSProperties)
-                  : undefined
+                {
+                  ...(word.color ? { "--word-color": word.color } : {}),
+                  ...(animated
+                    ? {
+                        "--tagline-name": name,
+                        "--tagline-duration": `${words.length * STEP}s`,
+                        "--tagline-delay": `${i * STEP}s`,
+                      }
+                    : {}),
+                } as CSSProperties
               }
             >
-              {word}
+              {word.text}
               {end}
             </span>
           ))}

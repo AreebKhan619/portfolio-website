@@ -102,7 +102,8 @@ export interface PersonalInfo {
    */
   tagline: {
     lead: string;
-    words: string[];
+    /** `color` is any CSS colour; only its hue and chroma are kept, lightness is set per theme for contrast. */
+    words: { text: string; color?: string }[];
     /** Trailing punctuation, e.g. ".". */
     end: string;
   };

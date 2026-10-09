@@ -148,6 +148,25 @@
   opacity: 1;
 }
 
+/*
+ * Per-word company colours. Keep the hue, give it enough chroma to read as a
+ * colour, and pin the lightness per theme so yellow and orange still pass
+ * contrast on the light background.
+ */
+.tagline-word[data-color] {
+  color: var(--word-color);
+}
+
+@supports (color: oklch(from red l c h)) {
+  .tagline-word[data-color] {
+    color: oklch(from var(--word-color) 0.56 clamp(0.12, c, 0.19) h);
+  }
+
+  .dark .tagline-word[data-color] {
+    color: oklch(from var(--word-color) 0.82 clamp(0.1, c, 0.16) h);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .tagline-word {
     animation: var(--tagline-name, none) var(--tagline-duration, 0s) cubic-bezier(0.22, 1, 0.36, 1)

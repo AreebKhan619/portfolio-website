@@ -89,11 +89,26 @@
     "tagline": {
       "lead": "I build",
       "words": [
-        "B2B marketplaces",
-        "Node.js services",
-        "authentication flows",
-        "offline-first mobile apps",
-        "traceability platforms"
+        {
+          "text": "B2B marketplaces",
+          "color": "#2bcc89"
+        },
+        {
+          "text": "Node.js services",
+          "color": "#8b5cf6"
+        },
+        {
+          "text": "authentication flows",
+          "color": "#ff9400"
+        },
+        {
+          "text": "offline-first mobile apps",
+          "color": "#fed730"
+        },
+        {
+          "text": "traceability platforms",
+          "color": "#1a8fd6"
+        }
       ],
       "end": "."
     },
