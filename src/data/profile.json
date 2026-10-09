@@ -2,21 +2,23 @@
   "site": {
     "url": "https://areeb.co.in",
     "name": "Areeb Khan",
-    "description": "Areeb Khan is a full-stack software engineer building React, React Native and TypeScript products from scratch, from procurement platforms to supply-chain traceability.",
+    "description": "Areeb Khan is a full-stack software engineer who designs and ships TypeScript products end to end: Node.js and Express services, MongoDB data models, authentication, and React and React Native interfaces.",
     "keywords": [
       "Areeb Khan",
       "Mohammad Areeb Khan",
       "Full-Stack Software Engineer",
+      "Full-Stack Developer",
+      "Node.js Developer",
       "React Developer",
       "React Native Developer",
       "TypeScript",
       "Next.js",
-      "Node.js",
-      "Frontend Engineer",
+      "Express",
+      "MongoDB",
       "Portfolio"
     ],
     "locale": "en_US",
-    "lastUpdated": "2026-10-08",
+    "lastUpdated": "2026-10-09",
     "navigation": [
       { "id": "experience", "label": "Experience" },
       { "id": "projects", "label": "Projects" },
@@ -56,20 +58,20 @@
     "givenName": "Areeb",
     "familyName": "Khan",
     "jobTitle": "Full-Stack Software Engineer",
-    "headline": "React · React Native · TypeScript · Node.js",
+    "headline": "TypeScript · Node.js · React · React Native",
     "tagline": {
       "lead": "I build",
       "words": [
-        "procurement platforms",
-        "React Native apps",
-        "traceability systems",
-        "component libraries",
-        "ERP dashboards"
+        "full-stack web platforms",
+        "Node.js services",
+        "authentication flows",
+        "cross-platform mobile apps",
+        "traceability platforms"
       ],
       "end": "."
     },
-    "valueProposition": "I take web and mobile products from a blank repo to production, then build the shared code, logging and review habits that keep teams shipping fast.",
-    "summary": "Software engineer since 2019 with a speciality in React. I have led greenfield builds for a restaurant procurement platform, a social-media marketing platform and a blockchain farm-to-fork traceability solution that has given 5M+ products a unique identity.",
+    "valueProposition": "I design and ship products across the full stack, from Node.js services, data models and authentication to React and React Native interfaces, and put the tooling in place that keeps teams shipping.",
+    "summary": "Full-stack software engineer since 2019. I have built Node.js and Express services backed by MongoDB, implemented JWT and session-based authentication, and led greenfield React and React Native builds for a restaurant procurement platform, a social-media marketing platform and a blockchain-enabled farm-to-fork traceability solution that has given 5M+ products a unique identity.",
     "email": "areebkhan619@gmail.com",
     "resume": {
       "url": "/areeb-khan-resume.pdf",
@@ -140,7 +142,7 @@
       "stack": "Core stack",
       "availability": "Availability"
     },
-    "coreStack": ["React", "React Native", "TypeScript", "Node.js"],
+    "coreStack": ["TypeScript", "Node.js", "React", "React Native", "MongoDB"],
     "availability": {
       "available": true,
       "status": "Open to roles"
@@ -156,9 +158,9 @@
       "startDate": "2023-01",
       "endDate": null,
       "achievements": [
-        "Shipped Reeco's mobile app from an empty repo to stable **Android** and **iOS** releases, as measured by [metric: installs / active users], by owning the **React Native** build end-to-end and then guiding the team as it added new modules.",
-        "Made the company website editable without engineering help, as measured by [metric: e.g. content-change turnaround], by rebuilding the site and proposing and integrating a **headless CMS**.",
-        "Kept code quality consistent across Reeco's repositories, as measured by [metric: e.g. PRs reviewed per month], by running regular **pull-request reviews**."
+        "Built Reeco's mobile app from an empty repository to stable **Android** and **iOS** releases, owning the **React Native** codebase end to end and guiding the team through subsequent feature modules [metric: installs / active users].",
+        "Rebuilt the company website on a **headless CMS** that I proposed and integrated, so the business publishes content without engineering involvement [metric: e.g. content-change turnaround].",
+        "Maintain code quality across Reeco's repositories through regular **pull-request reviews**."
       ],
       "stack": ["React Native", "React", "TypeScript", "Headless CMS"]
     },
@@ -171,12 +173,12 @@
       "startDate": "2023-01",
       "endDate": "2023-04",
       "achievements": [
-        "Launched SuperTokens' public **JWT** Encoder / Decoder, supporting 6 signing algorithms (**HS256**, **HS384**, **HS512**, **ES256**, **RS256**, **PS256**), by building the module with signature-key validity checks.",
-        "Improved performance of the user-management dashboard and company website, as measured by [metric: e.g. Lighthouse / load time], by maintaining the dashboard and **front-end SDKs** and fixing UI bugs.",
-        "Brought legacy code up to the latest SDK version and added theming to the sign-up page, as measured by [metric], by refactoring with the UI/UX team to integrate the new design elements.",
-        "Improved sign-up security and user experience, as measured by [metric], by adding **session-based authentication** to the sign-up flow of the **Node.js** back-end SDK."
+        "Implemented **session-based authentication** in the sign-up flow of the **Node.js** back-end SDK, strengthening security for applications built on SuperTokens.",
+        "Built and launched SuperTokens' public **JWT** encoder/decoder, with signature-key validation across 6 signing algorithms (**HS256**, **HS384**, **HS512**, **ES256**, **RS256**, **PS256**).",
+        "Maintained the user-management dashboard and **front-end SDKs**, resolving UI defects and improving dashboard and website performance [metric: e.g. Lighthouse / load time].",
+        "Migrated legacy code to the latest SDK version and introduced theming on the sign-up page, working with the UI/UX team to integrate the new design elements."
       ],
-      "stack": ["React", "Node.js", "JWT"]
+      "stack": ["Node.js", "React", "JWT", "Session authentication"]
     },
     {
       "id": "caw-studios",
@@ -187,11 +189,11 @@
       "startDate": "2022-01",
       "endDate": "2023-01",
       "achievements": [
-        "Delivered the BeTagged social-media marketing web app from scratch, as measured by [metric: e.g. launch scope / users], by leading its **TypeScript** + **React** build and mentoring developers through daily code reviews.",
-        "Eliminated duplicated business logic between web and mobile, as measured by [metric: e.g. % shared code], by setting up and managing a **Lerna** monorepo and co-leading the shared-code development.",
-        "Created the logging blueprint now reused by other projects in the organisation, by moving logging from platform-specific to a single cross-platform setup with **Segment** and **Sentry**.",
-        "Reduced wait times across Reeco's three procurement apps (Back Office, Seller, Buyer), as measured by [metric: e.g. perceived latency], by implementing optimistic updates and response caching with **TanStack Query**.",
-        "Improved component reuse across those three apps, as measured by [metric: e.g. shared components], by contributing flexible components to a **Storybook** component library."
+        "Led the from-scratch build of the BeTagged social-media marketing web app in **TypeScript** and **React**, mentoring developers through daily code reviews [metric: e.g. launch scope / users].",
+        "Set up and managed a **Lerna** monorepo and co-led the shared-code effort, removing duplicated business logic between the web and mobile apps [metric: e.g. % shared code].",
+        "Designed a single cross-platform logging setup with **Segment** and **Sentry** to replace platform-specific logging; it became the blueprint reused by other projects across the organisation.",
+        "Reduced wait times across Reeco's three procurement apps (Back Office, Seller, Buyer) by implementing optimistic updates and response caching with **TanStack Query** [metric: e.g. perceived latency].",
+        "Contributed reusable components to a shared **Storybook** library, improving consistency across the three apps [metric: e.g. shared components]."
       ],
       "stack": [
         "React",
@@ -217,21 +219,21 @@
       "startDate": "2020-04",
       "endDate": "2022-03",
       "achievements": [
-        "Increased daily label-printing throughput by more than 60%, by architecting a **Node.js** print driver and dashboard (**MongoDB**, **Express**, **Puppeteer**) that automated dynamic QR-code labels and replaced proprietary software.",
-        "Gave unique traceability to 5M+ end products, integrated into 3+ supply chains and winning 1st prize at the inaugural Inspiring Futures event (UAE), by co-leading development of the blockchain-enabled farm-to-fork traceability solution QRiosity.",
-        "Delivered client-specific traceability experiences, as measured by 5+ trace apps shipped, by designing them in **Adobe XD** and building them in **React**.",
-        "Supported inventory, invoicing and throughput estimation for enterprises, as measured by [metric], by leading front-end development of the Invento ERP with **React**, **Redux** and **Ant Design**.",
-        "Reached ~10K impressions per month for Sahyadri Farms, India's leading Farmer-Producer Organisation, by developing and co-designing its corporate website.",
-        "Put a traceability module in the hands of less tech-savvy farmers in Maharashtra, as measured by [metric: e.g. farmers onboarded], by building a **PWA** and a **React Native** Android app with **i18n** support.",
-        "Trained 30+ interns in **React**, by running hands-on bootcamps from fundamentals to advanced concepts."
+        "Architected a **Node.js** print service and dashboard (**Express**, **MongoDB**, **Puppeteer**) that automated dynamic QR-code label generation and replaced proprietary software, increasing daily label-printing throughput by more than 60%.",
+        "Co-led development of QRiosity, a blockchain-enabled farm-to-fork traceability platform that has given 5M+ products a unique identity, is integrated into 3+ supply chains, and won 1st prize at the inaugural Inspiring Futures event (UAE).",
+        "Designed client-specific traceability experiences in **Adobe XD** and built them in **React**, shipping 5+ trace apps.",
+        "Led front-end development of the Invento ERP, covering inventory, invoicing and throughput estimation, with **React**, **Redux** and **Ant Design** [metric].",
+        "Brought the traceability module to farmers in Maharashtra through a **PWA** and a **React Native** Android app with **i18n** support [metric: e.g. farmers onboarded].",
+        "Developed and co-designed the corporate website of Sahyadri Farms, India's leading Farmer-Producer Organisation, reaching ~10K impressions per month.",
+        "Trained 30+ interns in **React** through hands-on bootcamps, from fundamentals to advanced patterns."
       ],
       "stack": [
-        "React",
-        "Redux",
         "Node.js",
         "Express",
         "MongoDB",
         "Puppeteer",
+        "React",
+        "Redux",
         "React Native",
         "Ant Design",
         "SASS",
@@ -248,10 +250,10 @@
       "startDate": "2019-06",
       "endDate": "2020-04",
       "achievements": [
-        "Launched DhammaEdicts, a web app storing the sacred Buddhist Tripitaka texts on a blockchain, inaugurated by the Dalai Lama at the Global Buddhist Congregation 2019, by designing and building it with **React**, **Redux**, **Node.js** and **MongoDB**.",
-        "Secured access to the platform, as measured by [metric], by co-implementing authentication and authorisation with **JWT**."
+        "Designed and built DhammaEdicts across the stack (**React**, **Redux**, **Node.js**, **Express**, **MongoDB**): a web app preserving the Buddhist Tripitaka texts on a blockchain, inaugurated by the Dalai Lama at the Global Buddhist Congregation 2019.",
+        "Co-implemented authentication and authorisation with **JWT** to secure access to the platform."
       ],
-      "stack": ["React", "Redux", "Node.js", "Express", "MongoDB", "JWT"]
+      "stack": ["Node.js", "Express", "MongoDB", "React", "Redux", "JWT"]
     },
     {
       "id": "digital-impact-square",
@@ -262,8 +264,8 @@
       "startDate": "2019-06",
       "endDate": "2020-04",
       "achievements": [
-        "Enabled farmers to reach out for skill training and incubation, as measured by [metric], by designing and developing the website for the HortiSquare farmer-outreach programme.",
-        "Translated theoretical solutions for real-world problems into software, by working alongside tech entrepreneurs through team exercises, presentations and seminars."
+        "Designed and developed the website for HortiSquare, a farmer-outreach programme connecting farmers with skill training and incubation.",
+        "Worked alongside tech entrepreneurs through team exercises, presentations and seminars to turn proposed solutions to real-world problems into software."
       ],
       "stack": ["Web Design", "Web Development"]
     },
@@ -275,12 +277,38 @@
       "startDate": "2018-06",
       "endDate": "2018-10",
       "achievements": [
-        "Let patients book appointments and practitioners manage reports for an acupressure practice, as measured by [metric], by designing and co-developing an **Android** app and the client's website."
+        "Designed and co-developed an **Android** app and website for an acupressure practice, letting patients book appointments and practitioners manage reports."
       ],
       "stack": ["Android", "Web Development"]
     }
   ],
   "projects": [
+    {
+      "id": "qriosity",
+      "name": "QRiosity",
+      "category": "professional",
+      "organization": "Emertech Innovations",
+      "summary": "Blockchain-enabled farm-to-fork traceability platform for consumables across the supply chain.",
+      "impact": "More than 60% faster label printing; 5M+ uniquely traceable products; integrated into 3+ supply chains.",
+      "role": "Co-led development; architected the Node.js print service and dashboard and built 5+ client trace apps.",
+      "stack": ["Node.js", "Express", "MongoDB", "Puppeteer", "React", "Redux", "SASS"],
+      "links": {
+        "live": "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738"
+      }
+    },
+    {
+      "id": "dhammaedicts",
+      "name": "DhammaEdicts",
+      "category": "professional",
+      "organization": "Emertech Innovations",
+      "summary": "Full-stack web app preserving the Buddhist Tripitaka texts on a blockchain.",
+      "impact": "Inaugurated by the Dalai Lama at the Global Buddhist Congregation 2019.",
+      "role": "Designed and built the application across the stack, including JWT authentication and authorisation.",
+      "stack": ["Node.js", "Express", "MongoDB", "React", "Redux", "JWT"],
+      "links": {
+        "live": "https://dhammaedicts-block.com"
+      }
+    },
     {
       "id": "reeco-mobile",
       "name": "Reeco Mobile App",
@@ -288,23 +316,23 @@
       "organization": "Reeco",
       "summary": "Mobile companion app for Reeco's restaurant procurement platform.",
       "impact": "Stable **Android** and **iOS** releases shipped from scratch; [metric: installs / active users].",
-      "role": "Built the app from scratch, then guided later versions.",
+      "role": "Built the app from scratch and guided subsequent releases.",
       "stack": ["React Native"],
       "links": {
         "live": "https://play.google.com/store/apps/details?id=io.reeco.ocr&hl=en&gl=US"
       }
     },
     {
-      "id": "qriosity",
-      "name": "QRiosity",
+      "id": "jwt-encoder-decoder",
+      "name": "JWT Encoder / Decoder",
       "category": "professional",
-      "organization": "Emertech Innovations",
-      "summary": "Blockchain-enabled farm-to-fork traceability and transparency solution for consumables in the supply chain.",
-      "impact": "Label printing sped up by more than 60%; 5M+ unique traceable QR codes generated; integrated into 3+ supply chains.",
-      "role": "Co-led development; built the print driver, dashboard and 5+ trace screens.",
-      "stack": ["React", "Redux", "Node.js", "Express", "MongoDB", "Puppeteer", "SASS"],
+      "organization": "SuperTokens",
+      "summary": "Public tool for encoding and decoding JSON Web Tokens with signature-key validation.",
+      "impact": "Supports 6 signing algorithms: HS256, HS384, HS512, ES256, RS256 and PS256.",
+      "role": "Built and launched the module.",
+      "stack": ["JWT"],
       "links": {
-        "live": "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738"
+        "live": "https://supertokens.com/jwt-encoder-decoder"
       }
     },
     {
@@ -314,7 +342,7 @@
       "organization": "CAW Studios",
       "summary": "Social-media marketing platform.",
       "impact": "Its cross-platform **Segment** + **Sentry** logging became the blueprint for other projects in the organisation; [metric: users / launch outcome].",
-      "role": "Led the web app from scratch; set up the Lerna monorepo and co-led shared code.",
+      "role": "Led the web app build from scratch; set up the Lerna monorepo and co-led the shared code.",
       "stack": ["React", "TypeScript", "Redux", "Chakra UI", "Lerna", "Segment", "Sentry", "styled-components", "SASS"],
       "links": {
         "live": "https://incom.betagged.co"
@@ -334,42 +362,16 @@
       }
     },
     {
-      "id": "jwt-encoder-decoder",
-      "name": "JWT Encoder / Decoder",
-      "category": "professional",
-      "organization": "SuperTokens",
-      "summary": "Public tool for encoding and decoding JSON Web Tokens with signature-key validation.",
-      "impact": "Supports 6 signing algorithms: HS256, HS384, HS512, ES256, RS256 and PS256.",
-      "role": "Developed the module.",
-      "stack": ["JWT"],
-      "links": {
-        "live": "https://supertokens.com/jwt-encoder-decoder"
-      }
-    },
-    {
       "id": "invento",
       "name": "Invento ERP",
       "category": "professional",
       "organization": "Emertech Innovations",
-      "summary": "ERP software that helps enterprises with inventory management, invoice generation and throughput estimation.",
+      "summary": "ERP software that helps enterprises manage inventory, generate invoices and estimate throughput.",
       "impact": "[metric]",
       "role": "Led front-end development.",
       "stack": ["React", "Redux", "Ant Design", "SASS"],
       "links": {
         "live": "https://invento.agrotrust.io"
-      }
-    },
-    {
-      "id": "dhammaedicts",
-      "name": "DhammaEdicts",
-      "category": "professional",
-      "organization": "Emertech Innovations",
-      "summary": "Web app storing the sacred Buddhist Tripitaka texts on a blockchain.",
-      "impact": "Inaugurated by the Dalai Lama at the Global Buddhist Congregation 2019.",
-      "role": "Designed and developed the web app; co-implemented JWT auth.",
-      "stack": ["React", "Redux", "Node.js", "Express", "MongoDB"],
-      "links": {
-        "live": "https://dhammaedicts-block.com"
       }
     },
     {
@@ -398,24 +400,34 @@
       }
     },
     {
+      "id": "movies-explorer",
+      "name": "Movies Explorer",
+      "category": "personal",
+      "summary": "Full-stack MERN application for browsing, managing and playing a personal movie library, with offline metadata caching (similar to Plex).",
+      "stack": ["Node.js", "Express", "MongoDB", "React", "Chakra UI"],
+      "links": {
+        "repo": "https://github.com/AreebKhan619/MoviesExplorer"
+      }
+    },
+    {
+      "id": "plant-disease-detection",
+      "name": "Plant Disease Detection",
+      "category": "personal",
+      "summary": "Final-year engineering project: a machine-learning plant disease detection and prevention system with a **Flask** back end and a **React** front end.",
+      "stack": ["Python", "Flask", "TensorFlow", "Keras", "React", "Semantic UI"],
+      "links": {
+        "repo": "https://github.com/AreebKhan619/PlantDiseaseDetection"
+      }
+    },
+    {
       "id": "portfolio",
       "name": "Portfolio",
       "category": "personal",
-      "summary": "This site: a statically rendered, CMS-ready portfolio.",
+      "summary": "This site: a statically rendered, CMS-ready Next.js portfolio with structured data for search engines.",
       "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Motion"],
       "links": {
         "live": "https://areeb.co.in",
         "repo": "https://github.com/AreebKhan619/portfolio-website"
-      }
-    },
-    {
-      "id": "movies-explorer",
-      "name": "Movies Explorer",
-      "category": "personal",
-      "summary": "MERN app for browsing, managing and playing stored movies, with offline metadata caching (similar to Plex).",
-      "stack": ["React", "Chakra UI", "Node.js", "Express", "MongoDB"],
-      "links": {
-        "repo": "https://github.com/AreebKhan619/MoviesExplorer"
       }
     },
     {
@@ -433,7 +445,7 @@
       "id": "sticky-notes",
       "name": "Sticky Notes",
       "category": "personal",
-      "summary": "Draggable sticky notes, and my first React project.",
+      "summary": "Draggable sticky notes; my first React project.",
       "stack": ["React"],
       "links": {
         "live": "https://stickynotesinreact.netlify.app/",
@@ -454,14 +466,25 @@
   "skills": [
     {
       "category": "Languages",
-      "items": ["TypeScript", "JavaScript", "HTML", "CSS"]
+      "items": ["TypeScript", "JavaScript", "Python", "HTML", "CSS"]
+    },
+    {
+      "category": "Backend & Data",
+      "items": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Flask",
+        "JWT authentication",
+        "Session-based authentication",
+        "Puppeteer"
+      ]
     },
     {
       "category": "Frontend",
       "items": [
         "React",
         "Next.js",
-        "React Native",
         "Redux",
         "TanStack Query",
         "Tailwind CSS",
@@ -476,8 +499,8 @@
       ]
     },
     {
-      "category": "Backend & Data",
-      "items": ["Node.js", "Express", "Flask", "Puppeteer", "MongoDB"]
+      "category": "Mobile",
+      "items": ["React Native", "Progressive Web Apps", "Android"]
     },
     {
       "category": "Testing & Tooling",
@@ -492,7 +515,11 @@
       ]
     },
     {
-      "category": "Other",
+      "category": "Machine Learning",
+      "items": ["TensorFlow", "Keras"]
+    },
+    {
+      "category": "Foundations",
       "items": ["Computer Networking"]
     }
   ],
@@ -507,7 +534,7 @@
       "endDate": "2020-10",
       "grade": "GPA 7.6",
       "highlights": [
-        "Final-year project: plant disease detection and prevention system using machine learning (**React**, **Semantic UI**, **Flask**, **TensorFlow**, **Keras**).",
+        "Final-year project: machine-learning plant disease detection and prevention system (**React**, **Semantic UI**, **Flask**, **TensorFlow**, **Keras**).",
         "Runner-up, Web Quest (techfest event), 2017 and 2018.",
         "Winner, Spell Your Brain, 2018 and 2019.",
         "Ranked 1103rd in the state-level engineering entrance exams."
