@@ -17,6 +17,8 @@
       "Express",
       "MongoDB",
       "REST APIs",
+      "AI-Assisted Development",
+      "AI Coding Agents",
       "Portfolio"
     ],
     "locale": "en_US",
@@ -88,7 +90,7 @@
       "end": "."
     },
     "valueProposition": "I design and ship products across the full stack, from Node.js services, data models and authentication to React and React Native interfaces, and put the tooling in place that keeps teams shipping.",
-    "summary": "Full-stack software engineer since 2019, working fully remote with clients in Israel, Malaysia and India. I currently lead front-end on Reeco's hospitality procurement marketplace (web and mobile), and work across the stack: Node.js and Express services on MongoDB, JWT and session-based authentication, role-based access control and offline-first data layers. Past work includes a traceability platform that gave 5M+ products a unique identity and a blockchain app inaugurated by the Dalai Lama.",
+    "summary": "Full-stack software engineer since 2019, working fully remote with clients in Israel, Malaysia and India. I currently lead front-end on Reeco's hospitality procurement marketplace (web and mobile), and work across the stack: Node.js and Express services on MongoDB, JWT and session-based authentication, role-based access control and offline-first data layers. I also ship production software by directing AI coding agents, with custom agent skills and rigorous reviews in place of hand-written code. Past work includes a traceability platform that gave 5M+ products a unique identity and a blockchain app inaugurated by the Dalai Lama.",
     "email": "areebkhan619@gmail.com",
     "resume": {
       "url": "/areeb-khan-resume.pdf",
@@ -184,7 +186,8 @@
       "achievements": [
         "Delivered the customer-facing Buyer app, a **B2B marketplace** connecting hotels with suppliers, by building its Store, multi-stage Orders and Accounts Payable (invoices, statements) modules in **React** and **TypeScript** with **role-based access control (RBAC)**; the platform serves 3,700+ users across 1,000+ properties for 100+ corporate clients and has processed 24,000+ invoices worth $42M+.",
         "Launched Reeco's mobile app, built from scratch in **React Native** with **offline support** and **optimistic updates**, shipping stable **Android** and **iOS** releases that keep ordering reliable on unstable hotel networks; oversaw subsequent versions.",
-        "Expanded the product suite by building the Corporate Platform app for multi-property oversight and rebuilding the company website on a **headless CMS**.",
+        "Shipped the Corporate Platform app for multi-property oversight with zero hand-written code, directing **AI coding agents** end to end through custom **agent skills** and review gates on every change; the app is stable in production and buyers are adopting it.",
+        "Rebuilt the company website on a **headless CMS** that I proposed and integrated, so the business publishes content without engineering involvement.",
         "As lead front-end developer, screen and review **pull requests** from an 11-developer front-end team across Reeco's repositories, holding the bar on code quality, architecture and consistency while mentoring the team.",
         "Partner with the product designer in iterative back-and-forth reviews, turning designs into production UI and feeding implementation constraints and edge cases back into the design.",
         "Joined Reeco directly after building its Back Office, Seller and Buyer apps through CAW Studios."
@@ -397,6 +400,17 @@
       "links": {
         "live": "https://play.google.com/store/apps/details?id=io.reeco.ocr&hl=en&gl=US"
       }
+    },
+    {
+      "id": "reeco-corporate-platform",
+      "name": "Reeco Corporate Platform",
+      "category": "professional",
+      "organization": "Reeco",
+      "summary": "Multi-property oversight app for corporate hotel groups on Reeco's procurement platform, built entirely by **AI coding agents**.",
+      "impact": "Stable in production with buyers adopting it; zero lines written by hand.",
+      "role": "Directed the build end to end: authored the agent skills, steered implementation and reviewed every change before it shipped.",
+      "stack": ["AI coding agents", "Agent skills", "AI-assisted code review"],
+      "links": {}
     },
     {
       "id": "dhammaedicts",
@@ -630,6 +644,15 @@
         "Material UI",
         "SASS",
         "i18n"
+      ]
+    },
+    {
+      "category": "AI Engineering",
+      "items": [
+        "AI coding agents",
+        "Agent skills & workflows",
+        "AI-assisted code review",
+        "Agent orchestration"
       ]
     },
     {
