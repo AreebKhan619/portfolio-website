@@ -19,9 +19,46 @@ export async function getProfile(): Promise<Profile> {
   cacheLife("max");
   return {
     ...profile,
-    workExperience: profile.workExperience.filter((job) => !job.hidden),
-    projects: profile.projects.filter((project) => !project.hidden),
+    workExperience: visible(profile.workExperience),
+    projects: visible(profile.projects),
   };
+}
+
+/**
+ * The profile as the PDF resume sees it: every entry's `resumeOverrides`
+ * merged over its website fields, then hidden entries dropped. Overrides go
+ * first so `resumeOverrides.hidden` can show or hide an entry on the resume
+ * alone.
+ */
+export async function getResumeProfile(): Promise<Profile> {
+  "use cache";
+  cacheLife("max");
+  const forResume = <T extends Overridable>(items: T[]) =>
+    visible(items.map(applyResumeOverrides));
+  return {
+    ...profile,
+    personalInfo: applyResumeOverrides(profile.personalInfo),
+    workExperience: forResume(profile.workExperience),
+    projects: forResume(profile.projects),
+    skills: forResume(profile.skills),
+    education: forResume(profile.education),
+    certifications: forResume(profile.certifications),
+    publications: forResume(profile.publications),
+  };
+}
+
+interface Overridable {
+  hidden?: boolean;
+  resumeOverrides?: { hidden?: boolean };
+}
+
+function visible<T extends { hidden?: boolean }>(items: T[]): T[] {
+  return items.filter((item) => !item.hidden);
+}
+
+/** Resume fields win over website fields; anything not overridden falls through. */
+function applyResumeOverrides<T extends Overridable>(item: T): T {
+  return { ...item, ...item.resumeOverrides };
 }
 
 /**

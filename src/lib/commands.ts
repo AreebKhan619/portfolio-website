@@ -1,4 +1,5 @@
-import { formatYearMonth, toPlainText } from "@/lib/format";
+import { formatDateRange, toPlainText } from "@/lib/format";
+import { RESUME_PATH } from "@/lib/resume/path";
 import type { CommandPaletteCopy, NavItem, Profile, TerminalCopy } from "@/types/profile";
 
 /**
@@ -14,12 +15,12 @@ export interface PaletteData {
 }
 
 export function buildPaletteData(profile: Profile): PaletteData {
-  const { personalInfo, site, commandPalette } = profile;
+  const { personalInfo, site, commandPalette, resume } = profile;
   return {
     copy: commandPalette,
     sections: site.navigation,
     email: personalInfo.email,
-    resume: { url: personalInfo.resume.url, fileName: personalInfo.resume.fileName },
+    resume: { url: RESUME_PATH, fileName: resume.fileName },
     socials: personalInfo.socials.map(({ label, url }) => ({ label, url })),
   };
 }
@@ -38,7 +39,7 @@ export interface TerminalData {
 }
 
 export function buildTerminalData(profile: Profile): TerminalData {
-  const { personalInfo, workExperience, skills, projects, terminal } = profile;
+  const { personalInfo, workExperience, skills, projects, terminal, resume } = profile;
 
   const whoami = [
     `${personalInfo.name} (${personalInfo.fullName})`,
@@ -51,8 +52,7 @@ export function buildTerminalData(profile: Profile): TerminalData {
   ];
 
   const experience = workExperience.map((job) => {
-    const end = job.endDate ? formatYearMonth(job.endDate) : "Present";
-    const range = `${formatYearMonth(job.startDate)} – ${end}`.padEnd(21);
+    const range = formatDateRange(job.startDate, job.endDate).padEnd(21);
     return `${range} ${job.role} @ ${job.company}`;
   });
 
@@ -74,6 +74,6 @@ export function buildTerminalData(profile: Profile): TerminalData {
   return {
     copy: terminal,
     output: { whoami, experience, skills: skillLines, projects: projectLines, contact },
-    resume: { url: personalInfo.resume.url, fileName: personalInfo.resume.fileName },
+    resume: { url: RESUME_PATH, fileName: resume.fileName },
   };
 }

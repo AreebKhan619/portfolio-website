@@ -2,9 +2,18 @@ import Image from "next/image";
 
 import { RichText } from "@/components/rich-text";
 import { RotatingTagline } from "@/components/rotating-tagline";
-import type { PersonalInfo } from "@/types/profile";
+import { RESUME_PATH } from "@/lib/resume/path";
+import type { PersonalInfo, ResumeConfig } from "@/types/profile";
 
-export function Hero({ info, locale }: { info: PersonalInfo; locale: string }) {
+export function Hero({
+  info,
+  resume,
+  locale,
+}: {
+  info: PersonalInfo;
+  resume: ResumeConfig;
+  locale: string;
+}) {
   return (
     // Below lg the portrait floats right and the copy wraps around it, so the
     // name stays at the top; from lg it gets its own column beside the copy.
@@ -64,14 +73,14 @@ export function Hero({ info, locale }: { info: PersonalInfo; locale: string }) {
 
         <div className="mt-10 flex flex-wrap gap-3">
           <a
-            href={info.resume.url}
-            download={info.resume.fileName}
+            href={RESUME_PATH}
+            download={resume.fileName}
             className="inline-flex items-center gap-2 rounded-full bg-fg px-5 py-2.5 text-sm font-medium text-bg transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <svg viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
               <path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            {info.resume.label}
+            {resume.label}
           </a>
           <a
             href="#contact"

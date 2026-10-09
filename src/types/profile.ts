@@ -8,6 +8,11 @@
  * Rich-text conventions (strings typed as `RichText`):
  *   - `**keyword**`   renders as <strong> (tech keywords in achievements)
  *   - `[metric: …]`   a placeholder still to be filled in; rendered highlighted
+ *
+ * Resume overrides: any entry with a `resumeOverrides` object uses those
+ * fields instead of the same-named website fields in the generated PDF
+ * resume only. `resumeOverrides.hidden` controls the resume independently of
+ * the site's `hidden`.
  */
 
 /** Plain string that may contain `**bold**` markers and `[metric: …]` placeholders. */
@@ -15,6 +20,41 @@ export type RichText = string;
 
 /** Year-month in ISO form, e.g. "2023-01". */
 export type YearMonth = string;
+
+/**
+ * Resume-only replacements for the listed fields of `T`. A field set here wins
+ * over the website value in the PDF; anything left out falls back to it.
+ * `hidden: true` leaves the entry off the resume, `false` puts a site-hidden
+ * entry back on.
+ */
+export type ResumeOverrides<T, K extends keyof T = never> = Partial<Pick<T, K>> & {
+  hidden?: boolean;
+};
+
+/** Resume sections, rendered in the order `ResumeConfig.sections` lists them. */
+export type ResumeSectionId =
+  | "summary"
+  | "experience"
+  | "projects"
+  | "skills"
+  | "education"
+  | "certifications"
+  | "publications";
+
+/** The generated PDF resume. Its URL is fixed by the route (`RESUME_PATH`). */
+export interface ResumeConfig {
+  /** File name offered by the browser on download. */
+  fileName: string;
+  /** Download button label. */
+  label: string;
+  /** "A4" | "LETTER" — kept as string so JSON stays type-checkable. */
+  pageSize: string;
+  /**
+   * Sections in print order, with their headings. Leave one out to drop it.
+   * `id` is a `ResumeSectionId`; an unknown id fails the build.
+   */
+  sections: { id: string; title: string }[];
+}
 
 export interface SocialLink {
   /** Display label, e.g. "GitHub". */
@@ -113,14 +153,8 @@ export interface PersonalInfo {
   summary: string;
   location?: string;
   email: string;
-  resume: {
-    /** Public path, e.g. "/areeb-khan-resume.pdf". */
-    url: string;
-    /** File name offered by the browser on download. */
-    fileName: string;
-    label: string;
-  };
   socials: SocialLink[];
+  resumeOverrides?: ResumeOverrides<PersonalInfo, "jobTitle" | "headline" | "summary">;
 }
 
 export interface WorkExperience {
@@ -144,6 +178,10 @@ export interface WorkExperience {
   /** X-Y-Z achievements: "Accomplished X, as measured by Y, by doing Z". */
   achievements: RichText[];
   stack: string[];
+  resumeOverrides?: ResumeOverrides<
+    WorkExperience,
+    "role" | "location" | "achievements" | "stack"
+  >;
 }
 
 export interface ProjectLinks {
@@ -168,11 +206,13 @@ export interface Project {
   hidden?: boolean;
   stack: string[];
   links: ProjectLinks;
+  resumeOverrides?: ResumeOverrides<Project, "name" | "summary" | "impact" | "role" | "stack">;
 }
 
 export interface SkillGroup {
   category: string;
   items: string[];
+  resumeOverrides?: ResumeOverrides<SkillGroup, "category" | "items">;
 }
 
 export interface Education {
@@ -188,12 +228,14 @@ export interface Education {
   grade?: string;
   highlights: RichText[];
   links?: { label: string; url: string }[];
+  resumeOverrides?: ResumeOverrides<Education, "qualification" | "grade">;
 }
 
 export interface Certification {
   name: string;
   issuer: string;
   url?: string;
+  resumeOverrides?: ResumeOverrides<Certification, "name">;
 }
 
 export interface Publication {
@@ -201,6 +243,7 @@ export interface Publication {
   publisher: string;
   url?: string;
   date?: YearMonth;
+  resumeOverrides?: ResumeOverrides<Publication>;
 }
 
 /** Terminal command names, in the order `help` lists them. */
@@ -285,6 +328,7 @@ export interface Glance {
 export interface Profile {
   site: SiteConfig;
   personalInfo: PersonalInfo;
+  resume: ResumeConfig;
   commandPalette: CommandPaletteCopy;
   terminal: TerminalCopy;
   githubActivity: GitHubActivity;

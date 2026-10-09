@@ -31,7 +31,7 @@ export default async function HomePage() {
         terminal={buildTerminalData(profile)}
       />
       <main id="main" className="mx-auto max-w-5xl px-5 sm:px-8">
-        <Hero info={profile.personalInfo} locale={locale} />
+        <Hero info={profile.personalInfo} resume={profile.resume} locale={locale} />
         <Glance content={profile.glance} stats={stats} />
         <Experience jobs={profile.workExperience} />
         <Projects projects={profile.projects} />
@@ -43,7 +43,7 @@ export default async function HomePage() {
           publications={profile.publications}
         />
       </main>
-      <SiteFooter info={profile.personalInfo} />
+      <SiteFooter info={profile.personalInfo} resume={profile.resume} />
       <PersonJsonLd profile={profile} />
     </>
   );

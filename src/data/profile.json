@@ -122,11 +122,6 @@
       "Open to remote work anywhere."
     ],
     "email": "areebkhan619@gmail.com",
-    "resume": {
-      "url": "/areeb-khan-resume.pdf",
-      "fileName": "Areeb-Khan-Resume.pdf",
-      "label": "Download PDF Resume"
-    },
     "socials": [
       {
         "label": "GitHub",
@@ -144,7 +139,41 @@
         "handle": "areeb-khan"
       }
     ],
-    "location": "Srinagar, India"
+    "location": "Srinagar, India",
+    "resumeOverrides": {
+      "summary": "Full-stack software engineer with 7+ years of experience building **TypeScript** products end to end: **React** and **React Native** front ends, **Node.js** and **Express** services, **MongoDB** data models, authentication and **RBAC**. Lead front-end engineer on a B2B hospitality procurement marketplace serving 3,700+ users that has processed $42M+ in invoices. Ships production software faster by directing **AI coding agents**. Open to remote roles."
+    }
+  },
+  "resume": {
+    "fileName": "Areeb-Khan-Resume.pdf",
+    "label": "Download PDF Resume",
+    "pageSize": "A4",
+    "sections": [
+      {
+        "id": "summary",
+        "title": "Professional Summary"
+      },
+      {
+        "id": "experience",
+        "title": "Work Experience"
+      },
+      {
+        "id": "skills",
+        "title": "Technical Skills"
+      },
+      {
+        "id": "education",
+        "title": "Education"
+      },
+      {
+        "id": "certifications",
+        "title": "Certifications"
+      },
+      {
+        "id": "publications",
+        "title": "Publications"
+      }
+    ]
   },
   "terminal": {
     "title": "areeb — terminal",
@@ -237,7 +266,18 @@
         "RBAC",
         "Headless CMS"
       ],
-      "location": "Remote"
+      "location": "Remote",
+      "resumeOverrides": {
+        "achievements": [
+          "Built the Store, multi-stage Orders and Accounts Payable modules of a **B2B procurement marketplace** in **React** and **TypeScript** with **role-based access control (RBAC)**, serving 3,700+ users across 1,000+ properties and processing 24,000+ invoices worth $42M+.",
+          "Cut UI delivery time from days to about 2 hours by building an AI design-to-code pipeline as a **Claude Code** plugin that generates production code, tests and docs on **design tokens**, guarded by **CI** quality gates.",
+          "Eliminated ~200K tokens of fetches per design-system audit by building a code-first design sync with per-component render fingerprints and conflict detection.",
+          "Shipped the Corporate Platform to production with zero hand-written code by directing **AI coding agents** through custom agent skills and review gates.",
+          "Launched the company's mobile app from scratch in **React Native** with **offline support** and optimistic updates, shipping stable **Android** and **iOS** releases.",
+          "Lead front-end engineer for an 11-developer team: review **pull requests**, set architecture and code-quality standards, and mentor engineers.",
+          "Proposed and integrated a **headless CMS** for the company website, removing engineering from content publishing."
+        ]
+      }
     },
     {
       "id": "supertokens",
@@ -265,7 +305,15 @@
         "JWT",
         "Session authentication"
       ],
-      "location": "Remote"
+      "location": "Remote",
+      "resumeOverrides": {
+        "role": "Software Development Engineer (Consultant)",
+        "achievements": [
+          "Implemented **session-based authentication** in the sign-up flow of the **Node.js** back-end SDK used by applications built on SuperTokens.",
+          "Built and launched a public **JWT** encoder/decoder with signature validation across 6 algorithms (HS256, HS384, HS512, ES256, RS256, PS256).",
+          "Migrated legacy front-end code to the latest SDK, added theming to the sign-up UI and fixed defects in the user-management dashboard."
+        ]
+      }
     },
     {
       "id": "caw-studios",
@@ -299,7 +347,28 @@
         "Segment",
         "Sentry",
         "Nivo"
-      ]
+      ],
+      "resumeOverrides": {
+        "role": "Software Development Engineer II",
+        "achievements": [
+          "Led a 6-developer front-end team to build BeTagged, a social-media marketing platform, from scratch in **React** and **TypeScript**, mentoring through daily code reviews.",
+          "Eliminated duplicated business logic across web and mobile apps by setting up a **Lerna** monorepo for shared code.",
+          "Designed cross-platform logging and error monitoring with **Segment** and **Sentry**, adopted as the organisation-wide blueprint.",
+          "Reduced wait times in 3 procurement apps with optimistic updates and response caching in **TanStack Query**; built a shared **Storybook** component library."
+        ],
+        "stack": [
+          "React",
+          "TypeScript",
+          "Redux",
+          "TanStack Query",
+          "Chakra UI",
+          "styled-components",
+          "Storybook",
+          "Lerna",
+          "Segment",
+          "Sentry"
+        ]
+      }
     },
     {
       "id": "emertech-lead",
@@ -334,7 +403,16 @@
         "Ant Design",
         "SASS",
         "Adobe XD"
-      ]
+      ],
+      "resumeOverrides": {
+        "achievements": [
+          "Increased label-printing throughput by 60%+ by architecting a **Node.js** and **Express** print service with a **React** dashboard (**MongoDB**, **Puppeteer**), replacing a slow proprietary process.",
+          "Co-led QRiosity, a blockchain-backed **MERN** traceability platform that gave 5M+ products a unique identity across 3+ supply chains; won 1st prize at Inspiring Futures (UAE).",
+          "Built a **React Native** Android app and a multilingual (**i18n**) **PWA** for farmers with limited tech experience.",
+          "Led front-end development of the Invento ERP (inventory, invoicing, throughput) with **React**, **Redux** and **Ant Design**.",
+          "Trained 30+ interns in **React** through hands-on bootcamps; promoted from intern in April 2020."
+        ]
+      }
     },
     {
       "id": "emertech-intern",
@@ -361,7 +439,12 @@
         "React",
         "Redux",
         "JWT"
-      ]
+      ],
+      "resumeOverrides": {
+        "achievements": [
+          "Built DhammaEdicts, a **MERN** app preserving Buddhist scriptures on a blockchain, with **JWT** authentication and authorisation; inaugurated by the Dalai Lama at the Global Buddhist Congregation 2019."
+        ]
+      }
     },
     {
       "id": "digital-impact-square",
@@ -654,6 +737,9 @@
       "links": {
         "live": "https://areeb.co.in",
         "repo": "https://github.com/AreebKhan619/portfolio-website"
+      },
+      "resumeOverrides": {
+        "hidden": true
       }
     },
     {
@@ -668,6 +754,9 @@
       "links": {
         "live": "https://2048-three.vercel.app",
         "repo": "https://github.com/AreebKhan619/2048"
+      },
+      "resumeOverrides": {
+        "hidden": true
       }
     },
     {
@@ -681,6 +770,9 @@
       "links": {
         "live": "https://stickynotesinreact.netlify.app/",
         "repo": "https://github.com/AreebKhan619/react-sticky-notes"
+      },
+      "resumeOverrides": {
+        "hidden": true
       }
     },
     {
@@ -693,6 +785,9 @@
       ],
       "links": {
         "repo": "https://github.com/AreebKhan619/snake-game"
+      },
+      "resumeOverrides": {
+        "hidden": true
       }
     }
   ],
@@ -735,7 +830,23 @@
         "Material UI",
         "SASS",
         "i18n"
-      ]
+      ],
+      "resumeOverrides": {
+        "items": [
+          "React",
+          "Next.js",
+          "Redux",
+          "TanStack Query",
+          "Tailwind CSS",
+          "styled-components",
+          "Chakra UI",
+          "Ant Design",
+          "Material UI",
+          "SASS",
+          "Storybook",
+          "i18n"
+        ]
+      }
     },
     {
       "category": "AI Engineering",
@@ -756,7 +867,16 @@
         "Offline-first data",
         "Progressive Web Apps",
         "Android"
-      ]
+      ],
+      "resumeOverrides": {
+        "items": [
+          "React Native",
+          "Android",
+          "iOS",
+          "Offline-first data",
+          "Progressive Web Apps (PWA)"
+        ]
+      }
     },
     {
       "category": "Architecture & Tooling",
@@ -768,7 +888,20 @@
         "npm",
         "Sentry",
         "Segment"
-      ]
+      ],
+      "resumeOverrides": {
+        "category": "Tools & Practices",
+        "items": [
+          "Git",
+          "CI",
+          "RBAC",
+          "Monorepos (Lerna)",
+          "Sentry",
+          "Segment",
+          "Code review",
+          "Mentoring"
+        ]
+      }
     },
     {
       "category": "Testing",
@@ -782,13 +915,19 @@
       "items": [
         "TensorFlow",
         "Keras"
-      ]
+      ],
+      "resumeOverrides": {
+        "hidden": true
+      }
     },
     {
       "category": "Foundations",
       "items": [
         "Computer Networking"
-      ]
+      ],
+      "resumeOverrides": {
+        "hidden": true
+      }
     }
   ],
   "education": [
@@ -824,7 +963,10 @@
       "grade": "GPA 8.6",
       "highlights": [
         "Ranked 120th state-wide; awarded a national scholarship for undergraduate study."
-      ]
+      ],
+      "resumeOverrides": {
+        "hidden": true
+      }
     },
     {
       "id": "biscoe-ssc",
@@ -837,7 +979,10 @@
       "highlights": [
         "Ranked 20th state-wide.",
         "Represented the school in art competitions."
-      ]
+      ],
+      "resumeOverrides": {
+        "hidden": true
+      }
     }
   ],
   "certifications": [
@@ -854,7 +999,10 @@
     {
       "name": "Front End Development Libraries (React, Redux, SASS)",
       "issuer": "freeCodeCamp",
-      "url": "https://www.freecodecamp.org/certification/fccbd0ae55d-491b-441c-8296-1727843d700b/front-end-development-libraries"
+      "url": "https://www.freecodecamp.org/certification/fccbd0ae55d-491b-441c-8296-1727843d700b/front-end-development-libraries",
+      "resumeOverrides": {
+        "hidden": true
+      }
     },
     {
       "name": "React (Top 10%)",
@@ -864,7 +1012,10 @@
     {
       "name": "React",
       "issuer": "HackerRank",
-      "url": "https://www.hackerrank.com/certificates/be403f4d3fd3"
+      "url": "https://www.hackerrank.com/certificates/be403f4d3fd3",
+      "resumeOverrides": {
+        "hidden": true
+      }
     },
     {
       "name": "Node.js, React, MongoDB skill assessments (Top 15%, 30%, 5%)",
@@ -874,11 +1025,17 @@
     {
       "name": "Computer Networks and Internet Protocol (Top 5%)",
       "issuer": "NPTEL",
-      "url": "https://drive.google.com/file/d/1T5vYLOBtS6OysTNXzKQmYGwDUZ2D1d3_/view?usp=shari"
+      "url": "https://drive.google.com/file/d/1T5vYLOBtS6OysTNXzKQmYGwDUZ2D1d3_/view?usp=shari",
+      "resumeOverrides": {
+        "hidden": true
+      }
     },
     {
       "name": "JavaScript (Advanced)",
-      "issuer": "CutShort"
+      "issuer": "CutShort",
+      "resumeOverrides": {
+        "hidden": true
+      }
     }
   ],
   "publications": [

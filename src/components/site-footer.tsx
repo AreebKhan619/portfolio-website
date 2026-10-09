@@ -1,7 +1,8 @@
 import { ExternalLink } from "@/components/external-link";
-import type { PersonalInfo } from "@/types/profile";
+import { RESUME_PATH } from "@/lib/resume/path";
+import type { PersonalInfo, ResumeConfig } from "@/types/profile";
 
-export function SiteFooter({ info }: { info: PersonalInfo }) {
+export function SiteFooter({ info, resume }: { info: PersonalInfo; resume: ResumeConfig }) {
   return (
     <footer className="border-t border-line">
       <section
@@ -27,11 +28,11 @@ export function SiteFooter({ info }: { info: PersonalInfo }) {
             {info.email}
           </a>
           <a
-            href={info.resume.url}
-            download={info.resume.fileName}
+            href={RESUME_PATH}
+            download={resume.fileName}
             className="inline-flex items-center rounded-full border border-line px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-fg/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            {info.resume.label}
+            {resume.label}
           </a>
         </div>
         <ul aria-label="Social profiles" className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
