@@ -14,8 +14,9 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
     background_color: "#fbfbfa",
     theme_color: "#fbfbfa",
     icons: [
-      { src: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { src: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+      // Rendered by app/icon.tsx (ids from its generateImageMetadata).
+      { src: "/icon/192", sizes: "192x192", type: "image/png" },
+      { src: "/icon/512", sizes: "512x512", type: "image/png" },
     ],
   };
 }
