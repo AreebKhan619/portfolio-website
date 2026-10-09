@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { RichText } from "@/components/rich-text";
 import { RotatingTagline } from "@/components/rotating-tagline";
 import type { PersonalInfo } from "@/types/profile";
 
@@ -46,7 +47,20 @@ export function Hero({ info, locale }: { info: PersonalInfo; locale: string }) {
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-fg sm:text-2xl sm:leading-snug">
           {info.valueProposition}
         </p>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">{info.summary}</p>
+        {info.highlights?.length ? (
+          <ul className="mt-6 max-w-2xl space-y-2.5 text-base leading-relaxed text-muted">
+            {info.highlights.map((item) => (
+              <li key={item} className="flex gap-3">
+                <span aria-hidden="true" className="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-accent" />
+                <span>
+                  <RichText text={item} />
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">{info.summary}</p>
+        )}
 
         <div className="mt-10 flex flex-wrap gap-3">
           <a

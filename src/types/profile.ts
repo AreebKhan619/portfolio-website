@@ -89,6 +89,8 @@ export interface PersonalInfo {
   familyName: string;
   /** Portrait under /public (intrinsic size in px), shown in the hero and used as the JSON-LD image. */
   photo?: { src: string; alt: string; width: number; height: number };
+  /** Skimmable hero bullets; when present they replace `summary` on the page (JSON-LD keeps `summary`). */
+  highlights?: RichText[];
   /** Primary title, e.g. "Full-Stack Software Engineer". */
   jobTitle: string;
   /** Short specialisation line shown above the name. */
@@ -161,6 +163,8 @@ export interface Project {
   role?: string;
   /** Company / client the project was delivered for, if any. */
   organization?: string;
+  /** Kept in the data but left off the site (cards, terminal). */
+  hidden?: boolean;
   stack: string[];
   links: ProjectLinks;
 }

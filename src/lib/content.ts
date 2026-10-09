@@ -20,6 +20,7 @@ export async function getProfile(): Promise<Profile> {
   return {
     ...profile,
     workExperience: profile.workExperience.filter((job) => !job.hidden),
+    projects: profile.projects.filter((project) => !project.hidden),
   };
 }
 

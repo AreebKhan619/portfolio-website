@@ -2,7 +2,7 @@
   "site": {
     "url": "https://areeb.co.in",
     "name": "Areeb Khan",
-    "description": "Areeb Khan is a remote full-stack software engineer who ships TypeScript products end to end for clients in Israel, Malaysia and India: Node.js and Express services, MongoDB data models, authentication and RBAC, and React and React Native interfaces.",
+    "description": "Areeb Khan is a remote full-stack software engineer who ships TypeScript products end to end: Node.js and Express services, MongoDB data models, authentication and RBAC, and React and React Native interfaces.",
     "keywords": [
       "Areeb Khan",
       "Mohammad Areeb Khan",
@@ -97,8 +97,15 @@
       ],
       "end": "."
     },
-    "valueProposition": "I design and ship products across the full stack, from Node.js services, data models and authentication to React and React Native interfaces, and put the tooling in place that keeps teams shipping.",
-    "summary": "Full-stack software engineer since 2019, working fully remote with clients in Israel, Malaysia and India. I currently lead front-end on Reeco's hospitality procurement marketplace (web and mobile), and work across the stack: Node.js and Express services on MongoDB, JWT and session-based authentication, role-based access control and offline-first data layers. I also ship production software by directing AI coding agents, with custom agent skills and rigorous reviews in place of hand-written code. Past work includes a traceability platform that gave 5M+ products a unique identity and a blockchain app inaugurated by the Dalai Lama.",
+    "valueProposition": "I design and ship products across the full stack, from Node.js services and authentication to React and React Native interfaces.",
+    "summary": "Full-stack engineer since 2019, open to remote work anywhere. I lead front-end on Reeco's hospitality procurement marketplace, work across Node.js, MongoDB and authentication, and ship production apps by directing AI coding agents. Past work includes a traceability platform that gave 5M+ products a unique identity.",
+    "highlights": [
+      "Lead front-end on Reeco's hospitality procurement marketplace, across web and mobile.",
+      "Work across the stack: **Node.js**, **MongoDB**, authentication and **RBAC**.",
+      "Ship production apps by directing **AI coding agents**: screens in hours, not days.",
+      "Built a traceability platform that gave **5M+** products a unique identity.",
+      "Open to remote work anywhere."
+    ],
     "email": "areebkhan619@gmail.com",
     "resume": {
       "url": "/areeb-khan-resume.pdf",
@@ -572,6 +579,7 @@
     },
     {
       "id": "hortisquare",
+      "hidden": true,
       "name": "HortiSquare",
       "category": "professional",
       "organization": "Digital Impact Square (TCS Foundation)",
