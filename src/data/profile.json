@@ -78,6 +78,10 @@
     "fullName": "Mohammad Areeb Khan",
     "givenName": "Areeb",
     "familyName": "Khan",
+    "photo": {
+      "src": "/areeb-khan.jpg",
+      "alt": "Portrait of Areeb Khan"
+    },
     "jobTitle": "Full-Stack Software Engineer",
     "headline": "TypeScript · Node.js · React · React Native",
     "tagline": {

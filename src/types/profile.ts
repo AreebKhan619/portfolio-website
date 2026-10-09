@@ -87,6 +87,8 @@ export interface PersonalInfo {
   fullName: string;
   givenName: string;
   familyName: string;
+  /** Square portrait under /public, shown in the hero and used as the JSON-LD image. */
+  photo?: { src: string; alt: string };
   /** Primary title, e.g. "Full-Stack Software Engineer". */
   jobTitle: string;
   /** Short specialisation line shown above the name. */

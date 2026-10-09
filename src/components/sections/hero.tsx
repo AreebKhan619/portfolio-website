@@ -1,21 +1,40 @@
+import Image from "next/image";
+
 import { RotatingTagline } from "@/components/rotating-tagline";
 import type { PersonalInfo } from "@/types/profile";
 
 export function Hero({ info, locale }: { info: PersonalInfo; locale: string }) {
   return (
     <section aria-labelledby="hero-title" className="pt-16 pb-14 sm:pt-24 sm:pb-20">
-      <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent sm:text-sm">
-        {info.headline}
-      </p>
-      <h1
-        id="hero-title"
-        className="mt-4 font-display text-6xl leading-[0.95] tracking-tight text-fg sm:text-8xl"
-      >
-        {info.name}
-        <span className="mt-4 block font-sans text-xl font-normal tracking-normal text-muted sm:text-2xl">
-          {info.jobTitle}
-        </span>
-      </h1>
+      <div className="flex flex-col-reverse gap-8 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent sm:text-sm">
+            {info.headline}
+          </p>
+          <h1
+            id="hero-title"
+            className="mt-4 font-display text-6xl leading-[0.95] tracking-tight text-fg sm:text-8xl"
+          >
+            {info.name}
+            <span className="mt-4 block font-sans text-xl font-normal tracking-normal text-muted sm:text-2xl">
+              {info.jobTitle}
+            </span>
+          </h1>
+        </div>
+        {info.photo ? (
+          <div className="w-fit shrink-0 rounded-[1.75rem] bg-linear-to-br from-accent/70 via-line to-accent/20 p-1 shadow-xl shadow-accent/10 sm:rounded-[2.25rem]">
+            <Image
+              src={info.photo.src}
+              alt={info.photo.alt}
+              width={400}
+              height={400}
+              sizes="(min-width: 1024px) 208px, (min-width: 640px) 176px, 112px"
+              preload
+              className="size-28 rounded-3xl object-cover sm:size-44 sm:rounded-4xl lg:size-52"
+            />
+          </div>
+        ) : null}
+      </div>
       <RotatingTagline
         tagline={info.tagline}
         locale={locale}

@@ -33,6 +33,7 @@ export function PersonJsonLd({ profile }: { profile: Profile }) {
         givenName: personalInfo.givenName,
         familyName: personalInfo.familyName,
         url: site.url,
+        ...(personalInfo.photo ? { image: new URL(personalInfo.photo.src, site.url).href } : {}),
         email: `mailto:${personalInfo.email}`,
         jobTitle: personalInfo.jobTitle,
         description: toPlainText(personalInfo.valueProposition),
