@@ -1,7 +1,6 @@
 import { DateRange } from "@/components/date-range";
 import { ExternalLink } from "@/components/external-link";
 import { FadeIn } from "@/components/fade-in";
-import { RichText } from "@/components/rich-text";
 import { SectionHeading } from "@/components/section-heading";
 import { formatYearMonth } from "@/lib/format";
 import type { Certification, Education as EducationEntry, Publication } from "@/types/profile";
@@ -24,10 +23,10 @@ export function Education({ education, certifications, publications }: Education
         title="Education & Certifications"
       />
 
-      <div className="space-y-6">
+      <div className="divide-y divide-line">
         {education.map((edu) => (
-          <FadeIn key={edu.id}>
-            <article className="rounded-2xl border border-line bg-surface p-6">
+          <FadeIn key={edu.id} className="py-5 first:pt-0 last:pb-0">
+            <article>
               <header className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-fg">{edu.qualification}</h3>
@@ -45,24 +44,7 @@ export function Education({ education, certifications, publications }: Education
                 </div>
                 <DateRange start={edu.startDate} end={edu.endDate} />
               </header>
-              {edu.highlights.length > 0 ? (
-                <ul className="mt-4 list-disc space-y-1.5 pl-5 text-[0.95rem] leading-relaxed text-muted marker:text-line">
-                  {edu.highlights.map((item) => (
-                    <li key={item}>
-                      <RichText text={item} />
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              {edu.links?.length ? (
-                <p className="mt-4 flex flex-wrap gap-4 text-sm">
-                  {edu.links.map((link) => (
-                    <ExternalLink key={link.url} href={link.url} className={linkClass}>
-                      {link.label}
-                    </ExternalLink>
-                  ))}
-                </p>
-              ) : null}
+              {/* Highlights and links stay in the data but are left off: experience leads now. */}
             </article>
           </FadeIn>
         ))}
