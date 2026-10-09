@@ -185,11 +185,12 @@
       "logo": {
         "src": "/logos/reeco.png"
       },
+      "brandColor": "#e1f7ee",
       "employmentType": "Contract",
       "startDate": "2023-01",
       "endDate": null,
       "achievements": [
-        "Built an AI-driven designer-to-developer pipeline as a **Claude Code** plugin: one command turns a **Claude Design** file into production code by matching every design component to existing primitives, pausing at a plan gate for approval, then generating the code, tests and a gallery demo.",
+        "Cut screen delivery from days to about 2 hours by building an AI-driven designer-to-developer pipeline as a **Claude Code** plugin: one command turns a **Claude Design** file into production code on **semantic tokens** derived from the design-system foundations, matching every design component to existing primitives, pausing at a plan gate for approval, then generating the code, tests and a gallery demo.",
         "Kept design and code in lockstep with a reverse sync that treats code as the source of truth: per-component fingerprints of the real browser render, explicit sync verdicts that catch conflicts and outside edits before any push, token-level verification of every style value, and **CI** gates against raw colours; full design-system audits run from an export, cutting ~200K tokens of fetches per audit to zero.",
         "Shipped the Corporate Platform app for multi-property oversight with zero hand-written code, directing **AI coding agents** end to end through that pipeline, custom **agent skills** and review gates on every change; the app is stable in production and buyers are adopting it.",
         "Delivered the customer-facing Buyer app, a **B2B marketplace** connecting hotels with suppliers, by building its Store, multi-stage Orders and Accounts Payable (invoices, statements) modules in **React** and **TypeScript** with **role-based access control (RBAC)**; the platform serves 3,700+ users across 1,000+ properties for 100+ corporate clients and has processed 24,000+ invoices worth $42M+.",
@@ -219,6 +220,7 @@
         "src": "/logos/supertokens.png",
         "inset": true
       },
+      "brandColor": "#fae7fb",
       "employmentType": "Contract",
       "startDate": "2023-01",
       "endDate": "2023-04",
@@ -244,6 +246,7 @@
       "logo": {
         "src": "/logos/caw.jpg"
       },
+      "brandColor": "#f8f3e9",
       "location": "Hyderabad, India (Remote)",
       "startDate": "2022-01",
       "endDate": "2023-01",
@@ -277,6 +280,7 @@
         "src": "/logos/emertech.png",
         "inset": true
       },
+      "brandColor": "#e2f6ff",
       "location": "Nashik, India",
       "startDate": "2020-04",
       "endDate": "2022-03",
@@ -311,6 +315,7 @@
         "src": "/logos/emertech.png",
         "inset": true
       },
+      "brandColor": "#e5e5e9d1",
       "location": "Nashik, India",
       "employmentType": "Internship",
       "startDate": "2019-06",
@@ -337,6 +342,7 @@
         "src": "/logos/disq.png",
         "inset": true
       },
+      "brandColor": "#e2f6ff",
       "location": "Nashik, India",
       "startDate": "2019-06",
       "endDate": "2020-04",
@@ -358,6 +364,7 @@
       "logo": {
         "src": "/logos/freelance.png"
       },
+      "brandColor": "#f8f3e9",
       "employmentType": "Freelance",
       "startDate": "2018-06",
       "endDate": "2018-10",
@@ -451,7 +458,7 @@
       "category": "professional",
       "organization": "Reeco",
       "summary": "**Claude Code** plugin that converts designer files into production code and keeps the design system mirroring what actually ships.",
-      "impact": "Design file to code, tests and demo in one command; drift between code and the design system caught per component before any push; full audits cut from ~200K tokens to zero.",
+      "impact": "A screen that took days now ships in about 2 hours, on semantic tokens built from the design-system foundations; drift between code and the design system is caught per component before any push; full audits cut from ~200K tokens to zero.",
       "role": "Designed and built the pipeline: four agent commands, parallel subagents for token mapping and staging, sync verdicts and CI quality gates.",
       "stack": [
         "Claude Code",

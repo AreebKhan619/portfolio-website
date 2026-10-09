@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 import { ExternalLink } from "@/components/external-link";
 import { BadgeList } from "@/components/badge-list";
@@ -25,7 +26,17 @@ export function Experience({ jobs }: { jobs: WorkExperience[] }) {
         </span>
         <ol className="space-y-12 pl-6 sm:pl-8">
           {jobs.map((job) => (
-            <li key={job.id} className="timeline-item relative">
+            <li
+              key={job.id}
+              data-brand={job.brandColor ? "" : undefined}
+              style={job.brandColor ? ({ "--brand": job.brandColor } as CSSProperties) : undefined}
+              className="timeline-item group relative"
+            >
+              {/* This company's stretch of the line, down to the next dot. */}
+              <span
+                aria-hidden="true"
+                className="timeline-segment pointer-events-none absolute top-2 -bottom-12 -left-6.25 w-0.75 rounded-full group-last:bottom-0 sm:-left-8.25"
+              />
               <span
                 aria-hidden="true"
                 data-current={job.endDate === null ? "" : undefined}

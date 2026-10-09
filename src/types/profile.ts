@@ -125,6 +125,8 @@ export interface WorkExperience {
   companyUrl?: string;
   /** Square logo under /public. `inset` pads logos drawn on a transparent background. */
   logo?: { src: string; inset?: boolean };
+  /** Company colour (any CSS colour); the timeline deepens it to suit each theme. */
+  brandColor?: string;
   location?: string;
   employmentType?: string;
   startDate: YearMonth;

@@ -170,11 +170,38 @@
   transform-origin: top;
 }
 
+/*
+ * Each role tints its stretch of the line and its dot with the company colour.
+ * The stored colours are pastels, so keep the hue and deepen them per theme.
+ */
+.timeline-item {
+  --brand-line: var(--accent);
+}
+
+.timeline-item[data-brand] {
+  --brand-line: var(--brand);
+}
+
+@supports (color: oklch(from red l c h)) {
+  .timeline-item[data-brand] {
+    --brand-line: oklch(from var(--brand) calc(l - 0.32) min(calc(c * 6), 0.19) h);
+  }
+
+  .dark .timeline-item[data-brand] {
+    --brand-line: oklch(from var(--brand) calc(l - 0.12) min(calc(c * 5), 0.17) h);
+  }
+}
+
+.timeline-segment {
+  background-color: var(--brand-line);
+  transform-origin: top;
+}
+
 .timeline-dot {
-  background-color: var(--accent);
+  background-color: var(--brand-line);
   box-shadow:
     0 0 0 4px var(--bg),
-    0 0 0 6px color-mix(in oklab, var(--accent) 22%, transparent);
+    0 0 0 6px color-mix(in oklab, var(--brand-line) 22%, transparent);
 }
 
 @keyframes timeline-draw {
@@ -198,10 +225,10 @@
     scale: 1.35;
   }
   to {
-    background-color: var(--accent);
+    background-color: var(--brand-line);
     box-shadow:
       0 0 0 4px var(--bg),
-      0 0 0 6px color-mix(in oklab, var(--accent) 22%, transparent);
+      0 0 0 6px color-mix(in oklab, var(--brand-line) 22%, transparent);
     scale: 1;
   }
 }
@@ -231,6 +258,12 @@
       animation-range: cover 0% cover 100%;
     }
 
+    .timeline-segment {
+      animation: timeline-draw linear both;
+      animation-timeline: --career-item;
+      animation-range: cover 0% cover 100%;
+    }
+
     .timeline-dot {
       animation: timeline-dot-on linear both;
       animation-timeline: --career-item;
@@ -244,7 +277,7 @@
   content: "";
   position: absolute;
   inset: -4px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--brand-line);
   border-radius: inherit;
   opacity: 0;
 }
