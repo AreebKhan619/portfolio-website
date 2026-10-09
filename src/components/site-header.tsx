@@ -15,13 +15,13 @@ export function SiteHeader({ name, palette, terminal }: SiteHeaderProps) {
         <a href="#main" className="mr-auto shrink-0 font-semibold tracking-tight text-fg">
           {name}
         </a>
-        <nav aria-label="Primary" className="min-w-0 overflow-x-auto">
+        <nav aria-label="Primary" className="min-w-0">
           <ul className="flex items-center gap-1 text-sm whitespace-nowrap">
             {palette.sections.map((item) => (
               <li key={item.id} className={item.id === "contact" ? "" : "hidden md:block"}>
                 <a
                   href={`#${item.id}`}
-                  className="rounded-md px-2.5 py-1.5 text-muted transition-colors hover:text-fg"
+                  className="block rounded-md px-2.5 py-1.5 text-muted transition-colors hover:text-fg"
                 >
                   {item.label}
                 </a>
