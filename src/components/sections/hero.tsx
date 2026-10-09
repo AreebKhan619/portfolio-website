@@ -22,17 +22,17 @@ export function Hero({ info, locale }: { info: PersonalInfo; locale: string }) {
           </h1>
         </div>
         {info.photo ? (
-          <div className="w-fit shrink-0 rounded-[1.75rem] bg-linear-to-br from-accent/70 via-line to-accent/20 p-1 shadow-xl shadow-accent/10 sm:rounded-[2.25rem]">
-            <Image
-              src={info.photo.src}
-              alt={info.photo.alt}
-              width={400}
-              height={400}
-              sizes="(min-width: 1024px) 208px, (min-width: 640px) 176px, 112px"
-              preload
-              className="size-28 rounded-3xl object-cover sm:size-44 sm:rounded-4xl lg:size-52"
-            />
-          </div>
+          // A transparent cut-out (circle + head breaking out of it): no frame, just a
+          // soft accent-tinted shadow that follows its outline.
+          <Image
+            src={info.photo.src}
+            alt={info.photo.alt}
+            width={info.photo.width}
+            height={info.photo.height}
+            sizes="(min-width: 1024px) 240px, (min-width: 640px) 192px, 144px"
+            preload
+            className="h-auto w-36 shrink-0 drop-shadow-xl drop-shadow-accent/15 sm:w-48 lg:w-60"
+          />
         ) : null}
       </div>
       <RotatingTagline
