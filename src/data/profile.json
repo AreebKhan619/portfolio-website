@@ -182,10 +182,10 @@
       "startDate": "2023-01",
       "endDate": null,
       "achievements": [
-        "Delivered the customer-facing Buyer app, a **B2B marketplace** connecting hotels with suppliers, by building its Store, multi-stage Orders and Accounts Payable (invoices, statements) modules in **React** and **TypeScript** with **role-based access control (RBAC)**.",
+        "Delivered the customer-facing Buyer app, a **B2B marketplace** connecting hotels with suppliers, by building its Store, multi-stage Orders and Accounts Payable (invoices, statements) modules in **React** and **TypeScript** with **role-based access control (RBAC)**; the platform serves 3,700+ users across 1,000+ properties for 100+ corporate clients and has processed 24,000+ invoices worth $42M+.",
         "Launched Reeco's mobile app, built from scratch in **React Native** with **offline support** and **optimistic updates**, shipping stable **Android** and **iOS** releases that keep ordering reliable on unstable hotel networks; oversaw subsequent versions.",
         "Expanded the product suite by building the Corporate Platform app for multi-property oversight and rebuilding the company website on a **headless CMS**.",
-        "As lead front-end developer, screen and review front-end **pull requests** across Reeco's repositories, holding the bar on code quality, architecture and consistency while mentoring developers on the team.",
+        "As lead front-end developer, screen and review **pull requests** from an 11-developer front-end team across Reeco's repositories, holding the bar on code quality, architecture and consistency while mentoring the team.",
         "Partner with the product designer in iterative back-and-forth reviews, turning designs into production UI and feeding implementation constraints and edge cases back into the design.",
         "Joined Reeco directly after building its Back Office, Seller and Buyer apps through CAW Studios."
       ],
@@ -231,7 +231,7 @@
       "startDate": "2022-01",
       "endDate": "2023-01",
       "achievements": [
-        "Launched BeTagged, a social-media marketing platform for a Malaysian client, by leading its **TypeScript** and **React** web app from scratch and mentoring junior developers through daily code reviews.",
+        "Launched BeTagged, a social-media marketing platform for a Malaysian client, by leading a 6-developer front-end team that built its **TypeScript** and **React** web app from scratch, mentoring them through daily code reviews.",
         "Eliminated duplicated business logic between the web and mobile apps by setting up and managing a **Lerna** monorepo and co-leading the shared-code effort.",
         "Designed a single cross-platform logging setup with **Segment** and **Sentry**, later adopted as the organisation's logging blueprint.",
         "Cut wait times across Reeco's three procurement apps (Back Office, Seller, Buyer) with optimistic updates and response caching in **TanStack Query**, and built a shared **Storybook** component library."
@@ -345,7 +345,7 @@
       "category": "professional",
       "organization": "Reeco (started at CAW Studios)",
       "summary": "B2B hospitality procurement marketplace connecting hotels with suppliers, made up of Back Office, Seller and Buyer apps.",
-      "impact": "Store, multi-stage Orders and Accounts Payable modules with **RBAC**; shorter wait times through optimistic updates and response caching.",
+      "impact": "Serves 3,700+ users across 1,000+ properties for 100+ corporate clients; 24,000+ invoices worth $42M+ processed through the Accounts Payable module.",
       "role": "Built the three apps through CAW Studios, then joined Reeco directly; lead front-end on the Buyer app.",
       "stack": [
         "React",
@@ -440,7 +440,7 @@
       "organization": "CAW Studios",
       "summary": "Social-media marketing platform for a Malaysian client.",
       "impact": "Its cross-platform **Segment** + **Sentry** logging became the blueprint for other projects in the organisation.",
-      "role": "Led the web app build from scratch; set up the Lerna monorepo and co-led the shared code.",
+      "role": "Led a 6-developer front-end team building the web app from scratch; set up the Lerna monorepo and co-led the shared code.",
       "stack": [
         "React",
         "TypeScript",
