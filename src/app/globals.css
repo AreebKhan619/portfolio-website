@@ -1,0 +1,446 @@
+@import "tailwindcss";
+
+/* next-themes toggles `.dark` on <html>; drive Tailwind's dark: variant from it. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #fbfbfa;
+  --surface: #ffffff;
+  --fg: #18181b;
+  --muted: #52525b;
+  --line: #e4e4e7;
+  --accent: #4f46e5;
+  --accent-soft: #eef2ff;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0b0b0d;
+  --surface: #131316;
+  --fg: #f4f4f5;
+  --muted: #a1a1aa;
+  --line: #27272a;
+  --accent: #a5b4fc;
+  --accent-soft: rgb(99 102 241 / 0.14);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--bg);
+  }
+
+  /* Anchor targets clear the sticky header. */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Fade-in blocks are visible immediately for reduced-motion users (even before hydration). */
+@media (prefers-reduced-motion: reduce) {
+  [data-fade-in] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---------- Hero backdrop: grid + gradient mesh + pointer glow ---------- */
+.hero-backdrop {
+  --grid-size: 56px;
+  --grid-line: color-mix(in oklab, var(--line) 60%, transparent);
+  --grid-line-strong: color-mix(in oklab, var(--accent) 55%, transparent);
+  mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+}
+
+.hero-mesh {
+  background:
+    radial-gradient(38% 46% at 12% 18%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 70%),
+    radial-gradient(30% 40% at 88% 8%, color-mix(in oklab, #f59e0b 11%, transparent), transparent 70%),
+    radial-gradient(45% 35% at 60% 70%, color-mix(in oklab, var(--accent) 7%, transparent), transparent 70%);
+}
+
+.hero-grid,
+.pointer-glow-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-position: center top;
+}
+
+.hero-grid {
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 30%, #000 25%, transparent 80%);
+}
+
+.pointer-glow {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.pointer-glow[data-active] {
+  opacity: 1;
+}
+
+.pointer-glow-grid {
+  --grid-line: var(--grid-line-strong);
+  mask-image: radial-gradient(
+    220px circle at var(--glow-x, 50%) var(--glow-y, 30%),
+    #000,
+    transparent 100%
+  );
+}
+
+.pointer-glow-wash {
+  background: radial-gradient(
+    560px circle at var(--glow-x, 50%) var(--glow-y, 30%),
+    color-mix(in oklab, var(--accent) 12%, transparent),
+    transparent 65%
+  );
+}
+
+/* Touch and reduced motion: the backdrop stays static. */
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .pointer-glow {
+    display: none;
+  }
+}
+
+/* ---------- Rotating tagline (keyframes are generated per word count) ---------- */
+.tagline-words {
+  display: inline-grid;
+  max-width: 100%;
+  vertical-align: top;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.tagline-word {
+  grid-area: 1 / 1;
+  opacity: 0;
+}
+
+.tagline-word:first-child {
+  opacity: 1;
+}
+
+/*
+ * Per-word company colours. Keep the hue, give it enough chroma to read as a
+ * colour, and pin the lightness per theme so yellow and orange still pass
+ * contrast on the light background.
+ */
+.tagline-word[data-color] {
+  color: var(--word-color);
+}
+
+@supports (color: oklch(from red l c h)) {
+  .tagline-word[data-color] {
+    color: oklch(from var(--word-color) 0.56 clamp(0.12, c, 0.19) h);
+  }
+
+  .dark .tagline-word[data-color] {
+    color: oklch(from var(--word-color) 0.82 clamp(0.1, c, 0.16) h);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tagline-word {
+    animation: var(--tagline-name, none) var(--tagline-duration, 0s) cubic-bezier(0.22, 1, 0.36, 1)
+      var(--tagline-delay, 0s) infinite both;
+  }
+}
+
+/* ---------- Experience timeline: draws itself on scroll ---------- */
+/* Default (and fallback): a fully drawn line with every dot lit. */
+.timeline-track {
+  background-color: var(--line);
+}
+
+.timeline-fill {
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    color-mix(in oklab, var(--accent) 55%, var(--line))
+  );
+  transform-origin: top;
+}
+
+/*
+ * Company colours (`brandProps()` sets data-brand). Each role tints its stretch
+ * of the line and its dot, and the current role tints the "Currently" tile.
+ * The stored colours are pastels, so keep the hue and deepen them per theme.
+ */
+.timeline-item {
+  --brand-line: var(--accent);
+}
+
+[data-brand] {
+  --brand-line: var(--brand);
+}
+
+@supports (color: oklch(from red l c h)) {
+  [data-brand] {
+    --brand-line: oklch(from var(--brand) calc(l - 0.32) min(calc(c * 6), 0.19) h);
+  }
+
+  .dark [data-brand] {
+    --brand-line: oklch(from var(--brand) calc(l - 0.12) min(calc(c * 5), 0.17) h);
+  }
+}
+
+/* The "Currently" tile: company-coloured border with a soft glow. */
+.brand-tile[data-brand] {
+  border-color: var(--brand-line);
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--brand-line) 30%, transparent),
+    0 12px 40px -16px color-mix(in oklab, var(--brand-line) 55%, transparent);
+}
+
+.timeline-segment {
+  background-color: var(--brand-line);
+  transform-origin: top;
+}
+
+.timeline-dot {
+  background-color: var(--brand-line);
+  box-shadow:
+    0 0 0 4px var(--bg),
+    0 0 0 6px color-mix(in oklab, var(--brand-line) 22%, transparent);
+}
+
+@keyframes timeline-draw {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes timeline-dot-on {
+  from {
+    background-color: var(--line);
+    box-shadow:
+      0 0 0 4px var(--bg),
+      0 0 0 4px transparent;
+    scale: 0.8;
+  }
+  60% {
+    scale: 1.35;
+  }
+  to {
+    background-color: var(--brand-line);
+    box-shadow:
+      0 0 0 4px var(--bg),
+      0 0 0 6px color-mix(in oklab, var(--brand-line) 22%, transparent);
+    scale: 1;
+  }
+}
+
+/*
+ * The "reading line" sits 60% down the viewport (insets 60% / 40%). The fill
+ * tracks how much of the list has passed it; each dot lights up over the
+ * first 80px after its item reaches it.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .timeline {
+      view-timeline-name: --career;
+      view-timeline-axis: block;
+      view-timeline-inset: 60% 40%;
+    }
+
+    .timeline-item {
+      view-timeline-name: --career-item;
+      view-timeline-axis: block;
+      view-timeline-inset: 60% 40%;
+    }
+
+    .timeline-fill {
+      animation: timeline-draw linear both;
+      animation-timeline: --career;
+      animation-range: cover 0% cover 100%;
+    }
+
+    .timeline-segment {
+      animation: timeline-draw linear both;
+      animation-timeline: --career-item;
+      animation-range: cover 0% cover 100%;
+    }
+
+    .timeline-dot {
+      animation: timeline-dot-on linear both;
+      animation-timeline: --career-item;
+      animation-range: cover 0px cover 80px;
+    }
+  }
+}
+
+/* The current role's dot keeps a slow radar ping. */
+.timeline-dot[data-current]::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid var(--brand-line);
+  border-radius: inherit;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .timeline-dot[data-current]::after {
+    animation: timeline-ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+}
+
+@keyframes timeline-ping {
+  from {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* ---------- Project cards: pointer tilt + glowing border ---------- */
+/* Pseudo-elements stay inert unless card-spotlight.tsx marks a card active. */
+.spotlight-card {
+  position: relative;
+}
+
+.spotlight-card::before,
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Border-only ring: a radial gradient masked down to a 1px frame. */
+.spotlight-card::before {
+  inset: -1px;
+  padding: 1px;
+  background: radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 50%),
+    var(--accent),
+    transparent 70%
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+}
+
+/* Soft inner wash, kept behind the content. */
+.spotlight-card::after {
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in oklab, var(--accent) 8%, transparent),
+    transparent 65%
+  );
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .spotlight-card {
+    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition:
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.2s ease;
+  }
+
+  .spotlight-card[data-spotlight-active] {
+    transition:
+      transform 0.15s ease-out,
+      border-color 0.2s ease;
+  }
+
+  .spotlight-card[data-spotlight-active]::before,
+  .spotlight-card[data-spotlight-active]::after {
+    opacity: 1;
+  }
+}
+
+/* ---------- Theme switch: circular reveal (see lib/theme-transition.ts) ---------- */
+/* The JS drives a clip-path on the new snapshot; disable the default crossfade. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* ---------- Command palette ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .cmdk-backdrop {
+    animation: cmdk-fade 0.18s ease-out;
+  }
+
+  .cmdk-panel {
+    animation: cmdk-pop 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@keyframes cmdk-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes cmdk-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+}
+
+/* Sections focused programmatically (palette "Go to") don't need a ring. */
+section[tabindex="-1"]:focus {
+  outline: none;
+}
+
+/* ---------- GitHub contribution calendar ---------- */
+.gh-calendar path {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.gh-month {
+  fill: var(--muted);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 9px;
+}
+
+.gh-l0 { color: color-mix(in oklab, var(--line) 85%, var(--surface)); }
+.gh-l1 { color: color-mix(in oklab, var(--accent) 32%, var(--surface)); }
+.gh-l2 { color: color-mix(in oklab, var(--accent) 55%, var(--surface)); }
+.gh-l3 { color: color-mix(in oklab, var(--accent) 78%, var(--surface)); }
+.gh-l4 { color: var(--accent); }
