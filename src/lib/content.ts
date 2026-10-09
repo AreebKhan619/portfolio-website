@@ -17,7 +17,10 @@ const profile: Profile = profileData;
 export async function getProfile(): Promise<Profile> {
   "use cache";
   cacheLife("max");
-  return profile;
+  return {
+    ...profile,
+    workExperience: profile.workExperience.filter((job) => !job.hidden),
+  };
 }
 
 /**

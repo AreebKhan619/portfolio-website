@@ -129,6 +129,8 @@ export interface WorkExperience {
   brandColor?: string;
   /** Exact timeline colour, used as-is in both themes instead of the derived one. */
   lineColor?: string;
+  /** Kept in the data but left off the site (timeline, terminal, JSON-LD, stats). */
+  hidden?: boolean;
   location?: string;
   employmentType?: string;
   startDate: YearMonth;

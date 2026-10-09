@@ -337,6 +337,7 @@
     },
     {
       "id": "digital-impact-square",
+      "hidden": true,
       "role": "Innovator",
       "company": "Digital Impact Square (TCS Foundation)",
       "companyUrl": "https://www.digitalimpactsquare.com/",
@@ -361,6 +362,7 @@
     },
     {
       "id": "freelance",
+      "hidden": true,
       "role": "Freelance Developer",
       "company": "Self-employed",
       "logo": {
