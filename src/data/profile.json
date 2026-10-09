@@ -221,6 +221,7 @@
         "inset": true
       },
       "brandColor": "#fae7fb",
+      "lineColor": "#ff9400",
       "employmentType": "Contract",
       "startDate": "2023-01",
       "endDate": "2023-04",
@@ -247,6 +248,7 @@
         "src": "/logos/caw.jpg"
       },
       "brandColor": "#f8f3e9",
+      "lineColor": "#fed730",
       "location": "Hyderabad, India (Remote)",
       "startDate": "2022-01",
       "endDate": "2023-01",

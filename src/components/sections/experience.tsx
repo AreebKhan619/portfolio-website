@@ -29,7 +29,13 @@ export function Experience({ jobs }: { jobs: WorkExperience[] }) {
             <li
               key={job.id}
               data-brand={job.brandColor ? "" : undefined}
-              style={job.brandColor ? ({ "--brand": job.brandColor } as CSSProperties) : undefined}
+              style={
+                {
+                  ...(job.brandColor ? { "--brand": job.brandColor } : {}),
+                  // An inline custom property outranks the derived one in globals.css.
+                  ...(job.lineColor ? { "--brand-line": job.lineColor } : {}),
+                } as CSSProperties
+              }
               className="timeline-item group relative"
             >
               {/* This company's stretch of the line, down to the next dot. */}

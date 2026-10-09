@@ -127,6 +127,8 @@ export interface WorkExperience {
   logo?: { src: string; inset?: boolean };
   /** Company colour (any CSS colour); the timeline deepens it to suit each theme. */
   brandColor?: string;
+  /** Exact timeline colour, used as-is in both themes instead of the derived one. */
+  lineColor?: string;
   location?: string;
   employmentType?: string;
   startDate: YearMonth;
