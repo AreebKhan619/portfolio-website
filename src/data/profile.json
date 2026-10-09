@@ -2,12 +2,13 @@
   "site": {
     "url": "https://areeb.co.in",
     "name": "Areeb Khan",
-    "description": "Areeb Khan is a full-stack software engineer who designs and ships TypeScript products end to end: Node.js and Express services, MongoDB data models, authentication, and React and React Native interfaces.",
+    "description": "Areeb Khan is a remote full-stack software engineer who ships TypeScript products end to end for clients in Israel, Malaysia and India: Node.js and Express services, MongoDB data models, authentication and RBAC, and React and React Native interfaces.",
     "keywords": [
       "Areeb Khan",
       "Mohammad Areeb Khan",
       "Full-Stack Software Engineer",
       "Full-Stack Developer",
+      "Remote Software Engineer",
       "Node.js Developer",
       "React Developer",
       "React Native Developer",
@@ -15,16 +16,32 @@
       "Next.js",
       "Express",
       "MongoDB",
+      "REST APIs",
       "Portfolio"
     ],
     "locale": "en_US",
     "lastUpdated": "2026-10-09",
     "navigation": [
-      { "id": "experience", "label": "Experience" },
-      { "id": "projects", "label": "Projects" },
-      { "id": "skills", "label": "Skills" },
-      { "id": "education", "label": "Education" },
-      { "id": "contact", "label": "Contact" }
+      {
+        "id": "experience",
+        "label": "Experience"
+      },
+      {
+        "id": "projects",
+        "label": "Projects"
+      },
+      {
+        "id": "skills",
+        "label": "Skills"
+      },
+      {
+        "id": "education",
+        "label": "Education"
+      },
+      {
+        "id": "contact",
+        "label": "Contact"
+      }
     ]
   },
   "commandPalette": {
@@ -62,16 +79,16 @@
     "tagline": {
       "lead": "I build",
       "words": [
-        "full-stack web platforms",
+        "B2B marketplaces",
         "Node.js services",
         "authentication flows",
-        "cross-platform mobile apps",
+        "offline-first mobile apps",
         "traceability platforms"
       ],
       "end": "."
     },
     "valueProposition": "I design and ship products across the full stack, from Node.js services, data models and authentication to React and React Native interfaces, and put the tooling in place that keeps teams shipping.",
-    "summary": "Full-stack software engineer since 2019. I have built Node.js and Express services backed by MongoDB, implemented JWT and session-based authentication, and led greenfield React and React Native builds for a restaurant procurement platform, a social-media marketing platform and a blockchain-enabled farm-to-fork traceability solution that has given 5M+ products a unique identity.",
+    "summary": "Full-stack software engineer since 2019, working fully remote with clients in Israel, Malaysia and India. I currently lead front-end on Reeco's hospitality procurement marketplace (web and mobile), and work across the stack: Node.js and Express services on MongoDB, JWT and session-based authentication, role-based access control and offline-first data layers. Past work includes a traceability platform that gave 5M+ products a unique identity and a blockchain app inaugurated by the Dalai Lama.",
     "email": "areebkhan619@gmail.com",
     "resume": {
       "url": "/areeb-khan-resume.pdf",
@@ -94,7 +111,8 @@
         "url": "https://stackoverflow.com/users/7343008/areeb-khan",
         "handle": "areeb-khan"
       }
-    ]
+    ],
+    "location": "Srinagar, India"
   },
   "terminal": {
     "title": "areeb — terminal",
@@ -142,10 +160,16 @@
       "stack": "Core stack",
       "availability": "Availability"
     },
-    "coreStack": ["TypeScript", "Node.js", "React", "React Native", "MongoDB"],
+    "coreStack": [
+      "TypeScript",
+      "Node.js",
+      "React",
+      "React Native",
+      "MongoDB"
+    ],
     "availability": {
       "available": true,
-      "status": "Open to roles"
+      "status": "Open to remote roles"
     }
   },
   "workExperience": [
@@ -154,46 +178,61 @@
       "role": "Software Development Consultant",
       "company": "Reeco",
       "companyUrl": "https://reeco.io",
-      "employmentType": "Consultant",
+      "employmentType": "Contract",
       "startDate": "2023-01",
       "endDate": null,
       "achievements": [
-        "Built Reeco's mobile app from an empty repository to stable **Android** and **iOS** releases, owning the **React Native** codebase end to end and guiding the team through subsequent feature modules [metric: installs / active users].",
-        "Rebuilt the company website on a **headless CMS** that I proposed and integrated, so the business publishes content without engineering involvement [metric: e.g. content-change turnaround].",
-        "Maintain code quality across Reeco's repositories through regular **pull-request reviews**."
+        "Delivered the customer-facing Buyer app, a **B2B marketplace** connecting hotels with suppliers, by building its Store, multi-stage Orders and Accounts Payable (invoices, statements) modules in **React** and **TypeScript** with **role-based access control (RBAC)**.",
+        "Launched Reeco's mobile app, built from scratch in **React Native** with **offline support** and **optimistic updates**, shipping stable **Android** and **iOS** releases that keep ordering reliable on unstable hotel networks; oversaw subsequent versions.",
+        "Expanded the product suite by building the Corporate Platform app for multi-property oversight and rebuilding the company website on a **headless CMS**.",
+        "Lead and mentor developers through **pull-request reviews** across Reeco's repositories, having joined directly after building its Back Office, Seller and Buyer apps through CAW Studios."
       ],
-      "stack": ["React Native", "React", "TypeScript", "Headless CMS"]
+      "stack": [
+        "React",
+        "React Native",
+        "TypeScript",
+        "TanStack Query",
+        "Storybook",
+        "RBAC",
+        "Headless CMS"
+      ],
+      "location": "Remote"
     },
     {
       "id": "supertokens",
       "role": "SDE Consultant",
       "company": "SuperTokens",
       "companyUrl": "https://supertokens.io",
-      "employmentType": "Consultant",
+      "employmentType": "Contract",
       "startDate": "2023-01",
       "endDate": "2023-04",
       "achievements": [
-        "Implemented **session-based authentication** in the sign-up flow of the **Node.js** back-end SDK, strengthening security for applications built on SuperTokens.",
-        "Built and launched SuperTokens' public **JWT** encoder/decoder, with signature-key validation across 6 signing algorithms (**HS256**, **HS384**, **HS512**, **ES256**, **RS256**, **PS256**).",
-        "Maintained the user-management dashboard and **front-end SDKs**, resolving UI defects and improving dashboard and website performance [metric: e.g. Lighthouse / load time].",
-        "Migrated legacy code to the latest SDK version and introduced theming on the sign-up page, working with the UI/UX team to integrate the new design elements."
+        "Implemented **session-based authentication** in the sign-up flow of the **Node.js** back-end SDK, making sign-up safer and smoother for applications built on SuperTokens.",
+        "Built and launched SuperTokens' public **JWT** encoder/decoder, with signature validation across 6 algorithms (**HS256**, **HS384**, **HS512**, **ES256**, **RS256**, **PS256**), giving developers a way to debug tokens on the company site.",
+        "Migrated legacy front-end code to the latest SDK version, added theming support to the sign-up page and fixed UI defects in the user-management dashboard."
       ],
-      "stack": ["Node.js", "React", "JWT", "Session authentication"]
+      "stack": [
+        "Node.js",
+        "React",
+        "TypeScript",
+        "JWT",
+        "Session authentication"
+      ],
+      "location": "Remote"
     },
     {
       "id": "caw-studios",
       "role": "Software Dev Engineer II",
       "company": "ChimpsAtWork (CAW) Studios",
       "companyUrl": "https://cawstudios.com",
-      "location": "Hyderabad, India",
+      "location": "Hyderabad, India (Remote)",
       "startDate": "2022-01",
       "endDate": "2023-01",
       "achievements": [
-        "Led the from-scratch build of the BeTagged social-media marketing web app in **TypeScript** and **React**, mentoring developers through daily code reviews [metric: e.g. launch scope / users].",
-        "Set up and managed a **Lerna** monorepo and co-led the shared-code effort, removing duplicated business logic between the web and mobile apps [metric: e.g. % shared code].",
-        "Designed a single cross-platform logging setup with **Segment** and **Sentry** to replace platform-specific logging; it became the blueprint reused by other projects across the organisation.",
-        "Reduced wait times across Reeco's three procurement apps (Back Office, Seller, Buyer) by implementing optimistic updates and response caching with **TanStack Query** [metric: e.g. perceived latency].",
-        "Contributed reusable components to a shared **Storybook** library, improving consistency across the three apps [metric: e.g. shared components]."
+        "Launched BeTagged, a social-media marketing platform for a Malaysian client, by leading its **TypeScript** and **React** web app from scratch and mentoring junior developers through daily code reviews.",
+        "Eliminated duplicated business logic between the web and mobile apps by setting up and managing a **Lerna** monorepo and co-leading the shared-code effort.",
+        "Designed a single cross-platform logging setup with **Segment** and **Sentry**, later adopted as the organisation's logging blueprint.",
+        "Cut wait times across Reeco's three procurement apps (Back Office, Seller, Buyer) with optimistic updates and response caching in **TanStack Query**, and built a shared **Storybook** component library."
       ],
       "stack": [
         "React",
@@ -212,26 +251,26 @@
     },
     {
       "id": "emertech-lead",
-      "role": "Full Stack / Lead Front End Developer",
+      "role": "Lead Front-End / Full-Stack Developer",
       "company": "Emertech Innovations Pvt. Ltd.",
       "companyUrl": "https://emertech.io",
       "location": "Nashik, India",
       "startDate": "2020-04",
       "endDate": "2022-03",
       "achievements": [
-        "Architected a **Node.js** print service and dashboard (**Express**, **MongoDB**, **Puppeteer**) that automated dynamic QR-code label generation and replaced proprietary software, increasing daily label-printing throughput by more than 60%.",
-        "Co-led development of QRiosity, a blockchain-enabled farm-to-fork traceability platform that has given 5M+ products a unique identity, is integrated into 3+ supply chains, and won 1st prize at the inaugural Inspiring Futures event (UAE).",
-        "Designed client-specific traceability experiences in **Adobe XD** and built them in **React**, shipping 5+ trace apps.",
-        "Led front-end development of the Invento ERP, covering inventory, invoicing and throughput estimation, with **React**, **Redux** and **Ant Design** [metric].",
-        "Brought the traceability module to farmers in Maharashtra through a **PWA** and a **React Native** Android app with **i18n** support [metric: e.g. farmers onboarded].",
-        "Developed and co-designed the corporate website of Sahyadri Farms, India's leading Farmer-Producer Organisation, reaching ~10K impressions per month.",
-        "Trained 30+ interns in **React** through hands-on bootcamps, from fundamentals to advanced patterns."
+        "Increased daily label-printing throughput by more than 60% by architecting a **Node.js** print driver and **React** dashboard (**Express**, **MongoDB**, **Puppeteer**) that automated QR-coded label generation and replaced a slow proprietary process.",
+        "Gave 5M+ products farm-to-fork traceability by co-leading QRiosity, a blockchain-backed **MERN** platform, and designing and building its 5+ custom trace apps; adopted across 3+ supply chains and winner of 1st prize at the inaugural Inspiring Futures event (UAE).",
+        "Reached farmers in Maharashtra with limited tech experience by building a **React Native** Android app and a **PWA** with multilingual (**i18n**) support.",
+        "Led front-end development of the Invento ERP, covering inventory, invoicing and throughput estimation, with **React**, **Redux** and **Ant Design**.",
+        "Trained 30+ interns in **React** through hands-on bootcamps, from fundamentals to advanced patterns.",
+        "Promoted from Front-End Developer Intern in April 2020."
       ],
       "stack": [
         "Node.js",
         "Express",
         "MongoDB",
         "Puppeteer",
+        "JWT",
         "React",
         "Redux",
         "React Native",
@@ -242,7 +281,7 @@
     },
     {
       "id": "emertech-intern",
-      "role": "Front End Developer Intern",
+      "role": "Front-End Developer Intern",
       "company": "Emertech Innovations Pvt. Ltd.",
       "companyUrl": "https://emertech.io",
       "location": "Nashik, India",
@@ -250,24 +289,36 @@
       "startDate": "2019-06",
       "endDate": "2020-04",
       "achievements": [
-        "Designed and built DhammaEdicts across the stack (**React**, **Redux**, **Node.js**, **Express**, **MongoDB**): a web app preserving the Buddhist Tripitaka texts on a blockchain, inaugurated by the Dalai Lama at the Global Buddhist Congregation 2019.",
+        "Built DhammaEdicts, a **MERN** web app (**React**, **Redux**, **Node.js**, **Express**, **MongoDB**) storing the Buddhist Tripitaka scriptures on a blockchain, inaugurated by the Dalai Lama at the Global Buddhist Congregation 2019.",
         "Co-implemented authentication and authorisation with **JWT** to secure access to the platform."
       ],
-      "stack": ["Node.js", "Express", "MongoDB", "React", "Redux", "JWT"]
+      "stack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "React",
+        "Redux",
+        "JWT"
+      ]
     },
     {
       "id": "digital-impact-square",
       "role": "Innovator",
-      "company": "TCS Digital Impact Square",
+      "company": "Digital Impact Square (TCS Foundation)",
       "companyUrl": "https://www.digitalimpactsquare.com/",
       "location": "Nashik, India",
       "startDate": "2019-06",
       "endDate": "2020-04",
       "achievements": [
-        "Designed and developed the website for HortiSquare, a farmer-outreach programme connecting farmers with skill training and incubation.",
+        "Built the corporate website for Sahyadri Farms, India's leading Farmer-Producer Organisation, reaching ~10K impressions per month.",
+        "Built the HortiSquare farmer-outreach website, letting farmers apply for skill training and incubation.",
         "Worked alongside tech entrepreneurs through team exercises, presentations and seminars to turn proposed solutions to real-world problems into software."
       ],
-      "stack": ["Web Design", "Web Development"]
+      "stack": [
+        "Web Design",
+        "Web Development"
+      ],
+      "employmentType": "Social-Innovation Fellowship"
     },
     {
       "id": "freelance",
@@ -279,21 +330,70 @@
       "achievements": [
         "Designed and co-developed an **Android** app and website for an acupressure practice, letting patients book appointments and practitioners manage reports."
       ],
-      "stack": ["Android", "Web Development"]
+      "stack": [
+        "Android",
+        "Web Development"
+      ]
     }
   ],
   "projects": [
+    {
+      "id": "reeco-marketplace",
+      "name": "Reeco Procurement Marketplace",
+      "category": "professional",
+      "organization": "Reeco (started at CAW Studios)",
+      "summary": "B2B hospitality procurement marketplace connecting hotels with suppliers, made up of Back Office, Seller and Buyer apps.",
+      "impact": "Store, multi-stage Orders and Accounts Payable modules with **RBAC**; shorter wait times through optimistic updates and response caching.",
+      "role": "Built the three apps through CAW Studios, then joined Reeco directly; lead front-end on the Buyer app.",
+      "stack": [
+        "React",
+        "TypeScript",
+        "TanStack Query",
+        "RBAC",
+        "styled-components",
+        "Nivo",
+        "Storybook"
+      ],
+      "links": {
+        "live": "https://buyer-df.reeco.io"
+      }
+    },
     {
       "id": "qriosity",
       "name": "QRiosity",
       "category": "professional",
       "organization": "Emertech Innovations",
-      "summary": "Blockchain-enabled farm-to-fork traceability platform for consumables across the supply chain.",
+      "summary": "Blockchain-backed MERN platform for farm-to-fork traceability of consumables across the supply chain.",
       "impact": "More than 60% faster label printing; 5M+ uniquely traceable products; integrated into 3+ supply chains.",
       "role": "Co-led development; architected the Node.js print service and dashboard and built 5+ client trace apps.",
-      "stack": ["Node.js", "Express", "MongoDB", "Puppeteer", "React", "Redux", "SASS"],
+      "stack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Puppeteer",
+        "React",
+        "Redux",
+        "SASS"
+      ],
       "links": {
         "live": "https://qriosity.agrotrust.io/trace/73616879616472692d6661726d737c7c3030303030327c7c3530396535617c7c313034303738"
+      }
+    },
+    {
+      "id": "reeco-mobile",
+      "name": "Reeco Mobile App",
+      "category": "professional",
+      "organization": "Reeco",
+      "summary": "Offline-capable mobile app for Reeco's hospitality procurement marketplace.",
+      "impact": "Stable **Android** and **iOS** releases shipped from scratch, with reliable ordering on unstable hotel networks.",
+      "role": "Built the app from scratch and guided subsequent releases.",
+      "stack": [
+        "React Native",
+        "TypeScript",
+        "TanStack Query"
+      ],
+      "links": {
+        "live": "https://play.google.com/store/apps/details?id=io.reeco.ocr&hl=en&gl=US"
       }
     },
     {
@@ -304,22 +404,16 @@
       "summary": "Full-stack web app preserving the Buddhist Tripitaka texts on a blockchain.",
       "impact": "Inaugurated by the Dalai Lama at the Global Buddhist Congregation 2019.",
       "role": "Designed and built the application across the stack, including JWT authentication and authorisation.",
-      "stack": ["Node.js", "Express", "MongoDB", "React", "Redux", "JWT"],
+      "stack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "React",
+        "Redux",
+        "JWT"
+      ],
       "links": {
         "live": "https://dhammaedicts-block.com"
-      }
-    },
-    {
-      "id": "reeco-mobile",
-      "name": "Reeco Mobile App",
-      "category": "professional",
-      "organization": "Reeco",
-      "summary": "Mobile companion app for Reeco's restaurant procurement platform.",
-      "impact": "Stable **Android** and **iOS** releases shipped from scratch; [metric: installs / active users].",
-      "role": "Built the app from scratch and guided subsequent releases.",
-      "stack": ["React Native"],
-      "links": {
-        "live": "https://play.google.com/store/apps/details?id=io.reeco.ocr&hl=en&gl=US"
       }
     },
     {
@@ -330,7 +424,9 @@
       "summary": "Public tool for encoding and decoding JSON Web Tokens with signature-key validation.",
       "impact": "Supports 6 signing algorithms: HS256, HS384, HS512, ES256, RS256 and PS256.",
       "role": "Built and launched the module.",
-      "stack": ["JWT"],
+      "stack": [
+        "JWT"
+      ],
       "links": {
         "live": "https://supertokens.com/jwt-encoder-decoder"
       }
@@ -340,25 +436,22 @@
       "name": "BeTagged",
       "category": "professional",
       "organization": "CAW Studios",
-      "summary": "Social-media marketing platform.",
-      "impact": "Its cross-platform **Segment** + **Sentry** logging became the blueprint for other projects in the organisation; [metric: users / launch outcome].",
+      "summary": "Social-media marketing platform for a Malaysian client.",
+      "impact": "Its cross-platform **Segment** + **Sentry** logging became the blueprint for other projects in the organisation.",
       "role": "Led the web app build from scratch; set up the Lerna monorepo and co-led the shared code.",
-      "stack": ["React", "TypeScript", "Redux", "Chakra UI", "Lerna", "Segment", "Sentry", "styled-components", "SASS"],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Chakra UI",
+        "Lerna",
+        "Segment",
+        "Sentry",
+        "styled-components",
+        "SASS"
+      ],
       "links": {
         "live": "https://incom.betagged.co"
-      }
-    },
-    {
-      "id": "reeco-procurement",
-      "name": "Reeco Procurement Apps",
-      "category": "professional",
-      "organization": "CAW Studios (client: Reeco)",
-      "summary": "Three TypeScript apps for restaurant management and goods procurement: Back Office, Seller-facing and Buyer-facing.",
-      "impact": "Shorter wait times through optimistic updates and response caching; [metric].",
-      "role": "Front-end engineer; contributor to the shared Storybook component library.",
-      "stack": ["React", "TypeScript", "TanStack Query", "styled-components", "Nivo", "Storybook"],
-      "links": {
-        "live": "https://buyer-df.reeco.io"
       }
     },
     {
@@ -367,9 +460,13 @@
       "category": "professional",
       "organization": "Emertech Innovations",
       "summary": "ERP software that helps enterprises manage inventory, generate invoices and estimate throughput.",
-      "impact": "[metric]",
       "role": "Led front-end development.",
-      "stack": ["React", "Redux", "Ant Design", "SASS"],
+      "stack": [
+        "React",
+        "Redux",
+        "Ant Design",
+        "SASS"
+      ],
       "links": {
         "live": "https://invento.agrotrust.io"
       }
@@ -378,11 +475,13 @@
       "id": "sahyadri-farms",
       "name": "Sahyadri Farms Website",
       "category": "professional",
-      "organization": "Sahyadri Farms",
+      "organization": "Digital Impact Square (client: Sahyadri Farms)",
       "summary": "Corporate website for India's leading Farmer-Producer Organisation.",
       "impact": "~10K impressions per month after the relaunch.",
-      "role": "Developed and co-designed the site.",
-      "stack": ["Web Development"],
+      "role": "Built the site.",
+      "stack": [
+        "Web Development"
+      ],
       "links": {
         "live": "https://sahyadrifarms.com"
       }
@@ -391,10 +490,12 @@
       "id": "hortisquare",
       "name": "HortiSquare",
       "category": "professional",
-      "organization": "TCS Digital Impact Square",
+      "organization": "Digital Impact Square (TCS Foundation)",
       "summary": "Website for a farmer-outreach programme offering skill training and incubation.",
       "role": "Designed and developed the website.",
-      "stack": ["Web Development"],
+      "stack": [
+        "Web Development"
+      ],
       "links": {
         "live": "https://www.hortisquare.org"
       }
@@ -404,7 +505,13 @@
       "name": "Movies Explorer",
       "category": "personal",
       "summary": "Full-stack MERN application for browsing, managing and playing a personal movie library, with offline metadata caching (similar to Plex).",
-      "stack": ["Node.js", "Express", "MongoDB", "React", "Chakra UI"],
+      "stack": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "React",
+        "Chakra UI"
+      ],
       "links": {
         "repo": "https://github.com/AreebKhan619/MoviesExplorer"
       }
@@ -414,7 +521,14 @@
       "name": "Plant Disease Detection",
       "category": "personal",
       "summary": "Final-year engineering project: a machine-learning plant disease detection and prevention system with a **Flask** back end and a **React** front end.",
-      "stack": ["Python", "Flask", "TensorFlow", "Keras", "React", "Semantic UI"],
+      "stack": [
+        "Python",
+        "Flask",
+        "TensorFlow",
+        "Keras",
+        "React",
+        "Semantic UI"
+      ],
       "links": {
         "repo": "https://github.com/AreebKhan619/PlantDiseaseDetection"
       }
@@ -424,7 +538,12 @@
       "name": "Portfolio",
       "category": "personal",
       "summary": "This site: a statically rendered, CMS-ready Next.js portfolio with structured data for search engines.",
-      "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Motion"
+      ],
       "links": {
         "live": "https://areeb.co.in",
         "repo": "https://github.com/AreebKhan619/portfolio-website"
@@ -435,7 +554,10 @@
       "name": "2048",
       "category": "personal",
       "summary": "The classic 2048 puzzle game, rebuilt in React.",
-      "stack": ["React", "styled-components"],
+      "stack": [
+        "React",
+        "styled-components"
+      ],
       "links": {
         "live": "https://2048-three.vercel.app",
         "repo": "https://github.com/AreebKhan619/2048"
@@ -446,7 +568,9 @@
       "name": "Sticky Notes",
       "category": "personal",
       "summary": "Draggable sticky notes; my first React project.",
-      "stack": ["React"],
+      "stack": [
+        "React"
+      ],
       "links": {
         "live": "https://stickynotesinreact.netlify.app/",
         "repo": "https://github.com/AreebKhan619/react-sticky-notes"
@@ -457,7 +581,9 @@
       "name": "Snake",
       "category": "personal",
       "summary": "The classic Snake game in React.",
-      "stack": ["React"],
+      "stack": [
+        "React"
+      ],
       "links": {
         "repo": "https://github.com/AreebKhan619/snake-game"
       }
@@ -466,7 +592,13 @@
   "skills": [
     {
       "category": "Languages",
-      "items": ["TypeScript", "JavaScript", "Python", "HTML", "CSS"]
+      "items": [
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "Python",
+        "HTML5",
+        "CSS3"
+      ]
     },
     {
       "category": "Backend & Data",
@@ -474,9 +606,10 @@
         "Node.js",
         "Express",
         "MongoDB",
-        "Flask",
+        "REST APIs",
         "JWT authentication",
         "Session-based authentication",
+        "Flask",
         "Puppeteer"
       ]
     },
@@ -494,33 +627,49 @@
         "Ant Design",
         "Material UI",
         "SASS",
-        "CSS-in-JS",
-        "Pug"
+        "i18n"
       ]
     },
     {
       "category": "Mobile",
-      "items": ["React Native", "Progressive Web Apps", "Android"]
+      "items": [
+        "React Native",
+        "Offline-first data",
+        "Progressive Web Apps",
+        "Android"
+      ]
     },
     {
-      "category": "Testing & Tooling",
+      "category": "Architecture & Tooling",
       "items": [
-        "Git",
-        "React Testing Library",
-        "TDD",
+        "RBAC",
+        "Monorepos (Lerna)",
         "Storybook",
-        "Lerna",
-        "Segment",
-        "Sentry"
+        "Git",
+        "npm",
+        "Sentry",
+        "Segment"
+      ]
+    },
+    {
+      "category": "Testing",
+      "items": [
+        "React Testing Library",
+        "TDD"
       ]
     },
     {
       "category": "Machine Learning",
-      "items": ["TensorFlow", "Keras"]
+      "items": [
+        "TensorFlow",
+        "Keras"
+      ]
     },
     {
       "category": "Foundations",
-      "items": ["Computer Networking"]
+      "items": [
+        "Computer Networking"
+      ]
     }
   ],
   "education": [
@@ -532,7 +681,7 @@
       "location": "Aurangabad, India",
       "startDate": "2016-07",
       "endDate": "2020-10",
-      "grade": "GPA 7.6",
+      "grade": "CGPA 7.6/10",
       "highlights": [
         "Final-year project: machine-learning plant disease detection and prevention system (**React**, **Semantic UI**, **Flask**, **TensorFlow**, **Keras**).",
         "Runner-up, Web Quest (techfest event), 2017 and 2018.",
@@ -616,7 +765,8 @@
   "publications": [
     {
       "title": "Empowering Farmers with Blockchain-Based Transparency Throughout the Value Chain",
-      "publisher": "Indian Society of Plant Genetic Resources"
+      "publisher": "Indian Society of Plant Genetic Resources",
+      "date": "2022-09"
     }
   ]
 }

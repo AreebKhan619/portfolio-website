@@ -3,6 +3,7 @@ import { ExternalLink } from "@/components/external-link";
 import { FadeIn } from "@/components/fade-in";
 import { RichText } from "@/components/rich-text";
 import { SectionHeading } from "@/components/section-heading";
+import { formatYearMonth } from "@/lib/format";
 import type { Certification, Education as EducationEntry, Publication } from "@/types/profile";
 
 interface EducationProps {
@@ -100,7 +101,10 @@ export function Education({ education, certifications, publications }: Education
                   ) : (
                     <cite className="text-fg not-italic">{pub.title}</cite>
                   )}
-                  <span className="block text-sm">{pub.publisher}</span>
+                  <span className="block text-sm">
+                    {pub.publisher}
+                    {pub.date ? <span> · {formatYearMonth(pub.date)}</span> : null}
+                  </span>
                 </li>
               ))}
             </ul>

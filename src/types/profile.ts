@@ -185,6 +185,7 @@ export interface Publication {
   title: string;
   publisher: string;
   url?: string;
+  date?: YearMonth;
 }
 
 /** Terminal command names, in the order `help` lists them. */
