@@ -12,7 +12,7 @@ interface FadeInProps {
 
 /**
  * The only animation primitive on the site: a subtle fade/slide-up when the
- * block scrolls into view.
+ * block scrolls into view, on a critically damped spring (no overshoot).
  *
  * Reduced motion: the markup stays identical (no hydration mismatch); the
  * transition becomes instant, and a CSS rule in globals.css keeps
@@ -25,13 +25,13 @@ export function FadeIn({ children, className, delay = 0 }: FadeInProps) {
     <motion.div
       data-fade-in=""
       className={className}
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "0px 0px -10% 0px" }}
       transition={
         reduceMotion
           ? { duration: 0 }
-          : { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98], delay }
+          : { type: "spring", visualDuration: 0.6, bounce: 0, delay }
       }
     >
       {children}

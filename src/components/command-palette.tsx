@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useIsPresent, useReducedMotion } from "motion/react";
 import { useTheme } from "next-themes";
 import {
   useEffect,
@@ -85,6 +86,9 @@ function matches(command: Command, query: string): boolean {
     .every((token) => haystack.includes(token));
 }
 
+/** Critically damped: the panel settles without overshoot. */
+const SPRING = { type: "spring", visualDuration: 0.32, bounce: 0 } as const;
+
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
@@ -101,6 +105,8 @@ export default function CommandPalette({ data, onClose, onOpenTerminal }: Comman
   const [active, setActive] = useState(0);
   const [copied, setCopied] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const isPresent = useIsPresent();
+  const reduceMotion = useReducedMotion();
   const baseId = useId();
   const listId = `${baseId}-list`;
   const titleId = `${baseId}-title`;
@@ -270,13 +276,26 @@ export default function CommandPalette({ data, onClose, onOpenTerminal }: Comman
   })).filter(({ items }) => items.length > 0);
 
   return createPortal(
-    <div className="fixed inset-0 z-[60] flex items-start justify-center px-4 pt-[12vh]">
-      <div
+    <div
+      className="fixed inset-0 z-60 flex items-start justify-center px-4 pt-[12vh]"
+      style={isPresent ? undefined : { pointerEvents: "none" }}
+    >
+      <motion.div
         aria-hidden="true"
-        className="cmdk-backdrop absolute inset-0 bg-black/40 backdrop-blur-[2px]"
+        className="absolute inset-0 bg-(--scrim)"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
         onMouseDown={() => onClose()}
       />
-      <div
+      {/* Materialises like Spotlight: scale, blur and opacity together, out the same way. */}
+      <motion.div
+        initial={reduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: -10, filter: "blur(8px)" }}
+        animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
+        exit={reduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: -10, filter: "blur(8px)" }}
+        transition={reduceMotion ? { duration: 0.15 } : SPRING}
+        style={{ transformOrigin: "50% 0%" }}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
@@ -285,15 +304,15 @@ export default function CommandPalette({ data, onClose, onOpenTerminal }: Comman
           // Keep focus on the input when clicking non-focusable parts.
           if (event.target !== inputRef.current) event.preventDefault();
         }}
-        className="cmdk-panel relative w-full max-w-xl overflow-hidden rounded-2xl border border-line bg-surface text-fg shadow-2xl shadow-black/20"
+        className="material-panel relative w-full max-w-xl overflow-hidden rounded-[1.375rem] text-fg"
       >
         <h2 id={titleId} className="sr-only">
           {copy.title}
         </h2>
-        <div className="flex items-center gap-3 border-b border-line px-4">
-          <svg viewBox="0 0 16 16" className="size-4 shrink-0 text-muted" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-            <circle cx="7" cy="7" r="4.5" />
-            <path d="m10.5 10.5 3 3" strokeLinecap="round" />
+        <div className="flex items-center gap-3 border-b border-hairline px-5">
+          <svg viewBox="0 0 16 16" className="size-5 shrink-0 text-muted" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+            <circle cx="7" cy="7" r="4.75" />
+            <path d="m10.5 10.5 3.25 3.25" strokeLinecap="round" />
           </svg>
           <input
             ref={inputRef}
@@ -313,9 +332,9 @@ export default function CommandPalette({ data, onClose, onOpenTerminal }: Comman
               setQuery(event.target.value);
               setActive(0);
             }}
-            className="h-14 w-full min-w-0 bg-transparent text-base text-fg outline-none placeholder:text-muted"
+            className="h-16 w-full min-w-0 bg-transparent text-[1.375rem] font-normal tracking-[-0.02em] text-fg outline-none placeholder:text-subtle focus-visible:outline-none"
           />
-          <kbd className="hidden rounded-md border border-line px-1.5 py-0.5 font-mono text-[0.65rem] text-muted sm:inline">
+          <kbd className="hidden rounded-md bg-fg/6 px-1.5 py-0.5 font-sans text-caption font-medium text-muted sm:inline">
             Esc
           </kbd>
         </div>
@@ -331,7 +350,7 @@ export default function CommandPalette({ data, onClose, onOpenTerminal }: Comman
               <div
                 id={`${baseId}-group-${group}`}
                 role="presentation"
-                className="px-3 pt-2 pb-1.5 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted"
+                className="px-3 pt-2 pb-1 text-xs font-semibold text-subtle"
               >
                 {copy.groups[group]}
               </div>
@@ -346,16 +365,16 @@ export default function CommandPalette({ data, onClose, onOpenTerminal }: Comman
                     aria-selected={index === activeIndex}
                     onMouseMove={() => index !== activeIndex && setActive(index)}
                     onClick={() => command.run()}
-                    className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-muted aria-selected:bg-accent-soft aria-selected:text-fg"
+                    className="flex cursor-default items-center gap-3 rounded-[0.625rem] px-3 py-2 text-callout text-fg aria-selected:bg-button aria-selected:text-button-fg"
                   >
                     <Icon name={isCopied ? "check" : command.icon} />
-                    <span className={`truncate ${isCopied ? "font-medium text-accent" : ""}`}>
+                    <span className={`truncate ${isCopied ? "font-semibold" : ""}`}>
                       {isCopied ? copy.actions.copied : command.label}
                     </span>
                     {command.shortcut ? (
                       <kbd
                         aria-hidden="true"
-                        className="ml-auto rounded-md border border-line px-1.5 font-mono text-[0.7rem] text-muted"
+                        className="ml-auto rounded-md bg-current/12 px-1.5 font-mono text-xs opacity-80"
                       >
                         {command.shortcut}
                       </kbd>
@@ -372,7 +391,7 @@ export default function CommandPalette({ data, onClose, onOpenTerminal }: Comman
 
         <div
           aria-hidden="true"
-          className="hidden items-center gap-4 border-t border-line px-4 py-2.5 font-mono text-[0.65rem] text-muted sm:flex"
+          className="hidden items-center gap-4 border-t border-hairline px-5 py-2.5 text-caption font-medium text-subtle sm:flex"
         >
           <span>↑↓ {copy.hints.navigate}</span>
           <span>↵ {copy.hints.select}</span>
@@ -381,7 +400,7 @@ export default function CommandPalette({ data, onClose, onOpenTerminal }: Comman
         <p role="status" aria-live="polite" className="sr-only">
           {copied ? copy.actions.copiedAnnouncement : ""}
         </p>
-      </div>
+      </motion.div>
     </div>,
     document.body,
   );

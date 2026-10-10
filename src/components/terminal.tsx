@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useIsPresent, useReducedMotion } from "motion/react";
 import { useTheme } from "next-themes";
 import {
   Fragment,
@@ -41,7 +42,7 @@ function linkify(line: string): ReactNode {
         href={href}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel="noopener noreferrer"
-        className="text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+        className="text-link underline decoration-link/40 underline-offset-2 hover:decoration-link"
       >
         {part}
       </a>
@@ -67,6 +68,8 @@ export default function Terminal({ data, onClose }: TerminalProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isPresent = useIsPresent();
+  const reduceMotion = useReducedMotion();
   const baseId = useId();
   const titleId = `${baseId}-title`;
   const inputId = `${baseId}-input`;
@@ -169,39 +172,64 @@ export default function Terminal({ data, onClose }: TerminalProps) {
   };
 
   return createPortal(
-    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-      <div
+    <div
+      className="fixed inset-0 z-60 flex items-center justify-center p-4"
+      style={isPresent ? undefined : { pointerEvents: "none" }}
+    >
+      <motion.div
         aria-hidden="true"
-        className="cmdk-backdrop absolute inset-0 bg-black/45 backdrop-blur-[2px]"
+        className="absolute inset-0 bg-(--scrim)"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
         onMouseDown={onClose}
       />
-      <div
+      <motion.div
+        initial={reduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.94, filter: "blur(8px)" }}
+        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+        exit={reduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.94, filter: "blur(8px)" }}
+        transition={reduceMotion ? { duration: 0.15 } : { type: "spring", visualDuration: 0.34, bounce: 0 }}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
         onKeyDown={onDialogKeyDown}
-        className="cmdk-panel relative flex h-[min(75vh,34rem)] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-line bg-surface font-mono text-[0.8rem] leading-relaxed text-fg shadow-2xl shadow-black/30 sm:text-sm"
+        className="material-panel relative flex h-[min(75vh,34rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl font-mono text-[0.8rem] leading-relaxed tracking-normal text-fg sm:text-sm"
       >
-        <div className="flex items-center gap-2 border-b border-line bg-bg/60 px-4 py-2.5">
-          <span aria-hidden="true" className="flex gap-1.5">
-            <span className="size-2.5 rounded-full bg-[#ff5f57]" />
-            <span className="size-2.5 rounded-full bg-[#febc2e]" />
-            <span className="size-2.5 rounded-full bg-[#28c840]" />
+        {/*
+          macOS title bar: the red light is the close button, as everywhere on the
+          Mac. It draws at 12px but its hit area is 44px (::before), the touch minimum.
+        */}
+        <div className="group/lights relative flex h-11 shrink-0 items-center border-b border-hairline px-4">
+          <span className="flex items-center gap-2">
+            <button
+              ref={closeRef}
+              type="button"
+              onClick={onClose}
+              aria-label={copy.closeLabel}
+              className="relative grid size-3 place-items-center rounded-full bg-[#ff5f57] text-black/60 ring-1 ring-black/10 ring-inset before:absolute before:-inset-4 before:rounded-full focus-visible:outline-offset-2 active:brightness-90"
+            >
+              <svg
+                viewBox="0 0 12 12"
+                className="size-2 opacity-0 group-hover/lights:opacity-100 group-focus-within/lights:opacity-100"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                aria-hidden="true"
+              >
+                <path d="m3 3 6 6M9 3 3 9" />
+              </svg>
+            </button>
+            <span aria-hidden="true" className="size-3 rounded-full bg-[#febc2e] ring-1 ring-black/10 ring-inset" />
+            <span aria-hidden="true" className="size-3 rounded-full bg-[#28c840] ring-1 ring-black/10 ring-inset" />
           </span>
-          <h2 id={titleId} className="mx-auto truncate text-xs text-muted">
+          <h2
+            id={titleId}
+            className="pointer-events-none absolute inset-x-20 truncate text-center font-sans text-footnote font-semibold text-muted"
+          >
             {copy.title}
           </h2>
-          <button
-            ref={closeRef}
-            type="button"
-            onClick={onClose}
-            aria-label={copy.closeLabel}
-            className="inline-flex size-6 items-center justify-center rounded-md text-muted transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-accent"
-          >
-            <svg viewBox="0 0 16 16" className="size-3.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
-              <path d="m4 4 8 8M12 4l-8 8" />
-            </svg>
-          </button>
         </div>
 
         <div
@@ -216,7 +244,7 @@ export default function Terminal({ data, onClose }: TerminalProps) {
               <div key={entry.id} className="mb-2">
                 {entry.input !== null ? (
                   <p className="break-words">
-                    <span className="text-accent">{copy.prompt}</span> {entry.input}
+                    <span className="font-semibold text-accent">{copy.prompt}</span> {entry.input}
                   </p>
                 ) : null}
                 {entry.lines.map((line, i) => (
@@ -232,7 +260,7 @@ export default function Terminal({ data, onClose }: TerminalProps) {
             <label htmlFor={inputId} className="sr-only">
               {copy.inputLabel}
             </label>
-            <span aria-hidden="true" className="shrink-0 text-accent">
+            <span aria-hidden="true" className="shrink-0 font-semibold text-accent">
               {copy.prompt}
             </span>
             <input
@@ -250,11 +278,11 @@ export default function Terminal({ data, onClose }: TerminalProps) {
               autoCorrect="off"
               spellCheck={false}
               enterKeyHint="send"
-              className="min-w-0 flex-1 bg-transparent text-base text-fg caret-accent outline-none sm:text-sm"
+              className="min-w-0 flex-1 bg-transparent text-base text-fg caret-accent outline-none focus-visible:outline-none sm:text-sm"
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>,
     document.body,
   );

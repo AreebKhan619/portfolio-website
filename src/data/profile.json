@@ -219,7 +219,8 @@
       "experience": "Years of experience",
       "companies": "Companies",
       "stack": "Core stack",
-      "availability": "Availability"
+      "availability": "Availability",
+      "highlights": "Highlights"
     },
     "coreStack": [
       "TypeScript",

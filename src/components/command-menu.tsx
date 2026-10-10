@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence } from "motion/react";
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 
@@ -109,23 +110,21 @@ export function CommandMenu({ palette, terminal }: CommandMenuProps) {
         aria-label={palette.copy.triggerLabel}
         aria-haspopup="dialog"
         aria-keyshortcuts="Meta+K Control+K"
-        className="inline-flex h-9 items-center gap-2 rounded-full border border-line px-2.5 text-muted transition-colors hover:border-fg/30 hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-3"
+        title={platform === null ? undefined : `${palette.copy.triggerLabel} (${platform === "mac" ? "⌘K" : "Ctrl K"})`}
+        className="pressable inline-flex size-9 items-center justify-center rounded-full text-fg/75 hover:bg-fg/6 hover:text-fg"
       >
-        <svg viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-          <circle cx="7" cy="7" r="4.5" />
-          <path d="m10.5 10.5 3 3" strokeLinecap="round" />
+        <svg viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <circle cx="7" cy="7" r="4.75" />
+          <path d="m10.5 10.5 3.25 3.25" strokeLinecap="round" />
         </svg>
-        <kbd
-          aria-hidden="true"
-          className="hidden min-w-[3.25rem] text-center font-mono text-[0.7rem] tracking-wide sm:inline"
-        >
-          {platform === null ? " " : platform === "mac" ? "⌘K" : "Ctrl K"}
-        </kbd>
       </button>
-      {overlay === "palette" ? (
-        <CommandPalette data={palette} onClose={close} onOpenTerminal={openTerminal} />
-      ) : null}
-      {overlay === "terminal" ? <Terminal data={terminal} onClose={close} /> : null}
+      {/* Overlays animate out along the path they came in on. */}
+      <AnimatePresence>
+        {overlay === "palette" ? (
+          <CommandPalette key="palette" data={palette} onClose={close} onOpenTerminal={openTerminal} />
+        ) : null}
+        {overlay === "terminal" ? <Terminal key="terminal" data={terminal} onClose={close} /> : null}
+      </AnimatePresence>
     </>
   );
 }

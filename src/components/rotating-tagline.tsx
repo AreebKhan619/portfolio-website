@@ -26,9 +26,9 @@ function keyframes(name: string, count: number): string {
   const pct = (value: number) => `${value.toFixed(3)}%`;
 
   return `@keyframes ${name}{
-0%{opacity:0;transform:translateY(.35em);filter:blur(4px)}
-${pct(fade)},${pct(slot)}{opacity:1;transform:none;filter:blur(0)}
-${pct(slot + fade)},100%{opacity:0;transform:translateY(-.35em);filter:blur(4px)}
+0%{opacity:0;transform:translateY(.35em)}
+${pct(fade)},${pct(slot)}{opacity:1;transform:none}
+${pct(slot + fade)},100%{opacity:0;transform:translateY(-.35em)}
 }`;
 }
 
