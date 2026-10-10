@@ -6,9 +6,9 @@ interface SectionHeadingProps {
 
 export function SectionHeading({ id, eyebrow, title }: SectionHeadingProps) {
   return (
-    <div className="mb-10">
-      <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{eyebrow}</p>
-      <h2 id={id} className="mt-2 font-display text-4xl leading-none tracking-tight text-fg sm:text-5xl">
+    <div className="mb-10 sm:mb-14">
+      <p className="type-eyebrow text-accent">{eyebrow}</p>
+      <h2 id={id} className="type-headline mt-2 text-fg">
         {title}
       </h2>
     </div>

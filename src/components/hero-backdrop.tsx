@@ -1,8 +1,6 @@
-import { PointerGlow } from "@/components/pointer-glow";
-
 /**
- * Decorative layer behind the header + hero: a faded grid over a soft
- * gradient mesh, with a pointer-following glow on top.
+ * Decorative layer behind the header + hero: a soft, static aura of colour
+ * that fades into the page. Nothing moves, so it never competes with the copy.
  *
  * It is absolutely positioned against the initial containing block (no
  * positioned ancestor), so it spans the viewport width without `100vw`
@@ -12,11 +10,7 @@ export function HeroBackdrop() {
   return (
     <div
       aria-hidden="true"
-      className="hero-backdrop pointer-events-none absolute inset-x-0 top-0 -z-10 h-[46rem] overflow-hidden select-none sm:h-[52rem]"
-    >
-      <div className="hero-mesh absolute inset-0" />
-      <div className="hero-grid absolute inset-0" />
-      <PointerGlow />
-    </div>
+      className="hero-aura pointer-events-none absolute inset-x-0 top-0 -z-10 h-[max(46rem,100svh)] overflow-hidden select-none"
+    />
   );
 }

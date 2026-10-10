@@ -3,16 +3,16 @@ import { join } from "node:path";
 
 import { ImageResponse } from "next/og";
 
-/** Initials drawn in the site's display face (Instrument Serif italic). */
+/** Initials in bold Inter, the site's stand-in for SF Pro. */
 const INITIALS = "AK";
 
-/** Light-theme accent from globals.css, deepened toward violet for the tile. */
-const FROM = "#4f46e5";
-const TO = "#7c3aed";
+/** Apple blue from globals.css: lighter at the top, like light catching an app icon. */
+const TOP = "#2997ff";
+const BOTTOM = "#0060df";
 
 /** next/og needs a TTF/OTF; the site's next/font copy is woff2, so the TTF is vendored (OFL). */
 function loadFont() {
-  return readFile(join(process.cwd(), "src/assets/fonts/InstrumentSerif-Italic.ttf"));
+  return readFile(join(process.cwd(), "src/assets/fonts/Inter-Bold.ttf"));
 }
 
 /**
@@ -23,10 +23,8 @@ function loadFont() {
  * because iOS applies its own mask.
  */
 export async function monogram(size: number, { rounded }: { rounded: boolean }) {
-  // Instrument Serif has hairline strokes that vanish in a 32px tab, so small
-  // sizes get bigger glyphs and a hairline shadow either side to thicken them.
+  // Tab-sized renders get bigger glyphs so the letters survive at 16-32px.
   const small = size <= 64;
-  const thicken = Math.max(size / 64, 0.4);
 
   return new ImageResponse(
     (
@@ -37,19 +35,15 @@ export async function monogram(size: number, { rounded }: { rounded: boolean }) 
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: `linear-gradient(135deg, ${FROM}, ${TO})`,
-          borderRadius: rounded ? size * 0.22 : 0,
+          background: `linear-gradient(180deg, ${TOP}, ${BOTTOM})`,
+          borderRadius: rounded ? size * 0.225 : 0,
           color: "#ffffff",
-          fontFamily: "Instrument Serif",
-          fontStyle: "italic",
-          fontSize: size * (small ? 0.74 : 0.62),
-          letterSpacing: -size * (small ? 0.05 : 0.035),
-          ...(small
-            ? { textShadow: `${thicken}px 0 0 #ffffff, -${thicken}px 0 0 #ffffff` }
-            : {}),
-          // Optical centring: the serif's descender space sits the glyphs high.
-          paddingTop: size * 0.06,
-          paddingRight: size * 0.03,
+          fontFamily: "Inter",
+          fontWeight: 700,
+          fontSize: size * (small ? 0.56 : 0.46),
+          letterSpacing: -size * (small ? 0.03 : 0.025),
+          // Optical centring: cap height sits a touch high in the em box.
+          paddingTop: size * 0.02,
         }}
       >
         {INITIALS}
@@ -58,7 +52,7 @@ export async function monogram(size: number, { rounded }: { rounded: boolean }) 
     {
       width: size,
       height: size,
-      fonts: [{ name: "Instrument Serif", data: await loadFont(), style: "italic", weight: 400 }],
+      fonts: [{ name: "Inter", data: await loadFont(), style: "normal", weight: 700 }],
     },
   );
 }

@@ -11,26 +11,27 @@ interface EducationProps {
   publications: Publication[];
 }
 
-const linkClass =
-  "text-fg underline decoration-line underline-offset-4 transition-colors hover:decoration-accent";
+const linkClass = "text-link hover:underline hover:underline-offset-4";
 
 export function Education({ education, certifications, publications }: EducationProps) {
   return (
-    <section id="education" aria-labelledby="education-title" className="py-20">
+    <section id="education" aria-labelledby="education-title" className="py-20 sm:py-28">
       <SectionHeading
         id="education-title"
         eyebrow="Background"
         title="Education & Certifications"
       />
 
-      <div className="divide-y divide-line">
+      <div className="divide-y divide-hairline">
         {education.map((edu) => (
-          <FadeIn key={edu.id} className="py-5 first:pt-0 last:pb-0">
+          <FadeIn key={edu.id} className="py-6 first:pt-0 last:pb-0">
             <article>
               <header className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-fg">{edu.qualification}</h3>
-                  <p className="text-muted">
+                  <h3 className="text-[1.3125rem] leading-tight font-semibold tracking-[-0.018em] text-fg">
+                    {edu.qualification}
+                  </h3>
+                  <p className="mt-1 text-muted">
                     {edu.institutionUrl ? (
                       <ExternalLink href={edu.institutionUrl} className={linkClass}>
                         {edu.institution}
@@ -50,11 +51,11 @@ export function Education({ education, certifications, publications }: Education
         ))}
       </div>
 
-      <div className="mt-12 grid gap-10 md:grid-cols-[2fr_1fr]">
+      <div className="mt-16 grid gap-12 md:grid-cols-[2fr_1fr]">
         {certifications.length > 0 ? (
           <FadeIn>
-            <h3 className="text-lg font-semibold text-fg">Certifications</h3>
-            <ul className="mt-4 space-y-2.5 text-[0.95rem]">
+            <h3 className="text-[1.3125rem] font-semibold tracking-[-0.018em] text-fg">Certifications</h3>
+            <ul className="mt-4 space-y-3">
               {certifications.map((cert) => (
                 <li key={`${cert.issuer}-${cert.name}`} className="text-muted">
                   {cert.url ? (
@@ -72,8 +73,8 @@ export function Education({ education, certifications, publications }: Education
         ) : null}
         {publications.length > 0 ? (
           <FadeIn>
-            <h3 className="text-lg font-semibold text-fg">Publications</h3>
-            <ul className="mt-4 space-y-2.5 text-[0.95rem]">
+            <h3 className="text-[1.3125rem] font-semibold tracking-[-0.018em] text-fg">Publications</h3>
+            <ul className="mt-4 space-y-3">
               {publications.map((pub) => (
                 <li key={pub.title} className="text-muted">
                   {pub.url ? (

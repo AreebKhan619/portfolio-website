@@ -10,7 +10,7 @@ import type { WorkExperience } from "@/types/profile";
 
 export function Experience({ jobs }: { jobs: WorkExperience[] }) {
   return (
-    <section id="experience" aria-labelledby="experience-title" className="py-20">
+    <section id="experience" aria-labelledby="experience-title" className="py-20 sm:py-28">
       <SectionHeading id="experience-title" eyebrow="Career" title="Experience" />
       {/*
         The track's fill and each dot are driven by CSS scroll-driven animations
@@ -23,13 +23,13 @@ export function Experience({ jobs }: { jobs: WorkExperience[] }) {
         >
           <span className="timeline-fill absolute inset-0" />
         </span>
-        <ol className="space-y-12 pl-6 sm:pl-8">
+        <ol className="space-y-14 pl-6 sm:pl-8">
           {jobs.map((job) => (
             <li key={job.id} {...brandProps(job)} className="timeline-item group relative">
               {/* This company's stretch of the line, down to the next dot. */}
               <span
                 aria-hidden="true"
-                className="timeline-segment pointer-events-none absolute top-2 -bottom-12 -left-6.25 w-0.75 rounded-full group-last:bottom-0 sm:-left-8.25"
+                className="timeline-segment pointer-events-none absolute top-2 -bottom-14 -left-6.25 w-0.75 rounded-full group-last:bottom-0 sm:-left-8.25"
               />
               <span
                 aria-hidden="true"
@@ -42,12 +42,14 @@ export function Experience({ jobs }: { jobs: WorkExperience[] }) {
                     {job.logo ? <CompanyLogo logo={job.logo} /> : null}
                     <div className="flex min-w-0 flex-1 flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                       <div>
-                        <h3 className="text-lg font-semibold text-fg">{job.role}</h3>
-                        <p className="text-base text-muted">
+                        <h3 className="text-[1.3125rem] leading-tight font-semibold tracking-[-0.018em] text-fg">
+                          {job.role}
+                        </h3>
+                        <p className="mt-1 text-muted">
                           {job.companyUrl ? (
                             <ExternalLink
                               href={job.companyUrl}
-                              className="font-medium text-fg underline decoration-line underline-offset-4 hover:decoration-accent"
+                              className="font-medium text-link hover:underline hover:underline-offset-4"
                             >
                               {job.company}
                             </ExternalLink>
@@ -61,14 +63,14 @@ export function Experience({ jobs }: { jobs: WorkExperience[] }) {
                       <DateRange start={job.startDate} end={job.endDate} />
                     </div>
                   </header>
-                  <ul className="mt-4 list-disc space-y-2 pl-5 text-[0.95rem] leading-relaxed text-muted marker:text-line">
+                  <ul className="mt-5 list-disc space-y-2 pl-5 leading-[1.47] text-muted marker:text-subtle">
                     {job.achievements.map((item) => (
                       <li key={item}>
                         <RichText text={item} />
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4">
+                  <div className="mt-5">
                     <BadgeList items={job.stack} label={`Tech used at ${job.company}`} />
                   </div>
                 </article>

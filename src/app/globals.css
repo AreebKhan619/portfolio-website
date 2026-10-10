@@ -3,55 +3,144 @@
 /* next-themes toggles `.dark` on <html>; drive Tailwind's dark: variant from it. */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Short phone viewports (most iPhones once Safari's bars are showing): the hero tightens its spacing. */
+@custom-variant short (@media (max-width: 39.99rem) and (max-height: 44rem));
+
+/*
+ * Apple-style system: white page with soft gray bands, tiles that flip between
+ * white and gray depending on the band they sit in, Apple blue for actions,
+ * and translucent materials for everything that floats.
+ */
 :root {
-  --bg: #fbfbfa;
+  --bg: #ffffff;
+  --band: #f5f5f7;
   --surface: #ffffff;
-  --fg: #18181b;
-  --muted: #52525b;
-  --line: #e4e4e7;
-  --accent: #4f46e5;
-  --accent-soft: #eef2ff;
+  --surface-alt: #f5f5f7;
+  --chip: #ebebf0;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  /* Small text: #86868b is only 3.3:1 on the gray bands, so tertiary matches secondary. */
+  --subtle: #6e6e73;
+  --line: #d2d2d7;
+  --hairline: rgb(0 0 0 / 0.08);
+  --accent: #0071e3;
+  --link: #0066cc;
+  --accent-soft: rgb(0 113 227 / 0.1);
+  --button: #0071e3;
+  --button-hover: #0077ed;
+  --button-fg: #ffffff;
+  --material: rgb(251 251 253 / 0.72);
+  --material-thick: rgb(250 250 252 / 0.82);
+  --material-edge: rgb(255 255 255 / 0.6);
+  --scrim: rgb(0 0 0 / 0.18);
+  --shadow-float: 0 24px 64px -12px rgb(0 0 0 / 0.22), 0 8px 24px -8px rgb(0 0 0 / 0.12);
   color-scheme: light;
 }
 
 .dark {
-  --bg: #0b0b0d;
-  --surface: #131316;
-  --fg: #f4f4f5;
-  --muted: #a1a1aa;
-  --line: #27272a;
-  --accent: #a5b4fc;
-  --accent-soft: rgb(99 102 241 / 0.14);
+  --bg: #000000;
+  /* Just off black, so sections keep their rhythm in dark mode. */
+  --band: #0d0d0e;
+  --surface: #1c1c1e;
+  --surface-alt: #161617;
+  --chip: #2a2a2d;
+  --fg: #f5f5f7;
+  --muted: #a1a1a6;
+  --subtle: #86868b;
+  --line: #424245;
+  --hairline: rgb(255 255 255 / 0.1);
+  --accent: #2997ff;
+  --link: #2997ff;
+  --accent-soft: rgb(41 151 255 / 0.16);
+  --button: #0071e3;
+  --button-hover: #0077ed;
+  --button-fg: #ffffff;
+  --material: rgb(22 22 23 / 0.72);
+  --material-thick: rgb(36 36 38 / 0.78);
+  --material-edge: rgb(255 255 255 / 0.08);
+  --scrim: rgb(0 0 0 / 0.45);
+  --shadow-float: 0 24px 64px -12px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.06);
   color-scheme: dark;
+}
+
+/*
+ * Tracking per size (Inter's dynamic metrics, close to SF's tables): small
+ * text opens up, body tightens slightly. Tailwind applies these with the
+ * matching text-* utility; a tracking-* class still overrides them.
+ */
+@theme {
+  --text-caption: 0.6875rem;
+  --text-caption--line-height: 1.3;
+  --text-caption--letter-spacing: 0.005em;
+  --text-xs--letter-spacing: 0em;
+  --text-footnote: 0.8125rem;
+  --text-footnote--line-height: 1.38;
+  --text-footnote--letter-spacing: -0.004em;
+  --text-sm--letter-spacing: -0.006em;
+  --text-callout: 0.9375rem;
+  --text-callout--line-height: 1.4;
+  --text-callout--letter-spacing: -0.009em;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.47;
+  --text-body--letter-spacing: -0.012em;
 }
 
 @theme inline {
   --color-bg: var(--bg);
+  --color-band: var(--band);
   --color-surface: var(--surface);
+  --color-tile: var(--tile);
+  --color-chip: var(--chip);
   --color-fg: var(--fg);
   --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
   --color-line: var(--line);
+  --color-hairline: var(--hairline);
   --color-accent: var(--accent);
+  --color-link: var(--link);
   --color-accent-soft: var(--accent-soft);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --color-button: var(--button);
+  --color-button-hover: var(--button-hover);
+  --color-button-fg: var(--button-fg);
+  /* SF Pro on Apple devices; Inter (with optical sizing) everywhere else. */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", var(--font-inter), "Segoe UI", system-ui,
+    sans-serif;
+  --font-mono:
+    ui-monospace, "SF Mono", SFMono-Regular, var(--font-geist-mono), Menlo, Consolas, monospace;
+  --radius-tile: 1.75rem;
+  --radius-card: 1.125rem;
 }
 
 @layer base {
+  :root {
+    /* Tiles sit on white by default, so they are gray; bands flip them to white. */
+    --tile: var(--surface-alt);
+    --section-bg: var(--bg);
+  }
+
   body {
     background-color: var(--bg);
     color: var(--fg);
+    font-size: 1.0625rem;
+    line-height: 1.47;
+    letter-spacing: -0.012em;
+    font-optical-sizing: auto;
+    -webkit-tap-highlight-color: transparent;
   }
 
   ::selection {
-    background-color: var(--accent);
-    color: var(--bg);
+    background-color: color-mix(in oklab, var(--accent) 28%, transparent);
   }
 
   /* Anchor targets clear the sticky header. */
   section[id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 3rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
   }
 }
 
@@ -69,65 +158,188 @@
   }
 }
 
-/* ---------- Hero backdrop: grid + gradient mesh + pointer glow ---------- */
-.hero-backdrop {
-  --grid-size: 56px;
-  --grid-line: color-mix(in oklab, var(--line) 60%, transparent);
-  --grid-line-strong: color-mix(in oklab, var(--accent) 55%, transparent);
-  mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+/* ---------- Bands: full-bleed gray sections without 100vw overflow ---------- */
+.band {
+  --tile: var(--surface);
+  --section-bg: var(--band);
+  background-color: var(--band);
+  box-shadow: 0 0 0 100vmax var(--band);
+  clip-path: inset(0 -100vmax);
 }
 
-.hero-mesh {
-  background:
-    radial-gradient(38% 46% at 12% 18%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 70%),
-    radial-gradient(30% 40% at 88% 8%, color-mix(in oklab, #f59e0b 11%, transparent), transparent 70%),
-    radial-gradient(45% 35% at 60% 70%, color-mix(in oklab, var(--accent) 7%, transparent), transparent 70%);
+/* ---------- Type ramp: tracking tightens as size grows ---------- */
+.type-hero {
+  font-size: clamp(3.25rem, 9vw, 6rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 700;
 }
 
-.hero-grid,
-.pointer-glow-grid {
-  background-image:
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: var(--grid-size) var(--grid-size);
-  background-position: center top;
+.type-headline {
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+  line-height: 1.07;
+  letter-spacing: -0.028em;
+  font-weight: 700;
 }
 
-.hero-grid {
-  mask-image: radial-gradient(ellipse 75% 65% at 50% 30%, #000 25%, transparent 80%);
+/*
+ * The rotating tagline never wraps, so its box is always one line tall (no
+ * blank line reserved for a long phrase). It scales with the copy column
+ * (cqi) so the longest phrase still fits.
+ */
+.type-tagline {
+  font-size: clamp(1.375rem, 6.2cqi, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
-.pointer-glow {
-  opacity: 0;
-  transition: opacity 0.5s ease;
+.type-tagline .tagline-word {
+  white-space: nowrap;
 }
 
-.pointer-glow[data-active] {
-  opacity: 1;
+.type-title {
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+  font-weight: 600;
 }
 
-.pointer-glow-grid {
-  --grid-line: var(--grid-line-strong);
-  mask-image: radial-gradient(
-    220px circle at var(--glow-x, 50%) var(--glow-y, 30%),
-    #000,
-    transparent 100%
-  );
+.type-intro {
+  font-size: clamp(1.1875rem, 2.2vw, 1.5rem);
+  line-height: 1.38;
+  letter-spacing: -0.016em;
 }
 
-.pointer-glow-wash {
-  background: radial-gradient(
-    560px circle at var(--glow-x, 50%) var(--glow-y, 30%),
-    color-mix(in oklab, var(--accent) 12%, transparent),
-    transparent 65%
-  );
+.type-eyebrow {
+  font-size: 1.0625rem;
+  line-height: 1.24;
+  letter-spacing: -0.011em;
+  font-weight: 600;
 }
 
-/* Touch and reduced motion: the backdrop stays static. */
-@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
-  .pointer-glow {
-    display: none;
+.text-gradient {
+  background: linear-gradient(100deg, #0090f7 0%, #ba62fc 55%, #f2416b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Press feedback: lands on pointer-down, releases softly ---------- */
+.pressable {
+  transition:
+    transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pressable:active {
+  transform: scale(0.96);
+  transition-duration: 0.08s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pressable:active {
+    transform: none;
+    opacity: 0.75;
   }
+}
+
+/* ---------- Header: translucent material, edge appears only over content ---------- */
+.site-header {
+  background-color: var(--material);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 1px 0 var(--hairline);
+}
+
+@supports (animation-timeline: scroll()) {
+  .site-header {
+    animation: header-edge linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 48px;
+  }
+}
+
+@keyframes header-edge {
+  from {
+    background-color: color-mix(in oklab, var(--bg) 0%, transparent);
+    box-shadow: 0 1px 0 transparent;
+  }
+  to {
+    background-color: var(--material);
+    box-shadow: 0 1px 0 var(--hairline);
+  }
+}
+
+/* ---------- Floating materials: palette, terminal ---------- */
+.material-panel {
+  background-color: var(--material-thick);
+  backdrop-filter: saturate(180%) blur(40px);
+  -webkit-backdrop-filter: saturate(180%) blur(40px);
+  box-shadow:
+    inset 0 1px 0 var(--material-edge),
+    var(--shadow-float);
+}
+
+/*
+ * The phone menu covers the whole page, so it is nearly opaque: text behind
+ * full-screen chrome must never compete with the links on top.
+ */
+.nav-sheet {
+  background-color: color-mix(in oklab, var(--bg) 94%, transparent);
+  backdrop-filter: saturate(180%) blur(40px);
+  -webkit-backdrop-filter: saturate(180%) blur(40px);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .nav-sheet,
+  .site-header,
+  .material-panel {
+    background-color: var(--surface);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .site-header {
+    animation: none;
+    box-shadow: 0 1px 0 var(--line);
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --muted: #4a4a4f;
+    --hairline: var(--line);
+  }
+
+  .dark {
+    --muted: #c7c7cc;
+  }
+
+  .site-header,
+  .material-panel {
+    background-color: var(--surface);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid var(--fg);
+  }
+}
+
+/* ---------- Hero aura: a soft, static glow behind the portrait ---------- */
+.hero-aura {
+  background:
+    radial-gradient(34% 42% at 78% 28%, rgb(0 144 247 / 0.16), transparent 70%),
+    radial-gradient(28% 36% at 92% 12%, rgb(186 98 252 / 0.14), transparent 70%),
+    radial-gradient(30% 34% at 66% 52%, rgb(242 65 107 / 0.09), transparent 70%),
+    radial-gradient(40% 30% at 12% 10%, rgb(0 144 247 / 0.06), transparent 70%);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+}
+
+.dark .hero-aura {
+  opacity: 0.9;
 }
 
 /* ---------- Rotating tagline (keyframes are generated per word count) ---------- */
@@ -135,12 +347,12 @@
   display: inline-grid;
   max-width: 100%;
   vertical-align: top;
-  font-style: italic;
   color: var(--accent);
 }
 
 .tagline-word {
   grid-area: 1 / 1;
+  justify-self: start;
   opacity: 0;
 }
 
@@ -149,9 +361,9 @@
 }
 
 /*
- * Per-word company colours. Keep the hue, give it enough chroma to read as a
- * colour, and pin the lightness per theme so yellow and orange still pass
- * contrast on the light background.
+ * Per-word company colours, painted as a short gradient. Keep the hue, give it
+ * enough chroma to read as a colour, and pin the lightness per theme so yellow
+ * and orange still pass contrast on the light background.
  */
 .tagline-word[data-color] {
   color: var(--word-color);
@@ -159,11 +371,17 @@
 
 @supports (color: oklch(from red l c h)) {
   .tagline-word[data-color] {
-    color: oklch(from var(--word-color) 0.56 clamp(0.12, c, 0.19) h);
+    --word-from: oklch(from var(--word-color) 0.56 clamp(0.13, c, 0.2) h);
+    --word-to: oklch(from var(--word-color) 0.52 clamp(0.13, c, 0.2) calc(h + 22));
+    background: linear-gradient(100deg, var(--word-from), var(--word-to));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .dark .tagline-word[data-color] {
-    color: oklch(from var(--word-color) 0.82 clamp(0.1, c, 0.16) h);
+    --word-from: oklch(from var(--word-color) 0.82 clamp(0.11, c, 0.17) h);
+    --word-to: oklch(from var(--word-color) 0.76 clamp(0.11, c, 0.17) calc(h + 22));
   }
 }
 
@@ -212,12 +430,15 @@
   }
 }
 
-/* The "Currently" tile: company-coloured border with a soft glow. */
+/* The "Currently" tile: a soft wash of the company colour from the logo corner. */
 .brand-tile[data-brand] {
-  border-color: var(--brand-line);
-  box-shadow:
-    0 0 0 1px color-mix(in oklab, var(--brand-line) 30%, transparent),
-    0 12px 40px -16px color-mix(in oklab, var(--brand-line) 55%, transparent);
+  background:
+    radial-gradient(
+      120% 100% at 100% 0%,
+      color-mix(in oklab, var(--brand-line) 16%, transparent),
+      transparent 62%
+    ),
+    var(--tile);
 }
 
 .timeline-segment {
@@ -228,7 +449,7 @@
 .timeline-dot {
   background-color: var(--brand-line);
   box-shadow:
-    0 0 0 4px var(--bg),
+    0 0 0 4px var(--section-bg),
     0 0 0 6px color-mix(in oklab, var(--brand-line) 22%, transparent);
 }
 
@@ -245,7 +466,7 @@
   from {
     background-color: var(--line);
     box-shadow:
-      0 0 0 4px var(--bg),
+      0 0 0 4px var(--section-bg),
       0 0 0 4px transparent;
     scale: 0.8;
   }
@@ -255,7 +476,7 @@
   to {
     background-color: var(--brand-line);
     box-shadow:
-      0 0 0 4px var(--bg),
+      0 0 0 4px var(--section-bg),
       0 0 0 6px color-mix(in oklab, var(--brand-line) 22%, transparent);
     scale: 1;
   }
@@ -327,97 +548,12 @@
   }
 }
 
-/* ---------- Project cards: pointer tilt + glowing border ---------- */
-/* Pseudo-elements stay inert unless card-spotlight.tsx marks a card active. */
-.spotlight-card {
-  position: relative;
-}
-
-.spotlight-card::before,
-.spotlight-card::after {
-  content: "";
-  position: absolute;
-  border-radius: inherit;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-/* Border-only ring: a radial gradient masked down to a 1px frame. */
-.spotlight-card::before {
-  inset: -1px;
-  padding: 1px;
-  background: radial-gradient(
-    320px circle at var(--mx, 50%) var(--my, 50%),
-    var(--accent),
-    transparent 70%
-  );
-  mask:
-    linear-gradient(#000 0 0) content-box exclude,
-    linear-gradient(#000 0 0);
-}
-
-/* Soft inner wash, kept behind the content. */
-.spotlight-card::after {
-  inset: 0;
-  z-index: -1;
-  background: radial-gradient(
-    420px circle at var(--mx, 50%) var(--my, 50%),
-    color-mix(in oklab, var(--accent) 8%, transparent),
-    transparent 65%
-  );
-}
-
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .spotlight-card {
-    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-    transition:
-      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 0.2s ease;
-  }
-
-  .spotlight-card[data-spotlight-active] {
-    transition:
-      transform 0.15s ease-out,
-      border-color 0.2s ease;
-  }
-
-  .spotlight-card[data-spotlight-active]::before,
-  .spotlight-card[data-spotlight-active]::after {
-    opacity: 1;
-  }
-}
-
 /* ---------- Theme switch: circular reveal (see lib/theme-transition.ts) ---------- */
 /* The JS drives a clip-path on the new snapshot; disable the default crossfade. */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
-}
-
-/* ---------- Command palette ---------- */
-@media (prefers-reduced-motion: no-preference) {
-  .cmdk-backdrop {
-    animation: cmdk-fade 0.18s ease-out;
-  }
-
-  .cmdk-panel {
-    animation: cmdk-pop 0.22s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-}
-
-@keyframes cmdk-fade {
-  from {
-    opacity: 0;
-  }
-}
-
-@keyframes cmdk-pop {
-  from {
-    opacity: 0;
-    transform: translateY(-6px) scale(0.98);
-  }
 }
 
 /* Sections focused programmatically (palette "Go to") don't need a ring. */
@@ -434,13 +570,15 @@ section[tabindex="-1"]:focus {
 }
 
 .gh-month {
-  fill: var(--muted);
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  fill: var(--subtle);
+  font-family: var(--font-sans);
   font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
-.gh-l0 { color: color-mix(in oklab, var(--line) 85%, var(--surface)); }
-.gh-l1 { color: color-mix(in oklab, var(--accent) 32%, var(--surface)); }
-.gh-l2 { color: color-mix(in oklab, var(--accent) 55%, var(--surface)); }
-.gh-l3 { color: color-mix(in oklab, var(--accent) 78%, var(--surface)); }
+.gh-l0 { color: color-mix(in oklab, var(--line) 55%, var(--tile)); }
+.gh-l1 { color: color-mix(in oklab, var(--accent) 30%, var(--tile)); }
+.gh-l2 { color: color-mix(in oklab, var(--accent) 55%, var(--tile)); }
+.gh-l3 { color: color-mix(in oklab, var(--accent) 78%, var(--tile)); }
 .gh-l4 { color: var(--accent); }

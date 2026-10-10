@@ -11,8 +11,8 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
     description: site.description,
     start_url: "/",
     display: "standalone",
-    background_color: "#fbfbfa",
-    theme_color: "#fbfbfa",
+    background_color: "#ffffff",
+    theme_color: "#ffffff",
     icons: [
       // Rendered by app/icon.tsx (ids from its generateImageMetadata).
       { src: "/icon/192", sizes: "192x192", type: "image/png" },

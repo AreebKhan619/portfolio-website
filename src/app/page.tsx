@@ -32,7 +32,11 @@ export default async function HomePage() {
       />
       <main id="main" className="mx-auto max-w-5xl px-5 sm:px-8">
         <Hero info={profile.personalInfo} resume={profile.resume} locale={locale} />
-        <Glance content={profile.glance} stats={stats} />
+        <Glance
+          content={profile.glance}
+          stats={stats}
+          highlights={profile.personalInfo.highlights ?? []}
+        />
         <Experience jobs={profile.workExperience} />
         <Projects projects={profile.projects} />
         <GitHubActivity content={profile.githubActivity} locale={locale} />

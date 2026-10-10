@@ -129,7 +129,7 @@ export interface PersonalInfo {
   familyName: string;
   /** Portrait under /public (intrinsic size in px), shown in the hero and used as the JSON-LD image. */
   photo?: { src: string; alt: string; width: number; height: number };
-  /** Skimmable hero bullets; when present they replace `summary` on the page (JSON-LD keeps `summary`). */
+  /** Skimmable bullets, shown as the Highlights tile in At a glance (JSON-LD keeps `summary`). */
   highlights?: RichText[];
   /** Primary title, e.g. "Full-Stack Software Engineer". */
   jobTitle: string;
@@ -314,6 +314,7 @@ export interface Glance {
     companies: string;
     stack: string;
     availability: string;
+    highlights: string;
   };
   /** Headline technologies; each should also appear in `skills`. */
   coreStack: string[];
