@@ -180,7 +180,7 @@ export interface WorkExperience {
   stack: string[];
   resumeOverrides?: ResumeOverrides<
     WorkExperience,
-    "role" | "location" | "achievements" | "stack"
+    "role" | "location" | "employmentType" | "achievements" | "stack"
   >;
 }
 
