@@ -271,7 +271,7 @@
       "resumeOverrides": {
         "achievements": [
           "Built the Store, multi-stage Orders and Accounts Payable modules of a **B2B procurement marketplace** in **React** and **TypeScript** with **role-based access control (RBAC)**, serving 3,700+ users across 1,000+ properties and processing 24,000+ invoices worth $42M+.",
-          "Cut UI delivery time from days to about 2 hours by building an AI design-to-code pipeline as a **Claude Code** plugin that generates production code, tests and docs on **design tokens**, guarded by **CI** quality gates.",
+          "Accelerated UI delivery velocity from days to 2 hours by engineering an AI design-to-code pipeline as a **Claude Code** plugin, generating production code, tests, and documentation guarded by **CI** quality gates.",
           "Eliminated ~200K tokens of fetches per design-system audit by building a code-first design sync with per-component render fingerprints and conflict detection.",
           "Shipped the Corporate Platform to production with zero hand-written code by directing **AI coding agents** through custom agent skills and review gates.",
           "Launched the company's mobile app from scratch in **React Native** with **offline support** and optimistic updates, shipping stable **Android** and **iOS** releases.",
@@ -309,6 +309,7 @@
       "location": "Remote",
       "resumeOverrides": {
         "role": "Software Development Engineer (Consultant)",
+        "employmentType": "Contract, concurrent with Reeco",
         "achievements": [
           "Implemented **session-based authentication** in the sign-up flow of the **Node.js** back-end SDK used by applications built on SuperTokens.",
           "Built and launched a public **JWT** encoder/decoder with signature validation across 6 algorithms (HS256, HS384, HS512, ES256, RS256, PS256).",
@@ -407,7 +408,7 @@
       ],
       "resumeOverrides": {
         "achievements": [
-          "Increased label-printing throughput by 60%+ by architecting a **Node.js** and **Express** print service with a **React** dashboard (**MongoDB**, **Puppeteer**), replacing a slow proprietary process.",
+          "Boosted label-printing throughput by 60% by architecting a **Node.js** and **Express** print service integrated with a **React** dashboard, completely replacing a legacy proprietary process.",
           "Co-led QRiosity, a blockchain-backed **MERN** traceability platform that gave 5M+ products a unique identity across 3+ supply chains; won 1st prize at Inspiring Futures (UAE).",
           "Built a **React Native** Android app and a multilingual (**i18n**) **PWA** for farmers with limited tech experience.",
           "Led front-end development of the Invento ERP (inventory, invoicing, throughput) with **React**, **Redux** and **Ant Design**.",
@@ -891,16 +892,12 @@
         "Segment"
       ],
       "resumeOverrides": {
-        "category": "Tools & Practices",
         "items": [
-          "Git",
           "CI",
           "RBAC",
           "Monorepos (Lerna)",
           "Sentry",
-          "Segment",
-          "Code review",
-          "Mentoring"
+          "Segment"
         ]
       }
     },
