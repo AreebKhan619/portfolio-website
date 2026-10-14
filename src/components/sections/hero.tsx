@@ -22,13 +22,15 @@ export function Hero({
       className="flex min-h-[calc(100svh-3rem)] flex-col justify-center py-6 short:py-3 sm:py-12"
     >
       {/*
-        Phones: the portrait sits on top at a size that reads, above full-width
-        copy, at a fixed 176px: shrinking it with screen height made it tiny in
-        real Safari (whose visible height is far below the screen's) without
-        getting the buttons above the fold. sm-lg: it floats right and the copy wraps around it, so the name
-        stays at the top. From lg it gets its own column beside the copy.
+        Phones: the portrait sits on top and takes whatever height the copy
+        leaves in the first screen (100svh, so with Safari's toolbars showing),
+        between a floor that still reads and a cap, so the buttons stay above
+        the fold wherever the floor allows. The buttons are a size smaller here
+        so they share one row. sm-lg: it floats right and the copy wraps around
+        it, so the name stays at the top. From lg it gets its own column beside
+        the copy.
       */}
-      <div className="flow-root lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-x-12">
+      <div className="flex flex-1 flex-col justify-center sm:flow-root sm:flex-none lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-x-12">
         {info.photo ? (
           // A transparent cut-out (circle + head breaking out of it): no frame, just a
           // soft shadow that follows its outline, over the aura behind it.
@@ -37,9 +39,9 @@ export function Hero({
             alt={info.photo.alt}
             width={info.photo.width}
             height={info.photo.height}
-            sizes="(min-width: 1024px) 352px, (min-width: 640px) 224px, 176px"
+            sizes="(min-width: 1024px) 352px, (min-width: 640px) 224px, 260px"
             preload
-            className="mb-5 h-auto w-44 drop-shadow-2xl short:mb-3 drop-shadow-black/10 sm:float-right sm:mb-4 sm:ml-8 sm:w-56 lg:col-start-2 lg:row-start-1 lg:float-none lg:m-0 lg:w-88"
+            className="mb-5 min-h-36 max-h-80 w-full flex-1 basis-0 object-contain object-left drop-shadow-2xl short:mb-3 drop-shadow-black/10 sm:float-right sm:mb-4 sm:ml-8 sm:h-auto sm:max-h-none sm:min-h-0 sm:w-56 sm:flex-none lg:col-start-2 lg:row-start-1 lg:float-none lg:m-0 lg:w-88"
           />
         ) : null}
 
@@ -48,7 +50,7 @@ export function Hero({
           which below lg would stop the copy wrapping under the floated portrait.
           Without one, the tagline's cqi units fall back to the viewport.
         */}
-        <div className="lg:col-start-1 lg:row-start-1 lg:@container">
+        <div className="flex-none lg:col-start-1 lg:row-start-1 lg:@container">
           <p className="type-eyebrow text-muted">{info.headline}</p>
           <h1 id="hero-title" className="type-hero mt-3 text-fg">
             {info.name}
@@ -64,7 +66,7 @@ export function Hero({
             <a
               href={RESUME_PATH}
               download={resume.fileName}
-              className="pressable inline-flex items-center gap-2 rounded-full whitespace-nowrap bg-button px-5.5 py-3 text-body leading-none text-button-fg hover:bg-button-hover"
+              className="pressable inline-flex items-center gap-2 rounded-full whitespace-nowrap bg-button px-4 py-3 text-callout leading-none sm:px-5.5 sm:text-body text-button-fg hover:bg-button-hover"
             >
               <svg viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                 <path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" strokeLinecap="round" strokeLinejoin="round" />
@@ -73,7 +75,7 @@ export function Hero({
             </a>
             <a
               href="#contact"
-              className="pressable inline-flex items-center rounded-full whitespace-nowrap px-5.5 py-3 text-body leading-none text-link ring-1 ring-link ring-inset hover:bg-link hover:text-button-fg"
+              className="pressable inline-flex items-center rounded-full whitespace-nowrap px-4 py-3 text-callout leading-none text-link sm:px-5.5 sm:text-body ring-1 ring-link ring-inset hover:bg-link hover:text-button-fg"
             >
               Contact Me
             </a>
